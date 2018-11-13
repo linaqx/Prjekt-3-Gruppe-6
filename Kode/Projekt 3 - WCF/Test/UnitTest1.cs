@@ -23,27 +23,30 @@ namespace Test
             // arrange, act, assert
             PersonController pC = new PersonController();
             //User
-            User monsterMike = new User(3, "mike", "hansen", "et-øjet ork", "mike@elskerBanan.com", "HenningsMor", "MonsterMike", "1");
+            User monsterMike = new User("mike", "hansen", "et-øjet ork", "mike@elskerBanan.com", "HenningsMor", "MonsterMike", "1");
             //List
-            pC.CreateFavoriteList(monsterMike, "Horror", "Her er mine yndlingds horror film");
+            FavoriteList f = new FavoriteList(monsterMike, "Horror", "dette er horror");
+            monsterMike.AddToFavoriteList(f);
+            //pC.CreateFavoriteList(monsterMike, "Horror", "Her er mine yndlingds horror film");
             //Movie
             Movie m = new Movie("Horror", "scary movie 1", "USA", "English", DateTime.Now, "Funny horror movie", "New York", "blabla");
+            // add movie to Horror
+            //f.AddEntertainment(m);
 
-            
             //Act
-            List<Entertainment> AmountOfMoviesFirst = pC.getFavoriteLists(monsterMike);
 
-            FindFavoriteListByName();
+            int firstCount = f.PropEntertianments.Count;
 
-            monsterMike.entertainments.addMovie();
+            f.AddEntertainment(m);
 
-            int AmountOfMoviesLast = List.getCount(); 
+            int lastCount = f.PropEntertianments.Count;
 
             //Assert
-            Assertequals(AmountOfMoviesFirst + 1, AmountOfMoviesLast);
+            Assert.AreEqual(firstCount + 1, lastCount);
 
             Console.WriteLine("TestAddToMyList complete");
             Console.WriteLine("--------------------------");
+            Console.ReadLine();
         }
     }
 }

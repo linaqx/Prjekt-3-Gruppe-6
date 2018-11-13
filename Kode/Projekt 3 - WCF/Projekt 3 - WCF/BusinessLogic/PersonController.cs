@@ -18,9 +18,9 @@ namespace Projekt_3___WCF.BusinessLogic
 
         public void CreateFavoriteList(User user, string name, string description)
         {
-            int author = user.PropAuthor;
 
-            fLC.createFavoriteList(author, name, description);
+            FavoriteList temp = fLC.CreateFavoriteList(user, name, description);
+            user.AddToFavoriteList(temp);
         }
 
         public List<FavoriteList> getFavoriteLists(User user)

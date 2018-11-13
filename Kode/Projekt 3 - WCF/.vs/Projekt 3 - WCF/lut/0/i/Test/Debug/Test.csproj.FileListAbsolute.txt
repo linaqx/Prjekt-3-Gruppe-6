@@ -1,0 +1,7 @@
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Test\bin\Debug\Test.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Debug\Test.csproj.CopyComplete
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Debug\Test.dll

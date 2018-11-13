@@ -7,7 +7,7 @@ namespace Projekt_3___WCF.Model
 {
     public class User : Person
     {
-        private int author;
+        
         private string email;
         private string password;
         private string userName;
@@ -17,10 +17,10 @@ namespace Projekt_3___WCF.Model
 
         
 
-        //HUSK at slette author
-        public User(int author, string firstName, string lastName, string information, string email, string password, string userName, string userRank) : base(firstName, lastName, information)
+        
+        public User(string firstName, string lastName, string information, string email, string password, string userName, string userRank) : base(firstName, lastName, information)
         {
-            this.author = author;
+            
             this.email = email;
             this.password = password;
             this.userName = userName;
@@ -31,20 +31,16 @@ namespace Projekt_3___WCF.Model
 
 
 
-        
-
-        public int PropAuthor
-        {
-            get { return author; }
-            set { author = value; }
-        }
-
-
 
         public List<FavoriteList> propFavoriteLists
         {
             get { return favoritelists; }
             set { favoritelists = value; }
+        }
+
+        public void AddToFavoriteList(FavoriteList favoritelist)
+        {
+            favoritelists.Add(favoritelist);
         }
 
     }

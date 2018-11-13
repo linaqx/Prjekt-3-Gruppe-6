@@ -8,18 +8,20 @@ namespace Projekt_3___WCF.BusinessLogic
 {
     public class favoriteListController
     {
-        public void createFavoriteList(int author, string name, string description)
+        
+        public FavoriteList CreateFavoriteList(User author, string name, string description)
         {
             FavoriteList fL = new FavoriteList(author, name, description);
+            return fL;
         }
 
 
-        public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)
-        {
-            List<Entertainment> temp = new List<Entertainment>();
-            temp = listOfList.Find(x => x.PropEntertianments.Contains(nameOfList));
-            return temp;
-        }
+        //public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)
+        //{
+        //    List<Entertainment> temp = new List<Entertainment>();
+        //    temp = listOfList.Find(x => x.PropEntertianments.Contains(nameOfList));
+        //    return temp;
+        //}
 
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Projekt 3 - WCF\bin\Projekt 3 - WCF.dll.config
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\b\Projekt 3 - WCF\bin\Projekt 3 - WCF.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Projekt 3 - WCF\Debug\Projekt 3 - WCF.csprojAssemblyReference.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Projekt 3 - WCF\Debug\Projekt 3 - WCF.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Projekt 3 - WCF\Debug\Projekt 3 - WCF.csproj.CopyComplete
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Projekt 3 - WCF\Debug\Projekt 3 - WCF.dll

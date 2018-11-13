@@ -76,6 +76,7 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Series.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

@@ -107,6 +107,7 @@ create table Season
 create table Episode
 	(
 	id int identity(1,1),
+	episode int NOT NULL,
 	season_id int,
 	series_id int,
 	title nvarchar(100) NOT NULL,
@@ -207,5 +208,10 @@ create table EntertainmentFavoriteList
 	constraint FKEntertainmentFavoriteList_FavoriteList foreign key(favoriteList_id) references FavoriteList(id)
 	);
 
+
+
+insert into Country values ('Denmark');
+insert into Country values ('USA');
+insert into Country values ('France');
 
 use master;

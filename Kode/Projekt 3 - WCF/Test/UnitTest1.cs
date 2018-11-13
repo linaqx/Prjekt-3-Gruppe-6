@@ -11,6 +11,7 @@ namespace Test
     {
         
         private User user;
+        private List<Entertainment> templist;
 
 
         //fix datetime så den ikke er dateTime.now
@@ -48,5 +49,62 @@ namespace Test
             Console.WriteLine("--------------------------");
             Console.ReadLine();
         }
+
+
+        [TestMethod]
+        public void FindEntertainmentByName()
+        {
+            //Arrange
+            Entertainment entertainment1 = new Entertainment("bla", "bla", "bla", "bla", DateTime.Today, "bla", "bla", "bla");
+            Movie movie1 = new Movie("Horror", "Van Helsing", "USA", "English", DateTime.Today, "vampyr slayer", "california", "A movie about vampire killign");
+            Series series1 = new Series("Comedy", "HIMYM", "USA", "English", DateTime.Today, "How i met your mother", "New York", "A series about barney");
+            Episode episode1 = new Episode(1, 1, "Pilot", DateTime.Today, "Started here", series1);
+            Movie movie2 = new Movie("Comedy", "Tenacious d", "America", "English", DateTime.Today, "Epic tale of two musicians", "In Hell", "Best goddamm music ever made");
+            //lav en liste af entertainments
+            templist = new List<Entertainment>();
+
+            templist.Add(entertainment1);
+            templist.Add(movie1);
+            templist.Add(series1);
+            templist.Add(movie2);
+
+            Boolean hasEntertainmentBeenFound = false;
+
+            
+
+           
+
+            //Act
+            
+
+            //lav en FindEntertainmentByName metode
+            //set
+
+            //Assert
+
+
+            Assert.IsTrue(hasEntertainmentBeenFound);
+
+            Console.WriteLine("FindEntertainmentByName complete");
+            Console.WriteLine("--------------------------");
+            Console.ReadLine();
+        }
+
+        [TestMethod]
+        public void FindEntertainmentByGenre()
+        {
+
+
+
+            Console.WriteLine("FindEntertainmentByGenre complete");
+            Console.WriteLine("--------------------------");
+            Console.ReadLine();
+        }
+
+
+
+
+
+
     }
 }

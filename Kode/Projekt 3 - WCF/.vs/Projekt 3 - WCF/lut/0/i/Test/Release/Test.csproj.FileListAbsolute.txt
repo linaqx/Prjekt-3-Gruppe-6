@@ -5,4 +5,3 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Release\Test.csproj.CoreCompileInputs.cache
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Release\Test.csproj.CopyComplete
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Release\Test.dll
-C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\.vs\Projekt 3 - WCF\lut\0\i\Test\Release\Test.csprojAssemblyReference.cache

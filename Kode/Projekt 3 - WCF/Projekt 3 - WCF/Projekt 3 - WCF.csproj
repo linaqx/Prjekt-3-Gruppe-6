@@ -65,6 +65,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\EntertainmentController.cs" />
+    <Compile Include="BusinessLogic\favoriteListController.cs" />
+    <Compile Include="BusinessLogic\PersonController.cs" />
+    <Compile Include="Model\Actor.cs" />
+    <Compile Include="Model\Entertainment.cs" />
+    <Compile Include="Model\Episode.cs" />
+    <Compile Include="Model\FavoriteList.cs" />
+    <Compile Include="Model\Movie.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Series.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

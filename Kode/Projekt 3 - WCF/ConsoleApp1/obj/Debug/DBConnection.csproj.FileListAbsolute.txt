@@ -1,0 +1,7 @@
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Debug\DBConnection.csprojAssemblyReference.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Debug\DBConnection.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

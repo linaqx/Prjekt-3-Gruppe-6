@@ -13,15 +13,15 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //MISSING!!!!!
-            SqlConnection connection = new SqlConnection("Server=.\\SQLEXPRESS;Database=Projekt3_Gruppe6");
+            SqlConnection connection = new SqlConnection("Server=.\\SQLEXPRESS;Database=Projekt3_Gruppe6;Integrated security=true");
             connection.Open();
-            SqlCommand cmd = new SqlCommand("");
+            SqlCommand cmd = new SqlCommand("select name from [Projekt3_Gruppe6].[dbo].[Country]", connection);
             SqlDataReader reader = cmd.ExecuteReader();
             
 
             while(reader.Read())
             {
-                Console.WriteLine("");
+                Console.WriteLine("{0}", reader.GetString(0));
             }
             reader.Close();
             connection.Close();

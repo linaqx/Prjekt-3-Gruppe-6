@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +12,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            //MISSING!!!!!
+            SqlConnection connection = new SqlConnection("Server=.\\SQLEXPRESS;Database=Projekt3_Gruppe6");
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("");
+            SqlDataReader reader = cmd.ExecuteReader();
+            
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            while(reader.Read())
+            {
+                Console.WriteLine("");
+            }
+            reader.Close();
+            connection.Close();
+
+            if (Debugger.IsAttached)
+            {
+                Console.ReadLine();
+            }
         }
     }
 }

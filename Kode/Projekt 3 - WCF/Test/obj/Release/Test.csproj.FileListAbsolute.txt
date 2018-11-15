@@ -15,3 +15,7 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\T
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csproj.CopyComplete
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.dll
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.pdb
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csprojAssemblyReference.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.pdb

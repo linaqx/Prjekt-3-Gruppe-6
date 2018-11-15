@@ -24,8 +24,6 @@ namespace ConsoleApp1
             while(reader.Read())
             {
 
-                Console.WriteLine("");
-
                 Console.WriteLine("{0}", reader.GetString(0));
 
             }

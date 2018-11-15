@@ -214,4 +214,18 @@ insert into Country values ('Denmark');
 insert into Country values ('USA');
 insert into Country values ('France');
 
+insert into [Language] values ('English');
+insert into [Language] values ('Danish');
+insert into [Language] values ('French');
+
+insert into Entertainment values ('Iron Man', 2, 1, '2008-04-30','After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'Some extra information!');
+insert into Entertainment values ('Iron Man 2', 2, 1, '2010-04-29', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his fathers legacy.', 'Some more awesome information!!');
+insert into Entertainment values ('Lucifer', 2, 1, NULL, 'Lucifer Morningstar has decided hes had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.', 'Lucier ROCKS!');
+insert into Entertainment values ('Arrow', 2, 1, NULL, 'Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.', 'Go team Arrow!');
+
+insert into Movie values (1);
+insert into Movie values (2);
+insert into Series values (3);
+insert into Series values (4);
+
 use master;

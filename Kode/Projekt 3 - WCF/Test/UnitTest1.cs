@@ -9,7 +9,12 @@ namespace Test
     [TestClass]
     public class UnitTest1
     {
-        
+        static void Main(string[] args)
+        {
+
+            
+        }
+
         private User user;
         private List<Entertainment> templist;
 

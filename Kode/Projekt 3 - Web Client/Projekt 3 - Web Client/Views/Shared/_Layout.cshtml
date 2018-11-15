@@ -16,13 +16,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("PopCorn time 2.0", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+
+            <!–search felt og knap starter her –>
+            <div class="navbar-right" style="margin-top:8px;">
+
+
+                @using (Html.BeginForm("Index", "HomeController"))
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.TextBox("id", ViewBag.CurrentFilter as string)</li>
+                        <li><input type="submit" value="Search" /></li>
+                    </ul>
+                }
+            </div>
+            <!–slutter her –>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("MyList", "MyList", "Home")</li>
+                    <li>@Html.ActionLink("Movies", "Movies", "Home")</li>
+                    <li>@Html.ActionLink("Series", "Series", "Home")</li>
+                    <li>@Html.ActionLink("Friends", "Friends", "Home")</li>
+                    
                 </ul>
             </div>
         </div>

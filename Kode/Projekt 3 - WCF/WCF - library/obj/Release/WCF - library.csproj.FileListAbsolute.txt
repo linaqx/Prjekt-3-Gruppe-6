@@ -1,0 +1,7 @@
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll.config
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.pdb
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.csprojAssemblyReference.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.pdb

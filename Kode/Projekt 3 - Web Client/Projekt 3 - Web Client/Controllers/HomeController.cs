@@ -13,18 +13,30 @@ namespace Projekt_3___Web_Client.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult MyList()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Movies()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+
+        public ActionResult Series()
+        {
+            return View();
+        }
+
+        public ActionResult Friends()
+        {
+            return View();
+        }
+
+        public ActionResult Search()
+        {
+            return View();
+            
         }
     }
 }

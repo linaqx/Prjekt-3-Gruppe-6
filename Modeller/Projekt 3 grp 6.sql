@@ -1,10 +1,10 @@
-use Projekt3_Gruppe6;
+--use Projekt3_Gruppe6;
+--use dmab0917_1026423;
 
 
-
-drop table EntertainmentFavoriteList, PersonFavoriteList, FavoriteList, EntertainmentPerson, UserFriend, 
-[User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, EntertainmentRole,
-[Role], EntertainmentFilmingLocation, EntertainmentGenre, Entertainment, FilmingLocation, Genre, [Language], Country;
+--drop table EntertainmentFavoriteList, PersonFavoriteList, FavoriteList, EntertainmentPerson, UserFriend, 
+--[User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, EntertainmentRole,
+--[Role], EntertainmentFilmingLocation, EntertainmentGenre, Entertainment, FilmingLocation, Genre, [Language], Country;
 
 create table Country
 	(
@@ -220,8 +220,8 @@ insert into [Language] values ('French');
 
 insert into Entertainment values ('Iron Man', 2, 1, '2008-04-30','After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'Some extra information!');
 insert into Entertainment values ('Iron Man 2', 2, 1, '2010-04-29', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his fathers legacy.', 'Some more awesome information!!');
-insert into Entertainment values ('Lucifer', 2, 1, NULL, 'Lucifer Morningstar has decided hes had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.', 'Lucier ROCKS!');
-insert into Entertainment values ('Arrow', 2, 1, NULL, 'Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.', 'Go team Arrow!');
+insert into Entertainment values ('Lucifer', 2, 1, '1010-10-10', 'Lucifer Morningstar has decided hes had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.', 'Lucier ROCKS!');
+insert into Entertainment values ('Arrow', 2, 1, '1010-10-10', 'Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.', 'Go team Arrow!');
 
 insert into Movie values (1);
 insert into Movie values (2);

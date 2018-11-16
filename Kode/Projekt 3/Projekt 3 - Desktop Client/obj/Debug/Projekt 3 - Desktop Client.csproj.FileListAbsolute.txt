@@ -1,0 +1,15 @@
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.exe.config
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.exe
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.pdb
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csprojAssemblyReference.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\MainWindow.g.cs
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\App.g.cs
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.lref
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\MainWindow.baml
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.g.resources
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt_3___Desktop_Client.Properties.Resources.resources
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csproj.GenerateResource.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.exe
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.pdb

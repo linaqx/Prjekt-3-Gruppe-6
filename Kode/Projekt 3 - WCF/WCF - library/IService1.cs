@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_3___WCF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -18,6 +19,9 @@ namespace WCF___library
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+
+        [OperationContract]
+        List<Entertainment> FindAllEntertainments(); 
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

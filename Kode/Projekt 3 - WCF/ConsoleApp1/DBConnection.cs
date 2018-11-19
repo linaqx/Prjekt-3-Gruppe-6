@@ -66,7 +66,7 @@ namespace ConsoleApp1
         }
 
         private SqlConnection connection = null;
-        private static DBConnection dbConnection;
+        private static SqlConnection connection;
 
         //private static readonly string driverClass = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
@@ -80,7 +80,20 @@ namespace ConsoleApp1
 
         public DBConnection()
         {
-
+            String connectionString = GetConnectionString();
+                
+            try
+            {
+                connection = get
+                Class.forName(driverClass);
+                connection = DriverManager.getConnection(connectionString);
+                System.out.println("Connected");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
         }
 
         public static DBConnection getInstance()
@@ -91,6 +104,11 @@ namespace ConsoleApp1
             }
             return dbConnection;
         }
+
+        //public Connection getConnection()
+        //{
+        //    return connection;
+        //}
 
         public SqlConnection OpenSQLConnection()
         {
@@ -133,94 +151,129 @@ namespace ConsoleApp1
         }
 
 
-        public void startTransaction(SqlConnection connection)
+        public void startTransaction(SqlConnection connection, string commandText)
         {
             SqlTransaction sqlTransaction = connection.BeginTransaction();
+            SqlCommand command = connection.CreateCommand();
+            command.Transaction = sqlTransaction;
+
+            try
+            {
+                command.CommandText = commandText;
+                command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                try
+                {
+                    sqlTransaction.Rollback();
+                }
+                catch (Exception)
+                {
+
+                    
+                }
+
+                throw;
+            }
         }
 
-        //        using (IDbTransaction tran = conn.BeginTransaction()) {
-        //    try {
-        //        // your code
-        //        tran.Commit();
-        //    }  catch {
-        //        tran.Rollback();
-        //        throw;
-        //    }
-        //}
+ //       public void commitTransaction() throws SQLException
+ //       {
+ //           connection.commit();
+	//	connection.setAutoCommit(true);
+	//}
 
-        //    using (SqlConnection connection1 = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True;User Instance=True"))
-        //       {
-        //           connection1.Open();
+ //   public void rollbackTransaction() throws SQLException
+ //   {
+ //       connection.rollback();
+ //       connection.setAutoCommit(true);
+ //   }
 
-        //           // Start a local transaction.
-        //           SqlTransaction sqlTran = connection1.BeginTransaction();
+    //        using (IDbTransaction tran = conn.BeginTransaction()) {
+    //    try {
+    //        // your code
+    //        tran.Commit();
+    //    }  catch {
+    //        tran.Rollback();
+    //        throw;
+    //    }
+    //}
 
-        //// Enlist a command in the current transaction.
-        //SqlCommand command = connection1.CreateCommand();
-        //command.Transaction = sqlTran;
+    //    using (SqlConnection connection1 = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True;User Instance=True"))
+    //       {
+    //           connection1.Open();
 
-        //           try
-        //           {
-        //               // Execute two separate commands.
-        //               command.CommandText =
-        //                "insert into [doctor](drname,drspecialization,drday) values ('a','b','c')";
-        //               command.ExecuteNonQuery();
-        //               command.CommandText =
-        //                "insert into [doctor](drname,drspecialization,drday) values ('x','y','z')";
-        //               command.ExecuteNonQuery();
+    //           // Start a local transaction.
+    //           SqlTransaction sqlTran = connection1.BeginTransaction();
 
-        //               // Commit the transaction.
-        //               sqlTran.Commit();
-        //               Label3.Text = "Both records were written to database.";
-        //           }
-        //           catch (Exception ex)
-        //           {
-        //               // Handle the exception if the transaction fails to commit.
-        //               Label4.Text = ex.Message;
+    //           // Enlist a command in the current transaction.
+    //           SqlCommand command = connection1.CreateCommand();
+    //           command.Transaction = sqlTran;
 
+    //           try
+    //           {
+    //               // Execute two separate commands.
+    //               command.CommandText =
+    //                "insert into [doctor](drname,drspecialization,drday) values ('a','b','c')";
+    //               command.ExecuteNonQuery();
+    //               command.CommandText =
+    //                "insert into [doctor](drname,drspecialization,drday) values ('x','y','z')";
+    //               command.ExecuteNonQuery();
 
-        //               try
-        //               {
-        //                   // Attempt to roll back the transaction.
-        //                   sqlTran.Rollback();
-        //               }
-        //               catch (Exception exRollback)
-        //               {
-        //                   // Throws an InvalidOperationException if the connection 
-        //                   // is closed or the transaction has already been rolled 
-        //                   // back on the server.
-        //                   Label5.Text = exRollback.Message;
-
-        //               }
-        //           }
-        //       }
+    //               // Commit the transaction.
+    //               sqlTran.Commit();
+    //               Label3.Text = "Both records were written to database.";
+    //           }
+    //           catch (Exception ex)
+    //           {
+    //               // Handle the exception if the transaction fails to commit.
+    //               Label4.Text = ex.Message;
 
 
-        //        public void startTransaction()
-        //        {
-        //            TransactionScope
-        //            using (TransactionScope tran = new TransactionScope())
-        //            {
-        //                CallAMethodThatDoesSomeWork();
-        //                CallAMethodThatDoesSomeMoreWork();
-        //                tran.Complete();
-        //            }
-        //            connection.
-        //            connection.setAutoCommit(false);
-        //	}
+    //               try
+    //               {
+    //                   // Attempt to roll back the transaction.
+    //                   sqlTran.Rollback();
+    //               }
+    //               catch (Exception exRollback)
+    //               {
+    //                   // Throws an InvalidOperationException if the connection 
+    //                   // is closed or the transaction has already been rolled 
+    //                   // back on the server.
+    //                   Label5.Text = exRollback.Message;
 
-        //    public void commitTransaction() throws SQLException
-        //    {
-        //        connection.commit();
-        //        connection.setAutoCommit(true);
-        //    }
+    //               }
+    //           }
+    //       }
 
-        //    public void rollbackTransaction() throws SQLException
-        //    {
-        //        connection.rollback();
-        //        connection.setAutoCommit(true);
 
-        //    }
+    //        public void startTransaction()
+    //        {
+    //            TransactionScope
+    //            using (TransactionScope tran = new TransactionScope())
+    //            {
+    //                CallAMethodThatDoesSomeWork();
+    //                CallAMethodThatDoesSomeMoreWork();
+    //                tran.Complete();
+    //            }
+    //            connection.
+    //            connection.setAutoCommit(false);
+    //	}
 
-    }
+    //    public void commitTransaction() throws SQLException
+    //    {
+    //        connection.commit();
+    //        connection.setAutoCommit(true);
+    //    }
+
+    //    public void rollbackTransaction() throws SQLException
+    //    {
+    //        connection.rollback();
+    //        connection.setAutoCommit(true);
+
+    //    }
+
+}
 }

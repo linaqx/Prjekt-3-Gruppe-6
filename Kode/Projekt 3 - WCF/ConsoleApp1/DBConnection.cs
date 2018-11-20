@@ -65,11 +65,8 @@ namespace ConsoleApp1
             }
         }
 
-        private SqlConnection connection = null;
-        private static SqlConnection connection;
-
-        //private static readonly string driverClass = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-
+        private static SqlConnection connection = null;
+        
         //Kraka connection/database information
         private static readonly string dbName = "dmab0917_1026423";
         private static readonly string serverAddress = "kraka.ucn.dk"; //Kraka address - DROP IKKE DATABASE
@@ -78,51 +75,40 @@ namespace ConsoleApp1
         private static readonly string userName = "dmab0917_1026423";
         private static readonly string password = "Password1!";
 
-        public DBConnection()
+        private DBConnection()
         {
-            String connectionString = GetConnectionString();
-                
             try
             {
-                connection = get
-                Class.forName(driverClass);
-                connection = DriverManager.getConnection(connectionString);
-                System.out.println("Connected");
+                OpenSQLConnection();
             }
             catch (Exception)
             {
                 throw;
             }
-           
+
         }
 
-        public static DBConnection getInstance()
+        public static SqlConnection getInstance()
         {
-            if (dbConnection == null)
+            if (connection == null)
             {
-                dbConnection = new DBConnection();
+                new DBConnection();
             }
-            return dbConnection;
+            return connection;
         }
 
-        //public Connection getConnection()
-        //{
-        //    return connection;
-        //}
 
-        public SqlConnection OpenSQLConnection()
+        private void OpenSQLConnection()
         {
             string connectionString = GetConnectionString();
-            using (SqlConnection connection = new SqlConnection())
+            using (connection = new SqlConnection())
             {
                 connection.ConnectionString = connectionString;
                 connection.Open();
             }
-
-            return connection;
         }
 
-        public void CloseConnection(SqlConnection connection)
+        public void CloseConnection()
         {
             try
             {
@@ -135,7 +121,7 @@ namespace ConsoleApp1
 
         }
 
-        private static string GetConnectionString()
+        private string GetConnectionString()
         {
             SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
 
@@ -151,7 +137,7 @@ namespace ConsoleApp1
         }
 
 
-        public void startTransaction(SqlConnection connection, string commandText)
+        public void StartTransaction(string commandText)
         {
             SqlTransaction sqlTransaction = connection.BeginTransaction();
             SqlCommand command = connection.CreateCommand();
@@ -164,116 +150,16 @@ namespace ConsoleApp1
             }
             catch (Exception)
             {
-
                 try
                 {
                     sqlTransaction.Rollback();
                 }
                 catch (Exception)
                 {
-
-                    
+                    throw;
                 }
-
                 throw;
             }
         }
-
- //       public void commitTransaction() throws SQLException
- //       {
- //           connection.commit();
-	//	connection.setAutoCommit(true);
-	//}
-
- //   public void rollbackTransaction() throws SQLException
- //   {
- //       connection.rollback();
- //       connection.setAutoCommit(true);
- //   }
-
-    //        using (IDbTransaction tran = conn.BeginTransaction()) {
-    //    try {
-    //        // your code
-    //        tran.Commit();
-    //    }  catch {
-    //        tran.Rollback();
-    //        throw;
-    //    }
-    //}
-
-    //    using (SqlConnection connection1 = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True;User Instance=True"))
-    //       {
-    //           connection1.Open();
-
-    //           // Start a local transaction.
-    //           SqlTransaction sqlTran = connection1.BeginTransaction();
-
-    //           // Enlist a command in the current transaction.
-    //           SqlCommand command = connection1.CreateCommand();
-    //           command.Transaction = sqlTran;
-
-    //           try
-    //           {
-    //               // Execute two separate commands.
-    //               command.CommandText =
-    //                "insert into [doctor](drname,drspecialization,drday) values ('a','b','c')";
-    //               command.ExecuteNonQuery();
-    //               command.CommandText =
-    //                "insert into [doctor](drname,drspecialization,drday) values ('x','y','z')";
-    //               command.ExecuteNonQuery();
-
-    //               // Commit the transaction.
-    //               sqlTran.Commit();
-    //               Label3.Text = "Both records were written to database.";
-    //           }
-    //           catch (Exception ex)
-    //           {
-    //               // Handle the exception if the transaction fails to commit.
-    //               Label4.Text = ex.Message;
-
-
-    //               try
-    //               {
-    //                   // Attempt to roll back the transaction.
-    //                   sqlTran.Rollback();
-    //               }
-    //               catch (Exception exRollback)
-    //               {
-    //                   // Throws an InvalidOperationException if the connection 
-    //                   // is closed or the transaction has already been rolled 
-    //                   // back on the server.
-    //                   Label5.Text = exRollback.Message;
-
-    //               }
-    //           }
-    //       }
-
-
-    //        public void startTransaction()
-    //        {
-    //            TransactionScope
-    //            using (TransactionScope tran = new TransactionScope())
-    //            {
-    //                CallAMethodThatDoesSomeWork();
-    //                CallAMethodThatDoesSomeMoreWork();
-    //                tran.Complete();
-    //            }
-    //            connection.
-    //            connection.setAutoCommit(false);
-    //	}
-
-    //    public void commitTransaction() throws SQLException
-    //    {
-    //        connection.commit();
-    //        connection.setAutoCommit(true);
-    //    }
-
-    //    public void rollbackTransaction() throws SQLException
-    //    {
-    //        connection.rollback();
-    //        connection.setAutoCommit(true);
-
-    //    }
-
-}
+    }
 }

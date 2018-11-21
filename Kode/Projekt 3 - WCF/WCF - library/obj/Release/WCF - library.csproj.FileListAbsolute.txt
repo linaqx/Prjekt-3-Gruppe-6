@@ -12,3 +12,10 @@ C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll.config
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.csprojAssemblyReference.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\obj\Release\WCF - library.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - library\bin\Release\WCF - library.pdb

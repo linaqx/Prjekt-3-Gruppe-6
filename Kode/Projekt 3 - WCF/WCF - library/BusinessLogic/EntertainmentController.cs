@@ -9,12 +9,12 @@ namespace Projekt_3___WCF.BusinessLogic
 {
     public class EntertainmentController
     {
-        private EntertainmentDB entertainmentDB;
+        //private EntertainmentDB entertainmentDB;
 
-        public EntertainmentController ()
-        {
-            EntertainmentDB edb = new EntertainmentDB();
-        }
+        //public EntertainmentController ()
+        //{
+        //    EntertainmentDB edb = new EntertainmentDB();
+        //}
 
 
         //Tilføj en entertainment til en users egen favorit liste
@@ -34,7 +34,7 @@ namespace Projekt_3___WCF.BusinessLogic
         public List<Entertainment> FindAllEntertainments()
         {
             List<Entertainment> temp = new List<Entertainment>();
-            temp = entertainmentDB.GetEntertainment();
+            //temp = entertainmentDB.GetEntertainment();
 
             return temp;
         }

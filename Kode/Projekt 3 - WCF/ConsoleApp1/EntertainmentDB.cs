@@ -14,6 +14,8 @@ namespace ConsoleApp1
         {
             EntertainmentDB edb = new EntertainmentDB();
             edb.GetEntertainments();
+            DBConnection dBConnection = DBConnection.GetInstance();
+            dBConnection.CloseConnection();
         }
 
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select * from Entertainment;";
@@ -28,7 +30,6 @@ namespace ConsoleApp1
         {
             con = DBConnection.GetInstance().GetConnection();
             findAllEntertainments = con.CreateCommand();
-
         }
 
         public List<Entertainment> GetEntertainments()
@@ -59,6 +60,7 @@ namespace ConsoleApp1
             }
             Console.WriteLine(temp.Count());
             Console.ReadLine();
+            reader.Close();
             return temp;
         }
 

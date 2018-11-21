@@ -117,6 +117,7 @@ namespace ConsoleApp1
             try
             {
                 connection.Close();
+                dBConnection = null;
             }
             catch (Exception e)
             {

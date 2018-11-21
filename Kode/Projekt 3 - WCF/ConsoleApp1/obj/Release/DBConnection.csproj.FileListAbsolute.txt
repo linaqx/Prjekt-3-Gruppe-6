@@ -5,3 +5,14 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleA
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\DBConnection.csproj.CoreCompileInputs.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\ConsoleApp1.exe
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\ConsoleApp1.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\DBConnection.csprojAssemblyReference.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\DBConnection.csproj.CoreCompileInputs.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\ConsoleApp1.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\ConsoleApp1.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\ConsoleApp1.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\WCF - library.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\WCF - library.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\bin\Release\WCF - library.dll.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\ConsoleApp1\obj\Release\DBConnection.csproj.CopyComplete

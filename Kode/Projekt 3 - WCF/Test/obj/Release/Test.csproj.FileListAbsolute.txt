@@ -19,3 +19,20 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - 
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csproj.CoreCompileInputs.cache
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.dll
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Test\obj\Release\Test.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csprojAssemblyReference.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csproj.CoreCompileInputs.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Test.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Test.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\WCF - library.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\WCF - library.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\WCF - library.dll.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Test\obj\Release\Test.csproj.CopyComplete

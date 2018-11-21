@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WCF - library\WCF - library.csproj">
+      <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
+      <Name>WCF - library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

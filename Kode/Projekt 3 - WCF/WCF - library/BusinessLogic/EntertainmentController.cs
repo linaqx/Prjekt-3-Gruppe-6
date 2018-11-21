@@ -29,12 +29,12 @@ namespace Projekt_3___WCF.BusinessLogic
             return null;
         }
 
-        public List<Entertainment> FindAllEntertainments()
-        {
-           rs = EntertainmentDB.BuildAllEntertainments();
+        //public List<Entertainment> FindAllEntertainments()
+        //{
+        //   rs = EntertainmentDB.BuildAllEntertainments();
 
-           return rs;
-        }
+        //   return rs;
+        //}
 
 
     }

@@ -32,10 +32,10 @@ namespace WCF___library
             return composite;
         }
 
-        public List<Entertainment> FindAllEntertainments()
-        {
-            return EC.FindAllEntertainments();
+        //public List<Entertainment> FindAllEntertainments()
+        //{
+        //    return EC.FindAllEntertainments();
             
-        }
+        //}
     }
 }

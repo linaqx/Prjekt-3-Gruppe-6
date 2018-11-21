@@ -147,6 +147,8 @@ namespace ConsoleApp1
             {
                 command.CommandText = commandText;
                 command.ExecuteNonQuery();
+                //command fix!!!!!!
+                sqlTransaction.Commit();
             }
             catch (Exception)
             {

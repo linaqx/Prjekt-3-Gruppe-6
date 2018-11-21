@@ -1,5 +1,4 @@
-﻿using Projekt_3___WCF.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,12 +9,12 @@ namespace ConsoleApp1
 {
     class EntertainmentDB
     {
-        private string sql_FIND_ALL_ENTERTAINMENT = "select * from Entertainment;";
-        private string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
-        private string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
+        private readonly string sql_FIND_ALL_ENTERTAINMENT = "select * from Entertainment;";
+        private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
+        private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
 
-        private SqlCommand FindAllEntertainments;
+        private string FindAllEntertainments;
         //con = new SqlConnection(connectionString);
         //Navn skal findes i App.Config eller DBConnection
         //private string _ConnectionString = ConfigurationManager.ConnectionStrings["Navn"].ConnectionString;

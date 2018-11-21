@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class EntertainmentDB
+    public class EntertainmentDB
     {
         static void Main(string[] args)
         {
@@ -29,7 +29,7 @@ namespace ConsoleApp1
 
         public EntertainmentDB()
         {
-            con = DBConnection.getInstance();
+            con = DBConnection.GetInstance().GetCon;
             findAllEntertainments = con.CreateCommand();
 
         }

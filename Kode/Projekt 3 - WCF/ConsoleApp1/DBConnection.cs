@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class DBConnection
+    public class DBConnection
     {
         //static void Main(string[] args)
         //{
@@ -65,7 +65,8 @@ namespace ConsoleApp1
         //    }
         //}
 
-        private static SqlConnection connection = null;
+        private SqlConnection connection = null;
+        private
         
         //Kraka connection/database information
         private static readonly string dbName = "dmab0917_1026423";
@@ -88,12 +89,17 @@ namespace ConsoleApp1
 
         }
 
-        public static SqlConnection getInstance()
+        public static SqlConnection GetInstance()
         {
             if (connection == null)
             {
                 new DBConnection();
             }
+            return connection;
+        }
+
+        public SqlConnection GetConnection()
+        {
             return connection;
         }
 
@@ -137,31 +143,35 @@ namespace ConsoleApp1
         }
 
 
-        public void StartTransaction(string commandText)
-        {
-            SqlTransaction sqlTransaction = connection.BeginTransaction();
-            SqlCommand command = connection.CreateCommand();
-            command.Transaction = sqlTransaction;
+        //public void StartTransaction(string commandText)
+        //{
+        //    for (int i = 0; i < length; i++)
+        //    {
+        //        SqlTransaction sqlTransaction = connection.BeginTransaction();
+        //        SqlCommand command = connection.CreateCommand();
+        //        command.Transaction = sqlTransaction;
 
-            try
-            {
-                command.CommandText = commandText;
-                command.ExecuteNonQuery();
-                //command fix!!!!!!
-                sqlTransaction.Commit();
-            }
-            catch (Exception)
-            {
-                try
-                {
-                    sqlTransaction.Rollback();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                throw;
-            }
-        }
+        //        try
+        //        {
+        //            command.CommandText = commandText;
+        //            command.ExecuteNonQuery();
+        //            //command fix!!!!!!
+        //            sqlTransaction.Commit();
+        //        }
+        //        catch (Exception)
+        //        {
+        //            try
+        //            {
+        //                sqlTransaction.Rollback();
+        //            }
+        //            catch (Exception)
+        //            {
+        //                throw;
+        //            }
+        //            throw;
+        //        }
+        //    }
+            
+        //}
     }
 }

@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace Projekt_3___WCF.BusinessLogic
 {
     public class EntertainmentController
     {
+        private EntertainmentDB entertainmentDB;
 
         public EntertainmentController ()
         {
-            
+            EntertainmentDB edb = new EntertainmentDB();
         }
 
 
@@ -29,12 +31,13 @@ namespace Projekt_3___WCF.BusinessLogic
             return null;
         }
 
-        //public List<Entertainment> FindAllEntertainments()
-        //{
-        //   rs = EntertainmentDB.BuildAllEntertainments();
+        public List<Entertainment> FindAllEntertainments()
+        {
+            List<Entertainment> temp = new List<Entertainment>();
+            temp = entertainmentDB.GetEntertainment();
 
-        //   return rs;
-        //}
+            return temp;
+        }
 
 
     }

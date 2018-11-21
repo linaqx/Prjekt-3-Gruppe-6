@@ -17,50 +17,42 @@ namespace ConsoleApp1
         }
 
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select * from Entertainment;";
-        private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
-        private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
-
-        private SqlConnection con; 
+        //private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
+        //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
         private SqlCommand findAllEntertainments;
-        //con = new SqlConnection(connectionString);
-        //Navn skal findes i App.Config eller DBConnection
-        //private string _ConnectionString = ConfigurationManager.ConnectionStrings["Navn"].ConnectionString;
+
+        private SqlConnection con;
 
         public EntertainmentDB()
         {
-            con = DBConnection.GetInstance().GetCon;
+            con = DBConnection.GetInstance().GetConnection();
             findAllEntertainments = con.CreateCommand();
 
         }
 
         public List<Entertainment> GetEntertainments()
         {
-            //using (SqlConnection connection = new SqlConnection(_ConnectionString))
-            //{
-            //    connection.Open();
-            //    using(SqlCommand cmd = connection.CreateCommand())
-            //    {
-
-
-
-            //    }
-
-            //}
             List<Entertainment> temp = new List<Entertainment>();
             findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
             SqlDataReader reader = findAllEntertainments.ExecuteReader();
             while (reader.Read())
             {
-                Entertainment e = new Entertainment();
-                e.genre = reader.GetString(reader.GetOrdinal("genre"));
-                e.title = reader.GetString(reader.GetOrdinal("title"));
-                e.country = reader.GetString(reader.GetOrdinal("country"));
-                e.language = reader.GetString(reader.GetOrdinal("language"));
-                e.releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate"));
-                e.storyLine = reader.GetString(reader.GetOrdinal("storyLine"));
-                e.filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation"));
-                e.information = reader.GetString(reader.GetOrdinal("information"));
+                Entertainment e = new Entertainment
+                {
+                    //genre = reader.GetString(reader.GetOrdinal("genre")),
+                    genre = "Action",
+                    title = reader.GetString(reader.GetOrdinal("title")),
+                    //country = reader.GetString(reader.GetOrdinal("country")),
+                    country = "USA",
+                    //language = reader.GetString(reader.GetOrdinal("language")),
+                    language = "English",
+                    releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
+                    storyLine = reader.GetString(reader.GetOrdinal("storyLine")),
+                    //filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
+                    filmingLocation = "Some place in the desert",
+                    information = reader.GetString(reader.GetOrdinal("information"))
+                };
 
                 temp.Add(e);
 

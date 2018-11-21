@@ -66,7 +66,7 @@ namespace ConsoleApp1
         //}
 
         private SqlConnection connection = null;
-        private
+        private static DBConnection dBConnection;
         
         //Kraka connection/database information
         private static readonly string dbName = "dmab0917_1026423";
@@ -89,13 +89,13 @@ namespace ConsoleApp1
 
         }
 
-        public static SqlConnection GetInstance()
+        public static DBConnection GetInstance()
         {
-            if (connection == null)
+            if (dBConnection == null)
             {
-                new DBConnection();
+                dBConnection = new DBConnection();
             }
-            return connection;
+            return dBConnection;
         }
 
         public SqlConnection GetConnection()
@@ -107,11 +107,9 @@ namespace ConsoleApp1
         private void OpenSQLConnection()
         {
             string connectionString = GetConnectionString();
-            using (connection = new SqlConnection())
-            {
-                connection.ConnectionString = connectionString;
-                connection.Open();
-            }
+            connection = new SqlConnection();
+            connection.ConnectionString = connectionString;
+            connection.Open();
         }
 
         public void CloseConnection()

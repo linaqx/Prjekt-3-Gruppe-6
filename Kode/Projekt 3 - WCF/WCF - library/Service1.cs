@@ -14,7 +14,7 @@ namespace WCF___library
     {
         private EntertainmentController EC;
 
-        public string GetData(int value)
+        public string GetData(string value)
         {
             return string.Format("You entered: {0}", value);
         }

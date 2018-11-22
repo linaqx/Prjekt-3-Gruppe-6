@@ -89,3 +89,94 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - 
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.csproj.CopyComplete
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.dll
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\ApplicationInsights.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Projekt 3 - Web Client.dll.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Projekt 3 - Web Client.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Projekt 3 - Web Client.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csc.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csc.exe.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csc.rsp
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csi.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csi.exe.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\csi.rsp
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.AppContext.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Console.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.IO.Compression.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.IO.Pipes.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Claims.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.ValueTuple.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Xml.XPath.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\vbc.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\vbc.exe.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\vbc.rsp
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\VBCSCompiler.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Antlr3.Runtime.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.Web.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.ApplicationInsights.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Newtonsoft.Json.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Helpers.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Mvc.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Optimization.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Razor.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.Deployment.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.Razor.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\WebGrease.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Helpers.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Mvc.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Optimization.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.Razor.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.Deployment.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Web.WebPages.Razor.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Newtonsoft.Json.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Antlr3.Runtime.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.AI.Web.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.csprojAssemblyReference.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.csproj.CoreCompileInputs.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.csproj.CopyComplete
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.dll
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3 - Web Client\Projekt 3 - Web Client\obj\Debug\Projekt 3 - Web Client.pdb

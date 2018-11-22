@@ -32,7 +32,7 @@ namespace Projekt_3___Web_Client.Controllers
         {
             return View();
         }
-
+        // Skal måske fjernes 
         public ActionResult Search()
         {
             return View();

@@ -1,4 +1,5 @@
-use dmab0917_1026423;
+--use dmab0917_1026423;
+use Projekt3_Gruppe6;
 
 --select * from EntertainmentGenre;
 
@@ -15,14 +16,19 @@ use dmab0917_1026423;
 --INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.genre_id)
 --INNER JOIN Genre as genre on (EntertainmentGenre.genre_id = Genre.id);
 
+
+
+----------Find all entertainments----------
 --select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;
 
 
 
+----------Find all specific favorit entertainments----------
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate
+--from Entertainment
+--INNER JOIN EntertainmentFavoriteList on (EntertainmentFavoriteList.entertainment_id = Entertainment.id)
+--where EntertainmentFavoriteList.favoriteList_id = 1;
 
-select Entertainment.id, Entertainment.title, Entertainment.releaseDate
-from Entertainment
-INNER JOIN PersonFavoriteList on (PersonFavoriteList.person_id = Person.id)
 
 
 --where PersonFavoriteList.favoriteList_id = FavoriteList.id and PersonFavoriteList.person_id = Person.id and EntertainmentFavoriteList.entertainment_id = Entertainment.id and EntertainmentFavoriteList.favoriteList_id = FavoriteList.id;

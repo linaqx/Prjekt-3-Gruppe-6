@@ -11,15 +11,17 @@ namespace WCF___library.DB
 {
     public class EntertainmentDB
     {
-        //static void Main(string[] args)
-        //{
-        //    EntertainmentDB edb = new EntertainmentDB();
-        //    edb.GetEntertainments();
-        //    DBConnection dBConnection = DBConnection.GetInstance();
-        //    dBConnection.CloseConnection();
-        //}
+        static void Main(string[] args)
+        {
+            EntertainmentDB edb = new EntertainmentDB();
+            edb.GetEntertainments();
+            DBConnection dBConnection = DBConnection.GetInstance();
+            dBConnection.CloseConnection();
+        }
 
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
+        //Tallet 1 i enden skal skiftes ud med et vilkårligt input
+        private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = 1;";
         //private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 

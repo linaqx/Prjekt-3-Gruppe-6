@@ -10,15 +10,15 @@ namespace ConsoleApp1
 {
     public class EntertainmentDB
     {
-        static void Main(string[] args)
-        {
-            EntertainmentDB edb = new EntertainmentDB();
-            edb.GetEntertainments();
-            DBConnection dBConnection = DBConnection.GetInstance();
-            dBConnection.CloseConnection();
-        }
+        //static void Main(string[] args)
+        //{
+        //    EntertainmentDB edb = new EntertainmentDB();
+        //    edb.GetEntertainments();
+        //    DBConnection dBConnection = DBConnection.GetInstance();
+        //    dBConnection.CloseConnection();
+        //}
 
-        private readonly string sql_FIND_ALL_ENTERTAINMENT = "select * from Entertainment;";
+        private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
         //private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
@@ -41,18 +41,8 @@ namespace ConsoleApp1
             {
                 Entertainment e = new Entertainment
                 {
-                    //genre = reader.GetString(reader.GetOrdinal("genre")),
-                    genre = "Action",
                     title = reader.GetString(reader.GetOrdinal("title")),
-                    //country = reader.GetString(reader.GetOrdinal("country")),
-                    country = "USA",
-                    //language = reader.GetString(reader.GetOrdinal("language")),
-                    language = "English",
                     releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
-                    storyLine = reader.GetString(reader.GetOrdinal("storyLine")),
-                    //filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
-                    filmingLocation = "Some place in the desert",
-                    information = reader.GetString(reader.GetOrdinal("information"))
                 };
 
                 temp.Add(e);
@@ -64,32 +54,33 @@ namespace ConsoleApp1
             return temp;
         }
 
-        //public Entertainment BuildEntertainment()
-        //{
-        //    Entertainment e = new Entertainment();
-        //    e.genre;
-
-        //    return null;
-        //}
-
-        //byg entertainments
-        //private List<Entertainment> buildEntertainment(SqlDataReader dr)
+        //public List<Entertainment> GetEntertainments()
         //{
         //    List<Entertainment> temp = new List<Entertainment>();
-        //    try
+        //    findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
+        //    SqlDataReader reader = findAllEntertainments.ExecuteReader();
+        //    while (reader.Read())
         //    {
-
-        //        while (dr.)
+        //        Entertainment e = new Entertainment
         //        {
-        //            Entertainment e = FindAllEntertainments(rs.getInt("fabric_id"));
-        //            Roll roll = buildRoll(rs, fab);
-        //            temp.add(e);
-        //        }
+        //            //genre = reader.GetString(reader.GetOrdinal("genre")),
+        //            genre = "Action",
+        //            title = reader.GetString(reader.GetOrdinal("title")),
+        //            country = reader.GetString(reader.GetOrdinal("country")),
+        //            language = reader.GetString(reader.GetOrdinal("language")),
+        //            releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
+        //            storyLine = reader.GetString(reader.GetOrdinal("storyLine")),
+        //            //filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
+        //            filmingLocation = "Some place in the desert",
+        //            information = reader.GetString(reader.GetOrdinal("information"))
+        //        };
+
+        //        temp.Add(e);
+
         //    }
-        //    catch (SQLException e)
-        //    {
-        //        e.printStackTrace();
-        //    }
+        //    Console.WriteLine(temp.Count());
+        //    Console.ReadLine();
+        //    reader.Close();
         //    return temp;
         //}
 

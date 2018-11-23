@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApp1;
+using WCF___library.DB;
 using Projekt_3___WCF.Model;
 
 namespace Test

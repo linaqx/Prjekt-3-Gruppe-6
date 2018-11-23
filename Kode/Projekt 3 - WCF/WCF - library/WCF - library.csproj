@@ -47,6 +47,9 @@
     <Compile Include="BusinessLogic\EntertainmentController.cs" />
     <Compile Include="BusinessLogic\favoriteListController.cs" />
     <Compile Include="BusinessLogic\PersonController.cs" />
+    <Compile Include="DB\DBConnection.cs" />
+    <Compile Include="DB\EntertainmentDB.cs" />
+    <Compile Include="DB\EntertainmentDBIF.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Model\Actor.cs" />
     <Compile Include="Model\Entertainment.cs" />

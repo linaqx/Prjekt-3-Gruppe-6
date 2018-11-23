@@ -61,10 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\DBConnection.csproj">
-      <Project>{7593e692-b5ac-4af1-aece-6b3a1bc3b3b3}</Project>
-      <Name>DBConnection</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WCF - library\WCF - library.csproj">
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
       <Name>WCF - library</Name>

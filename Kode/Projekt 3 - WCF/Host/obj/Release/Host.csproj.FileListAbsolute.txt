@@ -1,0 +1,11 @@
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\Host.exe.config
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\Host.exe
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\Host.pdb
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\WCF - library.dll
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\WCF - library.pdb
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\bin\Release\WCF - library.dll.config
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\obj\Release\Host.csprojAssemblyReference.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\obj\Release\Host.csproj.CoreCompileInputs.cache
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\obj\Release\Host.csproj.CopyComplete
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\obj\Release\Host.exe
+C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\Host\obj\Release\Host.pdb

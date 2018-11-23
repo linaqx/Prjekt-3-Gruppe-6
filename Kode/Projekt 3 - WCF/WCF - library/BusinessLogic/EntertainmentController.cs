@@ -33,10 +33,8 @@ namespace Projekt_3___WCF.BusinessLogic
 
         public List<Entertainment> FindAllEntertainments()
         {
-            List<Entertainment> temp = new List<Entertainment>();
-            temp = entertainmentDB.GetEntertainments();
-
-            return temp;
+            
+            return entertainmentDB.GetEntertainments();
         }
 
 

@@ -20,7 +20,7 @@ namespace Host
             {
                 // Open the host ans start listening for incoming calls
                 serviceHost.Open();
-                //DisplayHostInfo(serviceHost);
+                DisplayHostInfo(serviceHost);
 
                 // Keep the service running until the Enter key is pressed
                 Console.WriteLine("The service is ready.");

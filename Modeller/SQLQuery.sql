@@ -1,5 +1,5 @@
---use dmab0917_1026423;
-use Projekt3_Gruppe6;
+use dmab0917_1026423;
+--use Projekt3_Gruppe6;
 
 --select * from EntertainmentGenre;
 
@@ -31,12 +31,7 @@ use Projekt3_Gruppe6;
 
 
 
---where PersonFavoriteList.favoriteList_id = FavoriteList.id and PersonFavoriteList.person_id = Person.id and EntertainmentFavoriteList.entertainment_id = Entertainment.id and EntertainmentFavoriteList.favoriteList_id = FavoriteList.id;
-
-
--- Person - FavoriteList - PersonFavoriteList - Entertainment - EntertainmentFavoriteList
-
-
+----------Find all Person FavoriteLists----------
 
 
 

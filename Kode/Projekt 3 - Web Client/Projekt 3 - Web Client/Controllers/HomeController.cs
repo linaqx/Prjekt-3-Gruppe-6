@@ -13,6 +13,7 @@ namespace Projekt_3___Web_Client.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult MyList()
         {
             return View();

@@ -50,6 +50,9 @@
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\EntertainmentDB.cs" />
     <Compile Include="DB\EntertainmentDBIF.cs" />
+    <Compile Include="DB\FavoritListDB.cs" />
+    <Compile Include="DB\PersonDB.cs" />
+    <Compile Include="DB\PersonDBIF.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Model\Actor.cs" />
     <Compile Include="Model\Entertainment.cs" />

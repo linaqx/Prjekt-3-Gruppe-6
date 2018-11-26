@@ -9,11 +9,11 @@ namespace Projekt_3___WCF.BusinessLogic
 {
     public class EntertainmentController
     {
-        private EntertainmentDB entertainmentDB;
+        private EntertainmentDB edb;
 
         public EntertainmentController()
         {
-            EntertainmentDB edb = new EntertainmentDB();
+            edb = new EntertainmentDB();
         }
 
 
@@ -34,7 +34,7 @@ namespace Projekt_3___WCF.BusinessLogic
         public List<Entertainment> FindAllEntertainments()
         {
             
-            return entertainmentDB.GetEntertainments();
+            return edb.GetEntertainments();
         }
 
 

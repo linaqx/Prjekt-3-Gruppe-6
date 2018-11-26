@@ -35,7 +35,7 @@ namespace Projekt_3___WCF.Model
         public List<FavoriteList> propFavoriteLists
         {
             get { return favoritelists; }
-            set { favoritelists = value; }
+            //set { favoritelists = value; }
         }
 
         public void AddToFavoriteList(FavoriteList favoritelist)

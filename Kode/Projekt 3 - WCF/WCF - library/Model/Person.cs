@@ -12,7 +12,7 @@ namespace Projekt_3___WCF.Model
         private string firstName;
         private string lastName;
         private string information;
-        private List<FavoriteList> favoriteList;
+        
 
         public Person(string firstName, string lastName, string information)
         {

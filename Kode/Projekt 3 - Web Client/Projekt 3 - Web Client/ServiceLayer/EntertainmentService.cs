@@ -11,19 +11,16 @@ namespace Projekt_3___Web_Client.ServiceLayer
 {
     public class EntertainmentService
     {
-        //Entertainment ent = new Entertainment();
-        //public List<Entertainment> GetEntertainments()
-        //{
+        Entertainment ent = new Entertainment();
+        public List<Entertainment> GetEntertainments()
+        {
             
+            Service1.Service1Client sC = new Service1.Service1Client();
+            var entertainments = sC.FindAllEntertainments().ToList<Entertainment>();
+           
+            return entertainments;
 
-        //    Service1.Service1Client sC = new Service1.Service1Client();
-        //    Array.ConvertAll(sC.FindAllEntertainments);
-        //    List<Entertainment> temp = new List<Entertainment>();
-        //    temp = sC.FindAllEntertainments();
-
-        //    return sC.FindAllEntertainments();
-            
-        //}
+        }
 
 
     }

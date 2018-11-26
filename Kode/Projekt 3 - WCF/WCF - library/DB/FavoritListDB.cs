@@ -11,6 +11,8 @@ namespace WCF___library.DB
 {
     class FavoritListDB
     {
+        private readonly string sql_FIND_ALL_LISTS_BY_USER = "";
+
         private SqlCommand findAllFavoritList;
         private SqlConnection con;
 
@@ -23,7 +25,7 @@ namespace WCF___library.DB
         public List<FavoriteList> FindAllListByUser(User user)
         {
             List<FavoriteList> temp = new List<FavoriteList>();
-            findAllFavoritList.CommandText = "";
+            findAllFavoritList.CommandText = sql_FIND_ALL_LISTS_BY_USER;
             return null;
         }
     }

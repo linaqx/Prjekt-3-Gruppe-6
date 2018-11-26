@@ -51,7 +51,7 @@ namespace WCF___library.DB
                 temp.Add(e);
 
             }
-            Console.WriteLine(temp.Count());
+            Console.WriteLine(temp.Count() + " This is tested in EntertainmentDB");
             Console.ReadLine();
             reader.Close();
             return temp;

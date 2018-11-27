@@ -8,12 +8,11 @@ namespace Projekt_3___WCF.BusinessLogic
 {
     public class PersonController
     {
+        private FavoriteListController fLC;
 
-
-        private favoriteListController fLC;
         public PersonController()
         {
-            favoriteListController fLC = new favoriteListController();
+            fLC = new FavoriteListController();
         }
 
         public void CreateFavoriteList(User user, string name, string description)

@@ -19,7 +19,7 @@ namespace Test
             //Act
             //DBConnection dbc = new DBConnection
             EntertainmentDB eDB = new EntertainmentDB();
-            eDB.GetEntertainments();
+            eDB.GetAllEntertainments();
             //Assert
             Assert.AreEqual(1, 1);
 

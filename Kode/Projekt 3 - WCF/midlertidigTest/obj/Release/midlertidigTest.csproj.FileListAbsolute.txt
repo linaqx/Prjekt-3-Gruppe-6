@@ -9,3 +9,14 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - 
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.csproj.CopyComplete
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.exe
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.csprojAssemblyReference.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\midlertidigTest.exe.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\midlertidigTest.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\midlertidigTest.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\WCF - library.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\WCF - library.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Release\WCF - library.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\obj\Release\midlertidigTest.csproj.CopyComplete

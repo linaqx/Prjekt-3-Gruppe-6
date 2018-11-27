@@ -11,12 +11,8 @@ namespace Projekt_3___Web_Client.Controllers
 
 
 
-
-
-
-
         // GET: Entertainment
-        public ActionResult Index()
+        public ActionResult FindAllEntertainments()
         {
             return View();
         }

@@ -28,7 +28,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.TextBox("id", ViewBag.CurrentFilter as string)</li>
                     <form method="get" action="~/Views/Entertainment/FindAllEntertainments.cshtml">
-                        <button type="submit" value="Search"> test </button>
+                        <button type="submit" value="Search"> Search  </button>
                     </form>
                 </ul>
                 }
@@ -37,12 +37,13 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Home", "FindAllEntertainments", "Entertainment")</li>
                     <li>@Html.ActionLink("MyList", "MyList", "Home")</li>
                     <li>@Html.ActionLink("Movies", "Movies", "Home")</li>
                     <li>@Html.ActionLink("Series", "Series", "Home")</li>
                     <li>@Html.ActionLink("Friends", "Friends", "Home")</li>
-                    
+                    <!– slet den her senere –>
+                    <li>@Html.ActionLink("FindAllEntertainments", "FindAllEntertainments", "Entertainment")</li>
                 </ul>
             </div>
         </div>

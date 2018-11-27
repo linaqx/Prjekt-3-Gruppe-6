@@ -39,5 +39,11 @@ namespace Projekt_3___Web_Client.Controllers
             return View();
             
         }
+
+        public ActionResult FindAllEntertainments()
+        {
+            return View();
+
+        }
     }
 }

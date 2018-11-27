@@ -15,7 +15,7 @@ namespace Test
             
         }
 
-        private User user;
+        //private User user;
         private List<Entertainment> templist;
 
 
@@ -41,11 +41,11 @@ namespace Test
 
             //Act
 
-            int firstCount = f.PropEntertianments.Count;
+            int firstCount = f.Entertianments.Count;
 
             f.AddEntertainment(m);
 
-            int lastCount = f.PropEntertianments.Count;
+            int lastCount = f.Entertianments.Count;
 
             //Assert
             Assert.AreEqual(firstCount + 1, lastCount);

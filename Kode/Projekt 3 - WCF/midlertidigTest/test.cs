@@ -14,9 +14,7 @@ namespace midlertidigTest
         {
             EntertainmentDB edb = new EntertainmentDB();
             edb.GetAllEntertainments();
-            edb.GetPersonalEntertainments(1);
-            //DBConnection dBConnection = DBConnection.GetInstance();
-            //dBConnection.CloseConnection();
+            edb.GetPersonalEntertainments(2);
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WCF___library.DB
 {
-    class FavoritListDB
+    class FavoriteListDB
     {
         //fix number 1 with random number
         private readonly string sql_FIND_ALL_LISTS_BY_USER = "select FavoriteList.[name], FavoriteList.[description] from PersonFavoriteList, FavoriteList where PersonFavoriteList.person_id = @id and PersonFavoriteList.favoriteList_id = FavoriteList.id;";
@@ -19,7 +19,7 @@ namespace WCF___library.DB
         private SqlCommand findAllFavoritList;
         private SqlConnection con;
 
-        public FavoritListDB()
+        public FavoriteListDB()
         {
             con = DBConnection.GetInstance().GetConnection();
             findAllFavoritList = con.CreateCommand();

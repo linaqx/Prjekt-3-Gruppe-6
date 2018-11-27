@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Projekt_3___WCF.Model;
+using WCF___library.DB;
 
 namespace Projekt_3___WCF.BusinessLogic
 {
     public class FavoriteListController
     {
+        private FavoriteListDB FDB;
+
+        public FavoriteListController()
+        {
+            FDB = new FavoriteListDB();
+        }
         
         public FavoriteList CreateFavoriteList(User author, string name, string description)
         {
@@ -15,6 +22,10 @@ namespace Projekt_3___WCF.BusinessLogic
             return fL;
         }
 
+        public List<FavoriteList> FindAllListByUser(int id)
+        {
+            return FDB.FindAllListByUser(id);
+        }
 
         //public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)
         //{

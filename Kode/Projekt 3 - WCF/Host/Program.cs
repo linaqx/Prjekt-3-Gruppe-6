@@ -16,7 +16,7 @@ namespace Host
 
 
 
-            using (ServiceHost serviceHost = new ServiceHost(typeof(WCF___library.Service1)))
+            using (ServiceHost serviceHost = new ServiceHost(typeof(WCF___library.EntertainmentService)))
             {
                 // Open the host ans start listening for incoming calls
                 serviceHost.Open();

@@ -18,23 +18,24 @@ namespace Projekt_3___WCF.BusinessLogic
 
 
         //Tilføj en entertainment til en users egen favorit liste
-        public void addEntertainmentToFavorit()
+        public void AddEntertainmentToFavorite()
         {
 
         }
 
-
         public Entertainment FindEntertainmentByName(List<Entertainment> e)
         {
-
-
             return null;
         }
 
         public List<Entertainment> FindAllEntertainments()
         {
-
             return edb.GetAllEntertainments();
+        }
+
+        public List<Entertainment> FindPersonalEntertainments(int id)
+        {
+            return edb.GetPersonalEntertainments(id);
         }
 
 

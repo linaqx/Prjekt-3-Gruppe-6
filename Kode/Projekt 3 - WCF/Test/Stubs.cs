@@ -10,11 +10,11 @@ namespace Test
     class Stubs
     {
         private List<Entertainment> stubEntertainments;
-        private Entertainment et;
-        private Movie m;
-        private Series s;
-        private Episode e;
-        private Movie m1;
+        //private Entertainment et;
+        //private Movie m;
+        //private Series s;
+        //private Episode e;
+        //private Movie m1;
 
         static void Main(string[] args)
         {

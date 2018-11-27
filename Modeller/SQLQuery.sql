@@ -32,10 +32,23 @@ use dmab0917_1026423;
 
 
 ----------Find all Person FavoriteLists----------
+--select FavoriteList.[name], FavoriteList.[description] from PersonFavoriteList, FavoriteList where PersonFavoriteList.person_id = @id and PersonFavoriteList.favoriteList_id = FavoriteList.id;
 
 
 
+---------- ----------
 
+
+
+---------- ----------
+
+
+
+---------- ----------
+
+
+
+---------- ----------
 
 
 

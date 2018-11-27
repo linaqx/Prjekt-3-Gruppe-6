@@ -11,7 +11,10 @@ namespace WCF___library.DB
 {
     class FavoritListDB
     {
-        private readonly string sql_FIND_ALL_LISTS_BY_USER = "";
+        //fix number 1 with random number
+        private readonly string sql_FIND_ALL_LISTS_BY_USER = "select FavoriteList.[name], FavoriteList.[description] from PersonFavoriteList, FavoriteList where PersonFavoriteList.person_id = @id and PersonFavoriteList.favoriteList_id = FavoriteList.id;";
+
+        
 
         private SqlCommand findAllFavoritList;
         private SqlConnection con;
@@ -22,11 +25,44 @@ namespace WCF___library.DB
             findAllFavoritList = con.CreateCommand();
         }
 
-        public List<FavoriteList> FindAllListByUser(User user)
+        public List<FavoriteList> FindAllListByUser(int id)
         {
-            List<FavoriteList> temp = new List<FavoriteList>();
-            findAllFavoritList.CommandText = sql_FIND_ALL_LISTS_BY_USER;
-            return null;
+            try
+            {
+                SqlParameter parameter = new SqlParameter();
+                parameter.ParameterName = "@id";
+                parameter.Value = id;
+
+                findAllFavoritList.Parameters.Add(parameter);
+                findAllFavoritList.CommandText = sql_FIND_ALL_LISTS_BY_USER;
+
+                List<FavoriteList> temp = new List<FavoriteList>();
+
+                SqlDataReader reader = findAllFavoritList.ExecuteReader();
+                while (reader.Read())
+                {
+                    FavoriteList f = new FavoriteList
+                    {
+                        Id = reader.GetInt32(reader.GetOrdinal("id")),
+                        Name = reader.GetString(reader.GetOrdinal("name")),
+                        Description = reader.GetString(reader.GetOrdinal("releaseDate")),
+                    };
+
+                    temp.Add(f);
+
+                }
+                return temp;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+
+
+
+
+
     }
 }

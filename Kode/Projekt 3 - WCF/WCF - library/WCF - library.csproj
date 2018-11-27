@@ -45,11 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\EntertainmentController.cs" />
-    <Compile Include="BusinessLogic\favoriteListController.cs" />
+    <Compile Include="BusinessLogic\FavoriteListController.cs" />
     <Compile Include="BusinessLogic\PersonController.cs" />
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\EntertainmentDB.cs" />
     <Compile Include="DB\EntertainmentDBIF.cs" />
+    <Compile Include="DB\FavoriteListDBIF.cs" />
     <Compile Include="DB\FavoritListDB.cs" />
     <Compile Include="DB\PersonDB.cs" />
     <Compile Include="DB\PersonDBIF.cs" />

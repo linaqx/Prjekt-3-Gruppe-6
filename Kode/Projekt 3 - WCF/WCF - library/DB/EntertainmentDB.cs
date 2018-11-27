@@ -11,13 +11,13 @@ namespace WCF___library.DB
 {
     public class EntertainmentDB
     {
-        static void Main(string[] args)
-        {
-            EntertainmentDB edb = new EntertainmentDB();
-            edb.GetEntertainments();
-            DBConnection dBConnection = DBConnection.GetInstance();
-            dBConnection.CloseConnection();
-        }
+        //static void Main(string[] args)
+        //{
+        //    EntertainmentDB edb = new EntertainmentDB();
+        //    edb.GetAllEntertainments();
+        //    DBConnection dBConnection = DBConnection.GetInstance();
+        //    dBConnection.CloseConnection();
+        //}
 
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
         //Tallet 1 i enden skal skiftes ud med et vilkårligt input
@@ -26,6 +26,7 @@ namespace WCF___library.DB
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
         private SqlCommand findAllEntertainments;
+        private SqlCommand findAllPrivateEntertainments;
 
         private SqlConnection con;
 
@@ -33,19 +34,40 @@ namespace WCF___library.DB
         {
             con = DBConnection.GetInstance().GetConnection();
             findAllEntertainments = con.CreateCommand();
+            findAllPrivateEntertainments = con.CreateCommand();
         }
 
-        public List<Entertainment> GetEntertainments()
+        public List<Entertainment> GetAllEntertainments()
+        {
+            findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
+            List<Entertainment> temp = GetEntertainments(findAllEntertainments);
+            return temp;
+        }
+
+        public List<Entertainment> GetPersonalEntertainments(int id)
+        {
+            SqlParameter parameter = new SqlParameter();
+            parameter.ParameterName = "@id";
+            parameter.Value = id;
+
+            findAllPrivateEntertainments.Parameters.Add(parameter);
+            findAllPrivateEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST;
+            List<Entertainment> temp = GetEntertainments(findAllPrivateEntertainments);
+            return temp;
+        }
+
+        private List<Entertainment> GetEntertainments(SqlCommand sqlCommand)
         {
             List<Entertainment> temp = new List<Entertainment>();
-            findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
-            SqlDataReader reader = findAllEntertainments.ExecuteReader();
+            
+            SqlDataReader reader = sqlCommand.ExecuteReader();
             while (reader.Read())
             {
                 Entertainment e = new Entertainment
                 {
-                    title = reader.GetString(reader.GetOrdinal("title")),
-                    releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Title = reader.GetString(reader.GetOrdinal("title")),
+                    ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
                 };
 
                 temp.Add(e);
@@ -56,6 +78,8 @@ namespace WCF___library.DB
             reader.Close();
             return temp;
         }
+
+        
 
         //public List<Entertainment> GetEntertainments()
         //{

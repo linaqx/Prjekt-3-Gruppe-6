@@ -13,9 +13,10 @@ namespace midlertidigTest
         static void Main(string[] args)
         {
             EntertainmentDB edb = new EntertainmentDB();
-            edb.GetEntertainments();
-            DBConnection dBConnection = DBConnection.GetInstance();
-            dBConnection.CloseConnection();
+            edb.GetAllEntertainments();
+            edb.GetPersonalEntertainments(1);
+            //DBConnection dBConnection = DBConnection.GetInstance();
+            //dBConnection.CloseConnection();
         }
     }
 }

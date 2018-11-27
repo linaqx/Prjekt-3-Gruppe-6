@@ -33,8 +33,8 @@ namespace Projekt_3___WCF.BusinessLogic
 
         public List<Entertainment> FindAllEntertainments()
         {
-            
-            return edb.GetEntertainments();
+
+            return edb.GetAllEntertainments();
         }
 
 

@@ -6,7 +6,7 @@ using Projekt_3___WCF.Model;
 
 namespace Projekt_3___WCF.BusinessLogic
 {
-    public class favoriteListController
+    public class FavoriteListController
     {
         
         public FavoriteList CreateFavoriteList(User author, string name, string description)

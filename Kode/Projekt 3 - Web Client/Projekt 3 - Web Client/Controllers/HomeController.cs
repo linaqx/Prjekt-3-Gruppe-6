@@ -40,10 +40,6 @@ namespace Projekt_3___Web_Client.Controllers
             
         }
 
-        public ActionResult FindAllEntertainments()
-        {
-            return View();
-
-        }
+        
     }
 }

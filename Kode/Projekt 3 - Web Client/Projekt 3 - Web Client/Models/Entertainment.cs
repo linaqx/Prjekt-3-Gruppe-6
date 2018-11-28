@@ -45,6 +45,6 @@ namespace Projekt_3___Web_Client.Models
             public string information { get; set; }
 
 
-        }
+        
     }
 }

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Projekt_3___Web_Client.Models.Entertainment>
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.releaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.storyLine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.filmingLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.information)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.releaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.storyLine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.filmingLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.information)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

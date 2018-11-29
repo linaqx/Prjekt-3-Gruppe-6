@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Projekt_3___Web_Client.ServiceLayer;
+using Projekt_3___Web_Client.Models;
 
 namespace Projekt_3___Web_Client.Controllers
 {
@@ -10,6 +12,7 @@ namespace Projekt_3___Web_Client.Controllers
     {
         public ActionResult Index()
         {
+            List<Entertainment> entertainments = new List<Entertainment>();
             return View();
         }
 

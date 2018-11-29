@@ -229,6 +229,7 @@
     <Content Include="Views\Home\Movies.cshtml" />
     <Content Include="Views\Home\Series.cshtml" />
     <Content Include="Views\Home\Friends.cshtml" />
+    <Content Include="Views\Home\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

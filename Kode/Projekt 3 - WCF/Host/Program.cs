@@ -4,7 +4,6 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using ServiceToHost = WCF___library;
 
 namespace Host
 {
@@ -15,12 +14,15 @@ namespace Host
             Console.WriteLine("Console based host");
 
 
-
-            using (ServiceHost serviceHost = new ServiceHost(typeof(WCF___library.EntertainmentService)))
+            using (ServiceHost serviceHostFavoriteList = new ServiceHost(typeof(FavoriteListService.Service1)))
+            using (ServiceHost serviceHostEntertainments = new ServiceHost(typeof(WCF___library.EntertainmentService)))
             {
                 // Open the host ans start listening for incoming calls
-                serviceHost.Open();
-                DisplayHostInfo(serviceHost);
+                serviceHostEntertainments.Open();
+                DisplayHostInfo(serviceHostEntertainments);
+
+                serviceHostFavoriteList.Open();
+                DisplayHostInfo(serviceHostFavoriteList);
 
                 // Keep the service running until the Enter key is pressed
                 Console.WriteLine("The service is ready.");

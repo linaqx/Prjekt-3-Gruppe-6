@@ -1,0 +1,2 @@
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic\obj\Release\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic\obj\Release\BusinessLogic.csproj.CoreCompileInputs.cache

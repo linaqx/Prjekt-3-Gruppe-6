@@ -61,9 +61,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCF - library\WCF - library.csproj">
+    <ProjectReference Include="..\BusinessLogic - Layer\BusinessLogic - Layer.csproj">
+      <Project>{a2d97ded-c15e-42cd-b843-8ab8dab049d2}</Project>
+      <Name>BusinessLogic - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB - Layer\DB - Layer.csproj">
+      <Project>{32c36d18-25fd-45ca-988b-e4b9a9cc1323}</Project>
+      <Name>DB - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model - Layer\Model - Layer.csproj">
+      <Project>{3da60e37-8538-4cfe-84e9-cc291a5e86b1}</Project>
+      <Name>Model - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCF - library\WCF - Entertainment.csproj">
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
-      <Name>WCF - library</Name>
+      <Name>WCF - Entertainment</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

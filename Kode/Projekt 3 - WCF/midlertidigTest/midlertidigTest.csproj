@@ -39,9 +39,17 @@
     <Compile Include="test.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCF - library\WCF - library.csproj">
+    <ProjectReference Include="..\DB - Layer\DB - Layer.csproj">
+      <Project>{32c36d18-25fd-45ca-988b-e4b9a9cc1323}</Project>
+      <Name>DB - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model - Layer\Model - Layer.csproj">
+      <Project>{3DA60E37-8538-4CFE-84E9-CC291A5E86B1}</Project>
+      <Name>Model - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCF - library\WCF - Entertainment.csproj">
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
-      <Name>WCF - library</Name>
+      <Name>WCF - Entertainment</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

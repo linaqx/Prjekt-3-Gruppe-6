@@ -36,7 +36,8 @@ use dmab0917_1026423;
 
 
 
----------- ----------
+----------Insert Movie Entertainment----------
+insert into Movie (title, country_id, language_id, releaseDate, storyline, information) values (@title, @country_id, @
 
 
 

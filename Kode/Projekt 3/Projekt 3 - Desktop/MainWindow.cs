@@ -59,8 +59,8 @@ namespace Projekt_3___Desktop
             for (int i = 0; i < g.Count; i++)
             {
                 //cbBoxGenre.DataSource = ds.Tables[0];
-                cbBoxGenre.ValueMember = g.Select(x => x.Id);
-                cbBoxGenre.DisplayMember = g.Select(x => x.Name);
+                //cbBoxGenre.ValueMember = g.Select(x => x.Id);
+                //cbBoxGenre.DisplayMember = g.Select(x => x.Name);
             }
         }
 

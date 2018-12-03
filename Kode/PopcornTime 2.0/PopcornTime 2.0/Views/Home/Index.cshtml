@@ -13,63 +13,63 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.genre)
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.title)
+            @Html.DisplayNameFor(model => model.Country)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.country)
+            @Html.DisplayNameFor(model => model.Language)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.language)
+            @Html.DisplayNameFor(model => model.ReleaseDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.releaseDate)
+            @Html.DisplayNameFor(model => model.StoryLine)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.storyLine)
+            @Html.DisplayNameFor(model => model.FilmingLocation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.filmingLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.information)
-        </th>
+            @Html.DisplayNameFor(model => model.Information)
+        </th>*@
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.country)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.language)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.releaseDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.storyLine)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.filmingLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.information)
+            @Html.DisplayFor(modelItem => item.Id)
         </td>
         @*<td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReleaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoryLine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmingLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Information)
         </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
     </tr>
 }
 

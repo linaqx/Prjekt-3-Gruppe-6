@@ -6,29 +6,45 @@ using System.Web;
 namespace PopcornTime_2._0.Models
 {
     public class Entertainment
-    { 
+    {
+        public int Id { get; set; }
+        public string Genre { get; set; }
+        public string Title { get; set; }
+        public string Country { get; set; }
+        public string Language { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string StoryLine { get; set; }
+        public string FilmingLocation { get; set; }
+        public string Information { get; set; }
 
-            //private string genre;
-            //private string title;
-            //private string country;
-            //private string language;
-            //private DateTime releaseDate;
-            //private string storyLine;
-            //private string filmingLocation;
-            //private string information;
-
-            public Entertainment(string genre, string title, string country, string language, DateTime realeaseDate, string storyLine, string filmingLocation, string information)
+        public Entertainment(int id, string genre, string title, string country, string language, DateTime realeaseDate, string storyLine, string filmingLocation, string information)
             {
-                this.genre = genre;
-                this.title = title;
-                this.country = country;
-                this.language = language;
-                this.releaseDate = realeaseDate;
-                this.storyLine = storyLine;
-                this.filmingLocation = filmingLocation;
-                this.information = information;
+                this.Id = id;
+                this.Genre = genre;
+                this.Title = title;
+                this.Country = country;
+                this.Language = language;
+                this.ReleaseDate = realeaseDate;
+                this.StoryLine = storyLine;
+                this.FilmingLocation = filmingLocation;
+                this.Information = information;
 
             }
+
+        public Entertainment()
+        {
+
+        }
+
+        //public Entertainment(string title, DateTime releaseDate)
+        //{
+
+        //    this.title = title;
+        //    this.releaseDate = releaseDate;
+        //}
+
+
+
             //brug den her til listen på index viewwed
             //public Entertainment(string title, DateTime realeaseDate)
             //{
@@ -41,14 +57,7 @@ namespace PopcornTime_2._0.Models
 
             //}
 
-            public string genre { get; set; }
-            public string title { get; set; }
-            public string country { get; set; }
-            public string language { get; set; }
-            public DateTime releaseDate { get; set; }
-            public string storyLine { get; set; }
-            public string filmingLocation { get; set; }
-            public string information { get; set; }
+
         }
 
     

@@ -51,13 +51,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\FavoriteListService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Entertainment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.FilmingLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Genre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Language.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentService\Model___Layer.Model.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EntertainmentService\Projekt_3___WCF.Model.xsd">
       <SubType>Designer</SubType>
@@ -69,6 +89,22 @@
     <None Include="Connected Services\EntertainmentService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\FavoriteListService\Host.FavoriteListService.FavoriteList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FavoriteListService\Projekt_3___WCF.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FavoriteListService\service.wsdl" />
+    <None Include="Connected Services\FavoriteListService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FavoriteListService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FavoriteListService\WCF - FavoriteListService.csproj">
@@ -81,10 +117,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\EntertainmentService\" />
+    <WCFMetadataStorage Include="Connected Services\FavoriteListService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\EntertainmentService\configuration91.svcinfo" />
@@ -94,6 +128,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\EntertainmentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FavoriteListService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FavoriteListService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FavoriteListService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

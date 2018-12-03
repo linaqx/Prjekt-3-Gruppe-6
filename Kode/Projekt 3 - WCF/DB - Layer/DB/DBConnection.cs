@@ -5,8 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
+using System.Transactions;
 
 namespace Projekt_3___WCF.DB
 {
@@ -111,8 +110,10 @@ namespace Projekt_3___WCF.DB
         private void OpenSQLConnection()
         {
             string connectionString = GetConnectionString();
-            connection = new SqlConnection();
-            connection.ConnectionString = connectionString;
+            connection = new SqlConnection
+            {
+                ConnectionString = connectionString
+            };
             connection.Open();
         }
 
@@ -132,13 +133,14 @@ namespace Projekt_3___WCF.DB
 
         private string GetConnectionString()
         {
-            SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
-
-            sqlConnectionString.DataSource = serverAddress;
-            sqlConnectionString.InitialCatalog = dbName;
-            sqlConnectionString.IntegratedSecurity = integratedSecurity;
-            sqlConnectionString.UserID = userName;
-            sqlConnectionString.Password = password;
+            SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder
+            {
+                DataSource = serverAddress,
+                InitialCatalog = dbName,
+                IntegratedSecurity = integratedSecurity,
+                UserID = userName,
+                Password = password
+            };
 
             string connectionString = sqlConnectionString.ConnectionString;
 
@@ -146,40 +148,41 @@ namespace Projekt_3___WCF.DB
         }
 
 
-        public void StartTransaction(string commandText)
-        {
-            for (int i = 1; i < 10; i++)
-            {
-                SqlTransaction sqlTransaction = connection.BeginTransaction();
-                SqlCommand command = connection.CreateCommand();
-                command.Transaction = sqlTransaction;
+        //public void StartTransaction(string commandText)
+        //{
+        //    for (int i = 1; i < 10; i++)
+        //    {
+                
+        //        SqlTransaction sqlTransaction = connection.BeginTransaction();
+        //        SqlCommand command = connection.CreateCommand();
+        //        command.Transaction = sqlTransaction;
 
-                try
-                {
-                    command.CommandText = commandText;
-                    command.ExecuteNonQuery();
-                    //command fix!!!!!! - validate
-                    sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    try
-                    {
-                        sqlTransaction.Rollback();
-                    }
-                    catch (Exception)
-                    {
-                        throw;
-                    }
-                    throw;
-                }
+        //        try
+        //        {
+        //            command.CommandText = commandText;
+        //            command.ExecuteNonQuery();
+        //            //command fix!!!!!! - validate
+        //            sqlTransaction.Commit();
+        //        }
+        //        catch (Exception)
+        //        {
+        //            try
+        //            {
+        //                sqlTransaction.Rollback();
+        //            }
+        //            catch (Exception)
+        //            {
+        //                throw;
+        //            }
+        //            throw;
+        //        }
 
-                if(i == 10)
-                {
-                    new Exception("Something went wrong, please try again.");
-                }
-            }
+        //        if(i == 10)
+        //        {
+        //            new Exception("Something went wrong, please try again.");
+        //        }
+        //    }
 
-        }
+        //}
     }
 }

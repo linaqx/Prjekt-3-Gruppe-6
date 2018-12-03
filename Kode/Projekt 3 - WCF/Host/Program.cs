@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using FavoriteListService;
 
 namespace Host
 {
@@ -14,8 +15,9 @@ namespace Host
             Console.WriteLine("Console based host");
 
 
-            using (ServiceHost serviceHostFavoriteList = new ServiceHost(typeof(FavoriteListService.Service1)))
+
             using (ServiceHost serviceHostEntertainments = new ServiceHost(typeof(WCF___library.EntertainmentService)))
+            using (ServiceHost serviceHostFavoriteList = new ServiceHost(typeof(Service1)))
             {
                 // Open the host ans start listening for incoming calls
                 serviceHostEntertainments.Open();
@@ -29,6 +31,9 @@ namespace Host
                 Console.WriteLine("Press the Enter key to terminate service.");
 
                 Console.ReadLine();
+
+                serviceHostEntertainments.Close();
+                serviceHostFavoriteList.Close();
 
             }
         }

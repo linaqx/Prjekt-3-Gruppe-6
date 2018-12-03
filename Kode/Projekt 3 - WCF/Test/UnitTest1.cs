@@ -41,11 +41,11 @@ namespace Test
 
             //Act
 
-            int firstCount = f.Entertianments.Count;
+            int firstCount = f.Entertainments.Count;
 
             f.AddEntertainment(m);
 
-            int lastCount = f.Entertianments.Count;
+            int lastCount = f.Entertainments.Count;
 
             //Assert
             Assert.AreEqual(firstCount + 1, lastCount);

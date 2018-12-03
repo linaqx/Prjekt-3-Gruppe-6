@@ -16,17 +16,19 @@ namespace Projekt_3___Desktop
     public partial class MainWindow : Form
     {
         private DesktopController DC;
-        
+
         public MainWindow()
         {
             InitializeComponent();
             DC = new DesktopController();
-            Init();
+            GetData();
         }
+
+
 
         private void lblCountry_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public void btnSave_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace Projekt_3___Desktop
             //reset vinduet
             //spørge om vi er sikker
 
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -54,19 +56,19 @@ namespace Projekt_3___Desktop
             Close();
         }
 
-        public void CreateMovie ()
+        public void CreateMovie()
         {
             string title = txtTitle.Text;
-            // int genre = cbBoxGenre.
-            // int country = cbBoxCountry.
-            // int language = cbBoxlanguage.
-            string releaseDate = txtReleaseDate.Text;
+            int genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
+            int country = ((ComboBoxItem)cbBoxCountry.SelectedItem).HiddenValue;
+            int language = ((ComboBoxItem)cbBoxLanguage.SelectedItem).HiddenValue;
+            //DateTime releaseDate = txtReleaseDate.;
             string storyline = txtStoryline.Text;
-            // int filmingLocation = cbBoxFilmingLocation.
+            int filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
             string information = txtInformation.Text;
 
             DC.CreateMovie(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
-            
+
         }
 
         private void GetData()
@@ -79,30 +81,52 @@ namespace Projekt_3___Desktop
 
         private void GetGenre()
         {
-           List<Genre> g = DC.GetGenre();
-            for (int i = 0; i < g.Count; i++)
+
+            List<Genre> g = DC.GetGenre();
+
+            foreach (Genre item in g)
             {
-                //cbBoxGenre.DataSource = ds.Tables[0];
-                //cbBoxGenre.ValueMember = g.Select(x => x.Id);
-                //cbBoxGenre.DisplayMember = g.Select(x => x.Name);
+                int id = item.Id;
+                string name = item.Name;
+
+                cbBoxGenre.Items.Add(new ComboBoxItem(name, id));
+                
             }
         }
 
         private void GetCountry()
         {
-            DC.GetCountry();
+            List<Country> c = DC.GetCountry();
+            foreach (Country country in c)
+            {
+                int id = country.Id;
+                string name = country.Name;
+                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+            }
         }
 
         private void GetLanguage()
         {
-            DC.GetLanguage();
+            List<Language> l = DC.GetLanguage();
+            foreach (Language language in l)
+            {
+                int id = language.Id;
+                string name = language.Name;
+                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+            }
         }
 
         private void GetFilmingLocation()
         {
-            DC.GetFilmingLocation();
+            List<FilmingLocation> f = DC.GetFilmingLocation();
+            foreach (FilmingLocation film in f)
+            {
+                int id = film.Id;
+                string name = film.Name;
+                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+            }
         }
 
-    
+
     }
 }

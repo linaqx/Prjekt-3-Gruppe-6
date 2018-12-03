@@ -10,10 +10,15 @@ namespace Projekt_3___WCF.Model
     {
         [DataMember]
         private int number;
+        [DataMember]
         private int season;
+        [DataMember]
         private string title;
+        [DataMember]
         private DateTime releaseDate;
+        [DataMember]
         private string storyLine;
+        [DataMember]
         private Series serie;
 
         public Episode(int number, int season, string title, DateTime releaseDate, string storyLine, Series serie)

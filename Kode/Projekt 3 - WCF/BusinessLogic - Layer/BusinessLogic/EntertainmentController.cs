@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BusinessLogic___Layer.BusinessLogic;
+using Model___Layer.Model;
 using Projekt_3___WCF.Model;
 using WCF___library.DB;
 
 namespace Projekt_3___WCF.BusinessLogic
 {
-    public class EntertainmentController
+    public class EntertainmentController : EntertainmentControllerIF
     {
         private EntertainmentDB edb;
 
@@ -15,13 +17,7 @@ namespace Projekt_3___WCF.BusinessLogic
             edb = new EntertainmentDB();
         }
 
-
-        //Tilføj en entertainment til en users egen favorit liste
-        public void AddEntertainmentToFavorite()
-        {
-
-        }
-
+        //Search metode!!
         public Entertainment FindEntertainmentByName(List<Entertainment> e)
         {
             return null;
@@ -37,6 +33,29 @@ namespace Projekt_3___WCF.BusinessLogic
             return edb.GetPersonalEntertainments(id);
         }
 
+        public List<Genre> GetAllGenres()
+        { 
+            return edb.GetAllGenres();
+        }
 
+        public List<FilmingLocation> GetALLFilmingLocations()
+        {
+            return edb.GetALLFilmingLocations();
+        }
+
+        public List<Language> GetAllLanguages()
+        {
+            return edb.GetAllLanguages();
+        }
+
+        public List<Country> GetAllCountries()
+        {
+            return edb.GetAllCountries();
+        }
+
+        public void StartInsertMovieTransaction(Movie m)
+        {
+            edb.StartInsertMovieTransaction(m);
+        }
     }
 }

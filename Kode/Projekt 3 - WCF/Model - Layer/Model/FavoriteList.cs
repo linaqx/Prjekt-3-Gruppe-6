@@ -10,10 +10,14 @@ namespace Projekt_3___WCF.Model
     {
         [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public User Author { get; set; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public string Description { get; set; }
-        public List<Entertainment> Entertianments { get; set; }
+        [DataMember]
+        public List<Entertainment> Entertainments { get; set; }
 
         // ret user til int der er ID måske?
         public FavoriteList(User author, string name, string description)
@@ -21,7 +25,7 @@ namespace Projekt_3___WCF.Model
             this.Author = author;
             this.Name = name;
             this.Description = description;
-            Entertianments = new List<Entertainment>();
+            Entertainments = new List<Entertainment>();
         }
 
         public FavoriteList()
@@ -31,7 +35,7 @@ namespace Projekt_3___WCF.Model
         
         public void AddEntertainment(Entertainment e)
         {
-            Entertianments.Add(e);
+            Entertainments.Add(e);
         }
     }
 }

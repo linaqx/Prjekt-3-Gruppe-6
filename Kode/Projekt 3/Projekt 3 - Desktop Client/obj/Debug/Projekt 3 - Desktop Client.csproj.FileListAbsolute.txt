@@ -13,3 +13,8 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Pr
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csproj.CoreCompileInputs.cache
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.exe
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.pdb
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csprojAssemblyReference.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\App.g.cs
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.cache
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.exe
+C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.pdb

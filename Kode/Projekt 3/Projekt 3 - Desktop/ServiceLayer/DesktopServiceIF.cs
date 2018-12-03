@@ -9,6 +9,6 @@ namespace Projekt_3___Desktop.ServiceLayer
 {
     interface DesktopServiceIF
     {
-        void InsertEntertainment(Movie m);
+        void InsertMovieIntoEntertainment(Movie m);
     }
 }

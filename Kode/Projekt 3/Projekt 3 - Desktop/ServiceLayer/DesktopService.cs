@@ -9,9 +9,18 @@ namespace Projekt_3___Desktop.ServiceLayer
 {
     class DesktopService : DesktopServiceIF
     {
-        public void InsertEntertainment(Movie m)
+        public void InsertMovieIntoEntertainment(Movie m)
         {
-            
+            ServiceReference1.EntertainmentServiceClient sC = new ServiceReference1.EntertainmentServiceClient();
+            m = 
+            sC.StartInsertMovieTranscation(m);
+        }
+
+        public Movie CreateMovie()
+        {
+            Movie m = new Movie();
+           
+            return m;
         }
 
         public List<Genre> GetGenre()

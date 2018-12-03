@@ -75,6 +75,7 @@
             this.cbBoxGenre.Name = "cbBoxGenre";
             this.cbBoxGenre.Size = new System.Drawing.Size(148, 28);
             this.cbBoxGenre.TabIndex = 2;
+            this.cbBoxGenre.SelectedIndexChanged += new System.EventHandler(this.cbBoxGenre_SelectedIndexChanged);
             // 
             // cbBoxCountry
             // 
@@ -205,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 505);
+            this.ClientSize = new System.Drawing.Size(742, 506);
             this.Controls.Add(this.cbBoxFilmingLocation);
             this.Controls.Add(this.txtInformation);
             this.Controls.Add(this.txtStoryline);

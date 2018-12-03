@@ -11,7 +11,9 @@ namespace Projekt_3___WCF.Model
     {
         [DataMember]
         private string firstName;
+        [DataMember]
         private string lastName;
+        [DataMember]
         private string information;
         
 

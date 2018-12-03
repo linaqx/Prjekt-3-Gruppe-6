@@ -1,4 +1,5 @@
-﻿using Projekt_3___WCF.BusinessLogic;
+﻿using Model___Layer.Model;
+using Projekt_3___WCF.BusinessLogic;
 using Projekt_3___WCF.Model;
 using System;
 using System.Collections.Generic;
@@ -19,23 +20,10 @@ namespace WCF___library
             EC = new EntertainmentController();
         }
 
-        //public string GetData(string value)
-        //{
-        //    return string.Format("You entered: {0}", value);
-        //}
-
-        //public CompositeType GetDataUsingDataContract(CompositeType composite)
-        //{
-        //    if (composite == null)
-        //    {
-        //        throw new ArgumentNullException("composite");
-        //    }
-        //    if (composite.BoolValue)
-        //    {
-        //        composite.StringValue += "Suffix";
-        //    }
-        //    return composite;
-        //}
+        public List<Country> FindAllCountries()
+        {
+            return EC.GetAllCountries();
+        }
 
         public List<Entertainment> FindAllEntertainments()
         {
@@ -43,9 +31,29 @@ namespace WCF___library
 
         }
 
+        public List<FilmingLocation> FindAllFilmingLocations()
+        {
+            return EC.GetALLFilmingLocations();
+        }
+
+        public List<Genre> FindAllGenre()
+        {
+            return EC.GetAllGenres();
+        }
+
+        public List<Language> FindAllLanguage()
+        {
+            return EC.GetAllLanguages();
+        }
+
         public List<Entertainment> FindPersonalEntertainments(int id)
         {
             return EC.FindPersonalEntertainments(id);
+        }
+
+        public void StartInsertMovieTransaction(Movie m)
+        {
+            EC.StartInsertMovieTransaction(m);
         }
     }
 }

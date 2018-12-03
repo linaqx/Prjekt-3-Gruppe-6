@@ -8,16 +8,18 @@
   <xs:element name="ArrayOfEntertainment" nillable="true" type="tns:ArrayOfEntertainment" />
   <xs:complexType name="Entertainment">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FilmingLocation" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Genre" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Entertainment" nillable="true" type="tns:Entertainment" />
+  <xs:complexType name="Movie">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entertainment">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="genre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Movie" nillable="true" type="tns:Movie" />
 </xs:schema>

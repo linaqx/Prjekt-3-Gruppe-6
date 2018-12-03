@@ -10,13 +10,21 @@ namespace Projekt_3___WCF.Model
     {
         [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Genre { get; set; }
+        [DataMember]
         public string Title { get; set; }
+        [DataMember]
         public string Country { get; set; }
+        [DataMember]
         public string Language { get; set; }
+        [DataMember]
         public DateTime ReleaseDate { get; set; }
+        [DataMember]
         public string StoryLine { get; set; }
+        [DataMember]
         public string FilmingLocation { get; set; }
+        [DataMember]
         public string Information { get; set; }
 
         public Entertainment(string genre, string title, string country, string language, DateTime realeaseDate, string storyLine, string filmingLocation, string information)

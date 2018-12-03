@@ -1,7 +1,37 @@
 ﻿@{
     ViewBag.Title = "MyList";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@using PopcornTime_2._0.Models
+
+@model Entertainment
+
+<div>
+    <ul class='dropdown'>
+        <li id="top">
+            <a href='index.html'>Dropdown</a>
+            <span></span>
+            <ol class="dropdown-box">
+                @*foreach()*@
+                <li><a href='#'>item 1</a></li>
+                <li><a href='#'>item 2</a></li>
+                <li><a href='#'>item 3</a></li>
+                <li><a href='#'>item 4</a></li>
+                <li><a href='#'>item 5</a></li>
+            </ol>
+        </li>
+    </ul>
+</div>
+
+@*@model FavoriteList*@
+
+@*@Html.DropDownListFor(m => m.StudentGender,
+    new SelectList(Enum.GetValues(typeof(Gender))),
+    "Select Gender")*@
+
+
+@*FindAllfavoriteListByid skal sættes ind i dropdown*@
+
+@*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
+
+

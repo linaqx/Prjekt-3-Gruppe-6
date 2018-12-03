@@ -12,7 +12,7 @@ namespace PopcornTime_2._0.Controllers
     {
         //foran en metode kan der skrives []httpPost
         private EntertainmentService eS;
-        private Entertainment entertainment;
+        //private Entertainment entertainment;
         public HomeController()
         {
             eS = new EntertainmentService();

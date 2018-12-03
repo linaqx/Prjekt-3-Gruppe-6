@@ -36,20 +36,70 @@ use dmab0917_1026423;
 
 
 
-----------Insert Movie Entertainment----------
-insert into Movie (title, country_id, language_id, releaseDate, storyline, information) values (@title, @country_id, @
+----------Insert Entertainment----------
+--insert into Entertainment(title, country_id, language_id, releaseDate, storyline, information) output inserted.id values (@title, @country_id, @language_id, @releaseDate, @storyline, @information);
 
 
 
----------- ----------
+----------Insert Movie----------
+--insert into Movie(entertainment_id) values (@entertainment_id);
 
 
 
----------- ----------
+----------Insert into EntertainmentGenre----------
+--insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);
 
 
 
----------- ----------
+----------Insert into EntertainmentFilmingLocation----------
+--insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);
+
+
+
+----------Find all Genre----------
+--select Genre.id, Genre.[name] from Genre;
+
+
+
+----------Find all FilmingLocation----------
+--select FilmingLocation.id, FilmingLocation.[name] from FilmingLocation;
+
+
+
+----------Find all Language----------
+--select [Language].id, [Language].[name] from [Language];
+
+
+
+----------Find all Countries----------
+--select Country.id, Country.[name] from Country;
+
+
+
+
+----------Find all Favoritelists by person id---------- ER ALLEREDE LAVET ANDETSTEDS
+--select * from PersonFavoriteList where person_id = @id;
+
+
+
+----------Find all Entertainments by FavoriteList id----------
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment, EntertainmentFavoriteList where EntertainmentFavoriteList.favoriteList_id = 1 and EntertainmentFavoriteList.entertainment_id = Entertainment.id;
+
+
+
+----------Add Entertainment to FavoriteList by Entertainment id and FavoriteList id-----------
+--insert into EntertainmentFavoriteList (entertainment_id, favoriteList_id) values (@entertainment_id, @favoriteList_id);
+
+
+
+----------Get Movie by id----------
+--select * from Entertainment, Movie where Entertainment.id = @id and Entertainment.id = Movie.entertainment_id;
+
+
+
+----------Add comment to movie----------
+
+
 
 
 

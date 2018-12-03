@@ -10,10 +10,15 @@ namespace Projekt_3___WCF.Model
     {
         [DataMember]
         private string email;
+        [DataMember]
         private string password;
+        [DataMember]
         private string userName;
+        [DataMember]
         private string userRank;
+        [DataMember]
         private List<User> friends;
+        [DataMember]
         private List<FavoriteList> favoritelists;
 
         

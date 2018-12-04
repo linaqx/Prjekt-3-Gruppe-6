@@ -9,32 +9,32 @@ namespace Projekt_3___WCF.Model
     public class Movie : Entertainment
     {
         [DataMember]
-        public int genre { get; set; }
+        public int Genre { get; set; }
         [DataMember]
-        public string title { get; set; }
+        public string Title { get; set; }
         [DataMember]
-        public int country { get; set; }
+        public int Country { get; set; }
         [DataMember]
-        public int language { get; set; }
+        public int Language { get; set; }
         [DataMember]
-        public DateTime releaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
         [DataMember]
-        public string storyline { get; set; }
+        public string Storyline { get; set; }
         [DataMember]
-        public int filmingLocation { get; set; }
+        public int FilmingLocation { get; set; }
         [DataMember]
-        public string information { get; set; }
+        public string Information { get; set; }
         
         public Movie(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information) : base(genre, title, country, language, releaseDate, storyline, filmingLocation, information)
         {
-            this.genre = genre;
-            this.title = title;
-            this.country = country;
-            this.language = language;
-            this.releaseDate = releaseDate;
-            this.storyline = storyline;
-            this.filmingLocation = filmingLocation;
-            this.information = information;
+            Genre = genre;
+            Title = title;
+            Country = country;
+            Language = language;
+            ReleaseDate = releaseDate;
+            Storyline = storyline;
+            FilmingLocation = filmingLocation;
+            Information = information;
         }
 
         public Movie()

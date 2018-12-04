@@ -52,14 +52,14 @@ namespace midlertidigTest
 
             Movie movie = new Movie
             {
-                title = "Iron Man 3",
-                genre = 1,
-                country = 2,
-                language = 1,
-                releaseDate = DateTime.Now,
-                storyline = "Something Explode",
-                filmingLocation = 1,
-                information = "nice"
+                Title = "Iron Man 3",
+                Genre = 1,
+                Country = 2,
+                Language = 1,
+                ReleaseDate = DateTime.Now,
+                Storyline = "Something Explode",
+                FilmingLocation = 1,
+                Information = "nice"
             };
             es.StartInsertMovieTransaction(movie);
 

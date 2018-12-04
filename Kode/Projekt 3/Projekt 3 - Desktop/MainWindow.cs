@@ -33,16 +33,7 @@ namespace Projekt_3___Desktop
 
         public void btnSave_Click(object sender, EventArgs e)
         {
-
-            //string title = txtTitle.Text;
-            //string genre = cbBoxGenre.Text;
-            //string country = cbBoxCountry.Text;
-            //string language = cbBoxLanguage.Text;
-            //string releaseDate = txtReleaseDate.Text;
-            //string storyline = txtStoryline.Text;
-            //string filmingLocation = cbBoxFilmingLocation.Text;
-            //string information = txtInformation.Text;
-
+            CreateMovie();
             //MessageBox.Show(title + " " + " " + genre + " " + " " + country + " " + " " + language + " " + " " + releaseDate + " " + " " + storyline + " " + " " + filmingLocation + " " + " " + information);
 
             //reset vinduet
@@ -70,16 +61,14 @@ namespace Projekt_3___Desktop
             {
                 date = DateTime.ParseExact(txtReleaseDate.Text, "yyyy-MM-dd", null);
                 DateTime releaseDate = date;
-                DC.CreateMovie(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
+                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
             }
             else
             {
                 Console.WriteLine("Date is not correctly written: yyyy-MM-dd");
                 Console.ReadLine();
             }
-
             
-
         }
 
         private void GetData()
@@ -131,7 +120,7 @@ namespace Projekt_3___Desktop
                 {
                     int id = language.Id;
                     string name = language.Name;
-                    cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                    cbBoxLanguage.Items.Add(new ComboBoxItem(name, id));
                 }
             }
             
@@ -146,7 +135,7 @@ namespace Projekt_3___Desktop
             {
                     int id = film.Id;
                     string name = film.Name;
-                    cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                    cbBoxFilmingLocation.Items.Add(new ComboBoxItem(name, id));
                 }
             }
             

@@ -9,31 +9,40 @@ using System.Threading.Tasks;
 namespace Projekt_3___Desktop.ServiceLayer
 {
     class DesktopService : DesktopServiceIF
-    { 
+    {
         private ServiceReference1.EntertainmentServiceClient sC;
 
         public DesktopService()
         {
             sC = new ServiceReference1.EntertainmentServiceClient();
         }
-    
+
         public void InsertMovieIntoEntertainment(Movie m)
         {
-            
-            
-           // sC.StartInsertMovieTransaction(m);
+            ServiceReference1.Movie movie = ConvertToMovie(m);
+            sC.StartInsertMovieTransaction(movie);
         }
 
-        public Movie CreateMovie()
+        private ServiceReference1.Movie ConvertToMovie(Movie movie)
         {
-            Movie m = new Movie();
-           
-            return m;
+            ServiceReference1.Movie temp = new ServiceReference1.Movie
+            {
+                Title = movie.Title,
+                Genre = movie.Genre,
+                Country = movie.Country,
+                Language = movie.Language,
+                ReleaseDate = movie.ReleasDate,
+                StoryLine = movie.Storyline,
+                FilmingLocation = movie.FilmingLocation,
+                Information = movie.Information
+            };
+            return temp;
         }
+
 
         public List<Genre> GetGenre()
         {
-           
+
             var genre = sC.FindAllGenre();
 
             List<Genre> convertedGenre = ConvertToGenre(genre);
@@ -54,16 +63,16 @@ namespace Projekt_3___Desktop.ServiceLayer
                     Id = oldGenre.Id,
                     Name = oldGenre.Name
                 };
-                
+
                 convertedGenre.Add(temp);
             }
 
-            return convertedGenre; 
+            return convertedGenre;
         }
 
         public List<Country> GetCountry()
         {
-           
+
             var country = sC.FindAllCountries();
 
             List<Country> convertedCountry = ConvertToCountry(country);
@@ -84,7 +93,7 @@ namespace Projekt_3___Desktop.ServiceLayer
                     Id = oldCountry.Id,
                     Name = oldCountry.Name
                 };
-                
+
                 convertedCountry.Add(temp);
             }
 
@@ -113,7 +122,7 @@ namespace Projekt_3___Desktop.ServiceLayer
                     Id = oldLanguage.Id,
                     Name = oldLanguage.Name
                 };
-                
+
                 convertedLanguage.Add(temp);
             }
 
@@ -142,7 +151,7 @@ namespace Projekt_3___Desktop.ServiceLayer
                     Id = oldFilmingLocation.Id,
                     Name = oldFilmingLocation.Name
                 };
-                
+
                 convertedFilm.Add(temp);
             }
 

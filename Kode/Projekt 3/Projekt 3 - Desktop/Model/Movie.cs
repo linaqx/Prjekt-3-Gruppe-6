@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_3___Desktop.Model
 {
-    class Movie : Entertainment
+    public class Movie : Entertainment
     {
         public Movie() : base()
         {
@@ -15,7 +15,7 @@ namespace Projekt_3___Desktop.Model
 
         public Movie(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information) : base(genre, title, country, language, releaseDate, storyline, filmingLocation, information)
         {
-
+            
         }
     }
 }

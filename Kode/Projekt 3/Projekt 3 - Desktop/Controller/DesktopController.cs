@@ -26,29 +26,46 @@ namespace Projekt_3___Desktop.Controller
                 Information = information
             };
 
-            DesktopService.InsertEntertainment(m);
+            DesktopService.InsertMovieIntoEntertainment(m);
         }
 
-        public List<Genre> GetGenre()
+        public Movie CreateMovie(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
         {
-            return DesktopService.GetGenre();
+            Movie m = new Movie
+            {
+                Title = title,
+                Genre = genre,
+                Country = country,
+                Language = language,
+                ReleasDate = releaseDate,
+                Storyline = storyline,
+                FilmingLocation = filmingLocation,
+                Information = information
+        };
+            
+            return m;
         }
 
-        public List<Country> GetCountry()
-        {
-            return DesktopService.GetCountry();
-        }
-
-        public List<Language> GetLanguage()
-        {
-            return DesktopService.GetLanguage();
-        }
-
-        public List<FilmingLocation> GetFilmingLocation()
-        {
-            return DesktopService.GetFilmingLocation();
-        }
+    public List<Genre> GetGenre()
+    {
+        return DesktopService.GetGenre();
     }
+
+    public List<Country> GetCountry()
+    {
+        return DesktopService.GetCountry();
+    }
+
+    public List<Language> GetLanguage()
+    {
+        return DesktopService.GetLanguage();
+    }
+
+    public List<FilmingLocation> GetFilmingLocation()
+    {
+        return DesktopService.GetFilmingLocation();
+    }
+}
 
     //public list<Entertainment> ReturnAllEntertainments()
     //{

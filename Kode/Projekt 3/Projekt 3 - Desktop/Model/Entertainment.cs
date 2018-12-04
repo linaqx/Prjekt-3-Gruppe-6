@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_3___Desktop.Model
 {
-    class Entertainment
+    public class Entertainment
     {
         public int Genre { get; set; }
         public string Title { get; set; }

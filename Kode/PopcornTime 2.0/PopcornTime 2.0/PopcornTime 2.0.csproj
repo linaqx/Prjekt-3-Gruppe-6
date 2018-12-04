@@ -325,6 +325,7 @@
     <Content Include="Views\Home\Series.cshtml" />
     <Content Include="Views\Home\Friends.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Movie1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,8 +12,8 @@ namespace Projekt_3___Desktop.ServiceLayer
         public void InsertMovieIntoEntertainment(Movie m)
         {
             ServiceReference1.EntertainmentServiceClient sC = new ServiceReference1.EntertainmentServiceClient();
-            m = 
-            sC.StartInsertMovieTranscation(m);
+            
+           // sC.StartInsertMovieTransaction(m);
         }
 
         public Movie CreateMovie()

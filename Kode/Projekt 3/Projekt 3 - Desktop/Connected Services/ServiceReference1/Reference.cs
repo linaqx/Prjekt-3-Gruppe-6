@@ -17,13 +17,325 @@ namespace Projekt_3___Desktop.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Entertainment", Namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Projekt_3___Desktop.ServiceReference1.Movie))]
     public partial class Entertainment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FilmingLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GenreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InformationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LanguageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ReleaseDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StoryLineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FilmingLocation {
+            get {
+                return this.FilmingLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilmingLocationField, value) != true)) {
+                    this.FilmingLocationField = value;
+                    this.RaisePropertyChanged("FilmingLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Genre {
+            get {
+                return this.GenreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GenreField, value) != true)) {
+                    this.GenreField = value;
+                    this.RaisePropertyChanged("Genre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Information {
+            get {
+                return this.InformationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InformationField, value) != true)) {
+                    this.InformationField = value;
+                    this.RaisePropertyChanged("Information");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Language {
+            get {
+                return this.LanguageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LanguageField, value) != true)) {
+                    this.LanguageField = value;
+                    this.RaisePropertyChanged("Language");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ReleaseDate {
+            get {
+                return this.ReleaseDateField;
+            }
+            set {
+                if ((this.ReleaseDateField.Equals(value) != true)) {
+                    this.ReleaseDateField = value;
+                    this.RaisePropertyChanged("ReleaseDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StoryLine {
+            get {
+                return this.StoryLineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoryLineField, value) != true)) {
+                    this.StoryLineField = value;
+                    this.RaisePropertyChanged("StoryLine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Movie", Namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model")]
+    [System.SerializableAttribute()]
+    public partial class Movie : Projekt_3___Desktop.ServiceReference1.Entertainment {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string country1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string filmingLocation1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string genre1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string information1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string language1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime releaseDate1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string storyline1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string title1Field;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="country")]
+        public string country1 {
+            get {
+                return this.country1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.country1Field, value) != true)) {
+                    this.country1Field = value;
+                    this.RaisePropertyChanged("country1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="filmingLocation")]
+        public string filmingLocation1 {
+            get {
+                return this.filmingLocation1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.filmingLocation1Field, value) != true)) {
+                    this.filmingLocation1Field = value;
+                    this.RaisePropertyChanged("filmingLocation1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="genre")]
+        public string genre1 {
+            get {
+                return this.genre1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.genre1Field, value) != true)) {
+                    this.genre1Field = value;
+                    this.RaisePropertyChanged("genre1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="information")]
+        public string information1 {
+            get {
+                return this.information1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.information1Field, value) != true)) {
+                    this.information1Field = value;
+                    this.RaisePropertyChanged("information1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="language")]
+        public string language1 {
+            get {
+                return this.language1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.language1Field, value) != true)) {
+                    this.language1Field = value;
+                    this.RaisePropertyChanged("language1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="releaseDate")]
+        public System.DateTime releaseDate1 {
+            get {
+                return this.releaseDate1Field;
+            }
+            set {
+                if ((this.releaseDate1Field.Equals(value) != true)) {
+                    this.releaseDate1Field = value;
+                    this.RaisePropertyChanged("releaseDate1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="storyline")]
+        public string storyline1 {
+            get {
+                return this.storyline1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.storyline1Field, value) != true)) {
+                    this.storyline1Field = value;
+                    this.RaisePropertyChanged("storyline1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="title")]
+        public string title1 {
+            get {
+                return this.title1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.title1Field, value) != true)) {
+                    this.title1Field = value;
+                    this.RaisePropertyChanged("title1");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Genre", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
+    [System.SerializableAttribute()]
+    public partial class Genre : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -44,6 +356,202 @@ namespace Projekt_3___Desktop.ServiceReference1 {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FilmingLocation", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
+    [System.SerializableAttribute()]
+    public partial class FilmingLocation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Language", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
+    [System.SerializableAttribute()]
+    public partial class Language : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
+    [System.SerializableAttribute()]
+    public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -73,6 +581,36 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindPersonalEntertainments", ReplyAction="http://tempuri.org/IEntertainmentService/FindPersonalEntertainmentsResponse")]
         System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Entertainment[]> FindPersonalEntertainmentsAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllGenre", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllGenreResponse")]
+        Projekt_3___Desktop.ServiceReference1.Genre[] FindAllGenre();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllGenre", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllGenreResponse")]
+        System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Genre[]> FindAllGenreAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllFilmingLocations", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllFilmingLocationsResponse")]
+        Projekt_3___Desktop.ServiceReference1.FilmingLocation[] FindAllFilmingLocations();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllFilmingLocations", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllFilmingLocationsResponse")]
+        System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.FilmingLocation[]> FindAllFilmingLocationsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllLanguage", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllLanguageResponse")]
+        Projekt_3___Desktop.ServiceReference1.Language[] FindAllLanguage();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllLanguage", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllLanguageResponse")]
+        System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Language[]> FindAllLanguageAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllCountries", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllCountriesResponse")]
+        Projekt_3___Desktop.ServiceReference1.Country[] FindAllCountries();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/FindAllCountries", ReplyAction="http://tempuri.org/IEntertainmentService/FindAllCountriesResponse")]
+        System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Country[]> FindAllCountriesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/StartInsertMovieTransaction", ReplyAction="http://tempuri.org/IEntertainmentService/StartInsertMovieTransactionResponse")]
+        void StartInsertMovieTransaction(Projekt_3___Desktop.ServiceReference1.Movie m);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/StartInsertMovieTransaction", ReplyAction="http://tempuri.org/IEntertainmentService/StartInsertMovieTransactionResponse")]
+        System.Threading.Tasks.Task StartInsertMovieTransactionAsync(Projekt_3___Desktop.ServiceReference1.Movie m);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -116,6 +654,46 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         
         public System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Entertainment[]> FindPersonalEntertainmentsAsync(int id) {
             return base.Channel.FindPersonalEntertainmentsAsync(id);
+        }
+        
+        public Projekt_3___Desktop.ServiceReference1.Genre[] FindAllGenre() {
+            return base.Channel.FindAllGenre();
+        }
+        
+        public System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Genre[]> FindAllGenreAsync() {
+            return base.Channel.FindAllGenreAsync();
+        }
+        
+        public Projekt_3___Desktop.ServiceReference1.FilmingLocation[] FindAllFilmingLocations() {
+            return base.Channel.FindAllFilmingLocations();
+        }
+        
+        public System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.FilmingLocation[]> FindAllFilmingLocationsAsync() {
+            return base.Channel.FindAllFilmingLocationsAsync();
+        }
+        
+        public Projekt_3___Desktop.ServiceReference1.Language[] FindAllLanguage() {
+            return base.Channel.FindAllLanguage();
+        }
+        
+        public System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Language[]> FindAllLanguageAsync() {
+            return base.Channel.FindAllLanguageAsync();
+        }
+        
+        public Projekt_3___Desktop.ServiceReference1.Country[] FindAllCountries() {
+            return base.Channel.FindAllCountries();
+        }
+        
+        public System.Threading.Tasks.Task<Projekt_3___Desktop.ServiceReference1.Country[]> FindAllCountriesAsync() {
+            return base.Channel.FindAllCountriesAsync();
+        }
+        
+        public void StartInsertMovieTransaction(Projekt_3___Desktop.ServiceReference1.Movie m) {
+            base.Channel.StartInsertMovieTransaction(m);
+        }
+        
+        public System.Threading.Tasks.Task StartInsertMovieTransactionAsync(Projekt_3___Desktop.ServiceReference1.Movie m) {
+            return base.Channel.StartInsertMovieTransactionAsync(m);
         }
     }
 }

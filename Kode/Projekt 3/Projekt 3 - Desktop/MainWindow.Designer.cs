@@ -70,12 +70,10 @@
             // 
             // cbBoxGenre
             // 
-            this.cbBoxGenre.FormattingEnabled = true;
-            this.cbBoxGenre.Location = new System.Drawing.Point(234, 116);
+            this.cbBoxGenre.Location = new System.Drawing.Point(234, 117);
             this.cbBoxGenre.Name = "cbBoxGenre";
             this.cbBoxGenre.Size = new System.Drawing.Size(148, 28);
-            this.cbBoxGenre.TabIndex = 2;
-            this.cbBoxGenre.SelectedIndexChanged += new System.EventHandler(this.cbBoxGenre_SelectedIndexChanged);
+            this.cbBoxGenre.TabIndex = 19;
             // 
             // cbBoxCountry
             // 

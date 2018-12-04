@@ -115,6 +115,8 @@ namespace WCF___library.DB
                 temp.Add(g);
             }
 
+            reader.Close();
+
             return temp;
         }
 
@@ -132,6 +134,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(fL);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -149,6 +154,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(l);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -166,6 +174,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(c);
             }
+
+            reader.Close();
+
             return temp;
         }
 

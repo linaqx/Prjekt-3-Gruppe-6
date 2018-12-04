@@ -21,7 +21,7 @@ namespace Projekt_3___Desktop
         {
             InitializeComponent();
             DC = new DesktopController();
-            GetData();
+            //GetData();
         }
 
 
@@ -92,17 +92,20 @@ namespace Projekt_3___Desktop
 
         private void GetGenre()
         {
-
             List<Genre> g = DC.GetGenre();
-
-            foreach (Genre item in g)
+            if (g != null)
             {
-                int id = item.Id;
-                string name = item.Name;
+                foreach (Genre item in g)
+                {
+                    int id = item.Id;
+                    string name = item.Name;
 
-                cbBoxGenre.Items.Add(new ComboBoxItem(name, id));
-                
+                    cbBoxGenre.Items.Add(new ComboBoxItem(name, id));
+
+                }
             }
+
+            
         }
 
         private void GetCountry()
@@ -138,6 +141,6 @@ namespace Projekt_3___Desktop
             }
         }
 
-
+       
     }
 }

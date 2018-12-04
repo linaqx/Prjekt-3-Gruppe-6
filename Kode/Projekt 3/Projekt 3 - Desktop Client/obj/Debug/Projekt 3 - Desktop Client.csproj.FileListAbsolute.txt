@@ -18,3 +18,17 @@ C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.cache
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.exe
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\App.g.cs
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.exe.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\bin\Debug\Projekt 3 - Desktop Client.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\MainWindow.g.cs
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client_MarkupCompile.lref
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\MainWindow.baml
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.g.resources
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt_3___Desktop_Client.Properties.Resources.resources
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csproj.GenerateResource.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop Client\obj\Debug\Projekt 3 - Desktop Client.csproj.CoreCompileInputs.cache

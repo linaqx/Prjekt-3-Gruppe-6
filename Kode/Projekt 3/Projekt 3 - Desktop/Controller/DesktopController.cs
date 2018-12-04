@@ -12,6 +12,12 @@ namespace Projekt_3___Desktop.Controller
     {
         private DesktopService DesktopService;
 
+
+        public DesktopController()
+        {
+            DesktopService = new DesktopService();
+        }
+
         public void InsertMovieIntoEntertainment(string title, int genre, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
         {
             Movie m = new Movie

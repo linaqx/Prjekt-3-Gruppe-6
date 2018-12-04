@@ -13,14 +13,6 @@ namespace WCF___library.DB
 {
     public class EntertainmentDB
     {
-        //static void Main(string[] args)
-        //{
-        //    EntertainmentDB edb = new EntertainmentDB();
-        //    edb.GetAllEntertainments();
-        //    DBConnection dBConnection = DBConnection.GetInstance();
-        //    dBConnection.CloseConnection();
-        //}
-
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
         private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
 
@@ -33,9 +25,7 @@ namespace WCF___library.DB
         private readonly string sql_INSERT_MOVIE = "insert into Movie(entertainment_id) values (@entertainment_id);";
         private readonly string sql_INSERT_ENTERTAINMENTGENRE = "insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);";
         private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
-
         
-
         //private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
@@ -50,7 +40,6 @@ namespace WCF___library.DB
         private SqlCommand insertEntertainmentGenre;
         private SqlCommand insertEntertainmentFilmingLocation;
         
-
         private SqlConnection con;
 
         public EntertainmentDB()
@@ -126,6 +115,8 @@ namespace WCF___library.DB
                 temp.Add(g);
             }
 
+            reader.Close();
+
             return temp;
         }
 
@@ -143,6 +134,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(fL);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -160,6 +154,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(l);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -177,6 +174,9 @@ namespace WCF___library.DB
                 };
                 temp.Add(c);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -241,46 +241,7 @@ namespace WCF___library.DB
 
         
 
-        //public List<Entertainment> GetEntertainments()
-        //{
-        //    List<Entertainment> temp = new List<Entertainment>();
-        //    findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
-        //    SqlDataReader reader = findAllEntertainments.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        Entertainment e = new Entertainment
-        //        {
-        //            //genre = reader.GetString(reader.GetOrdinal("genre")),
-        //            genre = "Action",
-        //            title = reader.GetString(reader.GetOrdinal("title")),
-        //            country = reader.GetString(reader.GetOrdinal("country")),
-        //            language = reader.GetString(reader.GetOrdinal("language")),
-        //            releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
-        //            storyLine = reader.GetString(reader.GetOrdinal("storyLine")),
-        //            //filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
-        //            filmingLocation = "Some place in the desert",
-        //            information = reader.GetString(reader.GetOrdinal("information"))
-        //        };
-
-        //        temp.Add(e);
-
-        //    }
-        //    Console.WriteLine(temp.Count());
-        //    Console.ReadLine();
-        //    reader.Close();
-        //    return temp;
-        //}
-
-
-        // Setup connection to database
-        // Instantiate SqlConnection object with connectionstringcon = new SqlConnection(connectionString);
-        // Write SQL query
-        // Instantiate SqlCommand object with query string and SqlConnection objectstring queryString = "select * from tblProduct Order by name";SqlCommand readCommand = new SqlCommand(queryString, con);
-        // Open connection con.Open();
-        // Execure SqlCommand and assign read data to a SqlDataReader objectSqlDataReader productReader = readCommand.ExecuteReader();
-        // Use data for the reader
-        // E.g. convert read "rows" to domain objectint foundRows = PopulateProductList(productReader);
-        // Close used resourcesproductReader.Close();
+        
 
     }
 }

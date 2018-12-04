@@ -43,6 +43,13 @@ namespace midlertidigTest
                 Console.WriteLine(genre.Name);
             }
 
+            List<Country> countries = edb.GetAllCountries();
+            foreach (Country country in countries)
+            {
+                Console.WriteLine(country.Id);
+                Console.WriteLine(country.Name);
+            }
+
         }
     }
 }

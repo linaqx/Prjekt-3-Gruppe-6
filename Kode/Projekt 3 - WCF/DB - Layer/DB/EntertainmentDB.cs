@@ -206,7 +206,7 @@ namespace WCF___library.DB
             insertEntertainment.Parameters.AddWithValue("@title", m.title);
             insertEntertainment.Parameters.AddWithValue("@country_id", m.country);
             insertEntertainment.Parameters.AddWithValue("@language_id", m.language);
-            insertEntertainment.Parameters.AddWithValue("@releasDate", m.releaseDate);
+            insertEntertainment.Parameters.AddWithValue("@releaseDate", m.releaseDate);
             insertEntertainment.Parameters.AddWithValue("@storyline", m.storyline);
             insertEntertainment.Parameters.AddWithValue("@information", m.information);
             insertedId = (int)insertEntertainment.ExecuteScalar();

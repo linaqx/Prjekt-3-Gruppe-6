@@ -35,7 +35,7 @@ namespace Test
             monsterMike.AddToFavoriteList(f);
             //pC.CreateFavoriteList(monsterMike, "Horror", "Her er mine yndlingds horror film");
             //Movie
-            Movie m = new Movie("Horror", "scary movie 1", "USA", "English", DateTime.Now, "Funny horror movie", "New York", "blabla");
+            //Movie m = new Movie("Horror", "scary movie 1", "USA", "English", DateTime.Now, "Funny horror movie", "New York", "blabla");
             // add movie to Horror
             //f.AddEntertainment(m);
 
@@ -43,7 +43,7 @@ namespace Test
 
             int firstCount = f.Entertainments.Count;
 
-            f.AddEntertainment(m);
+            //f.AddEntertainment(m);
 
             int lastCount = f.Entertainments.Count;
 
@@ -63,17 +63,17 @@ namespace Test
 
             //Entertainment entertainment1 = new Entertainment("bla", "bla", "bla", "bla", DateTime.Today, "bla", "bla", "bla");
             Entertainment entertainment1 = new Entertainment();
-            Movie movie1 = new Movie("Horror", "Van Helsing", "USA", "English", DateTime.Today, "vampyr slayer", "california", "A movie about vampire killign");
-            Series series1 = new Series("Comedy", "HIMYM", "USA", "English", DateTime.Today, "How i met your mother", "New York", "A series about barney");
-            Episode episode1 = new Episode(1, 1, "Pilot", DateTime.Today, "Started here", series1);
-            Movie movie2 = new Movie("Comedy", "Tenacious d", "America", "English", DateTime.Today, "Epic tale of two musicians", "In Hell", "Best goddamm music ever made");
+            //Movie movie1 = new Movie("Horror", "Van Helsing", "USA", "English", DateTime.Today, "vampyr slayer", "california", "A movie about vampire killign");
+            //Series series1 = new Series("Comedy", "HIMYM", "USA", "English", DateTime.Today, "How i met your mother", "New York", "A series about barney");
+            //Episode episode1 = new Episode(1, 1, "Pilot", DateTime.Today, "Started here", series1);
+            //Movie movie2 = new Movie("Comedy", "Tenacious d", "America", "English", DateTime.Today, "Epic tale of two musicians", "In Hell", "Best goddamm music ever made");
             //lav en liste af entertainments
             templist = new List<Entertainment>();
 
             templist.Add(entertainment1);
-            templist.Add(movie1);
-            templist.Add(series1);
-            templist.Add(movie2);
+            //templist.Add(movie1);
+            //templist.Add(series1);
+            //templist.Add(movie2);
 
             Boolean hasEntertainmentBeenFound = false;
 

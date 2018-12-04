@@ -7,11 +7,11 @@ using Projekt_3___WCF.Model;
 
 namespace BusinessLogic___Layer.BusinessLogic
 {
-    interface FavoriteListControllerIF
+    interface IFavoriteListController
     {
-
-        FavoriteList CreateFavoriteList(User author, string name, string description);
         List<FavoriteList> FindAllListByUser(int id);
         void AddEntertainmentToFavoriteList(int ent, int fav);
+        void CreateNewFavoriteList(int id, string name, string description);
+        void AddUserToFavoriteList(int per, int fav);
     }
 }

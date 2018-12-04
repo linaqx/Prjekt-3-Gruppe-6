@@ -97,9 +97,20 @@ use dmab0917_1026423;
 
 
 
+----------Create new FavoriteList----------
+--insert into FavoriteList (author, [name], [description]) values (@author, @name, @description);
+select * from FavoriteList;
+
+
+----------Add User to FavoriteList----------
+select * from PersonFavoriteList;
+insert into PersonFavoriteList (person_id, favoriteList_id) values (2, 1);
+select * from PersonFavoriteList;
+
+
 ----------Add comment to movie----------
 
-
+select * from Comment;
 
 
 

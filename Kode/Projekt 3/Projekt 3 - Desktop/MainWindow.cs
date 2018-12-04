@@ -21,7 +21,7 @@ namespace Projekt_3___Desktop
         {
             InitializeComponent();
             DC = new DesktopController();
-            //GetData();
+            GetData();
         }
 
 
@@ -99,7 +99,6 @@ namespace Projekt_3___Desktop
                 {
                     int id = item.Id;
                     string name = item.Name;
-
                     cbBoxGenre.Items.Add(new ComboBoxItem(name, id));
 
                 }
@@ -111,34 +110,46 @@ namespace Projekt_3___Desktop
         private void GetCountry()
         {
             List<Country> c = DC.GetCountry();
-            foreach (Country country in c)
+            if(c != null)
             {
-                int id = country.Id;
-                string name = country.Name;
-                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                foreach (Country country in c)
+                {
+                    int id = country.Id;
+                    string name = country.Name;
+                    cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                }
             }
+            
         }
 
         private void GetLanguage()
         {
             List<Language> l = DC.GetLanguage();
-            foreach (Language language in l)
+            if (l != null)
             {
-                int id = language.Id;
-                string name = language.Name;
-                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                foreach (Language language in l)
+                {
+                    int id = language.Id;
+                    string name = language.Name;
+                    cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                }
             }
+            
         }
 
         private void GetFilmingLocation()
         {
             List<FilmingLocation> f = DC.GetFilmingLocation();
-            foreach (FilmingLocation film in f)
+            if (f != null)
             {
-                int id = film.Id;
-                string name = film.Name;
-                cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                foreach(FilmingLocation film in f)
+            {
+                    int id = film.Id;
+                    string name = film.Name;
+                    cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
+                }
             }
+            
         }
 
        

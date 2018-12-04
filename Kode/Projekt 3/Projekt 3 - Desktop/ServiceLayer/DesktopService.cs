@@ -9,10 +9,17 @@ using System.Threading.Tasks;
 namespace Projekt_3___Desktop.ServiceLayer
 {
     class DesktopService : DesktopServiceIF
-    {
+    { 
+        private ServiceReference1.EntertainmentServiceClient sC;
+
+        public DesktopService()
+        {
+            sC = new ServiceReference1.EntertainmentServiceClient();
+        }
+    
         public void InsertMovieIntoEntertainment(Movie m)
         {
-            ServiceReference1.EntertainmentServiceClient sC = new ServiceReference1.EntertainmentServiceClient();
+            
             
            // sC.StartInsertMovieTransaction(m);
         }
@@ -26,10 +33,8 @@ namespace Projekt_3___Desktop.ServiceLayer
 
         public List<Genre> GetGenre()
         {
-            ServiceReference1.EntertainmentServiceClient gSC = new ServiceReference1.EntertainmentServiceClient();
-            
-
-            var genre = gSC.FindAllGenre();
+           
+            var genre = sC.FindAllGenre();
 
             List<Genre> convertedGenre = ConvertToGenre(genre);
 
@@ -48,10 +53,7 @@ namespace Projekt_3___Desktop.ServiceLayer
                 {
                     Id = oldGenre.Id,
                     Name = oldGenre.Name
-
-
                 };
-
                 
                 convertedGenre.Add(temp);
             }
@@ -61,17 +63,90 @@ namespace Projekt_3___Desktop.ServiceLayer
 
         public List<Country> GetCountry()
         {
-            return null;
+           
+            var country = sC.FindAllCountries();
+
+            List<Country> convertedCountry = ConvertToCountry(country);
+
+            return convertedCountry;
+        }
+
+        private List<Country> ConvertToCountry(ServiceReference1.Country[] serviceCountry)
+        {
+            Country temp = null;
+            List<Country> convertedCountry = new List<Country>();
+
+
+            foreach (ServiceReference1.Country oldCountry in serviceCountry)
+            {
+                temp = new Country()
+                {
+                    Id = oldCountry.Id,
+                    Name = oldCountry.Name
+                };
+                
+                convertedCountry.Add(temp);
+            }
+
+            return convertedCountry;
         }
 
         public List<Language> GetLanguage()
         {
-            return null;
+            var language = sC.FindAllLanguage();
+
+            List<Language> convertedLanguage = ConvertToLanguage(language);
+
+            return convertedLanguage;
+        }
+
+        private List<Language> ConvertToLanguage(ServiceReference1.Language[] serviceLanguage)
+        {
+            Language temp = null;
+            List<Language> convertedLanguage = new List<Language>();
+
+
+            foreach (ServiceReference1.Language oldLanguage in serviceLanguage)
+            {
+                temp = new Language()
+                {
+                    Id = oldLanguage.Id,
+                    Name = oldLanguage.Name
+                };
+                
+                convertedLanguage.Add(temp);
+            }
+
+            return convertedLanguage;
         }
 
         public List<FilmingLocation> GetFilmingLocation()
         {
-            return null;
+            var film = sC.FindAllFilmingLocations();
+
+            List<FilmingLocation> convertedFilm = ConvertToFilmingLocation(film);
+
+            return convertedFilm;
+        }
+
+        private List<FilmingLocation> ConvertToFilmingLocation(ServiceReference1.FilmingLocation[] serviceFilmingLocation)
+        {
+            FilmingLocation temp = null;
+            List<FilmingLocation> convertedFilm = new List<FilmingLocation>();
+
+
+            foreach (ServiceReference1.FilmingLocation oldFilmingLocation in serviceFilmingLocation)
+            {
+                temp = new FilmingLocation()
+                {
+                    Id = oldFilmingLocation.Id,
+                    Name = oldFilmingLocation.Name
+                };
+                
+                convertedFilm.Add(temp);
+            }
+
+            return convertedFilm;
         }
     }
 }

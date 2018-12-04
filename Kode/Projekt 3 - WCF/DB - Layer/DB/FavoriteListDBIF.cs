@@ -13,5 +13,6 @@ namespace WCF___library.DB
         void AddEntertainmentToFavoriteList(int ent, int fav);
         void CreateNewFavoriteList(int id, string name, string description);
         void AddUserToFavoriteList(int per, int fav);
+        void RemoveUserFromFavoriteList(int per, int fav);
     }
 }

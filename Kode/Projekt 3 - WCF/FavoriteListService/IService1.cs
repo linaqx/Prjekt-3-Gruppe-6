@@ -24,6 +24,9 @@ namespace FavoriteListService
         [OperationContract]
         void AddUserToFavoriteList(int per, int fav);
 
+        [OperationContract]
+        void RemoveUserFromFavoriteList(int per, int fav);
+
 
 
 

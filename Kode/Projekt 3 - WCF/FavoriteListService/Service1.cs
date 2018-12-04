@@ -38,5 +38,10 @@ namespace FavoriteListService
         {
             FLC.AddUserToFavoriteList(per, fav);
         }
+
+        public void RemoveUserFromFavoriteList(int per, int fav)
+        {
+            FLC.RemoveUserFromFavoriteList(per, fav);
+        }
     }
 }

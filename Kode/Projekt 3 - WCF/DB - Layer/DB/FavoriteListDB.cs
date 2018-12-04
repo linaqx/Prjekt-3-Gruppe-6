@@ -20,10 +20,13 @@ namespace WCF___library.DB
 
         private readonly string sql_CREATE_NEW_FAVORITELIST = "insert into FavoriteList (author, [name], [description]) values (@author, @name, @description);";
 
+        private readonly string sql_REMOVE_USER_FROM_FAVORITELIST = "delete from PersonFavoriteList where person_id = @person_id and favoriteList_id = @favoriteList_id;";
+
         private SqlCommand findAllFavoritList;
         private SqlCommand addEntertainmentToFavoriteList;
         private SqlCommand addUserToFavoriteList;
         private SqlCommand createNewfavoriteList;
+        private SqlCommand removeUserFromFavoriteList;
         private SqlConnection con;
 
         public FavoriteListDB()
@@ -33,6 +36,7 @@ namespace WCF___library.DB
             addEntertainmentToFavoriteList = con.CreateCommand();
             addUserToFavoriteList = con.CreateCommand();
             createNewfavoriteList = con.CreateCommand();
+            removeUserFromFavoriteList = con.CreateCommand();
         }
 
         public List<FavoriteList> FindAllListByUser(int id)
@@ -118,8 +122,24 @@ namespace WCF___library.DB
             {
                 //(person_id, favoriteList_id)
                 addUserToFavoriteList.CommandText = sql_ADD_USER_TO_FAVORITELIST;
-                addUserToFavoriteList.Parameters.AddWithValue("person_id", per);
-                addUserToFavoriteList.Parameters.AddWithValue("favoriteList_id", fav);
+                addUserToFavoriteList.Parameters.AddWithValue("@person_id", per);
+                addUserToFavoriteList.Parameters.AddWithValue("@favoriteList_id", fav);
+                scope.Complete();
+            }
+        }
+
+        public void RemoveUserFromFavoriteList(int per, int fav)
+        {
+            TransactionOptions to = new TransactionOptions
+            {
+                IsolationLevel = IsolationLevel.ReadCommitted
+            };
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeOption.RequiresNew, to))
+            {
+                removeUserFromFavoriteList.CommandText = sql_REMOVE_USER_FROM_FAVORITELIST;
+                removeUserFromFavoriteList.Parameters.AddWithValue("@person_id", per);
+                removeUserFromFavoriteList.Parameters.AddWithValue("@favoriteList_id", fav);
                 scope.Complete();
             }
         }

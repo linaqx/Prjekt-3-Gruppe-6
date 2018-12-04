@@ -36,6 +36,11 @@ namespace Projekt_3___WCF.BusinessLogic
             FDB.AddUserToFavoriteList(per, fav);
         }
 
+        public void RemoveUserFromFavoriteList(int per, int fav)
+        {
+            FDB.RemoveUserFromFavoriteList(per, fav);
+        }
+
         //public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)
         //{
         //    List<Entertainment> temp = new List<Entertainment>();

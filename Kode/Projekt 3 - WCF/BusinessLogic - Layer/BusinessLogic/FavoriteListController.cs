@@ -27,7 +27,7 @@ namespace Projekt_3___WCF.BusinessLogic
             return FDB.FindAllListByUser(id);
         }
 
-        public void AddEntertainmentToFavorite(int ent, int fav)
+        public void AddEntertainmentToFavoriteList(int ent, int fav)
         {
             FDB.AddEntertainmentToFavoriteList(ent, fav);
         }

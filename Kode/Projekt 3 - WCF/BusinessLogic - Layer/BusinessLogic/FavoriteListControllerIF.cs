@@ -12,6 +12,6 @@ namespace BusinessLogic___Layer.BusinessLogic
 
         FavoriteList CreateFavoriteList(User author, string name, string description);
         List<FavoriteList> FindAllListByUser(int id);
-        void AddEntertainmentToFavorite(int ent, int fav);
+        void AddEntertainmentToFavoriteList(int ent, int fav);
     }
 }

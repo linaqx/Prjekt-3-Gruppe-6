@@ -21,7 +21,7 @@ namespace FavoriteListService
 
         public void AddEntertainmentToFavoriteList(int ent, int fav)
         {
-            FLC.AddEntertainmentToFavorite(ent, fav);
+            FLC.AddEntertainmentToFavoriteList(ent, fav);
         }
 
         public List<FavoriteList> FindAllListByUser(int id)

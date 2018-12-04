@@ -120,7 +120,7 @@ namespace WCF___library.DB
             {
                 Genre g = new Genre
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(g);
@@ -138,7 +138,7 @@ namespace WCF___library.DB
             {
                 FilmingLocation fL = new FilmingLocation
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(fL);
@@ -155,7 +155,7 @@ namespace WCF___library.DB
             {
                 Language l = new Language
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(l);
@@ -172,7 +172,7 @@ namespace WCF___library.DB
             {
                 Country c = new Country
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(c);

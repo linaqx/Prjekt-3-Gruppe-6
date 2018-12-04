@@ -1,4 +1,5 @@
-﻿using Projekt_3___WCF.DB;
+﻿using Model___Layer.Model;
+using Projekt_3___WCF.DB;
 using Projekt_3___WCF.Model;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,14 @@ namespace midlertidigTest
                 Console.WriteLine(ent2.Title);
                 Console.WriteLine(ent2.ReleaseDate);
             }
+
+            List<Genre> genres = edb.GetAllGenres();
+            foreach (Genre genre in genres)
+            {
+                Console.WriteLine(genre.Id);
+                Console.WriteLine(genre.Name);
+            }
+
         }
     }
 }

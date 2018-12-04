@@ -24,26 +24,27 @@ namespace Projekt_3___Desktop.ServiceLayer
             return m;
         }
 
-        public List<Projekt_3___Desktop.Model.Genre> GetGenre()
+        public List<Genre> GetGenre()
         {
             ServiceReference1.EntertainmentServiceClient gSC = new ServiceReference1.EntertainmentServiceClient();
+            
 
             var genre = gSC.FindAllGenre();
 
-            List<Projekt_3___Desktop.Model.Genre> convertedGenre = ConvertToGenre(genre);
+            List<Genre> convertedGenre = ConvertToGenre(genre);
 
             return convertedGenre;
         }
 
-        private List<Projekt_3___Desktop.Model.Genre> ConvertToGenre(Projekt_3___Desktop.ServiceReference1.Genre[] serviceGenre)
+        private List<Genre> ConvertToGenre(ServiceReference1.Genre[] serviceGenre)
         {
-            Projekt_3___Desktop.Model.Genre temp = null;
-            List<Projekt_3___Desktop.Model.Genre> convertedGenre = new List<Projekt_3___Desktop.Model.Genre>();
+            Genre temp = null;
+            List<Genre> convertedGenre = new List<Genre>();
 
 
-            foreach (Projekt_3___Desktop.ServiceReference1.Genre oldGenre in serviceGenre)
+            foreach (ServiceReference1.Genre oldGenre in serviceGenre)
             {
-                temp = new Model.Genre()
+                temp = new Genre()
                 {
                     Id = oldGenre.Id,
                     Name = oldGenre.Name

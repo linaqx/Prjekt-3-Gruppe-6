@@ -13,10 +13,6 @@ namespace PopcornTime_2._0.ServiceLayer
     {
         //Entertainment ent = new Entertainment();
 
-        
-       
-
-
         public List<EntertainmentModel.Entertainment> GetEntertainments()
         {
 
@@ -39,18 +35,18 @@ namespace PopcornTime_2._0.ServiceLayer
             EntertainmentModel.Entertainment temp = null;
             List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
 
+            
 
             foreach (PopcornTime_2._0.EntertainmentService1.Entertainment oldEnt in serviceEntertainments)
             {
-                temp = new Models.Entertainment()
-                {
-                    Id = oldEnt.Id,
+                oldEnt.
+                //temp = new Models.Entertainment()
+                //{
+                //    Id = oldEnt.Id
 
-
-
-                };
+                //};
                 
-                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
+                temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
                 //temp.id = oldEnt.Id;
                 //temp.genre = oldEnt.genre;
                 

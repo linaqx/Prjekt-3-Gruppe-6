@@ -7,7 +7,7 @@ using WCF___library.DB;
 
 namespace Projekt_3___WCF.BusinessLogic
 {
-    public class FavoriteListController : FavoriteListControllerIF
+    public class FavoriteListController : IFavoriteListController
     {
         private FavoriteListDB FDB;
 
@@ -16,20 +16,29 @@ namespace Projekt_3___WCF.BusinessLogic
             FDB = new FavoriteListDB();
         }
         
-        public FavoriteList CreateFavoriteList(User author, string name, string description)
-        {
-            FavoriteList fL = new FavoriteList(author, name, description);
-            return fL;
-        }
-
         public List<FavoriteList> FindAllListByUser(int id)
         {
             return FDB.FindAllListByUser(id);
         }
 
-        public void AddEntertainmentToFavorite(int ent, int fav)
+        public void AddEntertainmentToFavoriteList(int ent, int fav)
         {
             FDB.AddEntertainmentToFavoriteList(ent, fav);
+        }
+
+        public void CreateNewFavoriteList(int id, string name, string description)
+        {
+            FDB.CreateNewFavoriteList(id, name, description);
+        }
+
+        public void AddUserToFavoriteList(int per, int fav)
+        {
+            FDB.AddUserToFavoriteList(per, fav);
+        }
+
+        public void RemoveUserFromFavoriteList(int per, int fav)
+        {
+            FDB.RemoveUserFromFavoriteList(per, fav);
         }
 
         //public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)

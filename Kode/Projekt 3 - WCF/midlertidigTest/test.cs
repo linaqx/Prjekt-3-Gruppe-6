@@ -1,4 +1,5 @@
-﻿using Projekt_3___WCF.DB;
+﻿using Model___Layer.Model;
+using Projekt_3___WCF.DB;
 using Projekt_3___WCF.Model;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,34 @@ namespace midlertidigTest
                 Console.WriteLine(ent2.Title);
                 Console.WriteLine(ent2.ReleaseDate);
             }
+
+            List<Genre> genres = edb.GetAllGenres();
+            foreach (Genre genre in genres)
+            {
+                Console.WriteLine(genre.Id);
+                Console.WriteLine(genre.Name);
+            }
+
+            List<Country> countries = edb.GetAllCountries();
+            foreach (Country country in countries)
+            {
+                Console.WriteLine(country.Id);
+                Console.WriteLine(country.Name);
+            }
+
+            Movie movie = new Movie
+            {
+                Title = "Iron Man 3",
+                Genre = 1,
+                Country = 2,
+                Language = 1,
+                ReleaseDate = DateTime.Now,
+                Storyline = "Something Explode",
+                FilmingLocation = 1,
+                Information = "nice"
+            };
+            es.StartInsertMovieTransaction(movie);
+
         }
     }
 }

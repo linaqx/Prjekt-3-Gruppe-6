@@ -18,7 +18,19 @@ namespace FavoriteListService
         [OperationContract]
         void AddEntertainmentToFavoriteList(int ent, int fav);
 
-        
+        [OperationContract]
+        void CreateNewFavoriteList(int id, string name, string description);
+
+        [OperationContract]
+        void AddUserToFavoriteList(int per, int fav);
+
+        [OperationContract]
+        void RemoveUserFromFavoriteList(int per, int fav);
+
+
+
+
+
     }
 
 

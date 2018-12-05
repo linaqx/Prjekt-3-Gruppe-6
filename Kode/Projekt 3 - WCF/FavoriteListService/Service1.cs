@@ -19,16 +19,29 @@ namespace FavoriteListService
             FLC = new FavoriteListController();
         }
 
-        public void AddEntertainmentToFavoriteList(int ent, int fav)
-        {
-            FLC.AddEntertainmentToFavorite(ent, fav);
-        }
-
         public List<FavoriteList> FindAllListByUser(int id)
         {
             return FLC.FindAllListByUser(id);
         }
 
-        
+        public void AddEntertainmentToFavoriteList(int ent, int fav)
+        {
+            FLC.AddEntertainmentToFavoriteList(ent, fav);
+        }
+
+        public void CreateNewFavoriteList(int id, string name, string description)
+        {
+            FLC.CreateNewFavoriteList(id, name, description);
+        }
+
+        public void AddUserToFavoriteList(int per, int fav)
+        {
+            FLC.AddUserToFavoriteList(per, fav);
+        }
+
+        public void RemoveUserFromFavoriteList(int per, int fav)
+        {
+            FLC.RemoveUserFromFavoriteList(per, fav);
+        }
     }
 }

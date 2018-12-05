@@ -44,7 +44,7 @@
     <Compile Include="BusinessLogic\EntertainmentController.cs" />
     <Compile Include="BusinessLogic\EntertainmentControllerIF.cs" />
     <Compile Include="BusinessLogic\FavoriteListController.cs" />
-    <Compile Include="BusinessLogic\FavoriteListControllerIF.cs" />
+    <Compile Include="BusinessLogic\IFavoriteListController.cs" />
     <Compile Include="BusinessLogic\PersonController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -12,7 +12,13 @@ namespace Projekt_3___Desktop.Controller
     {
         private DesktopService DesktopService;
 
-        public void InsertMovieIntoEntertainment(string title, int genre, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
+
+        public DesktopController()
+        {
+            DesktopService = new DesktopService();
+        }
+
+        public void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
         {
             Movie m = new Movie
             {
@@ -26,8 +32,10 @@ namespace Projekt_3___Desktop.Controller
                 Information = information
             };
 
-            DesktopService.InsertEntertainment(m);
+            DesktopService.InsertMovieIntoEntertainment(m);
         }
+
+
 
         public List<Genre> GetGenre()
         {
@@ -48,6 +56,7 @@ namespace Projekt_3___Desktop.Controller
         {
             return DesktopService.GetFilmingLocation();
         }
+
     }
 
     //public list<Entertainment> ReturnAllEntertainments()

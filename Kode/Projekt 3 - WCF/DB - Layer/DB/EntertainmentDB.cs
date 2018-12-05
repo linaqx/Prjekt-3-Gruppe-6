@@ -13,14 +13,6 @@ namespace WCF___library.DB
 {
     public class EntertainmentDB
     {
-        //static void Main(string[] args)
-        //{
-        //    EntertainmentDB edb = new EntertainmentDB();
-        //    edb.GetAllEntertainments();
-        //    DBConnection dBConnection = DBConnection.GetInstance();
-        //    dBConnection.CloseConnection();
-        //}
-
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
         private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
 
@@ -33,9 +25,7 @@ namespace WCF___library.DB
         private readonly string sql_INSERT_MOVIE = "insert into Movie(entertainment_id) values (@entertainment_id);";
         private readonly string sql_INSERT_ENTERTAINMENTGENRE = "insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);";
         private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
-
         
-
         //private readonly string sql_FIND_MOVIE_ENTERTAINMENT = "select * from Entertainment, Movie where Movie.entertainment_id = Entertainment.id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
@@ -50,7 +40,6 @@ namespace WCF___library.DB
         private SqlCommand insertEntertainmentGenre;
         private SqlCommand insertEntertainmentFilmingLocation;
         
-
         private SqlConnection con;
 
         public EntertainmentDB()
@@ -120,11 +109,13 @@ namespace WCF___library.DB
             {
                 Genre g = new Genre
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(g);
             }
+
+            reader.Close();
 
             return temp;
         }
@@ -138,11 +129,14 @@ namespace WCF___library.DB
             {
                 FilmingLocation fL = new FilmingLocation
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(fL);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -155,11 +149,14 @@ namespace WCF___library.DB
             {
                 Language l = new Language
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(l);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -172,11 +169,14 @@ namespace WCF___library.DB
             {
                 Country c = new Country
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id)")),
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Name = reader.GetString(reader.GetOrdinal("name")),
                 };
                 temp.Add(c);
             }
+
+            reader.Close();
+
             return temp;
         }
 
@@ -203,12 +203,12 @@ namespace WCF___library.DB
             int insertedId = -1;
             //insert Entertainment - (title, country_id, language_id, releaseDate, storyline, information)
             insertEntertainment.CommandText = sql_INSERT_ENTERTAINMENT;
-            insertEntertainment.Parameters.AddWithValue("@title", m.title);
-            insertEntertainment.Parameters.AddWithValue("@country_id", m.country);
-            insertEntertainment.Parameters.AddWithValue("@language_id", m.language);
-            insertEntertainment.Parameters.AddWithValue("@releasDate", m.releaseDate);
-            insertEntertainment.Parameters.AddWithValue("@storyline", m.storyline);
-            insertEntertainment.Parameters.AddWithValue("@information", m.information);
+            insertEntertainment.Parameters.AddWithValue("@title", m.Title);
+            insertEntertainment.Parameters.AddWithValue("@country_id", m.Country);
+            insertEntertainment.Parameters.AddWithValue("@language_id", m.Language);
+            insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
+            insertEntertainment.Parameters.AddWithValue("@storyline", m.Storyline);
+            insertEntertainment.Parameters.AddWithValue("@information", m.Information);
             insertedId = (int)insertEntertainment.ExecuteScalar();
             return insertedId;
         }
@@ -226,7 +226,7 @@ namespace WCF___library.DB
             //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.genre);
+            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre);
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 
@@ -235,52 +235,13 @@ namespace WCF___library.DB
             //insert EntertainmentFilmingLocation - (entertainment_id, filmingLocation_id)
             insertEntertainmentFilmingLocation.CommandText = sql_INSERT_ENTERTAINMENTFILMINGLOCATION;
             insertEntertainmentFilmingLocation.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.filmingLocation);
+            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.FilmingLocation);
             insertEntertainmentFilmingLocation.ExecuteNonQuery();
         }
 
         
 
-        //public List<Entertainment> GetEntertainments()
-        //{
-        //    List<Entertainment> temp = new List<Entertainment>();
-        //    findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
-        //    SqlDataReader reader = findAllEntertainments.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        Entertainment e = new Entertainment
-        //        {
-        //            //genre = reader.GetString(reader.GetOrdinal("genre")),
-        //            genre = "Action",
-        //            title = reader.GetString(reader.GetOrdinal("title")),
-        //            country = reader.GetString(reader.GetOrdinal("country")),
-        //            language = reader.GetString(reader.GetOrdinal("language")),
-        //            releaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
-        //            storyLine = reader.GetString(reader.GetOrdinal("storyLine")),
-        //            //filmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
-        //            filmingLocation = "Some place in the desert",
-        //            information = reader.GetString(reader.GetOrdinal("information"))
-        //        };
-
-        //        temp.Add(e);
-
-        //    }
-        //    Console.WriteLine(temp.Count());
-        //    Console.ReadLine();
-        //    reader.Close();
-        //    return temp;
-        //}
-
-
-        // Setup connection to database
-        // Instantiate SqlConnection object with connectionstringcon = new SqlConnection(connectionString);
-        // Write SQL query
-        // Instantiate SqlCommand object with query string and SqlConnection objectstring queryString = "select * from tblProduct Order by name";SqlCommand readCommand = new SqlCommand(queryString, con);
-        // Open connection con.Open();
-        // Execure SqlCommand and assign read data to a SqlDataReader objectSqlDataReader productReader = readCommand.ExecuteReader();
-        // Use data for the reader
-        // E.g. convert read "rows" to domain objectint foundRows = PopulateProductList(productReader);
-        // Close used resourcesproductReader.Close();
+        
 
     }
 }

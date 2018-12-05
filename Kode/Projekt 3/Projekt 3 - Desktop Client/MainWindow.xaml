@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:Projekt_3___Desktop_Client"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <SearchBox x:Name="mySearchBox" 
-    FocusOnKeyboardInput="True"
-    QuerySubmitted="mySearchBox_QuerySubmitted"
-    Height=""/>
+    <!--<Grid>
+        --><!--<SearchBox x:Name="mySearchBox"--> 
+    <!--FocusOnKeyboardInput="True"-->
+    <!--QuerySubmitted="mySearchBox_QuerySubmitted"-->
+    <!--Height=""/>--><!--
         
         
         
-    </Grid>
+    </Grid>-->
 </Window>

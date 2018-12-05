@@ -97,11 +97,30 @@ use dmab0917_1026423;
 
 
 
+----------Create new FavoriteList----------
+--insert into FavoriteList (author, [name], [description]) values (@author, @name, @description);
+--select * from FavoriteList;
+
+
+----------Add User to FavoriteList----------
+--select * from PersonFavoriteList;
+--insert into PersonFavoriteList (person_id, favoriteList_id) values (@person_id, @favoriteList_id);
+--select * from PersonFavoriteList;
+
+
+
+----------Remove User from FavoriteList----------
+--select * from PersonFavoriteList;
+--delete from PersonFavoriteList where person_id = @person_id and favoriteList_id = @favoriteList_id;
+--select * from PersonFavoriteList;
+
+
+
 ----------Add comment to movie----------
 
+--select * from Comment;
 
-
-
+select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
 
 
 

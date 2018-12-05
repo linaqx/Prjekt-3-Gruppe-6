@@ -8,3 +8,13 @@ C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\bin\Debug\Projekt 3 - Desktop.pdb
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.exe
 C:\Users\KatrineVindbæk\Documents\GitHub\Projekt-3-gruppe-6\Projekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\bin\Debug\Projekt 3 - Desktop.exe.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\bin\Debug\Projekt 3 - Desktop.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\bin\Debug\Projekt 3 - Desktop.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt_3___Desktop.MainWindow.resources
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt_3___Desktop.Properties.Resources.resources
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.csproj.GenerateResource.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.exe
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.csprojAssemblyReference.cache

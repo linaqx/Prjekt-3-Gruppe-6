@@ -120,7 +120,7 @@ use dmab0917_1026423;
 
 --select * from Comment;
 
-
+select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
 
 
 

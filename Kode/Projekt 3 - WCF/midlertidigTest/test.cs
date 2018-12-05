@@ -50,6 +50,19 @@ namespace midlertidigTest
                 Console.WriteLine(country.Name);
             }
 
+            Movie movie = new Movie
+            {
+                Title = "Iron Man 3",
+                Genre = 1,
+                Country = 2,
+                Language = 1,
+                ReleaseDate = DateTime.Now,
+                Storyline = "Something Explode",
+                FilmingLocation = 1,
+                Information = "nice"
+            };
+            es.StartInsertMovieTransaction(movie);
+
         }
     }
 }

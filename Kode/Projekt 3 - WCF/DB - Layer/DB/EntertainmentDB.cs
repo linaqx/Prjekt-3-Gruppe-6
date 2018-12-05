@@ -203,12 +203,12 @@ namespace WCF___library.DB
             int insertedId = -1;
             //insert Entertainment - (title, country_id, language_id, releaseDate, storyline, information)
             insertEntertainment.CommandText = sql_INSERT_ENTERTAINMENT;
-            insertEntertainment.Parameters.AddWithValue("@title", m.title);
-            insertEntertainment.Parameters.AddWithValue("@country_id", m.country);
-            insertEntertainment.Parameters.AddWithValue("@language_id", m.language);
-            insertEntertainment.Parameters.AddWithValue("@releasDate", m.releaseDate);
-            insertEntertainment.Parameters.AddWithValue("@storyline", m.storyline);
-            insertEntertainment.Parameters.AddWithValue("@information", m.information);
+            insertEntertainment.Parameters.AddWithValue("@title", m.Title);
+            insertEntertainment.Parameters.AddWithValue("@country_id", m.Country);
+            insertEntertainment.Parameters.AddWithValue("@language_id", m.Language);
+            insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
+            insertEntertainment.Parameters.AddWithValue("@storyline", m.Storyline);
+            insertEntertainment.Parameters.AddWithValue("@information", m.Information);
             insertedId = (int)insertEntertainment.ExecuteScalar();
             return insertedId;
         }
@@ -226,7 +226,7 @@ namespace WCF___library.DB
             //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.genre);
+            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre);
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 
@@ -235,7 +235,7 @@ namespace WCF___library.DB
             //insert EntertainmentFilmingLocation - (entertainment_id, filmingLocation_id)
             insertEntertainmentFilmingLocation.CommandText = sql_INSERT_ENTERTAINMENTFILMINGLOCATION;
             insertEntertainmentFilmingLocation.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.filmingLocation);
+            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.FilmingLocation);
             insertEntertainmentFilmingLocation.ExecuteNonQuery();
         }
 

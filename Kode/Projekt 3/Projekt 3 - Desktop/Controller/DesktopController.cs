@@ -35,28 +35,29 @@ namespace Projekt_3___Desktop.Controller
             DesktopService.InsertMovieIntoEntertainment(m);
         }
 
-        
 
-    public List<Genre> GetGenre()
-    {
-        return DesktopService.GetGenre();
-    }
 
-    public List<Country> GetCountry()
-    {
-        return DesktopService.GetCountry();
-    }
+        public List<Genre> GetGenre()
+        {
+            return DesktopService.GetGenre();
+        }
 
-    public List<Language> GetLanguage()
-    {
-        return DesktopService.GetLanguage();
-    }
+        public List<Country> GetCountry()
+        {
+            return DesktopService.GetCountry();
+        }
 
-    public List<FilmingLocation> GetFilmingLocation()
-    {
-        return DesktopService.GetFilmingLocation();
+        public List<Language> GetLanguage()
+        {
+            return DesktopService.GetLanguage();
+        }
+
+        public List<FilmingLocation> GetFilmingLocation()
+        {
+            return DesktopService.GetFilmingLocation();
+        }
+
     }
-}
 
     //public list<Entertainment> ReturnAllEntertainments()
     //{

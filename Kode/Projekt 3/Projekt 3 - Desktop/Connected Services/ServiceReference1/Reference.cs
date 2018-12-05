@@ -24,13 +24,13 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryField;
+        private int CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FilmingLocationField;
+        private int FilmingLocationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GenreField;
+        private int GenreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
@@ -39,7 +39,7 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         private string InformationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LanguageField;
+        private int LanguageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime ReleaseDateField;
@@ -61,12 +61,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Country {
+        public int Country {
             get {
                 return this.CountryField;
             }
             set {
-                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                if ((this.CountryField.Equals(value) != true)) {
                     this.CountryField = value;
                     this.RaisePropertyChanged("Country");
                 }
@@ -74,12 +74,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FilmingLocation {
+        public int FilmingLocation {
             get {
                 return this.FilmingLocationField;
             }
             set {
-                if ((object.ReferenceEquals(this.FilmingLocationField, value) != true)) {
+                if ((this.FilmingLocationField.Equals(value) != true)) {
                     this.FilmingLocationField = value;
                     this.RaisePropertyChanged("FilmingLocation");
                 }
@@ -87,12 +87,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Genre {
+        public int Genre {
             get {
                 return this.GenreField;
             }
             set {
-                if ((object.ReferenceEquals(this.GenreField, value) != true)) {
+                if ((this.GenreField.Equals(value) != true)) {
                     this.GenreField = value;
                     this.RaisePropertyChanged("Genre");
                 }
@@ -126,12 +126,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Language {
+        public int Language {
             get {
                 return this.LanguageField;
             }
             set {
-                if ((object.ReferenceEquals(this.LanguageField, value) != true)) {
+                if ((this.LanguageField.Equals(value) != true)) {
                     this.LanguageField = value;
                     this.RaisePropertyChanged("Language");
                 }
@@ -194,19 +194,19 @@ namespace Projekt_3___Desktop.ServiceReference1 {
     public partial class Movie : Projekt_3___Desktop.ServiceReference1.Entertainment {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string country1Field;
+        private int country1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string filmingLocation1Field;
+        private int filmingLocation1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string genre1Field;
+        private int genre1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string information1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string language1Field;
+        private int language1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime releaseDate1Field;
@@ -218,12 +218,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         private string title1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="country")]
-        public string country1 {
+        public int country1 {
             get {
                 return this.country1Field;
             }
             set {
-                if ((object.ReferenceEquals(this.country1Field, value) != true)) {
+                if ((this.country1Field.Equals(value) != true)) {
                     this.country1Field = value;
                     this.RaisePropertyChanged("country1");
                 }
@@ -231,12 +231,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="filmingLocation")]
-        public string filmingLocation1 {
+        public int filmingLocation1 {
             get {
                 return this.filmingLocation1Field;
             }
             set {
-                if ((object.ReferenceEquals(this.filmingLocation1Field, value) != true)) {
+                if ((this.filmingLocation1Field.Equals(value) != true)) {
                     this.filmingLocation1Field = value;
                     this.RaisePropertyChanged("filmingLocation1");
                 }
@@ -244,12 +244,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="genre")]
-        public string genre1 {
+        public int genre1 {
             get {
                 return this.genre1Field;
             }
             set {
-                if ((object.ReferenceEquals(this.genre1Field, value) != true)) {
+                if ((this.genre1Field.Equals(value) != true)) {
                     this.genre1Field = value;
                     this.RaisePropertyChanged("genre1");
                 }
@@ -270,12 +270,12 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="language")]
-        public string language1 {
+        public int language1 {
             get {
                 return this.language1Field;
             }
             set {
-                if ((object.ReferenceEquals(this.language1Field, value) != true)) {
+                if ((this.language1Field.Equals(value) != true)) {
                     this.language1Field = value;
                     this.RaisePropertyChanged("language1");
                 }

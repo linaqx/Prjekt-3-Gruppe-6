@@ -237,4 +237,3 @@ C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\PopcornTime 
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\PopcornTime 2.0\PopcornTime 2.0\obj\Debug\PopcornTime 2.0.csproj.CopyComplete
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\PopcornTime 2.0\PopcornTime 2.0\obj\Debug\PopcornTime 2.0.dll
 C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\PopcornTime 2.0\PopcornTime 2.0\obj\Debug\PopcornTime 2.0.pdb
-C:\Users\myll5\Desktop\Projekt 3 - SVN\Projekt-3-Gruppe-6-ytte\Kode\PopcornTime 2.0\PopcornTime 2.0\obj\Debug\PopcornTime 2.0.csprojAssemblyReference.cache

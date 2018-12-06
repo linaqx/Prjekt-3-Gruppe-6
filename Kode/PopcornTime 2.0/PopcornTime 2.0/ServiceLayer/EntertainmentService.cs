@@ -72,16 +72,45 @@ namespace PopcornTime_2._0.ServiceLayer
 
                 temp = new Models.FavoriteList()
                 {
-                    Author = oldFav.Author,
+                    Author = oldFav.Id,
                     Name = oldFav.Name,
                     Description = oldFav.Description,
-                    Entertainments = oldFav.Entertainments;
-            };
-        
+                    Entertainments = oldFav.Entertainments
+                };
+            }
             convertedFavoriteList.Add(temp);
 
-                return convertedFavoriteList;
-            
+            return convertedFavoriteList;
+
+        }
+
+        private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
+        {
+            PopcornTime_2._0.FavoritList.FavoriteList f1 = new FavoritListService.FavoriteList();
+
+            EntertainmentModel.Entertainment temp = null;
+            //formål returner en 
+
+
+
+            List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
+
+            foreach (PopcornTime_2._0.EntertainmentService1.Entertainment oldEnt in serviceEntertainments)
+            {
+
+                temp = new Models.Entertainment()
+                {
+                    Id = oldEnt.Id,
+                    Title = oldEnt.Title,
+                    ReleaseDate = oldEnt.ReleaseDate
+                };
+
+                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
+                convertedEntertainments.Add(temp);
+            }
+            return convertedEntertainments;
+
+            return null;
         }
 
 

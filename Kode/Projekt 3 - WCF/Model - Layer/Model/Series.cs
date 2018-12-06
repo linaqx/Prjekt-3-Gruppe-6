@@ -8,7 +8,7 @@ namespace Projekt_3___WCF.Model
     {
 
 
-        public Series(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information) : base(genre, title, country, language, releaseDate, storyline, filmingLocation, information)
+        public Series()
         {
 
         }

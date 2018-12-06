@@ -29,7 +29,7 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public bool IsMovie { get; set; }
         
-        public Entertainment(int genre, string title, int country, int language, DateTime realeaseDate, string storyLine, int filmingLocation, string information)
+        public Entertainment(int genre, string title, int country, int language, DateTime realeaseDate, string storyLine, int filmingLocation, string information, bool isMovie)
         {
             Genre = genre;
             Title = title;
@@ -39,7 +39,7 @@ namespace Projekt_3___WCF.Model
             StoryLine = storyLine;
             FilmingLocation = filmingLocation;
             Information = information;
-
+            IsMovie = isMovie;
         }
 
         public Entertainment()

@@ -26,7 +26,9 @@ namespace Projekt_3___WCF.Model
         public int FilmingLocation { get; set; }
         [DataMember]
         public string Information { get; set; }
-
+        [DataMember]
+        public bool IsMovie { get; set; }
+        
         public Entertainment(int genre, string title, int country, int language, DateTime realeaseDate, string storyLine, int filmingLocation, string information)
         {
             Genre = genre;

@@ -19,7 +19,7 @@ use dmab0917_1026423;
 
 
 ----------Find all entertainments----------
---select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;
 
 
 
@@ -120,7 +120,16 @@ use dmab0917_1026423;
 
 --select * from Comment;
 
-select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
+--select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
+
+
+
+----------Find Movie by Id----------
+select * from Movie, Entertainment where Entertainment.id = Movie.entertainment_id;
+
+
+
+
 
 
 

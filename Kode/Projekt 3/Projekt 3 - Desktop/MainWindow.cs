@@ -16,7 +16,7 @@ namespace Projekt_3___Desktop
     public partial class MainWindow : Form
     {
         private DesktopController DC;
-        
+
 
         public MainWindow()
         {
@@ -35,13 +35,13 @@ namespace Projekt_3___Desktop
         public void btnSave_Click(object sender, EventArgs e)
         {
             CreateMovie();
-            
+
             //reset vinduet
-            ClearMovie();
+
 
             //spørge om vi er sikker
 
-            MessageBox.Show("Your movie is saved!");
+
 
         }
 
@@ -52,26 +52,87 @@ namespace Projekt_3___Desktop
 
         public void CreateMovie()
         {
+
             string title = txtTitle.Text;
-            int genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
-            int country = ((ComboBoxItem)cbBoxCountry.SelectedItem).HiddenValue;
-            int language = ((ComboBoxItem)cbBoxLanguage.SelectedItem).HiddenValue;
+            //int genre = 0;
+            //if ( genre > 0)
+            //{
+            //    genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please choose a genre");
+            //}
+            int genre;
+            try
+            {
+                genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
+            }
+            catch (Exception)
+            {
+                genre = 0;
+                MessageBox.Show("Please choose a valid genre");
+
+            }
+            int country;
+            try
+            {
+                country = ((ComboBoxItem)cbBoxCountry.SelectedItem).HiddenValue;
+            }
+            catch (Exception)
+            {
+
+                country = 0;
+                MessageBox.Show("Please choose a valid country");
+            }
+            int language;
+            try
+            {
+                language = ((ComboBoxItem)cbBoxLanguage.SelectedItem).HiddenValue;
+            }
+            catch (Exception)
+            {
+                language = 0;
+                MessageBox.Show("Please choose a valid language");
+            }
+            
             string storyline = txtStoryline.Text;
-            int filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
+            int filmingLocation;
+            try
+            {
+                filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
+            }
+            catch (Exception)
+            {
+                filmingLocation = 0;
+                MessageBox.Show("Please choose a valid filming location");
+            }
+            
             string information = txtInformation.Text;
             bool isMovie = true;
-            if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
+            if (title != "" && storyline != "" && information != "" && genre > 0 && country > 0 && language > 0 && filmingLocation > 0)
             {
-                date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
-                DateTime releaseDate = date;
-                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information, isMovie);
+
+                if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
+                {
+                    date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
+
+                    DC.InsertMovieIntoEntertainment(genre, title, country, language, date, storyline, filmingLocation, information, isMovie);
+                    ClearMovie();
+                    MessageBox.Show("Your movie is saved!");
+                }
+                else
+                {
+
+                    MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
+
+                }
             }
             else
             {
-                Console.WriteLine("Date is not correctly written: dd-MM-yyyy");
-                Console.ReadLine();
+                MessageBox.Show("Please fill all boxes!");
             }
-            
+
         }
 
 
@@ -85,9 +146,9 @@ namespace Projekt_3___Desktop
             txtStoryline.Clear();
             cbBoxFilmingLocation.ResetText();
             txtInformation.Clear();
-            
+
         }
-        
+
 
         private void GetData()
         {
@@ -111,13 +172,13 @@ namespace Projekt_3___Desktop
                 }
             }
 
-            
+
         }
 
         private void GetCountry()
         {
             List<Country> c = DC.GetCountry();
-            if(c != null)
+            if (c != null)
             {
                 foreach (Country country in c)
                 {
@@ -126,7 +187,7 @@ namespace Projekt_3___Desktop
                     cbBoxCountry.Items.Add(new ComboBoxItem(name, id));
                 }
             }
-            
+
         }
 
         private void GetLanguage()
@@ -141,7 +202,7 @@ namespace Projekt_3___Desktop
                     cbBoxLanguage.Items.Add(new ComboBoxItem(name, id));
                 }
             }
-            
+
         }
 
         private void GetFilmingLocation()
@@ -149,16 +210,16 @@ namespace Projekt_3___Desktop
             List<FilmingLocation> f = DC.GetFilmingLocation();
             if (f != null)
             {
-                foreach(FilmingLocation film in f)
-            {
+                foreach (FilmingLocation film in f)
+                {
                     int id = film.Id;
                     string name = film.Name;
                     cbBoxFilmingLocation.Items.Add(new ComboBoxItem(name, id));
                 }
             }
-            
+
         }
 
-       
+
     }
 }

@@ -5,9 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using PopcornTime_2._0.ServiceLayer;
 using PopcornTime_2._0.Models;
+using Microsoft.AspNet.Identity;
+
 
 namespace PopcornTime_2._0.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         //foran en metode kan der skrives []httpPost
@@ -18,6 +21,8 @@ namespace PopcornTime_2._0.Controllers
             eS = new EntertainmentService();
             //entertainment = new Entertainment();
         }
+
+        
         public ActionResult Index()
         {
             List<Entertainment> entertainments;

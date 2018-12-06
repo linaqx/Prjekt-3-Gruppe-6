@@ -53,19 +53,19 @@ namespace Projekt_3___Desktop
             int genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
             int country = ((ComboBoxItem)cbBoxCountry.SelectedItem).HiddenValue;
             int language = ((ComboBoxItem)cbBoxLanguage.SelectedItem).HiddenValue;
-            DateTime date;
             string storyline = txtStoryline.Text;
             int filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
             string information = txtInformation.Text;
-            if (DateTime.TryParse(txtReleaseDate.Text, out date))
+
+            if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
             {
-                date = DateTime.ParseExact(txtReleaseDate.Text, "yyyy-MM-dd", null);
+                date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
                 DateTime releaseDate = date;
                 DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
             }
             else
             {
-                Console.WriteLine("Date is not correctly written: yyyy-MM-dd");
+                Console.WriteLine("Date is not correctly written: dd-MM-yyyy");
                 Console.ReadLine();
             }
             

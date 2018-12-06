@@ -16,6 +16,7 @@ namespace Projekt_3___Desktop
     public partial class MainWindow : Form
     {
         private DesktopController DC;
+        private Movie movie;
 
         public MainWindow()
         {
@@ -34,11 +35,13 @@ namespace Projekt_3___Desktop
         public void btnSave_Click(object sender, EventArgs e)
         {
             CreateMovie();
-            //MessageBox.Show(title + " " + " " + genre + " " + " " + country + " " + " " + language + " " + " " + releaseDate + " " + " " + storyline + " " + " " + filmingLocation + " " + " " + information);
-
+            
             //reset vinduet
+            ClearMovie();
+
             //spørge om vi er sikker
 
+            MessageBox.Show("Your movie is saved!");
 
         }
 
@@ -68,8 +71,23 @@ namespace Projekt_3___Desktop
                 Console.WriteLine("Date is not correctly written: dd-MM-yyyy");
                 Console.ReadLine();
             }
+            //movie.IsMovie;
+        }
+
+
+        private void ClearMovie()
+        {
+            txtTitle.Clear();
+            cbBoxGenre.ResetText();
+            cbBoxCountry.ResetText();
+            cbBoxLanguage.ResetText();
+            txtReleaseDate.Clear();
+            txtStoryline.Clear();
+            cbBoxFilmingLocation.ResetText();
+            txtInformation.Clear();
             
         }
+        
 
         private void GetData()
         {

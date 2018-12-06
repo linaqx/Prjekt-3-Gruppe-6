@@ -16,6 +16,7 @@ namespace Projekt_3___Desktop.Model
         public string Storyline { get; set; }
         public int FilmingLocation { get; set; }
         public string Information { get; set; }
+        public bool IsMovie { get; set; }
 
         public Entertainment()
         {

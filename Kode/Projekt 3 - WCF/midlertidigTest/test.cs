@@ -19,13 +19,13 @@ namespace midlertidigTest
             EntertainmentService es = new EntertainmentService();
 
             List<Entertainment> temp = edb.GetAllEntertainments();
-            foreach(Entertainment ent in temp)
+            foreach (Entertainment ent in temp)
             {
                 Console.WriteLine(ent.Id);
                 Console.WriteLine(ent.Title);
                 Console.WriteLine(ent.ReleaseDate);
             }
-           
+
             edb.GetPersonalEntertainments(2);
 
             List<Entertainment> temp2 = es.FindAllEntertainments();
@@ -52,14 +52,15 @@ namespace midlertidigTest
 
             Movie movie = new Movie
             {
-                Title = "Iron Man 3",
-                genre = 1,
+                Title = "Iron Man 4",
+                Genre = 1,
                 Country = 2,
                 Language = 1,
                 ReleaseDate = DateTime.Now,
-                storyline = "Something Explode",
+                StoryLine = "Something Explode",
                 FilmingLocation = 1,
-                Information = "nice"
+                Information = "nice",
+                IsMovie = true
             };
             es.StartInsertMovieTransaction(movie);
 

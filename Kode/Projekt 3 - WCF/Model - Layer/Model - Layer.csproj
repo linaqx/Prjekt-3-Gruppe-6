@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Actor.cs" />
+    <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\FilmingLocation.cs" />
     <Compile Include="Model\Genre.cs" />

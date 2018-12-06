@@ -16,6 +16,7 @@ namespace Projekt_3___Desktop
     public partial class MainWindow : Form
     {
         private DesktopController DC;
+        
 
         public MainWindow()
         {
@@ -34,11 +35,13 @@ namespace Projekt_3___Desktop
         public void btnSave_Click(object sender, EventArgs e)
         {
             CreateMovie();
-            //MessageBox.Show(title + " " + " " + genre + " " + " " + country + " " + " " + language + " " + " " + releaseDate + " " + " " + storyline + " " + " " + filmingLocation + " " + " " + information);
-
+            
             //reset vinduet
+            ClearMovie();
+
             //spørge om vi er sikker
 
+            MessageBox.Show("Your movie is saved!");
 
         }
 
@@ -56,12 +59,12 @@ namespace Projekt_3___Desktop
             string storyline = txtStoryline.Text;
             int filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
             string information = txtInformation.Text;
-
+            bool isMovie = true;
             if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
             {
                 date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
                 DateTime releaseDate = date;
-                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
+                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information, isMovie);
             }
             else
             {
@@ -70,6 +73,21 @@ namespace Projekt_3___Desktop
             }
             
         }
+
+
+        private void ClearMovie()
+        {
+            txtTitle.Clear();
+            cbBoxGenre.ResetText();
+            cbBoxCountry.ResetText();
+            cbBoxLanguage.ResetText();
+            txtReleaseDate.Clear();
+            txtStoryline.Clear();
+            cbBoxFilmingLocation.ResetText();
+            txtInformation.Clear();
+            
+        }
+        
 
         private void GetData()
         {

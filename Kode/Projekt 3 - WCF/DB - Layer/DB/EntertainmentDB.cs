@@ -13,15 +13,15 @@ namespace WCF___library.DB
 {
     public class EntertainmentDB
     {
-        private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment;";
-        private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
+        private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;";
+        private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
 
         private readonly string sql_FIND_ALL_GENRE = "select Genre.id, Genre.[name] from Genre;";
         private readonly string sql_FIND_ALL_FILMINLOCATION = "select FilmingLocation.id, FilmingLocation.[name] from FilmingLocation;";
         private readonly string sql_FIND_ALL_LANGUAGE = "select [Language].id, [Language].[name] from [Language];";
         private readonly string sql_FIND_ALL_COUNTRIES = "select Country.id, Country.[name] from Country;";
 
-        private readonly string sql_INSERT_ENTERTAINMENT = "insert into Entertainment(title, country_id, language_id, releaseDate, storyline, information) output inserted.id values (@title, @country_id, @language_id, @releaseDate, @storyline, @information);";
+        private readonly string sql_INSERT_ENTERTAINMENT = "insert into Entertainment(title, country_id, language_id, releaseDate, storyline, information, isMovie) output inserted.id values (@title, @country_id, @language_id, @releaseDate, @storyline, @information, @isMovie);";
         private readonly string sql_INSERT_MOVIE = "insert into Movie(entertainment_id) values (@entertainment_id);";
         private readonly string sql_INSERT_ENTERTAINMENTGENRE = "insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);";
         private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
@@ -90,6 +90,7 @@ namespace WCF___library.DB
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Title = reader.GetString(reader.GetOrdinal("title")),
                     ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
+                    IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie"))
                 };
 
                 temp.Add(e);
@@ -207,8 +208,9 @@ namespace WCF___library.DB
             insertEntertainment.Parameters.AddWithValue("@country_id", m.Country);
             insertEntertainment.Parameters.AddWithValue("@language_id", m.Language);
             insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
-            insertEntertainment.Parameters.AddWithValue("@storyline", m.storyline);
+            insertEntertainment.Parameters.AddWithValue("@storyline", m.StoryLine);
             insertEntertainment.Parameters.AddWithValue("@information", m.Information);
+            insertEntertainment.Parameters.AddWithValue("@isMovie", m.IsMovie);
             insertedId = (int)insertEntertainment.ExecuteScalar();
             return insertedId;
         }
@@ -226,7 +228,7 @@ namespace WCF___library.DB
             //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.genre);
+            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre);
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 

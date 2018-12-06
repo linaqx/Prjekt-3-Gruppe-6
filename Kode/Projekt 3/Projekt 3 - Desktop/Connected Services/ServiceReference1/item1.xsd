@@ -13,6 +13,7 @@
       <xs:element minOccurs="0" name="Genre" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMovie" type="xs:boolean" />
       <xs:element minOccurs="0" name="Language" type="xs:int" />
       <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
@@ -23,16 +24,7 @@
   <xs:complexType name="Movie">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Entertainment">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="country" type="xs:int" />
-          <xs:element minOccurs="0" name="filmingLocation" type="xs:int" />
-          <xs:element minOccurs="0" name="genre" type="xs:int" />
-          <xs:element minOccurs="0" name="information" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="language" type="xs:int" />
-          <xs:element minOccurs="0" name="releaseDate" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="storyline" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
-        </xs:sequence>
+        <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

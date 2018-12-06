@@ -63,6 +63,21 @@ namespace PopcornTime_2._0.Controllers
 
         public ActionResult MyList()
         {
+            
+            List<FavoriteList> favoriteLists = new List<FavoriteList>();
+            favoriteLists = eS.getFavoriteLists();
+
+            return View(favoriteLists);
+        }
+
+        public ActionResult Movie1()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Movie2()
+        {
             ViewBag.Message = "Your contact page.";
 
             return View();

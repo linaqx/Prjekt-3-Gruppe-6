@@ -52,7 +52,7 @@ namespace midlertidigTest
 
             Movie movie = new Movie
             {
-                Title = "Iron Man 3",
+                Title = "Iron Man 4",
                 Genre = 1,
                 Country = 2,
                 Language = 1,

@@ -23,7 +23,19 @@ namespace PopcornTime_2._0.FavoritList {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PopcornTime_2._0.FavoritList.User AuthorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PopcornTime_2._0.FavoritList.Entertainment[] EntertainmentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -36,6 +48,45 @@ namespace PopcornTime_2._0.FavoritList {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public PopcornTime_2._0.FavoritList.User Author {
+            get {
+                return this.AuthorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthorField, value) != true)) {
+                    this.AuthorField = value;
+                    this.RaisePropertyChanged("Author");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PopcornTime_2._0.FavoritList.Entertainment[] Entertainments {
+            get {
+                return this.EntertainmentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntertainmentsField, value) != true)) {
+                    this.EntertainmentsField = value;
+                    this.RaisePropertyChanged("Entertainments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id {
             get {
                 return this.IdField;
@@ -44,6 +95,373 @@ namespace PopcornTime_2._0.FavoritList {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model")]
+    [System.SerializableAttribute()]
+    public partial class User : PopcornTime_2._0.FavoritList.Person {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PopcornTime_2._0.FavoritList.FavoriteList[] favoritelistsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PopcornTime_2._0.FavoritList.User[] friendsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string passwordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string userNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string userRankField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PopcornTime_2._0.FavoritList.FavoriteList[] favoritelists {
+            get {
+                return this.favoritelistsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.favoritelistsField, value) != true)) {
+                    this.favoritelistsField = value;
+                    this.RaisePropertyChanged("favoritelists");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PopcornTime_2._0.FavoritList.User[] friends {
+            get {
+                return this.friendsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.friendsField, value) != true)) {
+                    this.friendsField = value;
+                    this.RaisePropertyChanged("friends");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
+                    this.passwordField = value;
+                    this.RaisePropertyChanged("password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userName {
+            get {
+                return this.userNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userNameField, value) != true)) {
+                    this.userNameField = value;
+                    this.RaisePropertyChanged("userName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userRank {
+            get {
+                return this.userRankField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userRankField, value) != true)) {
+                    this.userRankField = value;
+                    this.RaisePropertyChanged("userRank");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Entertainment", Namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model")]
+    [System.SerializableAttribute()]
+    public partial class Entertainment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FilmingLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GenreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InformationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LanguageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ReleaseDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StoryLineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((this.CountryField.Equals(value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FilmingLocation {
+            get {
+                return this.FilmingLocationField;
+            }
+            set {
+                if ((this.FilmingLocationField.Equals(value) != true)) {
+                    this.FilmingLocationField = value;
+                    this.RaisePropertyChanged("FilmingLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Genre {
+            get {
+                return this.GenreField;
+            }
+            set {
+                if ((this.GenreField.Equals(value) != true)) {
+                    this.GenreField = value;
+                    this.RaisePropertyChanged("Genre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Information {
+            get {
+                return this.InformationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InformationField, value) != true)) {
+                    this.InformationField = value;
+                    this.RaisePropertyChanged("Information");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Language {
+            get {
+                return this.LanguageField;
+            }
+            set {
+                if ((this.LanguageField.Equals(value) != true)) {
+                    this.LanguageField = value;
+                    this.RaisePropertyChanged("Language");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ReleaseDate {
+            get {
+                return this.ReleaseDateField;
+            }
+            set {
+                if ((this.ReleaseDateField.Equals(value) != true)) {
+                    this.ReleaseDateField = value;
+                    this.RaisePropertyChanged("ReleaseDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StoryLine {
+            get {
+                return this.StoryLineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoryLineField, value) != true)) {
+                    this.StoryLineField = value;
+                    this.RaisePropertyChanged("StoryLine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PopcornTime_2._0.FavoritList.User))]
+    public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string firstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string informationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string lastNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
+                    this.firstNameField = value;
+                    this.RaisePropertyChanged("firstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string information {
+            get {
+                return this.informationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.informationField, value) != true)) {
+                    this.informationField = value;
+                    this.RaisePropertyChanged("information");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
+                    this.lastNameField = value;
+                    this.RaisePropertyChanged("lastName");
                 }
             }
         }
@@ -67,6 +485,30 @@ namespace PopcornTime_2._0.FavoritList {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/FindAllListByUser", ReplyAction="http://tempuri.org/IService1/FindAllListByUserResponse")]
         System.Threading.Tasks.Task<PopcornTime_2._0.FavoritList.FavoriteList[]> FindAllListByUserAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEntertainmentToFavoriteList", ReplyAction="http://tempuri.org/IService1/AddEntertainmentToFavoriteListResponse")]
+        void AddEntertainmentToFavoriteList(int ent, int fav);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEntertainmentToFavoriteList", ReplyAction="http://tempuri.org/IService1/AddEntertainmentToFavoriteListResponse")]
+        System.Threading.Tasks.Task AddEntertainmentToFavoriteListAsync(int ent, int fav);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateNewFavoriteList", ReplyAction="http://tempuri.org/IService1/CreateNewFavoriteListResponse")]
+        void CreateNewFavoriteList(int id, string name, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateNewFavoriteList", ReplyAction="http://tempuri.org/IService1/CreateNewFavoriteListResponse")]
+        System.Threading.Tasks.Task CreateNewFavoriteListAsync(int id, string name, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddUserToFavoriteList", ReplyAction="http://tempuri.org/IService1/AddUserToFavoriteListResponse")]
+        void AddUserToFavoriteList(int per, int fav);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddUserToFavoriteList", ReplyAction="http://tempuri.org/IService1/AddUserToFavoriteListResponse")]
+        System.Threading.Tasks.Task AddUserToFavoriteListAsync(int per, int fav);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RemoveUserFromFavoriteList", ReplyAction="http://tempuri.org/IService1/RemoveUserFromFavoriteListResponse")]
+        void RemoveUserFromFavoriteList(int per, int fav);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RemoveUserFromFavoriteList", ReplyAction="http://tempuri.org/IService1/RemoveUserFromFavoriteListResponse")]
+        System.Threading.Tasks.Task RemoveUserFromFavoriteListAsync(int per, int fav);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -102,6 +544,38 @@ namespace PopcornTime_2._0.FavoritList {
         
         public System.Threading.Tasks.Task<PopcornTime_2._0.FavoritList.FavoriteList[]> FindAllListByUserAsync(int id) {
             return base.Channel.FindAllListByUserAsync(id);
+        }
+        
+        public void AddEntertainmentToFavoriteList(int ent, int fav) {
+            base.Channel.AddEntertainmentToFavoriteList(ent, fav);
+        }
+        
+        public System.Threading.Tasks.Task AddEntertainmentToFavoriteListAsync(int ent, int fav) {
+            return base.Channel.AddEntertainmentToFavoriteListAsync(ent, fav);
+        }
+        
+        public void CreateNewFavoriteList(int id, string name, string description) {
+            base.Channel.CreateNewFavoriteList(id, name, description);
+        }
+        
+        public System.Threading.Tasks.Task CreateNewFavoriteListAsync(int id, string name, string description) {
+            return base.Channel.CreateNewFavoriteListAsync(id, name, description);
+        }
+        
+        public void AddUserToFavoriteList(int per, int fav) {
+            base.Channel.AddUserToFavoriteList(per, fav);
+        }
+        
+        public System.Threading.Tasks.Task AddUserToFavoriteListAsync(int per, int fav) {
+            return base.Channel.AddUserToFavoriteListAsync(per, fav);
+        }
+        
+        public void RemoveUserFromFavoriteList(int per, int fav) {
+            base.Channel.RemoveUserFromFavoriteList(per, fav);
+        }
+        
+        public System.Threading.Tasks.Task RemoveUserFromFavoriteListAsync(int per, int fav) {
+            return base.Channel.RemoveUserFromFavoriteListAsync(per, fav);
         }
     }
 }

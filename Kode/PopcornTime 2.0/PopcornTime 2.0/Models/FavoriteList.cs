@@ -9,13 +9,13 @@ namespace PopcornTime_2._0.Models
     {
 
         public int Id { get; set; }
-        public User Author { get; set; }
+        public int Author { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public List<Entertainment> Entertainments { get; set; }
 
         // ret user til int der er ID måske?
-        public FavoriteList(User author, string name, string description)
+        public FavoriteList(int author, string name, string description)
         {
             this.Author = author;
             this.Name = name;

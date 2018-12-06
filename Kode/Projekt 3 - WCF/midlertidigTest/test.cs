@@ -53,11 +53,11 @@ namespace midlertidigTest
             Movie movie = new Movie
             {
                 Title = "Iron Man 3",
-                genre = 1,
+                Genre = 1,
                 Country = 2,
                 Language = 1,
                 ReleaseDate = DateTime.Now,
-                storyline = "Something Explode",
+                StoryLine = "Something Explode",
                 FilmingLocation = 1,
                 Information = "nice"
             };

@@ -207,7 +207,7 @@ namespace WCF___library.DB
             insertEntertainment.Parameters.AddWithValue("@country_id", m.Country);
             insertEntertainment.Parameters.AddWithValue("@language_id", m.Language);
             insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
-            insertEntertainment.Parameters.AddWithValue("@storyline", m.storyline);
+            insertEntertainment.Parameters.AddWithValue("@storyline", m.StoryLine);
             insertEntertainment.Parameters.AddWithValue("@information", m.Information);
             insertedId = (int)insertEntertainment.ExecuteScalar();
             return insertedId;
@@ -226,7 +226,7 @@ namespace WCF___library.DB
             //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.genre);
+            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre);
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 

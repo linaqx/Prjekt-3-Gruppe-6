@@ -29,14 +29,14 @@ namespace Projekt_3___WCF.Model
 
         public Entertainment(int genre, string title, int country, int language, DateTime realeaseDate, string storyLine, int filmingLocation, string information)
         {
-            this.Genre = genre;
-            this.Title = title;
-            this.Country = country;
-            this.Language = language;
-            this.ReleaseDate = realeaseDate;
-            this.StoryLine = storyLine;
-            this.FilmingLocation = filmingLocation;
-            this.Information = information;
+            Genre = genre;
+            Title = title;
+            Country = country;
+            Language = language;
+            ReleaseDate = realeaseDate;
+            StoryLine = storyLine;
+            FilmingLocation = filmingLocation;
+            Information = information;
 
         }
 

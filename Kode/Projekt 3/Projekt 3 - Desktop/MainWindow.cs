@@ -16,7 +16,7 @@ namespace Projekt_3___Desktop
     public partial class MainWindow : Form
     {
         private DesktopController DC;
-        private Movie movie;
+        
 
         public MainWindow()
         {
@@ -59,19 +59,19 @@ namespace Projekt_3___Desktop
             string storyline = txtStoryline.Text;
             int filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
             string information = txtInformation.Text;
-
+            bool isMovie = true;
             if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
             {
                 date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
                 DateTime releaseDate = date;
-                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information);
+                DC.InsertMovieIntoEntertainment(genre, title, country, language, releaseDate, storyline, filmingLocation, information, isMovie);
             }
             else
             {
                 Console.WriteLine("Date is not correctly written: dd-MM-yyyy");
                 Console.ReadLine();
             }
-            //movie.IsMovie;
+            
         }
 
 

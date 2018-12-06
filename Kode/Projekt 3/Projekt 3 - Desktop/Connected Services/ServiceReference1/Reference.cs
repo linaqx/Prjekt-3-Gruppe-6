@@ -39,6 +39,9 @@ namespace Projekt_3___Desktop.ServiceReference1 {
         private string InformationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsMovieField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int LanguageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -121,6 +124,19 @@ namespace Projekt_3___Desktop.ServiceReference1 {
                 if ((object.ReferenceEquals(this.InformationField, value) != true)) {
                     this.InformationField = value;
                     this.RaisePropertyChanged("Information");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsMovie {
+            get {
+                return this.IsMovieField;
+            }
+            set {
+                if ((this.IsMovieField.Equals(value) != true)) {
+                    this.IsMovieField = value;
+                    this.RaisePropertyChanged("IsMovie");
                 }
             }
         }

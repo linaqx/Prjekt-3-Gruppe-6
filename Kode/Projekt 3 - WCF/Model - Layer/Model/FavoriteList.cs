@@ -11,7 +11,7 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public User Author { get; set; }
+        public int Author { get; set; }
         [DataMember]
         public string Name { get; set; }
         [DataMember]
@@ -20,11 +20,11 @@ namespace Projekt_3___WCF.Model
         public List<Entertainment> Entertainments { get; set; }
 
         // ret user til int der er ID måske?
-        public FavoriteList(User author, string name, string description)
+        public FavoriteList(int author, string name, string description)
         {
-            this.Author = author;
-            this.Name = name;
-            this.Description = description;
+            Author = author;
+            Name = name;
+            Description = description;
             Entertainments = new List<Entertainment>();
         }
 

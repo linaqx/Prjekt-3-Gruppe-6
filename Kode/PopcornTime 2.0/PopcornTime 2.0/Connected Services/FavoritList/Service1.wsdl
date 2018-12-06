@@ -13,16 +13,92 @@
   <wsdl:message name="IService1_FindAllListByUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllListByUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddEntertainmentToFavoriteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEntertainmentToFavoriteList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEntertainmentToFavoriteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEntertainmentToFavoriteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateNewFavoriteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewFavoriteList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateNewFavoriteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewFavoriteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserToFavoriteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToFavoriteList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserToFavoriteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToFavoriteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveUserFromFavoriteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromFavoriteList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveUserFromFavoriteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromFavoriteListResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="FindAllListByUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/FindAllListByUser" message="tns:IService1_FindAllListByUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/FindAllListByUserResponse" message="tns:IService1_FindAllListByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEntertainmentToFavoriteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddEntertainmentToFavoriteList" message="tns:IService1_AddEntertainmentToFavoriteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddEntertainmentToFavoriteListResponse" message="tns:IService1_AddEntertainmentToFavoriteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewFavoriteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateNewFavoriteList" message="tns:IService1_CreateNewFavoriteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateNewFavoriteListResponse" message="tns:IService1_CreateNewFavoriteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToFavoriteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUserToFavoriteList" message="tns:IService1_AddUserToFavoriteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserToFavoriteListResponse" message="tns:IService1_AddUserToFavoriteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromFavoriteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemoveUserFromFavoriteList" message="tns:IService1_RemoveUserFromFavoriteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemoveUserFromFavoriteListResponse" message="tns:IService1_RemoveUserFromFavoriteList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="FindAllListByUser">
       <soap:operation soapAction="http://tempuri.org/IService1/FindAllListByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEntertainmentToFavoriteList">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddEntertainmentToFavoriteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewFavoriteList">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateNewFavoriteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToFavoriteList">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUserToFavoriteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromFavoriteList">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemoveUserFromFavoriteList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

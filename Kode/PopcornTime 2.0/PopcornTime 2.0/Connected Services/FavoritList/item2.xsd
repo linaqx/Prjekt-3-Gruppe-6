@@ -8,8 +8,61 @@
   <xs:element name="ArrayOfFavoriteList" nillable="true" type="tns:ArrayOfFavoriteList" />
   <xs:complexType name="FavoriteList">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Author" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entertainments" nillable="true" type="tns:ArrayOfEntertainment" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FavoriteList" nillable="true" type="tns:FavoriteList" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="favoritelists" nillable="true" type="tns:ArrayOfFavoriteList" />
+          <xs:element minOccurs="0" name="friends" nillable="true" type="tns:ArrayOfUser" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="userRank" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="information" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="ArrayOfEntertainment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entertainment" nillable="true" type="tns:Entertainment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntertainment" nillable="true" type="tns:ArrayOfEntertainment" />
+  <xs:complexType name="Entertainment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" type="xs:int" />
+      <xs:element minOccurs="0" name="FilmingLocation" type="xs:int" />
+      <xs:element minOccurs="0" name="Genre" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Language" type="xs:int" />
+      <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entertainment" nillable="true" type="tns:Entertainment" />
 </xs:schema>

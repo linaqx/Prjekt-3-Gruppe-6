@@ -18,7 +18,7 @@ namespace Projekt_3___Desktop.Controller
             DesktopService = new DesktopService();
         }
 
-        public void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
+        public void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information, bool isMovie)
         {
             Movie m = new Movie
             {
@@ -29,7 +29,8 @@ namespace Projekt_3___Desktop.Controller
                 ReleasDate = releaseDate,
                 Storyline = storyline,
                 FilmingLocation = filmingLocation,
-                Information = information
+                Information = information,
+                IsMovie = isMovie
             };
 
             DesktopService.InsertMovieIntoEntertainment(m);

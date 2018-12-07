@@ -112,25 +112,37 @@ namespace Projekt_3___Desktop
             bool isMovie = true;
             if (title != "" && storyline != "" && information != "" && genre > 0 && country > 0 && language > 0 && filmingLocation > 0)
             {
-
-                if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
+                try
                 {
-                    date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
+                    DateTime date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
 
                     DC.InsertMovieIntoEntertainment(genre, title, country, language, date, storyline, filmingLocation, information, isMovie);
                     ClearMovie();
                     MessageBox.Show("Your movie is saved!");
                 }
-                else
+                catch (Exception)
                 {
 
                     MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
-
                 }
+                //if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
+                //{
+                //    date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
+
+                //    DC.InsertMovieIntoEntertainment(genre, title, country, language, date, storyline, filmingLocation, information, isMovie);
+                //    ClearMovie();
+                //    MessageBox.Show("Your movie is saved!");
+                //}
+                //else
+                //{
+
+                //    MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
+
+                //}
             }
             else
             {
-                MessageBox.Show("Please fill all boxes!");
+                MessageBox.Show("Please fill all the boxes!");
             }
 
         }

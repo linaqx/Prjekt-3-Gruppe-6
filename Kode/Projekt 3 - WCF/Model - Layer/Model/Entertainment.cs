@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using Model___Layer.Model;
 
 namespace Projekt_3___WCF.Model
 {
@@ -28,22 +29,13 @@ namespace Projekt_3___WCF.Model
         public string Information { get; set; }
         [DataMember]
         public bool IsMovie { get; set; }
+        [DataMember]
+        public List<Comment> Comments { get; set; }
         
-        public Entertainment(int genre, string title, int country, int language, DateTime realeaseDate, string storyLine, int filmingLocation, string information, bool isMovie)
-        {
-            Genre = genre;
-            Title = title;
-            Country = country;
-            Language = language;
-            ReleaseDate = realeaseDate;
-            StoryLine = storyLine;
-            FilmingLocation = filmingLocation;
-            Information = information;
-            IsMovie = isMovie;
-        }
 
         public Entertainment()
         {
+            Comments = new List<Comment>();
 
         }
 

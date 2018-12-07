@@ -26,6 +26,9 @@ namespace BusinessLogic___Layer.BusinessLogic
 
         void StartInsertMovieTransaction(Movie m);
 
-        
+        Movie GetMovieById(int id);
+
+
+
     }
 }

@@ -51,6 +51,11 @@ namespace WCF___library
             return EC.FindPersonalEntertainments(id);
         }
 
+        public Movie GetMovieById(int id)
+        {
+            return EC.GetMovieById(id);
+        }
+
         public void StartInsertMovieTransaction(Movie m)
         {
             EC.StartInsertMovieTransaction(m);

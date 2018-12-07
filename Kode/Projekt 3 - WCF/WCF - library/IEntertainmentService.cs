@@ -33,5 +33,8 @@ namespace WCF___library
 
         [OperationContract]
         void StartInsertMovieTransaction(Movie m);
+
+        [OperationContract]
+        Movie GetMovieById(int id);
     }
 }

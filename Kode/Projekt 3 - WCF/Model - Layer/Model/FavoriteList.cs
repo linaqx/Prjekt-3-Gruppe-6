@@ -19,7 +19,7 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public List<Entertainment> Entertainments { get; set; }
 
-        // ret user til int der er ID måske?
+        
         public FavoriteList(int author, string name, string description)
         {
             Author = author;

@@ -57,5 +57,10 @@ namespace Projekt_3___WCF.BusinessLogic
         {
             edb.StartInsertMovieTransaction(m);
         }
+
+        public Movie GetMovieById(int id)
+        {
+            return edb.GetMovieById(id);
+        }
     }
 }

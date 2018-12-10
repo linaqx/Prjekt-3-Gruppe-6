@@ -40,8 +40,8 @@ namespace WCF___library.DB
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
         private SqlCommand insertEntertainmentFilmingLocation;
-        
-        
+
+
         private SqlConnection con;
 
         public EntertainmentDB()
@@ -199,7 +199,7 @@ namespace WCF___library.DB
 
                 scope.Complete();
             }
-            
+
         }
 
         private int InsertEntertainment(Movie m)
@@ -256,36 +256,41 @@ namespace WCF___library.DB
             findMovieById.Parameters.Add(parameter);
             findMovieById.CommandText = sql_FIND_MOVIE_BY_ID;
             SqlDataReader reader = findMovieById.ExecuteReader();
-            Movie temp = new Movie();
+            List<Comment> comments = new List<Comment>();
+
+            Movie temp = new Movie
+            {
+                //Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
+                //[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
+                Id = reader.GetInt32(reader.GetOrdinal("id")),
+                Title = reader.GetString(reader.GetOrdinal("title")),
+                ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
+                StoryLine = reader.GetString(reader.GetOrdinal("storyline")),
+                Information = reader.GetString(reader.GetOrdinal("information")),
+                //Country = reader.GetString(reader.GetOrdinal("country")),
+                //Language = reader.GetString(reader.GetOrdinal("language")),
+                //Genre = reader.GetString(reader.GetOrdinal("genre")),
+                //FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
+                IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie")),
+            };
+
             while (reader.Read())
             {
-                Movie movie = new Movie
+                Comment comment = new Comment
                 {
-                    //Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
-                    //[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Title = reader.GetString(reader.GetOrdinal("title")),
-                    ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
-                    StoryLine = reader.GetString(reader.GetOrdinal("storyline")),
-                    Information = reader.GetString(reader.GetOrdinal("information")),
-                    //Country = reader.GetString(reader.GetOrdinal("country")),
-                    //Language = reader.GetString(reader.GetOrdinal("language")),
-                    //Genre = reader.GetString(reader.GetOrdinal("genre")),
-                    //FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
-                    IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie"))
+                    Entertainment_id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
+                    User = reader.GetInt32(reader.GetOrdinal("user")),
+                    Message = reader.GetString(reader.GetOrdinal("message"))
                 };
-
-                temp = movie;
             }
+
+            temp.Comments = comments;
+
             reader.Close();
 
             return temp;
         }
-
-
-
-        
-
 
     }
 }

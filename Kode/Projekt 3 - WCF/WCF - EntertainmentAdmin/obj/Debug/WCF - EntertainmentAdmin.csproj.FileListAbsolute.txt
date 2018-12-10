@@ -1,0 +1,14 @@
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\WCF - EntertainmentAdmin.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\WCF - EntertainmentAdmin.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\WCF - EntertainmentAdmin.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\BusinessLogic - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\Model - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\DB - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\BusinessLogic - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\Model - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\bin\Debug\DB - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\obj\Debug\WCF - EntertainmentAdmin.csprojAssemblyReference.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\obj\Debug\WCF - EntertainmentAdmin.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\obj\Debug\WCF - EntertainmentAdmin.csproj.CopyComplete
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\obj\Debug\WCF - EntertainmentAdmin.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - EntertainmentAdmin\obj\Debug\WCF - EntertainmentAdmin.pdb

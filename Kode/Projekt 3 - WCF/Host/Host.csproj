@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\EntertainmentAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\EntertainmentService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +66,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.FilmingLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.Genre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.Language.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\Model___Layer.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___WCF.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\service.wsdl" />
+    <None Include="Connected Services\EntertainmentAdminService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EntertainmentAdminService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -111,12 +141,17 @@
       <Project>{d8c14e8b-f079-4b8e-8808-bc0c4f9653fe}</Project>
       <Name>WCF - FavoriteListService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WCF - EntertainmentAdmin\WCF - EntertainmentAdmin.csproj">
+      <Project>{a1e015a5-9d5c-4e19-bc41-a6b40d0d20da}</Project>
+      <Name>WCF - EntertainmentAdmin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WCF - library\WCF - Entertainment.csproj">
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
       <Name>WCF - Entertainment</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EntertainmentAdminService\" />
     <WCFMetadataStorage Include="Connected Services\EntertainmentService\" />
     <WCFMetadataStorage Include="Connected Services\FavoriteListService\" />
   </ItemGroup>
@@ -140,6 +175,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\FavoriteListService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EntertainmentAdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EntertainmentAdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EntertainmentAdminService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

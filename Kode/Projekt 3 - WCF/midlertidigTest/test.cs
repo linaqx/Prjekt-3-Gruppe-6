@@ -6,17 +6,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WCF___EntertainmentAdmin;
 using WCF___library;
 using WCF___library.DB;
 
 namespace midlertidigTest
 {
-    class test
+    class Test
     {
         static void Main(string[] args)
         {
             EntertainmentDB edb = new EntertainmentDB();
             EntertainmentService es = new EntertainmentService();
+            EntertainmentAdminService eas = new EntertainmentAdminService();
 
             List<Entertainment> temp = edb.GetAllEntertainments();
             foreach (Entertainment ent in temp)
@@ -62,7 +64,7 @@ namespace midlertidigTest
                 Information = "nice",
                 IsMovie = true
             };
-            es.StartInsertMovieTransaction(movie);
+            eas.StartInsertMovieTransaction(movie);
 
         }
     }

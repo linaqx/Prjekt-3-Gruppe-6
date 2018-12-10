@@ -8,9 +8,9 @@ using Projekt_3___WCF.Model;
 
 namespace BusinessLogic___Layer.BusinessLogic
 {
-    interface EntertainmentControllerIF
+    interface IEntertainmentControllerIF
     {
-        Entertainment FindEntertainmentByName(List<Entertainment> e);
+        //Entertainment FindEntertainmentByName(List<Entertainment> e);
 
         List<Entertainment> FindAllEntertainments();
 

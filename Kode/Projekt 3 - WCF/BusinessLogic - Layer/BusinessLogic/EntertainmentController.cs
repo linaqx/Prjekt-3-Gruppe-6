@@ -8,9 +8,11 @@ using WCF___library.DB;
 
 namespace Projekt_3___WCF.BusinessLogic
 {
-    public class EntertainmentController : EntertainmentControllerIF
+    public class EntertainmentController : IEntertainmentControllerIF
     {
         private EntertainmentDB edb;
+        private readonly bool IsMovie = true;
+        //private readonly bool IsNotMovie = false;
 
         public EntertainmentController()
         {
@@ -18,10 +20,10 @@ namespace Projekt_3___WCF.BusinessLogic
         }
 
         //Search metode!!
-        public Entertainment FindEntertainmentByName(List<Entertainment> e)
-        {
-            return null;
-        }
+        //public Entertainment FindEntertainmentByName(List<Entertainment> e)
+        //{
+        //    return null;
+        //}
 
         public List<Entertainment> FindAllEntertainments()
         {
@@ -55,7 +57,7 @@ namespace Projekt_3___WCF.BusinessLogic
 
         public void StartInsertMovieTransaction(Movie m)
         {
-            m.IsMovie = true;
+            m.IsMovie = IsMovie;
             edb.StartInsertMovieTransaction(m);
         }
 

@@ -37,12 +37,8 @@ namespace Projekt_3___Desktop
             CreateMovie();
 
             //reset vinduet
-
-
             //spørge om vi er sikker
-
-
-
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -54,15 +50,6 @@ namespace Projekt_3___Desktop
         {
 
             string title = txtTitle.Text;
-            //int genre = 0;
-            //if ( genre > 0)
-            //{
-            //    genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please choose a genre");
-            //}
             int genre;
             try
             {
@@ -97,20 +84,10 @@ namespace Projekt_3___Desktop
             }
             
             string storyline = txtStoryline.Text;
-            int filmingLocation;
-            try
-            {
-                filmingLocation = ((ComboBoxItem)cbBoxFilmingLocation.SelectedItem).HiddenValue;
-            }
-            catch (Exception)
-            {
-                filmingLocation = 0;
-                MessageBox.Show("Please choose a valid filming location");
-            }
-            
+            string filmingLocation = txtFilmingLocation.Text;
             string information = txtInformation.Text;
             bool isMovie = true;
-            if (title != "" && storyline != "" && information != "" && genre > 0 && country > 0 && language > 0 && filmingLocation > 0)
+            if (title != "" && storyline != "" && information != "" && filmingLocation !="" && genre > 0 && country > 0 && language > 0)
             {
                 try
                 {
@@ -125,20 +102,6 @@ namespace Projekt_3___Desktop
 
                     MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
                 }
-                //if (DateTime.TryParse(txtReleaseDate.Text, out DateTime date))
-                //{
-                //    date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
-
-                //    DC.InsertMovieIntoEntertainment(genre, title, country, language, date, storyline, filmingLocation, information, isMovie);
-                //    ClearMovie();
-                //    MessageBox.Show("Your movie is saved!");
-                //}
-                //else
-                //{
-
-                //    MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
-
-                //}
             }
             else
             {
@@ -156,7 +119,7 @@ namespace Projekt_3___Desktop
             cbBoxLanguage.ResetText();
             txtReleaseDate.Clear();
             txtStoryline.Clear();
-            cbBoxFilmingLocation.ResetText();
+            txtFilmingLocation.Clear();
             txtInformation.Clear();
 
         }
@@ -167,7 +130,7 @@ namespace Projekt_3___Desktop
             GetGenre();
             GetCountry();
             GetLanguage();
-            GetFilmingLocation();
+            //GetFilmingLocation();
         }
 
         private void GetGenre()
@@ -217,20 +180,20 @@ namespace Projekt_3___Desktop
 
         }
 
-        private void GetFilmingLocation()
-        {
-            List<FilmingLocation> f = DC.GetFilmingLocation();
-            if (f != null)
-            {
-                foreach (FilmingLocation film in f)
-                {
-                    int id = film.Id;
-                    string name = film.Name;
-                    cbBoxFilmingLocation.Items.Add(new ComboBoxItem(name, id));
-                }
-            }
+        //private void GetFilmingLocation()
+        //{
+        //    List<FilmingLocation> f = DC.GetFilmingLocation();
+        //    if (f != null)
+        //    {
+        //        foreach (FilmingLocation film in f)
+        //        {
+        //            int id = film.Id;
+        //            string name = film.Name;
+        //            cbBoxFilmingLocation.Items.Add(new ComboBoxItem(name, id));
+        //        }
+        //    }
 
-        }
+        //}
 
 
     }

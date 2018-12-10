@@ -27,14 +27,14 @@ namespace Projekt_3___Desktop.ServiceLayer
         {
             EntertainmentAdminService.Movie temp = new EntertainmentAdminService.Movie
             {
-                //Title = movie.Title,
-                //Genre = movie.Genre,
-                //Country = movie.Country,
-                //Language = movie.Language,
-                //ReleaseDate = movie.ReleasDate,
-                //StoryLine = movie.Storyline,
-                //FilmingLocation = movie.FilmingLocation,
-                //Information = movie.Information
+                Title = movie.Title,
+                Genre = movie.Genre,
+                Country = movie.Country,
+                Language = movie.Language,
+                ReleaseDate = movie.ReleasDate,
+                StoryLine = movie.Storyline,
+                FilmingLocation = movie.FilmingLocation,
+                Information = movie.Information
             };
             return temp;
         }
@@ -129,33 +129,33 @@ namespace Projekt_3___Desktop.ServiceLayer
             return convertedLanguage;
         }
 
-        public List<FilmingLocation> GetFilmingLocation()
-        {
-            var film = easc.FindAllFilmingLocations();
+        //public List<FilmingLocation> GetFilmingLocation()
+        //{
+        //    var film = easc.FindAllFilmingLocations();
 
-            List<FilmingLocation> convertedFilm = ConvertToFilmingLocation(film);
+        //    List<FilmingLocation> convertedFilm = ConvertToFilmingLocation(film);
 
-            return convertedFilm;
-        }
+        //    return convertedFilm;
+        //}
 
-        private List<FilmingLocation> ConvertToFilmingLocation(EntertainmentAdminService.FilmingLocation[] serviceFilmingLocation)
-        {
-            FilmingLocation temp = null;
-            List<FilmingLocation> convertedFilm = new List<FilmingLocation>();
+        //private List<FilmingLocation> ConvertToFilmingLocation(EntertainmentAdminService.FilmingLocation[] serviceFilmingLocation)
+        //{
+        //    FilmingLocation temp = null;
+        //    List<FilmingLocation> convertedFilm = new List<FilmingLocation>();
 
 
-            foreach (EntertainmentAdminService.FilmingLocation oldFilmingLocation in serviceFilmingLocation)
-            {
-                temp = new FilmingLocation()
-                {
-                    Id = oldFilmingLocation.Id,
-                    Name = oldFilmingLocation.Name
-                };
+        //    foreach (EntertainmentAdminService.FilmingLocation oldFilmingLocation in serviceFilmingLocation)
+        //    {
+        //        temp = new FilmingLocation()
+        //        {
+        //            Id = oldFilmingLocation.Id,
+        //            Name = oldFilmingLocation.Name
+        //        };
 
-                convertedFilm.Add(temp);
-            }
+        //        convertedFilm.Add(temp);
+        //    }
 
-            return convertedFilm;
-        }
+        //    return convertedFilm;
+        //}
     }
 }

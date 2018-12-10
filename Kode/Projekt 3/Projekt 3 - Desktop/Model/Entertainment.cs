@@ -14,7 +14,7 @@ namespace Projekt_3___Desktop.Model
         public int Language { get; set; }
         public DateTime ReleasDate { get; set; }
         public string Storyline { get; set; }
-        public int FilmingLocation { get; set; }
+        public string FilmingLocation { get; set; }
         public string Information { get; set; }
         public bool IsMovie { get; set; }
 
@@ -23,7 +23,7 @@ namespace Projekt_3___Desktop.Model
 
         }
 
-        public Entertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information)
+        public Entertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, string filmingLocation, string information)
         {
             this.Genre = genre;
             this.Title = title;

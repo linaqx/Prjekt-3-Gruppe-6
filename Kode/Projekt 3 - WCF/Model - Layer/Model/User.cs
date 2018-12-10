@@ -9,44 +9,37 @@ namespace Projekt_3___WCF.Model
     public class User : Person
     {
         [DataMember]
-        private string email;
+        public string Email { get; set; }
         [DataMember]
-        private string password;
+        public string Password { get; set; }
         [DataMember]
-        private string userName;
+        public string UserName { get; set; }
         [DataMember]
-        private string userRank;
+        public string UserRank { get; set; }
         [DataMember]
-        private List<User> friends;
+        public List<User> Friends { get; set; }
         [DataMember]
-        private List<FavoriteList> favoritelists;
+        public List<FavoriteList> Favoritelists { get; set; }
 
-        
-
-        
-        public User(string firstName, string lastName, string information, string email, string password, string userName, string userRank) : base(firstName, lastName, information)
+        public User() : base()
         {
-            
-            this.email = email;
-            this.password = password;
-            this.userName = userName;
-            this.userRank = userRank;
-            friends = new List<User>();
-            favoritelists = new List<FavoriteList>();
+            //this.email = email;
+            //this.password = password;
+            //this.userName = userName;
+            //this.userRank = userRank;
+            Friends = new List<User>();
+            Favoritelists = new List<FavoriteList>();
         }
 
-
-
-
-        public List<FavoriteList> propFavoriteLists
-        {
-            get { return favoritelists; }
-            set { favoritelists = value; }
-        }
+        //public List<FavoriteList> propFavoriteLists
+        //{
+        //    get { return Favoritelists; }
+        //    set { Favoritelists = value; }
+        //}
 
         public void AddToFavoriteList(FavoriteList favoritelist)
         {
-            favoritelists.Add(favoritelist);
+            Favoritelists.Add(favoritelist);
         }
 
     }

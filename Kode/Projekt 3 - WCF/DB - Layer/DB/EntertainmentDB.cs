@@ -256,8 +256,36 @@ namespace WCF___library.DB
             findMovieById.Parameters.Add(parameter);
             findMovieById.CommandText = sql_FIND_MOVIE_BY_ID;
             SqlDataReader reader = findMovieById.ExecuteReader();
+            SqlDataReader commentReader = reader;
             List<Comment> comments = new List<Comment>();
+            Movie movie = new Movie();
+            while (reader.Read())
+            {
+                movie = CreateMovie(reader);
+            }
 
+            while (commentReader.Read())
+            {
+                Comment comment = new Comment
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Entertainment_id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
+                    User = reader.GetInt32(reader.GetOrdinal("user")),
+                    Message = reader.GetString(reader.GetOrdinal("message"))
+                };
+                comments.Add(comment);
+            }
+
+            movie.Comments = comments;
+
+            reader.Close();
+            commentReader.Close();
+
+            return movie;
+        }
+
+        private Movie CreateMovie(SqlDataReader reader)
+        {
             Movie temp = new Movie
             {
                 //Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
@@ -273,24 +301,28 @@ namespace WCF___library.DB
                 //FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
                 IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie")),
             };
-
-            while (reader.Read())
-            {
-                Comment comment = new Comment
-                {
-                    Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Entertainment_id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
-                    User = reader.GetInt32(reader.GetOrdinal("user")),
-                    Message = reader.GetString(reader.GetOrdinal("message"))
-                };
-            }
-
-            temp.Comments = comments;
-
-            reader.Close();
-
             return temp;
         }
+
+        //public List<FilmingLocation> GetALLFilmingLocations()
+        //{
+        //    findAllFilmingLocations.CommandText = sql_FIND_ALL_FILMINLOCATION;
+        //    List<FilmingLocation> temp = new List<FilmingLocation>();
+        //    SqlDataReader reader = findAllFilmingLocations.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        FilmingLocation fL = new FilmingLocation
+        //        {
+        //            Id = reader.GetInt32(reader.GetOrdinal("id")),
+        //            Name = reader.GetString(reader.GetOrdinal("name")),
+        //        };
+        //        temp.Add(fL);
+        //    }
+
+        //    reader.Close();
+
+        //    return temp;
+        //}
 
     }
 }

@@ -66,6 +66,9 @@ namespace midlertidigTest
             };
             eas.StartInsertMovieTransaction(movie);
 
+
+            Movie testmovie = es.GetMovieById(1);
+            Console.WriteLine(testmovie.Title);
         }
     }
 }

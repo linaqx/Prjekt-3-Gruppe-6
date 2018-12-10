@@ -7,7 +7,7 @@ using Projekt_3___WCF.Model;
 
 namespace WCF___library.DB
 {
-    interface FavoriteListDBIF
+    interface IFavoriteListDB
     {
         List<FavoriteList> FindAllListByUser(int id);
         void AddEntertainmentToFavoriteList(int ent, int fav);

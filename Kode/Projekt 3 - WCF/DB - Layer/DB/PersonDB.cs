@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace WCF___library.DB
 {
-    public class PersonDB
+    public class PersonDB : IPersonDB
     {
-
-
-        public User FindUserById(int id)
-        {
-            return null;
-        }
+        //public User FindUserById(int id)
+        //{
+        //    return null;
+        //}
 
         
 

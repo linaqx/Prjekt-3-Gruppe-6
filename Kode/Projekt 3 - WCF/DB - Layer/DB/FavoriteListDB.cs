@@ -10,7 +10,7 @@ using System.Transactions;
 
 namespace WCF___library.DB
 {
-    public class FavoriteListDB : FavoriteListDBIF
+    public class FavoriteListDB : IFavoriteListDB
     {
         //fix number 1 with random number
         private readonly string sql_FIND_ALL_LISTS_BY_USER = "select FavoriteList.id, FavoriteList.[name], FavoriteList.[description] from PersonFavoriteList, FavoriteList where PersonFavoriteList.person_id = @id and PersonFavoriteList.favoriteList_id = FavoriteList.id;";

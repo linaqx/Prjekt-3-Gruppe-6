@@ -24,7 +24,7 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public string StoryLine { get; set; }
         [DataMember]
-        public FilmingLocation FilmingLocation { get; set; }
+        public string FilmingLocation { get; set; }
         [DataMember]
         public string Information { get; set; }
         [DataMember]

@@ -7,17 +7,17 @@ use dmab0917_1026423;
 
 --select * from EntertainmentGenre, Genre where EntertainmentGenre.genre_id = Genre.id;
 
-select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
-[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
-from Movie
-INNER JOIN Entertainment on (Entertainment.id = Movie.entertainment_id)
-INNER JOIN Country on (Entertainment.country_id = Country.id)
-INNER JOIN [Language] on (Entertainment.language_id = [Language].id)
-INNER JOIN EntertainmentFilmingLocation on (Entertainment.id = EntertainmentFilmingLocation.entertainment_id)
-INNER JOIN FilmingLocation on (EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id)
-INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
-INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
-where  Movie.entertainment_id = 5;
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
+--[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
+--from Movie
+--INNER JOIN Entertainment on (Entertainment.id = Movie.entertainment_id)
+--INNER JOIN Country on (Entertainment.country_id = Country.id)
+--INNER JOIN [Language] on (Entertainment.language_id = [Language].id)
+--INNER JOIN EntertainmentFilmingLocation on (Entertainment.id = EntertainmentFilmingLocation.entertainment_id)
+--INNER JOIN FilmingLocation on (EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id)
+--INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
+--INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
+--where  Movie.entertainment_id = 5;
 
 
 

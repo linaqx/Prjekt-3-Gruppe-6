@@ -29,7 +29,7 @@ namespace WCF___library.DB
         private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country, [Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN Country on(Entertainment.country_id = Country.id) INNER JOIN[Language] on(Entertainment.language_id = [Language].id) INNER JOIN EntertainmentFilmingLocation on(Entertainment.id = EntertainmentFilmingLocation.entertainment_id) INNER JOIN FilmingLocation on(EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
-        private readonly string sql_FIND_GENRE_BY_NAME = "";
+        private readonly string sql_FIND_GENRE_BY_NAME = "select Genre.id, Genre.[name] as genre from Genre where Genre.[name] = @genre;";
         private readonly string sql_FIND_COUNTRY_BY_NAME = "";
         private readonly string sql_FIND_LANGUAGE_BY_NAME = "";
 
@@ -41,6 +41,9 @@ namespace WCF___library.DB
         private SqlCommand findAllLanguages;
         private SqlCommand findAllCountries;
         private SqlCommand findMovieById;
+        private SqlCommand findGenreByName;
+        private SqlCommand findCountryByName;
+        private SqlCommand findLanguageByName;
         private SqlCommand insertEntertainment;
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
@@ -59,6 +62,9 @@ namespace WCF___library.DB
             findAllLanguages = con.CreateCommand();
             findAllCountries = con.CreateCommand();
             findMovieById = con.CreateCommand();
+            findGenreByName = con.CreateCommand();
+            findCountryByName = con.CreateCommand();
+            findLanguageByName = con.CreateCommand();
             insertEntertainment = con.CreateCommand();
             insertMovie = con.CreateCommand();
             insertEntertainmentGenre = con.CreateCommand();
@@ -303,7 +309,7 @@ namespace WCF___library.DB
                 Country = FindCountryByName(reader.GetString(reader.GetOrdinal("country"))),
                 Language = FindLanguageByName(reader.GetString(reader.GetOrdinal("language"))),
                 Genre = FindGenreByName(reader.GetString(reader.GetOrdinal("genre"))),
-                FilmingLocation = FindFilmingLocationByName(reader.GetString(reader.GetOrdinal("filmingLocation"))),
+                FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
                 IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie")),
             };
             return temp;
@@ -311,8 +317,30 @@ namespace WCF___library.DB
 
         private Genre FindGenreByName(string name)
         {
-            Genre genre = new Genre();
-            return genre;
+            SqlParameter parameter = new SqlParameter
+            {
+                ParameterName = "@genre",
+                Value = name
+            };
+
+            findGenreByName.Parameters.Add(parameter);
+            findGenreByName.CommandText = sql_FIND_GENRE_BY_NAME;
+            Genre temp = new Genre();
+            SqlDataReader reader = findGenreByName.ExecuteReader();
+            while (reader.Read())
+            {
+                Genre genre = new Genre
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Name = reader.GetString(reader.GetOrdinal("name"))
+                };
+
+                temp = genre;
+            }
+
+            reader.Close();
+
+            return temp;
 
             //findAllLanguages.CommandText = sql_FIND_ALL_LANGUAGE;
             //List<Language> temp = new List<Language>();
@@ -339,10 +367,6 @@ namespace WCF___library.DB
             Language language = new Language();
             return language;
         }
-        private FilmingLocation FindFilmingLocationByName(string name)
-        {
-            FilmingLocation filmingLocation = new FilmingLocation();
-            return filmingLocation;
-        }
+        
     }
 }

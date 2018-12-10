@@ -45,7 +45,7 @@
             this.txtReleaseDate = new System.Windows.Forms.TextBox();
             this.txtStoryline = new System.Windows.Forms.TextBox();
             this.txtInformation = new System.Windows.Forms.TextBox();
-            this.cbBoxFilmingLocation = new System.Windows.Forms.ComboBox();
+            this.txtFilmingLocation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -192,20 +192,19 @@
             this.txtInformation.Size = new System.Drawing.Size(148, 26);
             this.txtInformation.TabIndex = 17;
             // 
-            // cbBoxFilmingLocation
+            // txtFilmingLocation
             // 
-            this.cbBoxFilmingLocation.FormattingEnabled = true;
-            this.cbBoxFilmingLocation.Location = new System.Drawing.Point(234, 286);
-            this.cbBoxFilmingLocation.Name = "cbBoxFilmingLocation";
-            this.cbBoxFilmingLocation.Size = new System.Drawing.Size(148, 28);
-            this.cbBoxFilmingLocation.TabIndex = 18;
+            this.txtFilmingLocation.Location = new System.Drawing.Point(234, 285);
+            this.txtFilmingLocation.Name = "txtFilmingLocation";
+            this.txtFilmingLocation.Size = new System.Drawing.Size(148, 26);
+            this.txtFilmingLocation.TabIndex = 20;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 506);
-            this.Controls.Add(this.cbBoxFilmingLocation);
+            this.Controls.Add(this.txtFilmingLocation);
             this.Controls.Add(this.txtInformation);
             this.Controls.Add(this.txtStoryline);
             this.Controls.Add(this.txtReleaseDate);
@@ -249,6 +248,6 @@
         private System.Windows.Forms.TextBox txtReleaseDate;
         private System.Windows.Forms.TextBox txtStoryline;
         private System.Windows.Forms.TextBox txtInformation;
-        private System.Windows.Forms.ComboBox cbBoxFilmingLocation;
+        private System.Windows.Forms.TextBox txtFilmingLocation;
     }
 }

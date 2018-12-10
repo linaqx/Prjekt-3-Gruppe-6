@@ -12,6 +12,6 @@ namespace Projekt_3___Desktop.Controller
 
         //ReturnEntertainmentBySearch();
 
-         void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information, bool isMovie);
+         void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, string filmingLocation, string information, bool isMovie);
     }
 }

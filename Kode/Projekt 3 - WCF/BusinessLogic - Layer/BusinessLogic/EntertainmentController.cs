@@ -55,6 +55,7 @@ namespace Projekt_3___WCF.BusinessLogic
 
         public void StartInsertMovieTransaction(Movie m)
         {
+            m.IsMovie = true;
             edb.StartInsertMovieTransaction(m);
         }
 

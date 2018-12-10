@@ -12,19 +12,19 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public int Genre { get; set; }
+        public Genre Genre { get; set; }
         [DataMember]
         public string Title { get; set; }
         [DataMember]
-        public int Country { get; set; }
+        public Country Country { get; set; }
         [DataMember]
-        public int Language { get; set; }
+        public Language Language { get; set; }
         [DataMember]
         public DateTime ReleaseDate { get; set; }
         [DataMember]
         public string StoryLine { get; set; }
         [DataMember]
-        public int FilmingLocation { get; set; }
+        public FilmingLocation FilmingLocation { get; set; }
         [DataMember]
         public string Information { get; set; }
         [DataMember]

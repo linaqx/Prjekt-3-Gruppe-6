@@ -29,6 +29,11 @@ namespace WCF___library.DB
         private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country, [Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN Country on(Entertainment.country_id = Country.id) INNER JOIN[Language] on(Entertainment.language_id = [Language].id) INNER JOIN EntertainmentFilmingLocation on(Entertainment.id = EntertainmentFilmingLocation.entertainment_id) INNER JOIN FilmingLocation on(EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
+        private readonly string sql_FIND_GENRE_BY_NAME = "";
+        private readonly string sql_FIND_COUNTRY_BY_NAME = "";
+        private readonly string sql_FIND_LANGUAGE_BY_NAME = "";
+
+
         private SqlCommand findAllEntertainments;
         private SqlCommand findAllPrivateEntertainments;
         private SqlCommand findAllGenres;
@@ -295,34 +300,49 @@ namespace WCF___library.DB
                 ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
                 StoryLine = reader.GetString(reader.GetOrdinal("storyline")),
                 Information = reader.GetString(reader.GetOrdinal("information")),
-                //Country = reader.GetString(reader.GetOrdinal("country")),
-                //Language = reader.GetString(reader.GetOrdinal("language")),
-                //Genre = reader.GetString(reader.GetOrdinal("genre")),
-                //FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
+                Country = FindCountryByName(reader.GetString(reader.GetOrdinal("country"))),
+                Language = FindLanguageByName(reader.GetString(reader.GetOrdinal("language"))),
+                Genre = FindGenreByName(reader.GetString(reader.GetOrdinal("genre"))),
+                FilmingLocation = FindFilmingLocationByName(reader.GetString(reader.GetOrdinal("filmingLocation"))),
                 IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie")),
             };
             return temp;
         }
 
-        //public List<FilmingLocation> GetALLFilmingLocations()
-        //{
-        //    findAllFilmingLocations.CommandText = sql_FIND_ALL_FILMINLOCATION;
-        //    List<FilmingLocation> temp = new List<FilmingLocation>();
-        //    SqlDataReader reader = findAllFilmingLocations.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        FilmingLocation fL = new FilmingLocation
-        //        {
-        //            Id = reader.GetInt32(reader.GetOrdinal("id")),
-        //            Name = reader.GetString(reader.GetOrdinal("name")),
-        //        };
-        //        temp.Add(fL);
-        //    }
+        private Genre FindGenreByName(string name)
+        {
+            Genre genre = new Genre();
+            return genre;
 
-        //    reader.Close();
+            //findAllLanguages.CommandText = sql_FIND_ALL_LANGUAGE;
+            //List<Language> temp = new List<Language>();
+            //SqlDataReader reader = findAllLanguages.ExecuteReader();
+            //while (reader.Read())
+            //{
+            //    Language l = new Language
+            //    {
+            //        Id = reader.GetInt32(reader.GetOrdinal("id")),
+            //        Name = reader.GetString(reader.GetOrdinal("name")),
+            //    };
+            //    temp.Add(l);
+            //}
 
-        //    return temp;
-        //}
-
+            //reader.Close();
+        }
+        private Country FindCountryByName(string name)
+        {
+            Country country = new Country();
+            return country;
+        }
+        private Language FindLanguageByName(string name)
+        {
+            Language language = new Language();
+            return language;
+        }
+        private FilmingLocation FindFilmingLocationByName(string name)
+        {
+            FilmingLocation filmingLocation = new FilmingLocation();
+            return filmingLocation;
+        }
     }
 }

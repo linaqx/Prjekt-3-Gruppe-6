@@ -27,14 +27,14 @@ namespace Projekt_3___Desktop.ServiceLayer
         {
             EntertainmentAdminService.Movie temp = new EntertainmentAdminService.Movie
             {
-                Title = movie.Title,
-                Genre = movie.Genre,
-                Country = movie.Country,
-                Language = movie.Language,
-                ReleaseDate = movie.ReleasDate,
-                StoryLine = movie.Storyline,
-                FilmingLocation = movie.FilmingLocation,
-                Information = movie.Information
+                //Title = movie.Title,
+                //Genre = movie.Genre,
+                //Country = movie.Country,
+                //Language = movie.Language,
+                //ReleaseDate = movie.ReleasDate,
+                //StoryLine = movie.Storyline,
+                //FilmingLocation = movie.FilmingLocation,
+                //Information = movie.Information
             };
             return temp;
         }

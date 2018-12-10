@@ -52,19 +52,19 @@ namespace midlertidigTest
                 Console.WriteLine(country.Name);
             }
 
-            Movie movie = new Movie
-            {
-                Title = "Iron Man 4",
-                Genre = 1,
-                Country = 2,
-                Language = 1,
-                ReleaseDate = DateTime.Now,
-                StoryLine = "Something Explode",
-                FilmingLocation = 1,
-                Information = "nice",
-                IsMovie = true
-            };
-            eas.StartInsertMovieTransaction(movie);
+            //Movie movie = new Movie
+            //{
+            //    Title = "Iron Man 4",
+            //    Genre = 1,
+            //    Country = 2,
+            //    Language = 1,
+            //    ReleaseDate = DateTime.Now,
+            //    StoryLine = "Something Explode",
+            //    FilmingLocation = 1,
+            //    Information = "nice",
+            //    IsMovie = true
+            //};
+            //eas.StartInsertMovieTransaction(movie);
 
 
             Movie testmovie = es.GetMovieById(1);

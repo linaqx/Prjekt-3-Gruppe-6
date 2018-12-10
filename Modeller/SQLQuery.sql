@@ -22,7 +22,7 @@ where  Movie.entertainment_id = 5;
 
 
 ----------Find all entertainments----------
-select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;
 
 
 
@@ -123,12 +123,16 @@ select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Enterta
 
 --select * from Comment;
 
-select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
+--select * from Entertainment, Movie where Entertainment.id = Movie.entertainment_id;
 
 
 
 ----------Find Movie by Id----------
 --select * from Movie, Entertainment, Genre, FilmingLocation where Entertainment.id = Movie.entertainment_id and Entertainment.id = ;
+
+
+----------Find Genre By Name----------
+select Genre.id, Genre.[name] from Genre where Genre.[name] = 'Action';
 
 
 

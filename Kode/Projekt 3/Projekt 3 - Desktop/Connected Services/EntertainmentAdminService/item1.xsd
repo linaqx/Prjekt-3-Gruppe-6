@@ -12,13 +12,13 @@
   <xs:complexType name="Entertainment">
     <xs:sequence>
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Comments" nillable="true" type="q1:ArrayOfComment" />
-      <xs:element minOccurs="0" name="Country" type="xs:int" />
-      <xs:element minOccurs="0" name="FilmingLocation" type="xs:int" />
-      <xs:element minOccurs="0" name="Genre" type="xs:int" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilmingLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Genre" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsMovie" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Language" type="xs:int" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />

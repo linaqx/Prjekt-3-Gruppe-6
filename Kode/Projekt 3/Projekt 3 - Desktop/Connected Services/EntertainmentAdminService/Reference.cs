@@ -271,13 +271,13 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         private Projekt_3___Desktop.EntertainmentAdminService.Comment[] CommentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CountryField;
+        private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int FilmingLocationField;
+        private string FilmingLocationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int GenreField;
+        private string GenreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
@@ -289,7 +289,7 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         private bool IsMovieField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LanguageField;
+        private string LanguageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime ReleaseDateField;
@@ -324,12 +324,12 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Country {
+        public string Country {
             get {
                 return this.CountryField;
             }
             set {
-                if ((this.CountryField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
                     this.CountryField = value;
                     this.RaisePropertyChanged("Country");
                 }
@@ -337,12 +337,12 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int FilmingLocation {
+        public string FilmingLocation {
             get {
                 return this.FilmingLocationField;
             }
             set {
-                if ((this.FilmingLocationField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.FilmingLocationField, value) != true)) {
                     this.FilmingLocationField = value;
                     this.RaisePropertyChanged("FilmingLocation");
                 }
@@ -350,12 +350,12 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Genre {
+        public string Genre {
             get {
                 return this.GenreField;
             }
             set {
-                if ((this.GenreField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.GenreField, value) != true)) {
                     this.GenreField = value;
                     this.RaisePropertyChanged("Genre");
                 }
@@ -402,12 +402,12 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Language {
+        public string Language {
             get {
                 return this.LanguageField;
             }
             set {
-                if ((this.LanguageField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.LanguageField, value) != true)) {
                     this.LanguageField = value;
                     this.RaisePropertyChanged("Language");
                 }

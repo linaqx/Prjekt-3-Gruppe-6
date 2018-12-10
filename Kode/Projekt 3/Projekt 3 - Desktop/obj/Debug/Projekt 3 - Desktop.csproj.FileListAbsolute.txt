@@ -17,4 +17,3 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - De
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.csproj.CoreCompileInputs.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.exe
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.pdb
-C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3\Projekt 3 - Desktop\obj\Debug\Projekt 3 - Desktop.csprojAssemblyReference.cache

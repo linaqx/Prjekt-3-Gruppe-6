@@ -10,22 +10,22 @@ namespace Projekt_3___Desktop.ServiceLayer
 {
     class DesktopService : DesktopServiceIF
     {
-        private ServiceReference1.EntertainmentServiceClient sC;
+        private EntertainmentAdminService.EntertainmentAdminServiceClient easc;
 
         public DesktopService()
         {
-            sC = new ServiceReference1.EntertainmentServiceClient();
+            easc = new EntertainmentAdminService.EntertainmentAdminServiceClient();
         }
 
         public void InsertMovieIntoEntertainment(Movie m)
         {
-            ServiceReference1.Movie movie = ConvertToMovie(m);
-            sC.StartInsertMovieTransaction(movie);
+            EntertainmentAdminService.Movie movie = ConvertToMovie(m);
+            easc.StartInsertMovieTransaction(movie);
         }
 
-        private ServiceReference1.Movie ConvertToMovie(Movie movie)
+        private EntertainmentAdminService.Movie ConvertToMovie(Movie movie)
         {
-            ServiceReference1.Movie temp = new ServiceReference1.Movie
+            EntertainmentAdminService.Movie temp = new EntertainmentAdminService.Movie
             {
                 Title = movie.Title,
                 Genre = movie.Genre,
@@ -43,20 +43,20 @@ namespace Projekt_3___Desktop.ServiceLayer
         public List<Genre> GetGenre()
         {
 
-            var genre = sC.FindAllGenre();
+            var genre = easc.FindAllGenre();
 
             List<Genre> convertedGenre = ConvertToGenre(genre);
 
             return convertedGenre;
         }
 
-        private List<Genre> ConvertToGenre(ServiceReference1.Genre[] serviceGenre)
+        private List<Genre> ConvertToGenre(EntertainmentAdminService.Genre[] serviceGenre)
         {
             Genre temp = null;
             List<Genre> convertedGenre = new List<Genre>();
 
 
-            foreach (ServiceReference1.Genre oldGenre in serviceGenre)
+            foreach (EntertainmentAdminService.Genre oldGenre in serviceGenre)
             {
                 temp = new Genre()
                 {
@@ -73,20 +73,20 @@ namespace Projekt_3___Desktop.ServiceLayer
         public List<Country> GetCountry()
         {
 
-            var country = sC.FindAllCountries();
+            var country = easc.FindAllCountries();
 
             List<Country> convertedCountry = ConvertToCountry(country);
 
             return convertedCountry;
         }
 
-        private List<Country> ConvertToCountry(ServiceReference1.Country[] serviceCountry)
+        private List<Country> ConvertToCountry(EntertainmentAdminService.Country[] serviceCountry)
         {
             Country temp = null;
             List<Country> convertedCountry = new List<Country>();
 
 
-            foreach (ServiceReference1.Country oldCountry in serviceCountry)
+            foreach (EntertainmentAdminService.Country oldCountry in serviceCountry)
             {
                 temp = new Country()
                 {
@@ -102,20 +102,20 @@ namespace Projekt_3___Desktop.ServiceLayer
 
         public List<Language> GetLanguage()
         {
-            var language = sC.FindAllLanguage();
+            var language = easc.FindAllLanguage();
 
             List<Language> convertedLanguage = ConvertToLanguage(language);
 
             return convertedLanguage;
         }
 
-        private List<Language> ConvertToLanguage(ServiceReference1.Language[] serviceLanguage)
+        private List<Language> ConvertToLanguage(EntertainmentAdminService.Language[] serviceLanguage)
         {
             Language temp = null;
             List<Language> convertedLanguage = new List<Language>();
 
 
-            foreach (ServiceReference1.Language oldLanguage in serviceLanguage)
+            foreach (EntertainmentAdminService.Language oldLanguage in serviceLanguage)
             {
                 temp = new Language()
                 {
@@ -131,20 +131,20 @@ namespace Projekt_3___Desktop.ServiceLayer
 
         public List<FilmingLocation> GetFilmingLocation()
         {
-            var film = sC.FindAllFilmingLocations();
+            var film = easc.FindAllFilmingLocations();
 
             List<FilmingLocation> convertedFilm = ConvertToFilmingLocation(film);
 
             return convertedFilm;
         }
 
-        private List<FilmingLocation> ConvertToFilmingLocation(ServiceReference1.FilmingLocation[] serviceFilmingLocation)
+        private List<FilmingLocation> ConvertToFilmingLocation(EntertainmentAdminService.FilmingLocation[] serviceFilmingLocation)
         {
             FilmingLocation temp = null;
             List<FilmingLocation> convertedFilm = new List<FilmingLocation>();
 
 
-            foreach (ServiceReference1.FilmingLocation oldFilmingLocation in serviceFilmingLocation)
+            foreach (EntertainmentAdminService.FilmingLocation oldFilmingLocation in serviceFilmingLocation)
             {
                 temp = new FilmingLocation()
                 {

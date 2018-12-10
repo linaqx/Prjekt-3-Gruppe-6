@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="613bd8b5-40bb-4908-a522-59f3b7dce7ae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="9ba925b7-0aca-43a8-b231-e1744b76e10d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="81447e38-0b54-47a1-8d8a-e301dbd0c588" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="9094caf5-18e0-4a0d-86b1-477cced72724" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="81d4996b-e920-4d3b-861d-cc8d11557fd7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="EntertainmentAdminService.wsdl" MetadataType="Wsdl" ID="f1216760-1574-4540-9a9f-ee44e7691981" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="885565b9-1dbd-47cb-b09d-a40ecbb88908" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComboBoxItem.cs" />
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\EntertainmentAdminService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -84,32 +84,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ServiceReference1\EntertainmentService.wsdl" />
-    <None Include="Connected Services\ServiceReference1\item.xsd">
+    <None Include="Connected Services\EntertainmentAdminService\EntertainmentAdminService.wsdl" />
+    <None Include="Connected Services\EntertainmentAdminService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\item1.xsd">
+    <None Include="Connected Services\EntertainmentAdminService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\item2.xsd">
+    <None Include="Connected Services\EntertainmentAdminService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\item3.xsd">
+    <None Include="Connected Services\EntertainmentAdminService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\Projekt_3___Desktop.ServiceReference1.Country.datasource">
+    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Projekt_3___Desktop.ServiceReference1.Entertainment.datasource">
+    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Projekt_3___Desktop.ServiceReference1.FilmingLocation.datasource">
+    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.Genre.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Projekt_3___Desktop.ServiceReference1.Genre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceReference1\Projekt_3___Desktop.ServiceReference1.Language.datasource">
+    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.Language.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -129,19 +126,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\EntertainmentAdminService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\item.disco" />
+    <None Include="Connected Services\EntertainmentAdminService\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\EntertainmentAdminService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\EntertainmentAdminService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\EntertainmentAdminService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

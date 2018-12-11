@@ -100,9 +100,6 @@
     <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\EntertainmentAdminService\Projekt_3___Desktop.EntertainmentAdminService.Genre.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

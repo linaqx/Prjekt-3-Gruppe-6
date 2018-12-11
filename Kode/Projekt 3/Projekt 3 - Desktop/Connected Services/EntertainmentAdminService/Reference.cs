@@ -76,67 +76,6 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FilmingLocation", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
-    [System.SerializableAttribute()]
-    public partial class FilmingLocation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Language", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
     [System.SerializableAttribute()]
     public partial class Language : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -573,12 +512,6 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentAdminService/FindAllGenre", ReplyAction="http://tempuri.org/IEntertainmentAdminService/FindAllGenreResponse")]
         System.Threading.Tasks.Task<Projekt_3___Desktop.EntertainmentAdminService.Genre[]> FindAllGenreAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations", ReplyAction="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocationsResponse")]
-        Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation[] FindAllFilmingLocations();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations", ReplyAction="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocationsResponse")]
-        System.Threading.Tasks.Task<Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation[]> FindAllFilmingLocationsAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentAdminService/FindAllLanguage", ReplyAction="http://tempuri.org/IEntertainmentAdminService/FindAllLanguageResponse")]
         Projekt_3___Desktop.EntertainmentAdminService.Language[] FindAllLanguage();
         
@@ -633,14 +566,6 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         
         public System.Threading.Tasks.Task<Projekt_3___Desktop.EntertainmentAdminService.Genre[]> FindAllGenreAsync() {
             return base.Channel.FindAllGenreAsync();
-        }
-        
-        public Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation[] FindAllFilmingLocations() {
-            return base.Channel.FindAllFilmingLocations();
-        }
-        
-        public System.Threading.Tasks.Task<Projekt_3___Desktop.EntertainmentAdminService.FilmingLocation[]> FindAllFilmingLocationsAsync() {
-            return base.Channel.FindAllFilmingLocationsAsync();
         }
         
         public Projekt_3___Desktop.EntertainmentAdminService.Language[] FindAllLanguage() {

@@ -14,12 +14,6 @@
   <wsdl:message name="IEntertainmentAdminService_FindAllGenre_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllGenreResponse" />
   </wsdl:message>
-  <wsdl:message name="IEntertainmentAdminService_FindAllFilmingLocations_InputMessage">
-    <wsdl:part name="parameters" element="tns:FindAllFilmingLocations" />
-  </wsdl:message>
-  <wsdl:message name="IEntertainmentAdminService_FindAllFilmingLocations_OutputMessage">
-    <wsdl:part name="parameters" element="tns:FindAllFilmingLocationsResponse" />
-  </wsdl:message>
   <wsdl:message name="IEntertainmentAdminService_FindAllLanguage_InputMessage">
     <wsdl:part name="parameters" element="tns:FindAllLanguage" />
   </wsdl:message>
@@ -43,10 +37,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllGenre" message="tns:IEntertainmentAdminService_FindAllGenre_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllGenreResponse" message="tns:IEntertainmentAdminService_FindAllGenre_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="FindAllFilmingLocations">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations" message="tns:IEntertainmentAdminService_FindAllFilmingLocations_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocationsResponse" message="tns:IEntertainmentAdminService_FindAllFilmingLocations_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="FindAllLanguage">
       <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllLanguage" message="tns:IEntertainmentAdminService_FindAllLanguage_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllLanguageResponse" message="tns:IEntertainmentAdminService_FindAllLanguage_OutputMessage" />
@@ -64,15 +54,6 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="FindAllGenre">
       <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllGenre" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="FindAllFilmingLocations">
-      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

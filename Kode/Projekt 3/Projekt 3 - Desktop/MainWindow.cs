@@ -50,14 +50,17 @@ namespace Projekt_3___Desktop
         {
 
             string title = txtTitle.Text;
-            int genre;
+            int genre_id;
+            string genre_name;
             try
             {
-                genre = ((ComboBoxItem)cbBoxGenre.SelectedItem).HiddenValue;
+                ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxGenre.SelectedItem;
+                genre_id = comboBoxItem.HiddenValue;
+                genre_name = comboBoxItem.DisplayValue;
             }
             catch (Exception)
             {
-                genre = 0;
+                genre_id = 0;
                 MessageBox.Show("Please choose a valid genre");
 
             }
@@ -87,13 +90,13 @@ namespace Projekt_3___Desktop
             string filmingLocation = txtFilmingLocation.Text;
             string information = txtInformation.Text;
             bool isMovie = true;
-            if (title != "" && storyline != "" && information != "" && filmingLocation !="" && genre > 0 && country > 0 && language > 0)
+            if (title != "" && storyline != "" && information != "" && filmingLocation !="" && genre_id > 0 && country > 0 && language > 0)
             {
                 try
                 {
                     DateTime date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
 
-                    DC.InsertMovieIntoEntertainment(genre, title, country, language, date, storyline, filmingLocation, information, isMovie);
+                    DC.InsertMovieIntoEntertainment(genre_id, genre_name, title, country, language, date, storyline, filmingLocation, information, isMovie);
                     ClearMovie();
                     MessageBox.Show("Your movie is saved!");
                 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projekt_3___Desktop.Model;
 
 namespace Projekt_3___Desktop.Controller
 {
@@ -12,6 +13,6 @@ namespace Projekt_3___Desktop.Controller
 
         //ReturnEntertainmentBySearch();
 
-         void InsertMovieIntoEntertainment(int genre, string title, int country, int language, DateTime releaseDate, string storyline, string filmingLocation, string information, bool isMovie);
+         void InsertMovieIntoEntertainment(Genre genre, string title, Country country, Language language, DateTime releaseDate, string storyline, string filmingLocation, string information, bool isMovie);
     }
 }

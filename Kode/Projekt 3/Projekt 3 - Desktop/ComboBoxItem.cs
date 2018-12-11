@@ -27,6 +27,14 @@ namespace Projekt_3___Desktop
             }
         }
 
+        public string DisplayValue
+        {
+            get
+            {
+                return displayValue;
+            }
+        }
+
         //Override ToString method
         public override string ToString()
         {

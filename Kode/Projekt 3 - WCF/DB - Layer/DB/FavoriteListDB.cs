@@ -67,6 +67,8 @@ namespace WCF___library.DB
                     temp.Add(f);
 
                 }
+
+                reader.Close();
                 return temp;
             }
             catch (Exception)

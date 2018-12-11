@@ -17,27 +17,27 @@ namespace WCF___library.DB
         private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
 
         private readonly string sql_FIND_ALL_GENRE = "select Genre.id, Genre.[name] from Genre;";
-        private readonly string sql_FIND_ALL_FILMINLOCATION = "select FilmingLocation.id, FilmingLocation.[name] from FilmingLocation;";
+        //private readonly string sql_FIND_ALL_FILMINLOCATION = "select FilmingLocation.id, FilmingLocation.[name] from FilmingLocation;";
         private readonly string sql_FIND_ALL_LANGUAGE = "select [Language].id, [Language].[name] from [Language];";
         private readonly string sql_FIND_ALL_COUNTRIES = "select Country.id, Country.[name] from Country;";
 
         private readonly string sql_INSERT_ENTERTAINMENT = "insert into Entertainment(title, country_id, language_id, releaseDate, storyline, information, isMovie) output inserted.id values (@title, @country_id, @language_id, @releaseDate, @storyline, @information, @isMovie);";
         private readonly string sql_INSERT_MOVIE = "insert into Movie(entertainment_id) values (@entertainment_id);";
         private readonly string sql_INSERT_ENTERTAINMENTGENRE = "insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);";
-        private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
+        //private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
 
-        private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country, [Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN Country on(Entertainment.country_id = Country.id) INNER JOIN[Language] on(Entertainment.language_id = [Language].id) INNER JOIN EntertainmentFilmingLocation on(Entertainment.id = EntertainmentFilmingLocation.entertainment_id) INNER JOIN FilmingLocation on(EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
+        private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country, [Language].[name] as [language], Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN Country on(Entertainment.country_id = Country.id) INNER JOIN[Language] on(Entertainment.language_id = [Language].id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
 
         private readonly string sql_FIND_GENRE_BY_NAME = "select Genre.id, Genre.[name] as genre from Genre where Genre.[name] = @genre;";
-        private readonly string sql_FIND_COUNTRY_BY_NAME = "";
-        private readonly string sql_FIND_LANGUAGE_BY_NAME = "";
+        private readonly string sql_FIND_COUNTRY_BY_NAME = "select Country.id, Country.name as country from Country where Country.name = @country;";
+        private readonly string sql_FIND_LANGUAGE_BY_NAME = "select [Language].id, [Language].[name] as [language] from [Language] where [Language].[name] = @language;";
 
 
         private SqlCommand findAllEntertainments;
         private SqlCommand findAllPrivateEntertainments;
         private SqlCommand findAllGenres;
-        private SqlCommand findAllFilmingLocations;
+        //private SqlCommand findAllFilmingLocations;
         private SqlCommand findAllLanguages;
         private SqlCommand findAllCountries;
         private SqlCommand findMovieById;
@@ -47,7 +47,7 @@ namespace WCF___library.DB
         private SqlCommand insertEntertainment;
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
-        private SqlCommand insertEntertainmentFilmingLocation;
+        //private SqlCommand insertEntertainmentFilmingLocation;
 
 
         private SqlConnection con;
@@ -58,7 +58,7 @@ namespace WCF___library.DB
             findAllEntertainments = con.CreateCommand();
             findAllPrivateEntertainments = con.CreateCommand();
             findAllGenres = con.CreateCommand();
-            findAllFilmingLocations = con.CreateCommand();
+            //findAllFilmingLocations = con.CreateCommand();
             findAllLanguages = con.CreateCommand();
             findAllCountries = con.CreateCommand();
             findMovieById = con.CreateCommand();
@@ -68,7 +68,7 @@ namespace WCF___library.DB
             insertEntertainment = con.CreateCommand();
             insertMovie = con.CreateCommand();
             insertEntertainmentGenre = con.CreateCommand();
-            insertEntertainmentFilmingLocation = con.CreateCommand();
+            //insertEntertainmentFilmingLocation = con.CreateCommand();
         }
 
         public List<Entertainment> GetAllEntertainments()
@@ -135,25 +135,25 @@ namespace WCF___library.DB
             return temp;
         }
 
-        public List<FilmingLocation> GetALLFilmingLocations()
-        {
-            findAllFilmingLocations.CommandText = sql_FIND_ALL_FILMINLOCATION;
-            List<FilmingLocation> temp = new List<FilmingLocation>();
-            SqlDataReader reader = findAllFilmingLocations.ExecuteReader();
-            while (reader.Read())
-            {
-                FilmingLocation fL = new FilmingLocation
-                {
-                    Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Name = reader.GetString(reader.GetOrdinal("name")),
-                };
-                temp.Add(fL);
-            }
+        //public List<FilmingLocation> GetALLFilmingLocations()
+        //{
+        //    findAllFilmingLocations.CommandText = sql_FIND_ALL_FILMINLOCATION;
+        //    List<FilmingLocation> temp = new List<FilmingLocation>();
+        //    SqlDataReader reader = findAllFilmingLocations.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        FilmingLocation fL = new FilmingLocation
+        //        {
+        //            Id = reader.GetInt32(reader.GetOrdinal("id")),
+        //            Name = reader.GetString(reader.GetOrdinal("name")),
+        //        };
+        //        temp.Add(fL);
+        //    }
 
-            reader.Close();
+        //    reader.Close();
 
-            return temp;
-        }
+        //    return temp;
+        //}
 
         public List<Language> GetAllLanguages()
         {
@@ -206,7 +206,7 @@ namespace WCF___library.DB
                 int insertedId = InsertEntertainment(m);
                 InsertMovie(insertedId, m);
                 InsertEntertainmentGenre(insertedId, m);
-                InsertEntertainmentFilmingLocation(insertedId, m);
+                //InsertEntertainmentFilmingLocation(insertedId, m);
 
                 scope.Complete();
             }
@@ -219,8 +219,8 @@ namespace WCF___library.DB
             //insert Entertainment - (title, country_id, language_id, releaseDate, storyline, information)
             insertEntertainment.CommandText = sql_INSERT_ENTERTAINMENT;
             insertEntertainment.Parameters.AddWithValue("@title", m.Title);
-            insertEntertainment.Parameters.AddWithValue("@country_id", m.Country);
-            insertEntertainment.Parameters.AddWithValue("@language_id", m.Language);
+            insertEntertainment.Parameters.AddWithValue("@country_id", m.Country.Id);
+            insertEntertainment.Parameters.AddWithValue("@language_id", m.Language.Id);
             insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
             insertEntertainment.Parameters.AddWithValue("@storyline", m.StoryLine);
             insertEntertainment.Parameters.AddWithValue("@information", m.Information);
@@ -242,19 +242,18 @@ namespace WCF___library.DB
             //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre);
+            insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre.Id);
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 
-        private void InsertEntertainmentFilmingLocation(int insertedId, Movie m)
-        {
-            //insert EntertainmentFilmingLocation - (entertainment_id, filmingLocation_id)
-            insertEntertainmentFilmingLocation.CommandText = sql_INSERT_ENTERTAINMENTFILMINGLOCATION;
-            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@entertainment_id", insertedId);
-            insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.FilmingLocation);
-            insertEntertainmentFilmingLocation.ExecuteNonQuery();
-        }
-
+        //private void InsertEntertainmentFilmingLocation(int insertedId, Movie m)
+        //{
+        //    //insert EntertainmentFilmingLocation - (entertainment_id, filmingLocation_id)
+        //    insertEntertainmentFilmingLocation.CommandText = sql_INSERT_ENTERTAINMENTFILMINGLOCATION;
+        //    insertEntertainmentFilmingLocation.Parameters.AddWithValue("@entertainment_id", insertedId);
+        //    insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.FilmingLocation);
+        //    insertEntertainmentFilmingLocation.ExecuteNonQuery();
+        //}
 
         public Movie GetMovieById(int id)
         {
@@ -292,6 +291,8 @@ namespace WCF___library.DB
             reader.Close();
             commentReader.Close();
 
+            //movie.Genre = findGenreByName();
+
             return movie;
         }
 
@@ -315,7 +316,7 @@ namespace WCF___library.DB
             return temp;
         }
 
-        private Genre FindGenreByName(string name)
+        public Genre FindGenreByName(string name)
         {
             SqlParameter parameter = new SqlParameter
             {
@@ -326,46 +327,77 @@ namespace WCF___library.DB
             findGenreByName.Parameters.Add(parameter);
             findGenreByName.CommandText = sql_FIND_GENRE_BY_NAME;
             Genre temp = new Genre();
-            SqlDataReader reader = findGenreByName.ExecuteReader();
-            while (reader.Read())
+            SqlDataReader genrereader = findGenreByName.ExecuteReader();
+            while (genrereader.Read())
             {
                 Genre genre = new Genre
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Name = reader.GetString(reader.GetOrdinal("name"))
+                    Id = genrereader.GetInt32(genrereader.GetOrdinal("id")),
+                    Name = genrereader.GetString(genrereader.GetOrdinal("genre"))
                 };
 
                 temp = genre;
             }
 
-            reader.Close();
+            genrereader.Close();
 
             return temp;
-
-            //findAllLanguages.CommandText = sql_FIND_ALL_LANGUAGE;
-            //List<Language> temp = new List<Language>();
-            //SqlDataReader reader = findAllLanguages.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    Language l = new Language
-            //    {
-            //        Id = reader.GetInt32(reader.GetOrdinal("id")),
-            //        Name = reader.GetString(reader.GetOrdinal("name")),
-            //    };
-            //    temp.Add(l);
-            //}
-
-            //reader.Close();
         }
-        private Country FindCountryByName(string name)
+
+        public Country FindCountryByName(string name)
         {
-            Country country = new Country();
-            return country;
+            SqlParameter parameter = new SqlParameter
+            {
+                ParameterName = "@country",
+                Value = name
+            };
+
+            findCountryByName.Parameters.Add(parameter);
+            findCountryByName.CommandText = sql_FIND_COUNTRY_BY_NAME;
+            Country temp = new Country();
+            SqlDataReader countryreader = findCountryByName.ExecuteReader();
+            while (countryreader.Read())
+            {
+                Country country = new Country
+                {
+                    Id = countryreader.GetInt32(countryreader.GetOrdinal("id")),
+                    Name = countryreader.GetString(countryreader.GetOrdinal("country"))
+                };
+
+                temp = country;
+            }
+
+            countryreader.Close();
+
+            return temp;
         }
-        private Language FindLanguageByName(string name)
+
+        public Language FindLanguageByName(string name)
         {
-            Language language = new Language();
-            return language;
+            SqlParameter parameter = new SqlParameter
+            {
+                ParameterName = "@language",
+                Value = name
+            };
+
+            findLanguageByName.Parameters.Add(parameter);
+            findLanguageByName.CommandText = sql_FIND_LANGUAGE_BY_NAME;
+            Language temp = new Language();
+            SqlDataReader languagereader = findLanguageByName.ExecuteReader();
+            while (languagereader.Read())
+            {
+                Language language = new Language
+                {
+                    Id = languagereader.GetInt32(languagereader.GetOrdinal("id")),
+                    Name = languagereader.GetString(languagereader.GetOrdinal("language"))
+                };
+
+                temp = language;
+            }
+
+            languagereader.Close();
+
+            return temp;
         }
         
     }

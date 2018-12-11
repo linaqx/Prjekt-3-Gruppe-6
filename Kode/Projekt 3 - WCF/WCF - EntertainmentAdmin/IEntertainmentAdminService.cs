@@ -16,8 +16,8 @@ namespace WCF___EntertainmentAdmin
         [OperationContract]
         List<Genre> FindAllGenre();
 
-        [OperationContract]
-        List<FilmingLocation> FindAllFilmingLocations();
+        //[OperationContract]
+        //List<FilmingLocation> FindAllFilmingLocations();
 
         [OperationContract]
         List<Language> FindAllLanguage();

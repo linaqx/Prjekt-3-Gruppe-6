@@ -132,9 +132,18 @@ use dmab0917_1026423;
 
 
 ----------Find Genre By Name----------
-select Genre.id, Genre.[name] from Genre where Genre.[name] = 'Action';
+select Genre.id, Genre.[name] as genre from Genre where Genre.[name] = 'Action';
 
 
+
+
+-----------Find Country By Name----------
+select Country.id, Country.name as country from Country where Country.name = 'Denmark';
+
+
+
+----------Find Language By Name-----------
+select [Language].id, [Language].[name] as [language] from [Language] where [Language].[name] = 'English';
 
 
 

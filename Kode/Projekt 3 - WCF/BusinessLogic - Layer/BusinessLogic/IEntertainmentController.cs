@@ -18,7 +18,7 @@ namespace BusinessLogic___Layer.BusinessLogic
 
         List<Genre> GetAllGenres();
 
-        List<FilmingLocation> GetALLFilmingLocations();
+        //List<FilmingLocation> GetALLFilmingLocations();
 
         List<Language> GetAllLanguages();
 

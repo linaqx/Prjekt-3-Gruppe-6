@@ -30,7 +30,7 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         private PopcornTime_2._0.EntertainmentService1.Country CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PopcornTime_2._0.EntertainmentService1.FilmingLocation FilmingLocationField;
+        private string FilmingLocationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private PopcornTime_2._0.EntertainmentService1.Genre GenreField;
@@ -93,7 +93,7 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PopcornTime_2._0.EntertainmentService1.FilmingLocation FilmingLocation {
+        public string FilmingLocation {
             get {
                 return this.FilmingLocationField;
             }
@@ -224,67 +224,6 @@ namespace PopcornTime_2._0.EntertainmentService1 {
     [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
     [System.SerializableAttribute()]
     public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FilmingLocation", Namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model")]
-    [System.SerializableAttribute()]
-    public partial class FilmingLocation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;

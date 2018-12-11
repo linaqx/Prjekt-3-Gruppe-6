@@ -64,25 +64,47 @@ namespace PopcornTime_2._0.ServiceLayer
 
         private List<EntertainmentModel.FavoriteList> ConvertToModelFavoriteList(PopcornTime_2._0.FavoritList.FavoriteList[] serviceFavoriteLists)
         {
-            EntertainmentModel.FavoriteList temp = null;
+            EntertainmentModel.FavoriteList temp = new EntertainmentModel.FavoriteList();
             List<EntertainmentModel.FavoriteList> convertedFavoriteList = new List<EntertainmentModel.FavoriteList>();
 
             foreach (PopcornTime_2._0.FavoritList.FavoriteList oldFav in serviceFavoriteLists)
             {
 
-                temp = new Models.FavoriteList()
+                EntertainmentModel.FavoriteList temp1 = new Models.FavoriteList
                 {
-                    Author = oldFav.Id,
+                    Id = oldFav.Id,
+                    Author = oldFav.Author,
                     Name = oldFav.Name,
                     Description = oldFav.Description,
                     
+                    
                 };
+                temp = temp1;
+
             }
             convertedFavoriteList.Add(temp);
 
             return convertedFavoriteList;
 
         }
+
+        public EntertainmentModel.Movie MovieById()
+        {
+            EntertainmentService1.EntertainmentServiceClient sC = new EntertainmentService1.EntertainmentServiceClient();
+
+            var movie = sC.GetMovieById(1);
+
+            EntertainmentModel.Movie convertedMovie = ConvertToModelMovie(movie);
+
+            return convertedMovie;
+        }
+
+        private EntertainmentModel.Movie ConvertToModelMovie(PopcornTime_2._0.EntertainmentService1.Movie serviceEntertainments)
+        {
+            EntertainmentModel.Movie convertedMovie = new EntertainmentModel.Movie();
+            return convertedMovie;
+        }
+
 
         //private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
         //{

@@ -2,19 +2,19 @@
     ViewBag.Title = "MyList";
 }
 
-@using PopcornTime_2._0.Models
+
 
 @model IEnumerable<PopcornTime_2._0.Models.FavoriteList>
 
 
 
-<select>
+@*<select>
     <option>
     @Html.DisplayNameFor(model => model.Name)
     </option>
-</select>
+</select>*@
 
-@foreach (var item in Model)
+@*@foreach (var item in Model)
 {
     <select>
         <option>
@@ -22,7 +22,7 @@
         </option>
     </select>
     
-}
+}*@
 
 
     @*<partial name="~/Views/Home/MyListPartialView.cshtml" />*@

@@ -22,13 +22,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Country" nillable="true" type="tns:Country" />
-  <xs:complexType name="FilmingLocation">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="FilmingLocation" nillable="true" type="tns:FilmingLocation" />
   <xs:complexType name="Genre">
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />

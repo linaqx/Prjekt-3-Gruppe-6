@@ -25,7 +25,7 @@ namespace PopcornTime_2._0.Models
 
         public FavoriteList()
         {
-
+            Entertainments = new List<Entertainment>();
         }
 
         public void AddEntertainment(Entertainment e)

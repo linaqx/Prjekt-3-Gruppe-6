@@ -63,9 +63,9 @@ namespace PopcornTime_2._0.Controllers
 
         public ActionResult MyList()
         {
+
+            List<FavoriteList> favoriteLists = eS.GetFavoriteLists();
             
-            List<FavoriteList> favoriteLists = new List<FavoriteList>();
-            favoriteLists = eS.GetFavoriteLists();
 
             return View(favoriteLists);
         }
@@ -79,8 +79,10 @@ namespace PopcornTime_2._0.Controllers
         public ActionResult Movie2()
         {
             ViewBag.Message = "Your contact page.";
+            Movie movie;
 
-            return View();
+            movie = eS.MovieById();
+            return View(movie);
         }
     }
 }

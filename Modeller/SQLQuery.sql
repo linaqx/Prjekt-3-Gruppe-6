@@ -8,7 +8,7 @@ use dmab0917_1026423;
 --select * from EntertainmentGenre, Genre where EntertainmentGenre.genre_id = Genre.id;
 
 --select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
---[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
+--[Language].[name] as [language], Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie
 --from Movie
 --INNER JOIN Entertainment on (Entertainment.id = Movie.entertainment_id)
 --INNER JOIN Country on (Entertainment.country_id = Country.id)
@@ -17,12 +17,20 @@ use dmab0917_1026423;
 --INNER JOIN FilmingLocation on (EntertainmentFilmingLocation.filmingLocation_id = FilmingLocation.id)
 --INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
 --INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
---where  Movie.entertainment_id = 5;
+--where  Movie.entertainment_id = 1;
+
+select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Entertainment.country_id,
+Entertainment.language_id, Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie
+from Movie
+INNER JOIN Entertainment on (Entertainment.id = Movie.entertainment_id)
+INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
+INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
+where  Movie.entertainment_id = 1;
 
 
 
 ----------Find all entertainments----------
---select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;
+select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;
 
 
 
@@ -131,19 +139,31 @@ use dmab0917_1026423;
 --select * from Movie, Entertainment, Genre, FilmingLocation where Entertainment.id = Movie.entertainment_id and Entertainment.id = ;
 
 
-----------Find Genre By Name----------
-select Genre.id, Genre.[name] as genre from Genre where Genre.[name] = 'Action';
+
+----------Find Genre On Movie----------
+select Genre.id, Genre.[name] as genre from Entertainment
+INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
+INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
+
+where Entertainment.id = 1
+;
+
+--select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Entertainment.country_id,
+--Entertainment.language_id, Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie
+--from Movie
+--INNER JOIN Entertainment on (Entertainment.id = Movie.entertainment_id)
+--INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id)
+--INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id)
+--where  Movie.entertainment_id = 1;
+
+
+-----------Find Country On Movie----------
+select Country.id, Country.[name] as country from Country, Entertainment where Entertainment.country_id = Country.id and Entertainment.id = 1;
 
 
 
-
------------Find Country By Name----------
-select Country.id, Country.name as country from Country where Country.name = 'Denmark';
-
-
-
-----------Find Language By Name-----------
-select [Language].id, [Language].[name] as [language] from [Language] where [Language].[name] = 'English';
+----------Find Language On Movie-----------
+select [Language].id, [Language].[name] as [language] from [Language], Entertainment where Entertainment.language_id = [Language].id and Entertainment.id = 1;
 
 
 

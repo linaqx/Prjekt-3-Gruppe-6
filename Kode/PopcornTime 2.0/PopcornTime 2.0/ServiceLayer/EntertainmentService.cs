@@ -75,7 +75,7 @@ namespace PopcornTime_2._0.ServiceLayer
                     Author = oldFav.Id,
                     Name = oldFav.Name,
                     Description = oldFav.Description,
-                    Entertainments = oldFav.Entertainments
+                    //Entertainments = oldFav.Entertainments
                 };
             }
             convertedFavoriteList.Add(temp);
@@ -84,34 +84,34 @@ namespace PopcornTime_2._0.ServiceLayer
 
         }
 
-        private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
-        {
-            PopcornTime_2._0.FavoritList.FavoriteList f1 = new FavoritListService.FavoriteList();
+        //private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
+        //{
+        //    PopcornTime_2._0.FavoritList.FavoriteList f1 = new FavoritListService.FavoriteList();
 
-            EntertainmentModel.Entertainment temp = null;
-            //formål returner en 
+        //    EntertainmentModel.Entertainment temp = null;
+        //    //formål returner en 
 
 
 
-            List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
+        //    List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
 
-            foreach (PopcornTime_2._0.EntertainmentService1.Entertainment oldEnt in serviceEntertainments)
-            {
+        //    foreach (PopcornTime_2._0.EntertainmentService1.Entertainment oldEnt in serviceEntertainments)
+        //    {
 
-                temp = new Models.Entertainment()
-                {
-                    Id = oldEnt.Id,
-                    Title = oldEnt.Title,
-                    ReleaseDate = oldEnt.ReleaseDate
-                };
+        //        temp = new Models.Entertainment()
+        //        {
+        //            Id = oldEnt.Id,
+        //            Title = oldEnt.Title,
+        //            ReleaseDate = oldEnt.ReleaseDate
+        //        };
 
-                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
-                convertedEntertainments.Add(temp);
-            }
-            return convertedEntertainments;
+        //        //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
+        //        convertedEntertainments.Add(temp);
+        //    }
+        //    return convertedEntertainments;
 
-            return null;
-        }
+        //    return null;
+        //}
 
 
     }

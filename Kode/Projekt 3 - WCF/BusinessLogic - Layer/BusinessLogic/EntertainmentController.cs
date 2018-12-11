@@ -40,10 +40,10 @@ namespace Projekt_3___WCF.BusinessLogic
             return edb.GetAllGenres();
         }
 
-        public List<FilmingLocation> GetALLFilmingLocations()
-        {
-            return edb.GetALLFilmingLocations();
-        }
+        //public List<FilmingLocation> GetALLFilmingLocations()
+        //{
+        //    return edb.GetALLFilmingLocations();
+        //}
 
         public List<Language> GetAllLanguages()
         {

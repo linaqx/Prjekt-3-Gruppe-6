@@ -25,10 +25,10 @@ namespace WCF___EntertainmentAdmin
             return EC.GetAllCountries();
         }
 
-        public List<FilmingLocation> FindAllFilmingLocations()
-        {
-            return EC.GetALLFilmingLocations();
-        }
+        //public List<FilmingLocation> FindAllFilmingLocations()
+        //{
+        //    return EC.GetALLFilmingLocations();
+        //}
 
         public List<Genre> FindAllGenre()
         {

@@ -24,22 +24,50 @@
     
 }
 
-    <partial name="~/Views/Home/MyListPartialView.cshtml" />
 
-    @*<table class="table">
+    @*<partial name="~/Views/Home/MyListPartialView.cshtml" />*@
+    <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Country)
+                @Html.DisplayNameFor(model => model.Author)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Language)
-            </th>*@
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+            @*<table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Language)
+                </th>*@
             @*<th>
                 @Html.DisplayNameFor(model => model.ReleaseDate)
             </th>*@
@@ -53,26 +81,26 @@
                 @Html.DisplayNameFor(model => model.Information)
             </th>*@
             @*<th></th>
-        </tr>*@
+            </tr>*@
 
-        @*<div>
+            @*<div>
             <ul class='dropdown'>
                 <li id="top">
                     <a href='index.html'>Dropdown</a>
                     <span></span>
                     <ol class="dropdown-box">
                         @*foreach()*@
-                        *@*@
+            *@*@
 
-        
+
 
         @Html.DropDownListFor(m => m.StudentGender,
         new SelectList(Enum.GetValues(typeof(Gender))),
-        "Select Gender")*@*@
+        "Select Gender")*@
 
 
-        @*FindAllfavoriteListByid skal sættes ind i dropdown*@
+            @*FindAllfavoriteListByid skal sættes ind i dropdown*@
 
-        @*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
+            @*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
 
 

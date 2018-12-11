@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="cb0e1899-7413-4327-a130-61edaf500b48" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="267b9031-a1c2-4581-a177-c1133706376e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="86bdee7e-1a92-4aa2-b94d-449798cdb747" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd2" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="887cbbcd-7597-419a-a8b3-7b46db305bfb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd1" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="3f3b2bf0-4a02-4a81-a7f8-d0f5942f1de0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="cb0e1899-7413-4327-a130-61edaf500b48" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?wsdl" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="e54b13a0-cc1a-40c0-b508-dcfd34525ca3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?disco" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="86bdee7e-1a92-4aa2-b94d-449798cdb747" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

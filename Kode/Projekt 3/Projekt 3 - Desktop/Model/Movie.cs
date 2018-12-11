@@ -13,7 +13,7 @@ namespace Projekt_3___Desktop.Model
 
         }
 
-        public Movie(int genre, string title, int country, int language, DateTime releaseDate, string storyline, int filmingLocation, string information) : base(genre, title, country, language, releaseDate, storyline, filmingLocation, information)
+        public Movie(Genre genre, string title, Country country, Language language, DateTime releaseDate, string storyline, string filmingLocation, string information) : base(genre, title, country, language, releaseDate, storyline, filmingLocation, information)
         {
             
         }

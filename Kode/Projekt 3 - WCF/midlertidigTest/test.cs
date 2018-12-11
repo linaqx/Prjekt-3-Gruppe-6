@@ -52,23 +52,29 @@ namespace midlertidigTest
                 Console.WriteLine(country.Name);
             }
 
-            Movie movie = new Movie
-            {
-                Title = "Iron Man 4",
-                Genre = edb.FindGenreByName("Action"),
-                Country = edb.FindCountryByName("USA"),
-                Language = edb.FindLanguageByName("English"),
-                ReleaseDate = DateTime.Now,
-                StoryLine = "Something Explode",
-                FilmingLocation = "New York",
-                Information = "nice",
-                //IsMovie = true
-            };
-            eas.StartInsertMovieTransaction(movie);
+            //Movie movie = new Movie
+            //{
+            //    Title = "Iron Man 4",
+            //    //Genre = edb.FindGenreByName("Action"),
+            //    //Country = edb.FindCountryByName("USA"),
+            //    //Language = edb.FindLanguageByName("English"),
+            //    ReleaseDate = DateTime.Now,
+            //    StoryLine = "Something Explode",
+            //    FilmingLocation = "New York",
+            //    Information = "nice",
+            //    //IsMovie = true
+            //};
+            //eas.StartInsertMovieTransaction(movie);
 
 
-            Movie testmovie = es.GetMovieById(1);
-            Console.WriteLine(testmovie.Title);
+            //Movie testmovie = es.GetMovieById(1);
+            //Console.WriteLine(testmovie.Title);
+
+            Movie findMovie = es.GetMovieById(1);
+            Console.WriteLine(findMovie.Title);
+            Console.WriteLine(findMovie.Country.Name);
+            Console.WriteLine(findMovie.Language.Name);
+            Console.WriteLine(findMovie.Genre.Name);
         }
     }
 }

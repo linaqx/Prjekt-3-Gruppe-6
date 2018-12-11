@@ -8,10 +8,10 @@ namespace PopcornTime_2._0.Models
     public class Entertainment
     {
         public int Id { get; set; }
-        public string Genre { get; set; }
+        public Genre Genre { get; set; }
         public string Title { get; set; }
-        public string Country { get; set; }
-        public string Language { get; set; }
+        public Country Country { get; set; }
+        public Language Language { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string StoryLine { get; set; }
         public string FilmingLocation { get; set; }

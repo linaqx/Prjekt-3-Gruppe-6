@@ -214,9 +214,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Entertainment.cs" />
     <Compile Include="Models\FavoriteList.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Language.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\User.cs" />
@@ -235,16 +238,7 @@
     <None Include="Connected Services\EntertainmentService1\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\EntertainmentService1\PopcornTime_2._0.EntertainmentService1.Country.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\EntertainmentService1\PopcornTime_2._0.EntertainmentService1.FilmingLocation.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\EntertainmentService1\PopcornTime_2._0.EntertainmentService1.Genre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\EntertainmentService1\PopcornTime_2._0.EntertainmentService1.Language.datasource">
+    <Content Include="Connected Services\EntertainmentService1\PopcornTime_2._0.EntertainmentService1.Movie.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\EntertainmentService1\Reference.svcmap">
@@ -342,6 +336,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Movie2.cshtml" />
     <Content Include="Views\Home\Movie1.cshtml" />
+    <Content Include="Views\Home\MyListPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

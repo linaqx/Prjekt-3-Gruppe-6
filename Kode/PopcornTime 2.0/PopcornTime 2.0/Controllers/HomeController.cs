@@ -65,7 +65,7 @@ namespace PopcornTime_2._0.Controllers
         {
             
             List<FavoriteList> favoriteLists = new List<FavoriteList>();
-            //favoriteLists = eS.getFavoriteLists();
+            favoriteLists = eS.GetFavoriteLists();
 
             return View(favoriteLists);
         }

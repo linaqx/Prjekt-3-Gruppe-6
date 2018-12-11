@@ -4,40 +4,75 @@
 
 @using PopcornTime_2._0.Models
 
-@model Entertainment
+@model IEnumerable<PopcornTime_2._0.Models.FavoriteList>
+
 
 
 <select>
-    <option>Vælg</option>
-    <option>test</option>
+    <option>
+    @Html.DisplayNameFor(model => model.Name)
+    </option>
 </select>
 
-<div>
-    <ul class='dropdown'>
-        <li id="top">
-            <a href='index.html'>Dropdown</a>
-            <span></span>
-            <ol class="dropdown-box">
-                @*foreach()*@
-                <li><a href='#'>item 1</a></li>
-                <li><a href='#'>item 2</a></li>
-                <li><a href='#'>item 3</a></li>
-                <li><a href='#'>item 4</a></li>
-                <li><a href='#'>item 5</a></li>
-            </ol>
-        </li>
-    </ul>
-</div>
+@foreach (var item in Model)
+{
+    <select>
+        <option>
+            @Html.DisplayFor(ModelItem => item.Name)
+        </option>
+    </select>
+    
+}
 
-@*@model FavoriteList*@
+    <partial name="~/Views/Home/MyListPartialView.cshtml" />
 
-@*@Html.DropDownListFor(m => m.StudentGender,
-    new SelectList(Enum.GetValues(typeof(Gender))),
-    "Select Gender")*@
+    @*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.StoryLine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmingLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Information)
+            </th>*@
+            @*<th></th>
+        </tr>*@
+
+        @*<div>
+            <ul class='dropdown'>
+                <li id="top">
+                    <a href='index.html'>Dropdown</a>
+                    <span></span>
+                    <ol class="dropdown-box">
+                        @*foreach()*@
+                        *@*@
+
+        
+
+        @Html.DropDownListFor(m => m.StudentGender,
+        new SelectList(Enum.GetValues(typeof(Gender))),
+        "Select Gender")*@*@
 
 
-@*FindAllfavoriteListByid skal sættes ind i dropdown*@
+        @*FindAllfavoriteListByid skal sættes ind i dropdown*@
 
-@*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
+        @*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
 
 

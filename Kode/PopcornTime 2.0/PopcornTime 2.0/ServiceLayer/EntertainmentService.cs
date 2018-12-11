@@ -75,7 +75,7 @@ namespace PopcornTime_2._0.ServiceLayer
                     Author = oldFav.Id,
                     Name = oldFav.Name,
                     Description = oldFav.Description,
-                    //Entertainments = oldFav.Entertainments
+                    
                 };
             }
             convertedFavoriteList.Add(temp);

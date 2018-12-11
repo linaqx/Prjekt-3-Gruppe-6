@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF___library/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model" />
   <xs:complexType name="ArrayOfEntertainment">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Entertainment" nillable="true" type="tns:Entertainment" />
@@ -8,12 +9,14 @@
   <xs:element name="ArrayOfEntertainment" nillable="true" type="tns:ArrayOfEntertainment" />
   <xs:complexType name="Entertainment">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Country" type="xs:int" />
-      <xs:element minOccurs="0" name="FilmingLocation" type="xs:int" />
-      <xs:element minOccurs="0" name="Genre" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Comments" nillable="true" type="q1:ArrayOfComment" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Country" nillable="true" type="q2:Country" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="FilmingLocation" nillable="true" type="q3:FilmingLocation" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Genre" nillable="true" type="q4:Genre" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Language" type="xs:int" />
+      <xs:element minOccurs="0" name="IsMovie" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Language" nillable="true" type="q5:Language" />
       <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
@@ -23,16 +26,7 @@
   <xs:complexType name="Movie">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Entertainment">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Country" type="xs:int" />
-          <xs:element minOccurs="0" name="FilmingLocation" type="xs:int" />
-          <xs:element minOccurs="0" name="Genre" type="xs:int" />
-          <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Language" type="xs:int" />
-          <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="Storyline" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
-        </xs:sequence>
+        <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

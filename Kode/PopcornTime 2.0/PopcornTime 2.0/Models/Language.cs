@@ -10,11 +10,11 @@ namespace PopcornTime_2._0.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Language(int id, string Name)
+        public Language()
         {
-            this.Id = id;
-            this.Name = Name;
+           
         }
+
 
 
     }

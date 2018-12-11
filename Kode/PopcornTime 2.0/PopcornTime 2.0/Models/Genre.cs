@@ -5,10 +5,9 @@
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Genre(int id, string Name)
+        public Genre()
         {
-            this.Id = id;
-            this.Name = Name;
+           
         }
 
 

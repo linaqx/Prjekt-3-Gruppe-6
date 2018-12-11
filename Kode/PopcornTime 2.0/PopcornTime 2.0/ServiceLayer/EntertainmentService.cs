@@ -49,12 +49,12 @@ namespace PopcornTime_2._0.ServiceLayer
             return convertedEntertainments;
         }
 
-        public List<EntertainmentModel.FavoriteList> GetFavoriteLists()
+        public List<EntertainmentModel.FavoriteList> GetFavoriteLists(int id)
         {
             FavoritListService.Service1Client fls = new FavoritListService.Service1Client();
 
 
-            var FavoriteLists = fls.FindAllListByUser(1);
+            var FavoriteLists = fls.FindAllListByUser(id);
 
             List<EntertainmentModel.FavoriteList> convertedFavoriteList = ConvertToModelFavoriteList(FavoriteLists);
 
@@ -80,19 +80,19 @@ namespace PopcornTime_2._0.ServiceLayer
                     
                 };
                 temp = temp1;
-
+                convertedFavoriteList.Add(temp);
             }
-            convertedFavoriteList.Add(temp);
+            
 
             return convertedFavoriteList;
 
         }
 
-        public EntertainmentModel.Movie MovieById()
+        public EntertainmentModel.Movie MovieById(int id)
         {
             EntertainmentService1.EntertainmentServiceClient sC = new EntertainmentService1.EntertainmentServiceClient();
 
-            var movie = sC.GetMovieById(1);
+            var movie = sC.GetMovieById(id);
 
             EntertainmentModel.Movie convertedMovie = ConvertToModelMovie(movie);
 
@@ -101,7 +101,42 @@ namespace PopcornTime_2._0.ServiceLayer
 
         private EntertainmentModel.Movie ConvertToModelMovie(PopcornTime_2._0.EntertainmentService1.Movie serviceEntertainments)
         {
-            EntertainmentModel.Movie convertedMovie = new EntertainmentModel.Movie();
+            EntertainmentModel.Language language = new EntertainmentModel.Language
+            {
+                Id = serviceEntertainments.Language.Id,
+                Name = serviceEntertainments.Language.Name
+            };
+
+            EntertainmentModel.Genre genre = new EntertainmentModel.Genre
+            {
+                Id = serviceEntertainments.Genre.Id,
+                Name = serviceEntertainments.Genre.Name
+            };
+
+            EntertainmentModel.Country country = new EntertainmentModel.Country
+            {
+                Id = serviceEntertainments.Country.Id,
+                Name = serviceEntertainments.Country.Name
+            };
+
+
+            EntertainmentModel.Movie convertedMovie = new EntertainmentModel.Movie
+            {
+                Id = serviceEntertainments.Id,
+                Genre = genre,
+                Title = serviceEntertainments.Title,
+                Country = country,
+                Language = language,
+                ReleaseDate = serviceEntertainments.ReleaseDate,
+                StoryLine = serviceEntertainments.StoryLine,
+                FilmingLocation = serviceEntertainments.FilmingLocation,
+                Information = serviceEntertainments.Information
+
+            };
+
+        
+
+
             return convertedMovie;
         }
 

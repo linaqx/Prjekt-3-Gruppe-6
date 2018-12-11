@@ -64,25 +64,34 @@ namespace PopcornTime_2._0.Controllers
         public ActionResult MyList()
         {
 
-            List<FavoriteList> favoriteLists = eS.GetFavoriteLists();
+            List<FavoriteList> favoriteLists = eS.GetFavoriteLists(1);
             
 
             return View(favoriteLists);
         }
 
-        public ActionResult Movie1()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Movie1()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
         public ActionResult Movie2()
         {
             ViewBag.Message = "Your contact page.";
             Movie movie;
 
-            movie = eS.MovieById();
+            movie = eS.MovieById(1);
             return View(movie);
         }
+
+        public ActionResult MyListPartialView()
+        {
+            ViewBag.Message = "Your contact page.";
+            PartialView("MyListPartialView");
+
+            return View();
+        }
+
     }
 }

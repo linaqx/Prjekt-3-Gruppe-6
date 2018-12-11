@@ -11,10 +11,9 @@ namespace PopcornTime_2._0.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Country(int id, string Name)
+        public Country()
         {
-            this.Id = id;
-            this.Name = Name;
+            
         }
     }
 }

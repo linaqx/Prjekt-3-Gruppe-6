@@ -10,22 +10,22 @@ namespace Projekt_3___WCF.Model
     public class Person
     {
         [DataMember]
-        private string firstName;
+        private string FirstName { get; set; }
         [DataMember]
-        private string lastName;
+        private string LastName { get; set; }
         [DataMember]
-        private string information;
+        private string Information { get; set; }
         
+        //public Person(string firstName, string lastName, string information)
+        //{
+        //    FirstName = firstName;
+        //    LastName = lastName;
+        //    Information = information;
+        //}
 
-        public Person(string firstName, string lastName, string information)
+        public Person()
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.information = information;
+
         }
-
-       
-
-
     }
 }

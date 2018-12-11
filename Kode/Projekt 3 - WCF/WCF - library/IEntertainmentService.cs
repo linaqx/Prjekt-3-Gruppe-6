@@ -20,18 +20,6 @@ namespace WCF___library
         List<Entertainment> FindPersonalEntertainments(int id);
 
         [OperationContract]
-        List<Genre> FindAllGenre();
-
-        [OperationContract]
-        List<FilmingLocation> FindAllFilmingLocations();
-
-        [OperationContract]
-        List<Language> FindAllLanguage();
-
-        [OperationContract]
-        List<Country> FindAllCountries();
-
-        [OperationContract]
-        void StartInsertMovieTransaction(Movie m);
+        Movie GetMovieById(int id);
     }
 }

@@ -20,30 +20,10 @@ namespace WCF___library
             EC = new EntertainmentController();
         }
 
-        public List<Country> FindAllCountries()
-        {
-            return EC.GetAllCountries();
-        }
-
         public List<Entertainment> FindAllEntertainments()
         {
             return EC.FindAllEntertainments();
 
-        }
-
-        public List<FilmingLocation> FindAllFilmingLocations()
-        {
-            return EC.GetALLFilmingLocations();
-        }
-
-        public List<Genre> FindAllGenre()
-        {
-            return EC.GetAllGenres();
-        }
-
-        public List<Language> FindAllLanguage()
-        {
-            return EC.GetAllLanguages();
         }
 
         public List<Entertainment> FindPersonalEntertainments(int id)
@@ -51,9 +31,11 @@ namespace WCF___library
             return EC.FindPersonalEntertainments(id);
         }
 
-        public void StartInsertMovieTransaction(Movie m)
+        public Movie GetMovieById(int id)
         {
-            EC.StartInsertMovieTransaction(m);
+            return EC.GetMovieById(id);
         }
+
+        
     }
 }

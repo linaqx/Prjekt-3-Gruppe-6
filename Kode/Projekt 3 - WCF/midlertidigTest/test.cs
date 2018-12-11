@@ -6,17 +6,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WCF___EntertainmentAdmin;
 using WCF___library;
 using WCF___library.DB;
 
 namespace midlertidigTest
 {
-    class test
+    class Test
     {
         static void Main(string[] args)
         {
             EntertainmentDB edb = new EntertainmentDB();
             EntertainmentService es = new EntertainmentService();
+            EntertainmentAdminService eas = new EntertainmentAdminService();
 
             List<Entertainment> temp = edb.GetAllEntertainments();
             foreach (Entertainment ent in temp)
@@ -50,20 +52,23 @@ namespace midlertidigTest
                 Console.WriteLine(country.Name);
             }
 
-            Movie movie = new Movie
-            {
-                Title = "Iron Man 4",
-                Genre = 1,
-                Country = 2,
-                Language = 1,
-                ReleaseDate = DateTime.Now,
-                StoryLine = "Something Explode",
-                FilmingLocation = 1,
-                Information = "nice",
-                IsMovie = true
-            };
-            es.StartInsertMovieTransaction(movie);
+            //Movie movie = new Movie
+            //{
+            //    Title = "Iron Man 4",
+            //    Genre = 1,
+            //    Country = 2,
+            //    Language = 1,
+            //    ReleaseDate = DateTime.Now,
+            //    StoryLine = "Something Explode",
+            //    FilmingLocation = 1,
+            //    Information = "nice",
+            //    IsMovie = true
+            //};
+            //eas.StartInsertMovieTransaction(movie);
 
+
+            Movie testmovie = es.GetMovieById(1);
+            Console.WriteLine(testmovie.Title);
         }
     }
 }

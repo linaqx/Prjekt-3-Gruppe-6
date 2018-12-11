@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_3___Desktop.Model
 {
-    class Language
+    public class Language
     {
 
         public int Id { get; set; }

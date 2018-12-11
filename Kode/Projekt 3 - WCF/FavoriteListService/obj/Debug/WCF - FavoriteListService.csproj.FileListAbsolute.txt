@@ -7,8 +7,8 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\Favorite
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\bin\Debug\BusinessLogic - Layer.pdb
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\bin\Debug\Model - Layer.pdb
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\bin\Debug\DB - Layer.pdb
-C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\WCF - FavoriteListService.csprojAssemblyReference.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\WCF - FavoriteListService.csproj.CoreCompileInputs.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\WCF - FavoriteListService.csproj.CopyComplete
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\FavoriteListService.dll
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\FavoriteListService.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\FavoriteListService\obj\Debug\WCF - FavoriteListService.csprojAssemblyReference.cache

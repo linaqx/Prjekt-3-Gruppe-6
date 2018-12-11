@@ -15,11 +15,14 @@ namespace Host
             Console.WriteLine("Console based host");
 
 
-
+            using (ServiceHost serviceHostEntertainmentAdmin = new ServiceHost(typeof(WCF___EntertainmentAdmin.EntertainmentAdminService)))
             using (ServiceHost serviceHostEntertainments = new ServiceHost(typeof(WCF___library.EntertainmentService)))
             using (ServiceHost serviceHostFavoriteList = new ServiceHost(typeof(Service1)))
             {
                 // Open the host ans start listening for incoming calls
+                serviceHostEntertainmentAdmin.Open();
+                DisplayHostInfo(serviceHostEntertainmentAdmin);
+
                 serviceHostEntertainments.Open();
                 DisplayHostInfo(serviceHostEntertainments);
 
@@ -32,6 +35,7 @@ namespace Host
 
                 Console.ReadLine();
 
+                serviceHostEntertainmentAdmin.Close();
                 serviceHostEntertainments.Close();
                 serviceHostFavoriteList.Close();
 

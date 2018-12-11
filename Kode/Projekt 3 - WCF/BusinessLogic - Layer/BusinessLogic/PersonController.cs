@@ -16,10 +16,10 @@ namespace Projekt_3___WCF.BusinessLogic
 
        
 
-        public List<FavoriteList> getFavoriteLists(User user)
-        {
-            return user.propFavoriteLists;
-        }
+        //public List<FavoriteList> getFavoriteLists(User user)
+        //{
+        //    return user.propFavoriteLists;
+        //}
 
     }
 }

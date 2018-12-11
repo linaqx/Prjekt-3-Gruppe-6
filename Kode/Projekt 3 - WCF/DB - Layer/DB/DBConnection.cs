@@ -75,7 +75,7 @@ namespace Projekt_3___WCF.DB
         private static readonly string dbName = "dmab0917_1026423";
         private static readonly string serverAddress = "kraka.ucn.dk"; //Kraka address - DROP IKKE DATABASE
         //private static readonly int serverPort = 1433;
-        private static readonly Boolean integratedSecurity = false;
+        private static readonly bool integratedSecurity = false;
         private static readonly string userName = "dmab0917_1026423";
         private static readonly string password = "Password1!";
 
@@ -146,43 +146,5 @@ namespace Projekt_3___WCF.DB
 
             return connectionString;
         }
-
-
-        //public void StartTransaction(string commandText)
-        //{
-        //    for (int i = 1; i < 10; i++)
-        //    {
-                
-        //        SqlTransaction sqlTransaction = connection.BeginTransaction();
-        //        SqlCommand command = connection.CreateCommand();
-        //        command.Transaction = sqlTransaction;
-
-        //        try
-        //        {
-        //            command.CommandText = commandText;
-        //            command.ExecuteNonQuery();
-        //            //command fix!!!!!! - validate
-        //            sqlTransaction.Commit();
-        //        }
-        //        catch (Exception)
-        //        {
-        //            try
-        //            {
-        //                sqlTransaction.Rollback();
-        //            }
-        //            catch (Exception)
-        //            {
-        //                throw;
-        //            }
-        //            throw;
-        //        }
-
-        //        if(i == 10)
-        //        {
-        //            new Exception("Something went wrong, please try again.");
-        //        }
-        //    }
-
-        //}
     }
 }

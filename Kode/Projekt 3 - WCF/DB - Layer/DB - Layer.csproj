@@ -44,11 +44,11 @@
   <ItemGroup>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\EntertainmentDB.cs" />
-    <Compile Include="DB\EntertainmentDBIF.cs" />
+    <Compile Include="DB\IEntertainmentDB.cs" />
     <Compile Include="DB\FavoriteListDB.cs" />
-    <Compile Include="DB\FavoriteListDBIF.cs" />
+    <Compile Include="DB\IFavoriteListDB.cs" />
     <Compile Include="DB\PersonDB.cs" />
-    <Compile Include="DB\PersonDBIF.cs" />
+    <Compile Include="DB\IPersonDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

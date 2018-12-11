@@ -36,7 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="test.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DB - Layer\DB - Layer.csproj">
@@ -46,6 +46,10 @@
     <ProjectReference Include="..\Model - Layer\Model - Layer.csproj">
       <Project>{3DA60E37-8538-4CFE-84E9-CC291A5E86B1}</Project>
       <Name>Model - Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCF - EntertainmentAdmin\WCF - EntertainmentAdmin.csproj">
+      <Project>{A1E015A5-9D5C-4E19-BC41-A6B40D0D20DA}</Project>
+      <Name>WCF - EntertainmentAdmin</Name>
     </ProjectReference>
     <ProjectReference Include="..\WCF - library\WCF - Entertainment.csproj">
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>

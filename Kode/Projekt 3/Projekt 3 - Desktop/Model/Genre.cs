@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_3___Desktop.Model
 {
-    class Genre
+    public class Genre
     {
         public int Id { get; set; }
         public string Name { get; set; }

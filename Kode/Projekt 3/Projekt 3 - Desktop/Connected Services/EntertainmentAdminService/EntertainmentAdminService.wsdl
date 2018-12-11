@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EntertainmentAdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEntertainmentAdminService_FindAllGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllGenre" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllGenreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllFilmingLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllFilmingLocations" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllFilmingLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllFilmingLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCountries" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_FindAllCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_StartInsertMovieTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartInsertMovieTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IEntertainmentAdminService_StartInsertMovieTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartInsertMovieTransactionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEntertainmentAdminService">
+    <wsdl:operation name="FindAllGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllGenre" message="tns:IEntertainmentAdminService_FindAllGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllGenreResponse" message="tns:IEntertainmentAdminService_FindAllGenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllFilmingLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations" message="tns:IEntertainmentAdminService_FindAllFilmingLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocationsResponse" message="tns:IEntertainmentAdminService_FindAllFilmingLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllLanguage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllLanguage" message="tns:IEntertainmentAdminService_FindAllLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllLanguageResponse" message="tns:IEntertainmentAdminService_FindAllLanguage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllCountries" message="tns:IEntertainmentAdminService_FindAllCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/FindAllCountriesResponse" message="tns:IEntertainmentAdminService_FindAllCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartInsertMovieTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentAdminService/StartInsertMovieTransaction" message="tns:IEntertainmentAdminService_StartInsertMovieTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentAdminService/StartInsertMovieTransactionResponse" message="tns:IEntertainmentAdminService_StartInsertMovieTransaction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEntertainmentAdminService" type="tns:IEntertainmentAdminService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindAllGenre">
+      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllFilmingLocations">
+      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllFilmingLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllLanguage">
+      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCountries">
+      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/FindAllCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartInsertMovieTransaction">
+      <soap:operation soapAction="http://tempuri.org/IEntertainmentAdminService/StartInsertMovieTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EntertainmentAdminService">
+    <wsdl:port name="BasicHttpBinding_IEntertainmentAdminService" binding="tns:BasicHttpBinding_IEntertainmentAdminService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF___EntertainmentAdmin/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -9,26 +9,21 @@ namespace Projekt_3___WCF.Model
     public class Episode
     {
         [DataMember]
-        private int number;
+        private int Number { get; set; }
         [DataMember]
-        private int season;
+        private int Season { get; set; }
         [DataMember]
-        private string title;
+        private string Title { get; set; }
         [DataMember]
-        private DateTime releaseDate;
+        private DateTime ReleaseDate { get; set; }
         [DataMember]
-        private string storyLine;
+        private string StoryLine { get; set; }
         [DataMember]
-        private Series serie;
+        private Series Series { get; set; }
 
-        public Episode(int number, int season, string title, DateTime releaseDate, string storyLine, Series serie)
+        public Episode()
         {
-            this.number = number;
-            this.season = season;
-            this.title = title;
-            this.releaseDate = releaseDate;
-            this.storyLine = storyLine;
-            this.serie = serie;
+            
         }
     }
 }

@@ -18,12 +18,24 @@ namespace Projekt_3___Desktop.Controller
             DesktopService = new DesktopService();
         }
 
-        public void InsertMovieIntoEntertainment(int genre_id, string genre_name, string title, Country country, Language language, DateTime releaseDate, string storyline, string filmingLocation, string information, bool isMovie)
+        public void InsertMovieIntoEntertainment(int genre_id, string genre_name, string title, int country_id, string country_name, int language_id, string language_name, DateTime releaseDate, string storyline, string filmingLocation, string information, bool isMovie)
         {
             Genre genre = new Genre
             {
                 Id = genre_id,
                 Name = genre_name
+            };
+
+            Country country = new Country
+            {
+                Id = country_id,
+                Name = country_name
+            };
+
+            Language language = new Language
+            {
+                Id = language_id,
+                Name = language_name
             };
 
             Movie m = new Movie

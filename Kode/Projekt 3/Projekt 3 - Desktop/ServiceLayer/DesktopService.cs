@@ -25,12 +25,30 @@ namespace Projekt_3___Desktop.ServiceLayer
 
         private EntertainmentAdminService.Movie ConvertToMovie(Movie movie)
         {
+            EntertainmentAdminService.Genre genre = new EntertainmentAdminService.Genre
+            {
+                Id = movie.Genre.Id,
+                Name = movie.Genre.Name
+            };
+
+            EntertainmentAdminService.Country country = new EntertainmentAdminService.Country
+            {
+                Id = movie.Country.Id,
+                Name = movie.Country.Name
+            };
+
+            EntertainmentAdminService.Language language = new EntertainmentAdminService.Language
+            {
+                Id = movie.Language.Id,
+                Name = movie.Language.Name
+            };
+
             EntertainmentAdminService.Movie temp = new EntertainmentAdminService.Movie
             {
                 Title = movie.Title,
-                Genre = movie.Genre,
-                Country = movie.Country,
-                Language = movie.Language,
+                Genre = genre,
+                Country = country,
+                Language = language,
                 ReleaseDate = movie.ReleasDate,
                 StoryLine = movie.Storyline,
                 FilmingLocation = movie.FilmingLocation,

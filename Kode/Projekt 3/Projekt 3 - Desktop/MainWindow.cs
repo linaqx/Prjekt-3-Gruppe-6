@@ -48,10 +48,14 @@ namespace Projekt_3___Desktop
 
         public void CreateMovie()
         {
-
             string title = txtTitle.Text;
-            int genre_id;
-            string genre_name;
+            int genre_id = 0;
+            string genre_name = "";
+            int country_id = 0;
+            string country_name = "";
+            int language_id = 0;
+            string language_name = "";
+
             try
             {
                 ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxGenre.SelectedItem;
@@ -64,25 +68,29 @@ namespace Projekt_3___Desktop
                 MessageBox.Show("Please choose a valid genre");
 
             }
-            int country;
+            
             try
             {
-                country = ((ComboBoxItem)cbBoxCountry.SelectedItem).HiddenValue;
+                ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxCountry.SelectedItem;
+                country_id = comboBoxItem.HiddenValue;
+                country_name = comboBoxItem.DisplayValue;
             }
             catch (Exception)
             {
 
-                country = 0;
+                country_id = 0;
                 MessageBox.Show("Please choose a valid country");
             }
-            int language;
+            
             try
             {
-                language = ((ComboBoxItem)cbBoxLanguage.SelectedItem).HiddenValue;
+                ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxLanguage.SelectedItem;
+                language_id = comboBoxItem.HiddenValue;
+                language_name = comboBoxItem.DisplayValue;
             }
             catch (Exception)
             {
-                language = 0;
+                language_id = 0;
                 MessageBox.Show("Please choose a valid language");
             }
             
@@ -90,13 +98,13 @@ namespace Projekt_3___Desktop
             string filmingLocation = txtFilmingLocation.Text;
             string information = txtInformation.Text;
             bool isMovie = true;
-            if (title != "" && storyline != "" && information != "" && filmingLocation !="" && genre_id > 0 && country > 0 && language > 0)
+            if (title != "" && storyline != "" && information != "" && filmingLocation !="" && genre_id > 0 && country_id > 0 && language_id > 0)
             {
                 try
                 {
                     DateTime date = DateTime.ParseExact(txtReleaseDate.Text, "dd-MM-yyyy", null);
 
-                    DC.InsertMovieIntoEntertainment(genre_id, genre_name, title, country, language, date, storyline, filmingLocation, information, isMovie);
+                    DC.InsertMovieIntoEntertainment(genre_id, genre_name, title, country_id, country_name, language_id, language_name, date, storyline, filmingLocation, information, isMovie);
                     ClearMovie();
                     MessageBox.Show("Your movie is saved!");
                 }

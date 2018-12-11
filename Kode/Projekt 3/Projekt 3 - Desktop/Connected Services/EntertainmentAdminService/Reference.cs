@@ -271,13 +271,13 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         private Projekt_3___Desktop.EntertainmentAdminService.Comment[] CommentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryField;
+        private Projekt_3___Desktop.EntertainmentAdminService.Country CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FilmingLocationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GenreField;
+        private Projekt_3___Desktop.EntertainmentAdminService.Genre GenreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
@@ -289,7 +289,7 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         private bool IsMovieField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LanguageField;
+        private Projekt_3___Desktop.EntertainmentAdminService.Language LanguageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime ReleaseDateField;
@@ -324,7 +324,7 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Country {
+        public Projekt_3___Desktop.EntertainmentAdminService.Country Country {
             get {
                 return this.CountryField;
             }
@@ -350,7 +350,7 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Genre {
+        public Projekt_3___Desktop.EntertainmentAdminService.Genre Genre {
             get {
                 return this.GenreField;
             }
@@ -402,7 +402,7 @@ namespace Projekt_3___Desktop.EntertainmentAdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Language {
+        public Projekt_3___Desktop.EntertainmentAdminService.Language Language {
             get {
                 return this.LanguageField;
             }

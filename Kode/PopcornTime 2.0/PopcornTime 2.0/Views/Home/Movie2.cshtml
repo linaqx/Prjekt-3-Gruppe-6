@@ -101,3 +101,13 @@
     }
 
 </table>
+<div> Add a comment</div>
+@*@Html.TextBox("myTextBox", "This is value", new { @class = "form-control" })*@
+
+
+@using (Html.BeginForm("AddComment", "Home"))
+{
+    @Html.TextBox("Your Comment Here")
+    
+    <input type="submit" value="Submit" id="btnSubmit" />
+}

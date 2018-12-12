@@ -32,6 +32,7 @@ namespace WCF___library.DB
         private readonly string sql_FIND_GENRE_ON_MOVIE = "select Genre.id, Genre.[name] as genre from Entertainment INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id) where Entertainment.id = @entertainment_id;";
         private readonly string sql_FIND_COUNTRY_ON_MOVIE = "select Country.id, Country.[name] as country from Country, Entertainment where Entertainment.country_id = Country.id and Entertainment.id = @entertainment_id;";
         private readonly string sql_FIND_LANGUAGE_ON_MOVIE = "select [Language].id, [Language].[name] as [language] from [Language], Entertainment where Entertainment.language_id = [Language].id and Entertainment.id = @entertainment_id";
+        private readonly string sql_FIND_COMMENTS_ON_MOVIE = "select Comment.id, Comment.entertainment_id, Comment.[user_id], Comment.[message] from Comment, Entertainment where Comment.entertainment_id = Entertainment.id and Comment.entertainment_id = @entertainment_id;";
 
 
         private SqlCommand findAllEntertainments;
@@ -44,6 +45,7 @@ namespace WCF___library.DB
         private SqlCommand findGenreByName;
         private SqlCommand findCountryOnMovie;
         private SqlCommand findLanguageOnMovie;
+        private SqlCommand findCommentsOnMovie;
         private SqlCommand insertEntertainment;
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
@@ -65,6 +67,7 @@ namespace WCF___library.DB
             findGenreByName = con.CreateCommand();
             findCountryOnMovie = con.CreateCommand();
             findLanguageOnMovie = con.CreateCommand();
+            findCommentsOnMovie = con.CreateCommand();
             insertEntertainment = con.CreateCommand();
             insertMovie = con.CreateCommand();
             insertEntertainmentGenre = con.CreateCommand();
@@ -265,35 +268,21 @@ namespace WCF___library.DB
 
             findMovieById.Parameters.Add(parameter);
             findMovieById.CommandText = sql_FIND_MOVIE_BY_ID;
-            SqlDataReader reader = findMovieById.ExecuteReader();
-            SqlDataReader commentReader = reader;
-            List<Comment> comments = new List<Comment>();
+
             Movie movie = new Movie();
+            SqlDataReader reader = findMovieById.ExecuteReader();
+
             while (reader.Read())
             {
                 movie = BuildMovie(reader);
             }
 
-            while (commentReader.Read())
-            {
-                Comment comment = new Comment
-                {
-                    Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Entertainment_id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
-                    User = reader.GetInt32(reader.GetOrdinal("user")),
-                    Message = reader.GetString(reader.GetOrdinal("message"))
-                };
-                comments.Add(comment);
-            }
-
-            movie.Comments = comments;
-
             reader.Close();
-            commentReader.Close();
 
             movie.Genre = FindGenreOnMovie(movie.Id);
             movie.Country = FindCountryOnMovie(movie.Id);
             movie.Language = FindLanguageOnMovie(movie.Id);
+            movie.Comments = FindCommentsOnMovie(movie.Id);
 
             return movie;
         }
@@ -302,23 +291,18 @@ namespace WCF___library.DB
         {
             Movie temp = new Movie
             {
-                //Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Country.[name] as country,
-                //[Language].[name] as [language], Genre.[name] as genre, FilmingLocation.[name] as filmingLocation, Entertainment.isMovie as isMovie
                 Id = reader.GetInt32(reader.GetOrdinal("id")),
                 Title = reader.GetString(reader.GetOrdinal("title")),
                 ReleaseDate = reader.GetDateTime(reader.GetOrdinal("releaseDate")),
                 StoryLine = reader.GetString(reader.GetOrdinal("storyline")),
                 Information = reader.GetString(reader.GetOrdinal("information")),
-                //Country = FindCountryOnMovie(reader.GetInt32(reader.GetOrdinal("id"))),
-                //Language = FindLanguageByName(reader.GetString(reader.GetOrdinal("language"))),
-                //Genre = FindGenreByName(reader.GetString(reader.GetOrdinal("genre"))),
                 FilmingLocation = reader.GetString(reader.GetOrdinal("filmingLocation")),
                 IsMovie = reader.GetBoolean(reader.GetOrdinal("isMovie")),
             };
             return temp;
         }
 
-        public Genre FindGenreOnMovie(int entertainment_id)
+        private Genre FindGenreOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
             {
@@ -346,7 +330,7 @@ namespace WCF___library.DB
             return temp;
         }
 
-        public Country FindCountryOnMovie(int entertainment_id)
+        private Country FindCountryOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
             {
@@ -374,7 +358,7 @@ namespace WCF___library.DB
             return temp;
         }
 
-        public Language FindLanguageOnMovie(int entertainment_id)
+        private Language FindLanguageOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
             {
@@ -400,6 +384,36 @@ namespace WCF___library.DB
             reader.Close();
 
             return temp;
+        }
+
+        private List<Comment> FindCommentsOnMovie(int entertainment_id)
+        {
+            SqlParameter parameter = new SqlParameter
+            {
+                ParameterName = "@entertainment_id",
+                Value = entertainment_id
+            };
+
+            findCommentsOnMovie.Parameters.Add(parameter);
+            findCommentsOnMovie.CommandText = sql_FIND_COMMENTS_ON_MOVIE;
+            List<Comment> comments = new List<Comment>();
+            SqlDataReader reader = findCommentsOnMovie.ExecuteReader();
+            while (reader.Read())
+            {
+                Comment comment = new Comment
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Entertainment_Id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
+                    User = reader.GetInt32(reader.GetOrdinal("user_id")),
+                    Message = reader.GetString(reader.GetOrdinal("message"))
+                };
+
+                comments.Add(comment);
+            }
+
+            reader.Close();
+
+            return comments;
         }
         
     }

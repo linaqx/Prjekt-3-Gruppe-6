@@ -13,7 +13,7 @@ namespace Model___Layer.Model
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public int Entertainment_id { get; set; }
+        public int Entertainment_Id { get; set; }
         [DataMember]
         public int User { get; set; }
         [DataMember]

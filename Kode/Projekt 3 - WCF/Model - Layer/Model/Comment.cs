@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Projekt_3___WCF.Model;
 
 namespace Model___Layer.Model
 {
@@ -15,7 +16,7 @@ namespace Model___Layer.Model
         [DataMember]
         public int Entertainment_Id { get; set; }
         [DataMember]
-        public int User { get; set; }
+        public User User { get; set; }
         [DataMember]
         public string Message { get; set; }
 

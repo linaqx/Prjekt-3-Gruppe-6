@@ -164,7 +164,22 @@ use dmab0917_1026423;
 
 
 ----------Find Comments On Movie----------
-select Comment.id, Comment.entertainment_id, Comment.[user_id], Comment.[message] from Comment, Entertainment where Comment.entertainment_id = Entertainment.id and Comment.entertainment_id = 1;
+select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] 
+from Comment 
+INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id)
+INNER JOIN [User] on (Comment.[user_id] = [User].person_id)
+where Comment.entertainment_id = 1;
+
+
+
+
+-----------Insert Comment On Movie----------
+--insert into Comment (entertainment_id, [user_id], [message]) values (@entertainment_id, @[user_id], @[message]);
+
+
+
+-----------Find User On Comment----------
+select [User].person_id as id, [User].userName from Comment, [User] where Comment.[user_id] = [User].person_id and Comment.id = 1;
 
 
 

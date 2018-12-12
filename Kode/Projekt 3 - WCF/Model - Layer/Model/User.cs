@@ -23,19 +23,9 @@ namespace Projekt_3___WCF.Model
 
         public User() : base()
         {
-            //this.email = email;
-            //this.password = password;
-            //this.userName = userName;
-            //this.userRank = userRank;
             Friends = new List<User>();
             Favoritelists = new List<FavoriteList>();
         }
-
-        //public List<FavoriteList> propFavoriteLists
-        //{
-        //    get { return Favoritelists; }
-        //    set { Favoritelists = value; }
-        //}
 
         public void AddToFavoriteList(FavoriteList favoritelist)
         {

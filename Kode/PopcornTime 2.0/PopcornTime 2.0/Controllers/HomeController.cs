@@ -76,14 +76,14 @@ namespace PopcornTime_2._0.Controllers
 
         //    return View();
         //}
-        public ActionResult Movie2()
-        {
-            ViewBag.Message = "Your contact page.";
-            Movie movie;
+        //public ActionResult Movie2()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+        //    Movie movie;
 
-            movie = eS.MovieById(1);
-            return View(movie);
-        }
+        //    movie = eS.MovieById(1);
+        //    return View(movie);
+        //}
 
         public ActionResult MyListPartialView()
         {
@@ -93,12 +93,20 @@ namespace PopcornTime_2._0.Controllers
             return View();
         }
 
-        public ActionResult AddComment(Comment c)
+        public ActionResult AddComment(string message)
         {
-            //some operations goes here
+            Comment comment = new Comment
+            {
+                Message = message,
+                Entertainment_Id = 1,
+                User = 1
+            };
 
 
-            return Movie2(); //return some view to the user
+            eS.InsertComment(comment);
+
+
+            return View("Movie2"); //return some view to the user
         }
     }
 }

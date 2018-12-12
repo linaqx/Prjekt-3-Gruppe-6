@@ -419,7 +419,7 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Entertainment_idField;
+        private int Entertainment_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
@@ -441,14 +441,14 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Entertainment_id {
+        public int Entertainment_Id {
             get {
-                return this.Entertainment_idField;
+                return this.Entertainment_IdField;
             }
             set {
-                if ((this.Entertainment_idField.Equals(value) != true)) {
-                    this.Entertainment_idField = value;
-                    this.RaisePropertyChanged("Entertainment_id");
+                if ((this.Entertainment_IdField.Equals(value) != true)) {
+                    this.Entertainment_IdField = value;
+                    this.RaisePropertyChanged("Entertainment_Id");
                 }
             }
         }
@@ -523,6 +523,12 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/GetMovieById", ReplyAction="http://tempuri.org/IEntertainmentService/GetMovieByIdResponse")]
         System.Threading.Tasks.Task<PopcornTime_2._0.EntertainmentService1.Movie> GetMovieByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/InsertComment", ReplyAction="http://tempuri.org/IEntertainmentService/InsertCommentResponse")]
+        void InsertComment(PopcornTime_2._0.EntertainmentService1.Comment comment);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/InsertComment", ReplyAction="http://tempuri.org/IEntertainmentService/InsertCommentResponse")]
+        System.Threading.Tasks.Task InsertCommentAsync(PopcornTime_2._0.EntertainmentService1.Comment comment);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -574,6 +580,14 @@ namespace PopcornTime_2._0.EntertainmentService1 {
         
         public System.Threading.Tasks.Task<PopcornTime_2._0.EntertainmentService1.Movie> GetMovieByIdAsync(int id) {
             return base.Channel.GetMovieByIdAsync(id);
+        }
+        
+        public void InsertComment(PopcornTime_2._0.EntertainmentService1.Comment comment) {
+            base.Channel.InsertComment(comment);
+        }
+        
+        public System.Threading.Tasks.Task InsertCommentAsync(PopcornTime_2._0.EntertainmentService1.Comment comment) {
+            return base.Channel.InsertCommentAsync(comment);
         }
     }
 }

@@ -8,7 +8,7 @@
   <xs:element name="ArrayOfComment" nillable="true" type="tns:ArrayOfComment" />
   <xs:complexType name="Comment">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Entertainment_id" type="xs:int" />
+      <xs:element minOccurs="0" name="Entertainment_Id" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="User" type="xs:int" />

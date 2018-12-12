@@ -520,7 +520,7 @@ namespace PopcornTime_2._0.FavoritList {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Entertainment_idField;
+        private int Entertainment_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
@@ -542,14 +542,14 @@ namespace PopcornTime_2._0.FavoritList {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Entertainment_id {
+        public int Entertainment_Id {
             get {
-                return this.Entertainment_idField;
+                return this.Entertainment_IdField;
             }
             set {
-                if ((this.Entertainment_idField.Equals(value) != true)) {
-                    this.Entertainment_idField = value;
-                    this.RaisePropertyChanged("Entertainment_id");
+                if ((this.Entertainment_IdField.Equals(value) != true)) {
+                    this.Entertainment_IdField = value;
+                    this.RaisePropertyChanged("Entertainment_Id");
                 }
             }
         }

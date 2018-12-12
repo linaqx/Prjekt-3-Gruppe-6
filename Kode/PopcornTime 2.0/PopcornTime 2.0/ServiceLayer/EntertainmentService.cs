@@ -89,6 +89,8 @@ namespace PopcornTime_2._0.ServiceLayer
 
         }
 
+        
+
         public EntertainmentModel.Movie MovieById(int id)
         {
             EntertainmentService1.EntertainmentServiceClient sC = new EntertainmentService1.EntertainmentServiceClient();
@@ -155,7 +157,7 @@ namespace PopcornTime_2._0.ServiceLayer
                 Models.Comment temp = new Models.Comment()
                 {
                     Id = oldCom.Id,
-                    Entertainment_Id = oldCom.Entertainment_id,
+                    Entertainment_Id = oldCom.Entertainment_Id,
                     User = oldCom.User,
                     Message = oldCom.Message
                 };
@@ -165,6 +167,36 @@ namespace PopcornTime_2._0.ServiceLayer
             }
             return convertedComments;
         }
+
+        public void InsertComment(Models.Comment c)
+        {
+            EntertainmentService1.EntertainmentServiceClient sC = new EntertainmentService1.EntertainmentServiceClient();
+            EntertainmentService1.Comment comment = ConvertToWCFComments(c);
+            sC.InsertComment(comment);
+        }
+
+        private EntertainmentService1.Comment ConvertToWCFComments(Models.Comment comment)
+        {
+            //EntertainmentService1.User tempUser = new EntertainmentService1.User
+            //{
+            //    Id = comment.User.Id,
+            //    Name = comment.User.Name
+            //};
+
+
+            EntertainmentService1.Comment temp = new EntertainmentService1.Comment
+            {
+                Id = comment.Id,
+                Entertainment_Id = comment.Entertainment_Id,
+                User = comment.User, //slet mig
+                //User = tempUser,
+                Message = comment.Message
+            };
+
+
+            return temp;
+        }
+        
 
         //private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
         //{

@@ -67,7 +67,9 @@
         </td>*@
         <td>
             @Html.ActionLink("Add to favorite list", "Delete", new { id = item.Id }) |
-            @Html.ActionLink("Go to", "Movie2", "Home", new { id = item.Id })
+            
+            @Html.ActionLink("Go", "Movie2", "Movie")
+
         </td>
     </tr>
 }

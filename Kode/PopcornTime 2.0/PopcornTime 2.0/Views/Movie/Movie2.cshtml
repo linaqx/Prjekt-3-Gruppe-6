@@ -1,0 +1,128 @@
+﻿@model PopcornTime_2._0.Models.Movie
+
+@{
+    ViewBag.Title = "Movie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie2</h2>
+
+<div>
+    <h4>Entertainment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoryLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoryLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilmingLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilmingLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+
+    </dl>
+</div>
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model.Comments)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+
+        </tr>
+    }
+
+</table>
+<div> Add a comment</div>
+@*@Html.TextBox("myTextBox", "This is value", new { @class = "form-control" })*@
+
+
+@using (Html.BeginForm())
+{
+    //text box
+    @Html.TextBox("Your Comment Here")
+    
+    //text boxen
+    <input type="text" name="CommentData"><br>
+
+    //Knappen
+    <input type="submit" value="Submit" @FormMethod.Post>
+
+
+}
+
+@*<form>
+        Comment:<br>
+
+
+    </form>*@
+
+@*<button onclick="myFunction()">Click me</button>*@

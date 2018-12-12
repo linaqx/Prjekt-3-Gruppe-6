@@ -21,5 +21,8 @@ namespace WCF___library
 
         [OperationContract]
         Movie GetMovieById(int id);
+
+        [OperationContract]
+        void InsertComment(Comment comment);
     }
 }

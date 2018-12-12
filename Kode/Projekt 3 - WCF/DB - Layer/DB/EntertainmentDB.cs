@@ -11,7 +11,7 @@ using System.Transactions;
 
 namespace WCF___library.DB
 {
-    public class EntertainmentDB
+    public class EntertainmentDB : IEntertainmentDB
     {
         private readonly string sql_FIND_ALL_ENTERTAINMENT = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment;";
         private readonly string sql_FIND_ALL_ENTERTAINMENT_ON_FAVORITELIST = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.isMovie from Entertainment INNER JOIN EntertainmentFavoriteList on(EntertainmentFavoriteList.entertainment_id = Entertainment.id) where EntertainmentFavoriteList.favoriteList_id = @id;";
@@ -24,7 +24,7 @@ namespace WCF___library.DB
         private readonly string sql_INSERT_ENTERTAINMENT = "insert into Entertainment(title, country_id, language_id, releaseDate, storyline, information, isMovie) output inserted.id values (@title, @country_id, @language_id, @releaseDate, @storyline, @information, @isMovie);";
         private readonly string sql_INSERT_MOVIE = "insert into Movie(entertainment_id) values (@entertainment_id);";
         private readonly string sql_INSERT_ENTERTAINMENTGENRE = "insert into EntertainmentGenre (entertainment_id, genre_id) values (@entertainment_id, @genre_id);";
-        //private readonly string sql_INSERT_ENTERTAINMENTFILMINGLOCATION = "insert into EntertainmentFilmingLocation (entertainment_id, filmingLocation_id) values (@entertainment_id, @filmingLocation_id);";
+        private readonly string sql_INSERT_COMMENT = "insert into Comment(entertainment_id, [user_id], [message]) values(@entertainment_id, @user_id, @message);";
 
         private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Entertainment.country_id, Entertainment.language_id, Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
         //private readonly string sql_FIND_SERIES_ENTERTAINMENT = "select * from Entertainment, Series where Series.entertainment_id = Entertainment.id;";
@@ -38,18 +38,19 @@ namespace WCF___library.DB
         private SqlCommand findAllEntertainments;
         private SqlCommand findAllPrivateEntertainments;
         private SqlCommand findAllGenres;
-        //private SqlCommand findAllFilmingLocations;
         private SqlCommand findAllLanguages;
         private SqlCommand findAllCountries;
+
         private SqlCommand findMovieById;
         private SqlCommand findGenreByName;
         private SqlCommand findCountryOnMovie;
         private SqlCommand findLanguageOnMovie;
         private SqlCommand findCommentsOnMovie;
+
         private SqlCommand insertEntertainment;
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
-        //private SqlCommand insertEntertainmentFilmingLocation;
+        private SqlCommand inserComment;
 
 
         private SqlConnection con;
@@ -57,21 +58,23 @@ namespace WCF___library.DB
         public EntertainmentDB()
         {
             con = DBConnection.GetInstance().GetConnection();
+
             findAllEntertainments = con.CreateCommand();
             findAllPrivateEntertainments = con.CreateCommand();
             findAllGenres = con.CreateCommand();
-            //findAllFilmingLocations = con.CreateCommand();
             findAllLanguages = con.CreateCommand();
             findAllCountries = con.CreateCommand();
+
             findMovieById = con.CreateCommand();
             findGenreByName = con.CreateCommand();
             findCountryOnMovie = con.CreateCommand();
             findLanguageOnMovie = con.CreateCommand();
             findCommentsOnMovie = con.CreateCommand();
+
             insertEntertainment = con.CreateCommand();
             insertMovie = con.CreateCommand();
             insertEntertainmentGenre = con.CreateCommand();
-            //insertEntertainmentFilmingLocation = con.CreateCommand();
+            inserComment = con.CreateCommand();
         }
 
         public List<Entertainment> GetAllEntertainments()
@@ -113,7 +116,6 @@ namespace WCF___library.DB
                 temp.Add(e);
 
             }
-            //Console.WriteLine(temp.Count() + " This is tested in EntertainmentDB");
             reader.Close();
             return temp;
         }
@@ -414,6 +416,25 @@ namespace WCF___library.DB
             reader.Close();
 
             return comments;
+        }
+
+
+        public void InsertComment(Comment comment)
+        {
+            TransactionOptions transactionOptions = new TransactionOptions
+            {
+               IsolationLevel = IsolationLevel.ReadUncommitted
+            };
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeOption.RequiresNew, transactionOptions))
+            {
+                inserComment.CommandText = sql_INSERT_COMMENT;
+                inserComment.Parameters.AddWithValue("@entertainment_id", comment.Entertainment_Id);
+                inserComment.Parameters.AddWithValue("@user_id", comment.User);
+                inserComment.Parameters.AddWithValue("@message", comment.Message);
+                inserComment.ExecuteNonQuery();
+                scope.Complete();
+            }
         }
         
     }

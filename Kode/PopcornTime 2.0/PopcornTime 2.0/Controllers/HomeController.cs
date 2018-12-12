@@ -93,5 +93,12 @@ namespace PopcornTime_2._0.Controllers
             return View();
         }
 
+        public ActionResult AddComment(Comment c)
+        {
+            //some operations goes here
+
+
+            return Movie2(); //return some view to the user
+        }
     }
 }

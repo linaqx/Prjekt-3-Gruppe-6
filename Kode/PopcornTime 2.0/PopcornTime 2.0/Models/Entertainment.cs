@@ -16,24 +16,13 @@ namespace PopcornTime_2._0.Models
         public string StoryLine { get; set; }
         public string FilmingLocation { get; set; }
         public string Information { get; set; }
+        public List<Comment> Comments { get; set; }
 
-        public Entertainment(int id, Genre genre, string title, Country country, Language language, DateTime releaseDate, string storyLine, string filmingLocation, string information)
-            {
-                this.Id = id;
-                this.Genre = genre;
-                this.Title = title;
-                this.Country = country;
-                this.Language = language;
-                this.ReleaseDate = releaseDate;
-                this.StoryLine = storyLine;
-                this.FilmingLocation = filmingLocation;
-                this.Information = information;
 
-            }
 
         public Entertainment()
         {
-
+            List<Comment> comments = new List<Comment>();
         }
 
         //public Entertainment(string title, DateTime releaseDate)

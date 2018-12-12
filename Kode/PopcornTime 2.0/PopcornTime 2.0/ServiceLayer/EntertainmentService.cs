@@ -77,12 +77,13 @@ namespace PopcornTime_2._0.ServiceLayer
                     Name = oldFav.Name,
                     Description = oldFav.Description,
                     
-                    
+
+
                 };
                 temp = temp1;
                 convertedFavoriteList.Add(temp);
             }
-            
+
 
             return convertedFavoriteList;
 
@@ -120,6 +121,7 @@ namespace PopcornTime_2._0.ServiceLayer
             };
 
 
+
             EntertainmentModel.Movie convertedMovie = new EntertainmentModel.Movie
             {
                 Id = serviceEntertainments.Id,
@@ -130,16 +132,39 @@ namespace PopcornTime_2._0.ServiceLayer
                 ReleaseDate = serviceEntertainments.ReleaseDate,
                 StoryLine = serviceEntertainments.StoryLine,
                 FilmingLocation = serviceEntertainments.FilmingLocation,
-                Information = serviceEntertainments.Information
+                Information = serviceEntertainments.Information,
+                Comments = ConvertToModelComments(serviceEntertainments.Comments)
 
             };
-
-        
 
 
             return convertedMovie;
         }
 
+
+
+        private List<EntertainmentModel.Comment> ConvertToModelComments(PopcornTime_2._0.EntertainmentService1.Comment[] ServiceComments)
+        {
+
+
+            List<EntertainmentModel.Comment> convertedComments = new List<EntertainmentModel.Comment>();
+
+            foreach (PopcornTime_2._0.EntertainmentService1.Comment oldCom in ServiceComments)
+            {
+
+                Models.Comment temp = new Models.Comment()
+                {
+                    Id = oldCom.Id,
+                    Entertainment_Id = oldCom.Entertainment_id,
+                    User = oldCom.User,
+                    Message = oldCom.Message
+                };
+
+                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
+                convertedComments.Add(temp);
+            }
+            return convertedComments;
+        }
 
         //private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
         //{

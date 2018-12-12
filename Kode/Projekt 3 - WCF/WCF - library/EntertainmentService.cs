@@ -36,6 +36,9 @@ namespace WCF___library
             return EC.GetMovieById(id);
         }
 
-        
+        public void InsertComment(Comment comment)
+        {
+            EC.InsertComment(comment);
+        }
     }
 }

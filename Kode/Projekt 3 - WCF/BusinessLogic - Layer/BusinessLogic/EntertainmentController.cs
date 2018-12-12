@@ -65,5 +65,10 @@ namespace Projekt_3___WCF.BusinessLogic
         {
             return edb.GetMovieById(id);
         }
+
+        public void InsertComment(Comment comment)
+        {
+            edb.InsertComment(comment);
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace BusinessLogic___Layer.BusinessLogic
 
         Movie GetMovieById(int id);
 
-
+        void InsertComment(Comment comment);
 
     }
 }

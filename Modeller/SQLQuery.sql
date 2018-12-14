@@ -164,11 +164,7 @@ use dmab0917_1026423;
 
 
 ----------Find Comments On Movie----------
-select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] 
-from Comment 
-INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id)
-INNER JOIN [User] on (Comment.[user_id] = [User].person_id)
-where Comment.entertainment_id = 1;
+--select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] from Comment INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) INNER JOIN [User] on (Comment.[user_id] = [User].person_id) where Comment.entertainment_id = 1;
 
 
 
@@ -179,7 +175,42 @@ where Comment.entertainment_id = 1;
 
 
 -----------Find User On Comment----------
-select [User].person_id as id, [User].userName from Comment, [User] where Comment.[user_id] = [User].person_id and Comment.id = 1;
+--select [User].person_id as id, [User].userName from Comment, [User] where Comment.[user_id] = [User].person_id and Comment.id = 1;
+
+
+
+
+----------Find User To Compare For Login----------
+select [User].person_id as id, [User].userName, [User].[password], [User].email, Person.firstName, Person.lastName, Person.information from [User], Person where [User].person_id = Person.id and [User].userName = 'Linaqx';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

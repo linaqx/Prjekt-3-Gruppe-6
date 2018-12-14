@@ -24,5 +24,8 @@ namespace WCF___library
 
         [OperationContract]
         void InsertComment(Comment comment);
+
+        [OperationContract]
+        User LoginConfirmation(User user);
     }
 }

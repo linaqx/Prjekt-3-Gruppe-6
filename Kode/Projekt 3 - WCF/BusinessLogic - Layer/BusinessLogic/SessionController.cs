@@ -32,9 +32,10 @@ namespace BusinessLogic___Layer.BusinessLogic
                         UserName = dbtemp.UserName
                     };
 
-                    if (tempuser.Id != 0 && tempuser.Id > 0)
+                    temp = tempuser;
+                    if (tempuser.Id > 0)
                     {
-                        temp = Session(tempuser);
+                        //temp = Session(tempuser);
                     }
                 }
             }

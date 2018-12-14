@@ -10,16 +10,18 @@ using FlixNet.Models;
 
 namespace FlixNet.Controllers
 {
-    
+
     public class HomeController : Controller
     {
         //foran en metode kan der skrives []httpPost
         private EntertainmentService eS;
+        private LogInService lis;
         //private Entertainment entertainment;
         public HomeController()
         {
             eS = new EntertainmentService();
-            //entertainment = new Entertainment();
+            lis = new LogInService();
+
         }
 
 
@@ -28,15 +30,7 @@ namespace FlixNet.Controllers
             List<Entertainment> entertainments;
 
             entertainments = eS.GetEntertainments();
-            //Entertainment entertainment = new Entertainment(string title, DateTime releaseDate);
-            //Entertainment[] ents;
 
-            //using (var client = new TimeSlotServiceClient())
-            //{
-            //    tSlots = await client.FindAllUnoccupiedAsync();
-            //}
-
-            //return View(tSlots.ToList());
             return View(entertainments);
         }
 
@@ -70,28 +64,6 @@ namespace FlixNet.Controllers
             return View(favoriteLists);
         }
 
-        //public ActionResult Movie1()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
-        //public ActionResult Movie2()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-        //    Movie movie;
-
-        //    movie = eS.MovieById(1);
-        //    return View(movie);
-        //}
-
-        public ActionResult MyListPartialView()
-        {
-            ViewBag.Message = "Your contact page.";
-            PartialView("MyListPartialView");
-
-            return View();
-        }
 
         public ActionResult AddComment(string message)
         {
@@ -111,8 +83,27 @@ namespace FlixNet.Controllers
 
         public ActionResult LogIn(string UserName, string Password)
         {
-            string u = UserName + "hejsa" + Password;
-            return View();
+
+            User user = new User
+            {
+                UserName = UserName,
+                Password = Password
+            };
+
+            User userNew = lis.Login(user);
+
+            Session["user"] = userNew;
+            
+            if(Session["user"] != null)
+            {
+                return View("Index");
+            }
+            else
+            {
+                ViewBag.Message = "You need to log in";
+                return View("LogIn");
+            }
+
         }
 
 

@@ -7,20 +7,18 @@ namespace FlixNet.Models
 {
     public class Person
     {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Information { get; set; }
 
-        private string firstName;
-        private string lastName;
-        private string information;
 
 
-        public Person(string firstName, string lastName, string information)
+
+        public Person()
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.information = information;
+
         }
-
-
 
     }
 }

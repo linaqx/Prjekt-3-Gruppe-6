@@ -32,12 +32,6 @@
   <wsdl:message name="IEntertainmentService_InsertComment_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertCommentResponse" />
   </wsdl:message>
-  <wsdl:message name="IEntertainmentService_LoginConfirmation_InputMessage">
-    <wsdl:part name="parameters" element="tns:LoginConfirmation" />
-  </wsdl:message>
-  <wsdl:message name="IEntertainmentService_LoginConfirmation_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LoginConfirmationResponse" />
-  </wsdl:message>
   <wsdl:portType name="IEntertainmentService">
     <wsdl:operation name="FindAllEntertainments">
       <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentService/FindAllEntertainments" message="tns:IEntertainmentService_FindAllEntertainments_InputMessage" />
@@ -54,10 +48,6 @@
     <wsdl:operation name="InsertComment">
       <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentService/InsertComment" message="tns:IEntertainmentService_InsertComment_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentService/InsertCommentResponse" message="tns:IEntertainmentService_InsertComment_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="LoginConfirmation">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEntertainmentService/LoginConfirmation" message="tns:IEntertainmentService_LoginConfirmation_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IEntertainmentService/LoginConfirmationResponse" message="tns:IEntertainmentService_LoginConfirmation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEntertainmentService" type="tns:IEntertainmentService">
@@ -91,15 +81,6 @@
     </wsdl:operation>
     <wsdl:operation name="InsertComment">
       <soap:operation soapAction="http://tempuri.org/IEntertainmentService/InsertComment" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="LoginConfirmation">
-      <soap:operation soapAction="http://tempuri.org/IEntertainmentService/LoginConfirmation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -835,12 +835,6 @@ namespace FlixNet.ServiceLibrary {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/InsertComment", ReplyAction="http://tempuri.org/IEntertainmentService/InsertCommentResponse")]
         System.Threading.Tasks.Task InsertCommentAsync(FlixNet.ServiceLibrary.Comment comment);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/LoginConfirmation", ReplyAction="http://tempuri.org/IEntertainmentService/LoginConfirmationResponse")]
-        FlixNet.ServiceLibrary.User LoginConfirmation(FlixNet.ServiceLibrary.User user);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntertainmentService/LoginConfirmation", ReplyAction="http://tempuri.org/IEntertainmentService/LoginConfirmationResponse")]
-        System.Threading.Tasks.Task<FlixNet.ServiceLibrary.User> LoginConfirmationAsync(FlixNet.ServiceLibrary.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -900,14 +894,6 @@ namespace FlixNet.ServiceLibrary {
         
         public System.Threading.Tasks.Task InsertCommentAsync(FlixNet.ServiceLibrary.Comment comment) {
             return base.Channel.InsertCommentAsync(comment);
-        }
-        
-        public FlixNet.ServiceLibrary.User LoginConfirmation(FlixNet.ServiceLibrary.User user) {
-            return base.Channel.LoginConfirmation(user);
-        }
-        
-        public System.Threading.Tasks.Task<FlixNet.ServiceLibrary.User> LoginConfirmationAsync(FlixNet.ServiceLibrary.User user) {
-            return base.Channel.LoginConfirmationAsync(user);
         }
     }
 }

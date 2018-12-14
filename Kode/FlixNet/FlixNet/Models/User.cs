@@ -8,38 +8,20 @@ namespace FlixNet.Models
     public class User : Person
     {
 
-        private string email;
-        private string password;
-        private string userName;
-        private string userRank;
-        private List<User> friends;
-        private List<FavoriteList> favoritelists;
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string UserName { get; set; }
+        public string UserRank { get; set; }
+        public List<User> Friends { get; set; }
+        public List<FavoriteList> Favoritelists { get; set; }
 
-        public User(string firstName, string lastName, string information, string email, string password, string userName, string userRank) : base(firstName, lastName, information)
+
+
+        public User()
         {
-
-            this.email = email;
-            this.password = password;
-            this.userName = userName;
-            this.userRank = userRank;
-            friends = new List<User>();
-            favoritelists = new List<FavoriteList>();
+            Friends = new List<User>();
+            Favoritelists = new List<FavoriteList>();
         }
-
-
-
-
-        public List<FavoriteList> propFavoriteLists
-        {
-            get { return favoritelists; }
-            set { favoritelists = value; }
-        }
-
-        public void AddToFavoriteList(FavoriteList favoritelist)
-        {
-            favoritelists.Add(favoritelist);
-        }
-
 
 
     }

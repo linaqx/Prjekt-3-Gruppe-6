@@ -84,6 +84,7 @@ namespace DB___Layer.DB
             {
                 Session session = new Session
                 {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Session_id = reader.GetString(reader.GetOrdinal("session_id"))
                 };
                 temp = session;
@@ -93,13 +94,14 @@ namespace DB___Layer.DB
             return temp;
         }
 
-        public void InsertSession(int id, string session_id)
+        public int InsertSession(int id, string session_id)
         {
+            int insertedId = -1;
             insertSession.CommandText = sql_INSERT_SESSION;
             insertSession.Parameters.AddWithValue("@person_id", id);
             insertSession.Parameters.AddWithValue("@session_id", session_id);
-            insertSession.ExecuteNonQuery();
-            
+            insertedId = (int)insertSession.ExecuteScalar();
+            return insertedId;
         }
 
 

@@ -12,6 +12,6 @@ namespace DB___Layer.DB
     {
         User LoginConfirmation(string userName);
         Session FindSession(int person_id);
-        void InsertSession(int id, string session_id);
+        int InsertSession(int id, string session_id);
     }
 }

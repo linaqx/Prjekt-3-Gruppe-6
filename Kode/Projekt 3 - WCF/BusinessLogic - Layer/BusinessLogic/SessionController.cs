@@ -49,7 +49,7 @@ namespace BusinessLogic___Layer.BusinessLogic
             byte[] bytes = BitConverter.GetBytes(ticks);
             string id = Convert.ToBase64String(bytes).Replace('+', '_').Replace('/', '-').TrimEnd('=');
 
-            sDB.InsertSession(user.Id, id);
+            user.Session.Id = sDB.InsertSession(user.Id, id);
             user.Session.Session_id = id;
 
             return user;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9b4cacf-ec24-46e1-9781-ae6ab0de4617" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1792c3ee-cff8-49b2-bad9-cb723bcecf73" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="4a460908-2302-4a7f-a872-e8f0ffd55fac" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="b76a6b4e-ac52-4e87-969b-6d62b242f821" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="afc44e2b-dcb5-4b86-88c5-c3f903414f65" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="f4b101a9-4d17-4eb8-973b-5ecae520087e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="981f763b-2b9b-4c46-8fce-f0503e8470b9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FavoriteListService/Service1/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

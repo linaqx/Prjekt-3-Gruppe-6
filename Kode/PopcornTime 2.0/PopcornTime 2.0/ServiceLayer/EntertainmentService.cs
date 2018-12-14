@@ -91,7 +91,7 @@ namespace PopcornTime_2._0.ServiceLayer
 
         
 
-        public EntertainmentModel.Movie MovieById(int id)
+        public EntertainmentModel.Movie GetMovieById(int id)
         {
             EntertainmentService1.EntertainmentServiceClient sC = new EntertainmentService1.EntertainmentServiceClient();
 
@@ -158,7 +158,7 @@ namespace PopcornTime_2._0.ServiceLayer
                 {
                     Id = oldCom.Id,
                     Entertainment_Id = oldCom.Entertainment_Id,
-                    User = oldCom.User,
+                    //User = oldCom.User,
                     Message = oldCom.Message
                 };
 
@@ -188,7 +188,7 @@ namespace PopcornTime_2._0.ServiceLayer
             {
                 Id = comment.Id,
                 Entertainment_Id = comment.Entertainment_Id,
-                User = comment.User, //slet mig
+                //User = comment.User, //slet mig
                 //User = tempUser,
                 Message = comment.Message
             };

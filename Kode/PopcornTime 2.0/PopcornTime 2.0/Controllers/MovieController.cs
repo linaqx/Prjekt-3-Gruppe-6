@@ -27,12 +27,24 @@ namespace PopcornTime_2._0.Controllers
 
         public ActionResult Movie2()
         {
-            ViewBag.Message = "Your contact page.";
-            Movie movie = eS.MovieById(1);
+            ViewBag.entertainmentId = 1;
+            ViewBag.Message = "Movie";
+            Movie movie;
 
+            movie = eS.GetMovieById(1);
             return View(movie);
 
         }
+
+        [HttpPost]
+        public ActionResult Movie2(string CommentData, string CommentMovieId)
+        {
+
+            string x = CommentData + "test" + CommentMovieId;
+
+            
+            return View();
+        } 
 
         // GET: Movie/Details/5
         public ActionResult Details(int id)

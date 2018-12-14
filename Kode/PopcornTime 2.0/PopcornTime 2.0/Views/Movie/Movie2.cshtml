@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movie2</h2>
+<h2>Movie</h2>
 
 <div>
-    <h4>Entertainment</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -107,11 +107,12 @@
 
 @using (Html.BeginForm())
 {
-    //text box
-    @Html.TextBox("Your Comment Here")
+    
+    <input type="hidden" name="CommentMovieId" id="CommentMovieId" value="@ViewBag.entertainmentId">
+   
     
     //text boxen
-    <input type="text" name="CommentData"><br>
+    <input type="text" name="CommentData" id="CommentData"><br>
 
     //Knappen
     <input type="submit" value="Submit" @FormMethod.Post>

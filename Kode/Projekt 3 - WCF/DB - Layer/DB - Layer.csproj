@@ -47,8 +47,10 @@
     <Compile Include="DB\IEntertainmentDB.cs" />
     <Compile Include="DB\FavoriteListDB.cs" />
     <Compile Include="DB\IFavoriteListDB.cs" />
+    <Compile Include="DB\ISessionDB.cs" />
     <Compile Include="DB\PersonDB.cs" />
     <Compile Include="DB\IPersonDB.cs" />
+    <Compile Include="DB\SessionDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

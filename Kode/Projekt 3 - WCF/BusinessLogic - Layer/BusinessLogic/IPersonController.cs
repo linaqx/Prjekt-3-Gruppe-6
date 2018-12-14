@@ -10,6 +10,6 @@ namespace BusinessLogic___Layer.BusinessLogic
     interface IPersonController
     {
 
-        User LoginConfirmation(User user);
+        
     }
 }

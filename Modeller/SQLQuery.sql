@@ -187,7 +187,7 @@ select [User].person_id as id, [User].userName, [User].[password], [User].email,
 
 
 
-
+select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = @person_id;
 
 
 

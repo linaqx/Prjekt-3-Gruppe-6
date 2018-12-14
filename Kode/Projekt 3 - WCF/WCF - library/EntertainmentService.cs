@@ -14,18 +14,15 @@ namespace WCF___library
     public class EntertainmentService : IEntertainmentService
     {
         private EntertainmentController EC;
-        private PersonController PC;
 
         public EntertainmentService()
         {
             EC = new EntertainmentController();
-            PC = new PersonController();
         }
 
         public List<Entertainment> FindAllEntertainments()
         {
             return EC.FindAllEntertainments();
-
         }
 
         public List<Entertainment> FindPersonalEntertainments(int id)
@@ -43,9 +40,6 @@ namespace WCF___library
             EC.InsertComment(comment);
         }
 
-        public User LoginConfirmation(User user)
-        {
-            return PC.LoginConfirmation(user);
-        }
+        
     }
 }

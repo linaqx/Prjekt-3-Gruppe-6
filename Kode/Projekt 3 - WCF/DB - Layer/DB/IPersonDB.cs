@@ -12,6 +12,6 @@ namespace WCF___library.DB
         //User FindUserById(int id);
 
 
-        User LoginConfirmation(string userName);
+        
     }
 }

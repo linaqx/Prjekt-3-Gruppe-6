@@ -13,10 +13,15 @@ namespace DB___Layer.DB
     public class SessionDB : ISessionDB
     {
         private readonly string sql_LOGIN_CONFIRMATION = "select [User].person_id as id, [User].userName, [User].[password], [User].email, Person.firstName, Person.lastName, Person.information from [User], Person where [User].person_id = Person.id and [User].userName = @userName;";
+
         private readonly string sql_FIND_SESSION = "select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = @person_id;";
+
+        private readonly string sql_INSERT_SESSION = "insert into [Session] (person_id, session_id) values (@person_id, @session_id);";
 
         private SqlCommand loginConfirmation;
         private SqlCommand findSession;
+
+        private SqlCommand insertSession;
 
         private SqlConnection con;
 
@@ -27,6 +32,8 @@ namespace DB___Layer.DB
             loginConfirmation = con.CreateCommand();
 
             findSession = con.CreateCommand();
+
+            insertSession = con.CreateCommand();
         }
 
         public User LoginConfirmation(string userName)
@@ -77,7 +84,6 @@ namespace DB___Layer.DB
             {
                 Session session = new Session
                 {
-                    User_id = reader.GetInt32(reader.GetOrdinal("person_id")),
                     Session_id = reader.GetString(reader.GetOrdinal("session_id"))
                 };
                 temp = session;
@@ -85,6 +91,15 @@ namespace DB___Layer.DB
             reader.Close();
 
             return temp;
+        }
+
+        public void InsertSession(int id, string session_id)
+        {
+            insertSession.CommandText = sql_INSERT_SESSION;
+            insertSession.Parameters.AddWithValue("@person_id", id);
+            insertSession.Parameters.AddWithValue("@session_id", session_id);
+            insertSession.ExecuteNonQuery();
+            
         }
 
 

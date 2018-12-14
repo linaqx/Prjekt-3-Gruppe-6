@@ -32,21 +32,27 @@ namespace BusinessLogic___Layer.BusinessLogic
                         UserName = dbtemp.UserName
                     };
 
-                    temp = tempuser;
+                    if (tempuser.Id != 0 && tempuser.Id > 0)
+                    {
+                        temp = Session(tempuser);
+                    }
                 }
             }
 
-            //if (user.Id != 0)
-            //{
-            //    user. = Session(user);
-            //}
             return temp;
 
         }
 
-        private void Session(User user)
+        private User Session(User user)
         {
+            long ticks = DateTime.Now.Ticks;
+            byte[] bytes = BitConverter.GetBytes(ticks);
+            string id = Convert.ToBase64String(bytes).Replace('+', '_').Replace('/', '-').TrimEnd('=');
 
+            sDB.InsertSession(user.Id, id);
+            user.Session.Session_id = id;
+
+            return user;
         }
     }
 }

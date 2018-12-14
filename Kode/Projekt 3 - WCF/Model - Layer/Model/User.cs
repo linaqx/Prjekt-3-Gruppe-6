@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using Model___Layer.Model;
 
 namespace Projekt_3___WCF.Model
 {
@@ -20,6 +21,8 @@ namespace Projekt_3___WCF.Model
         public List<User> Friends { get; set; }
         [DataMember]
         public List<FavoriteList> Favoritelists { get; set; }
+        [DataMember]
+        public Session Session { get; set; }
 
         public User() : base()
         {

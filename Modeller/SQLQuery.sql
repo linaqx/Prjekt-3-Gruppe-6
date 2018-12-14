@@ -181,13 +181,21 @@ use dmab0917_1026423;
 
 
 ----------Find User To Compare For Login----------
-select [User].person_id as id, [User].userName, [User].[password], [User].email, Person.firstName, Person.lastName, Person.information from [User], Person where [User].person_id = Person.id and [User].userName = 'Linaqx';
+--select [User].person_id as id, [User].userName, [User].[password], [User].email, Person.firstName, Person.lastName, Person.information from [User], Person where [User].person_id = Person.id and [User].userName = 'Linaqx';
 
 
 
+--select [User].session_id from [User] where [User].person_id =1 insert into [User] (session_id) values ('sadsa') ;
 
 
-select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = @person_id;
+--INSERT INTO table-name (column-names) 
+--SELECT column-names
+--  FROM table-name
+-- WHERE condition
+
+--select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = 1;
+--insert into [Session] (person_id, session_id) values (@person_id, @session_id);
+--select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = 1;
 
 
 

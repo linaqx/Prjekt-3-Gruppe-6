@@ -10,8 +10,7 @@ namespace Model___Layer.Model
     [DataContract]
     public class Session
     {
-        [DataMember]
-        public int User_id { get; set; }
+        
         [DataMember]
         public string Session_id { get; set; }
 

@@ -98,9 +98,11 @@ namespace FlixNet.Controllers
 
             User userNew = lis.Login(user);
 
-            Session["user"] = userNew;
-            
-            if(Session["user"] != null)
+            Session["user"] = userNew.Id;
+
+
+
+            if ((int)Session["user"] != 0)
             {
                 return View("Index");
             }

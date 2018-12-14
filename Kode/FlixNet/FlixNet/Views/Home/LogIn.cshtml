@@ -6,7 +6,17 @@
 
 <h2>LogIn</h2>
 
-@using (Html.BeginForm())
+<form action="/Home/Login" method="post">
+
+
+    <input type="text" name="UserName" id="UserName" />
+    <input type="text" name="Password" id="Password" />
+    <input type="submit" value="Log in" @FormMethod.Post>
+
+</form>
+
+
+@*@using (Html.BeginForm())
 {
 
     //UserName
@@ -15,11 +25,11 @@
 
     //Password
 
-    <input type="text" name="Password" id="Password" >
+    <input type="text" name="Password" id="Password">
 
 
     //Knappen
     <input type="submit" value="Log in" @FormMethod.Post>
 
 
-}
+}*@

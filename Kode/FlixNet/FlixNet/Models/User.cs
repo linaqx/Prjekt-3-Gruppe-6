@@ -7,7 +7,7 @@ namespace FlixNet.Models
 {
     public class User : Person
     {
-
+        //public Session session { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string UserName { get; set; }

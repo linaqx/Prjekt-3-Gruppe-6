@@ -81,7 +81,13 @@ namespace FlixNet.Controllers
             return View("Movie2"); //return some view to the user
         }
 
-        public ActionResult LogIn(string UserName, string Password)
+        public ActionResult LogIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string UserName, string Password)
         {
 
             User user = new User

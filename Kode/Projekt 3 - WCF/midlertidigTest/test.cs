@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using WCF___EntertainmentAdmin;
 using WCF___library;
 using WCF___library.DB;
+using WCF___Session;
 
 namespace midlertidigTest
 {
@@ -16,9 +17,10 @@ namespace midlertidigTest
     {
         static void Main(string[] args)
         {
-            //EntertainmentDB edb = new EntertainmentDB();
-            //EntertainmentService es = new EntertainmentService();
-            //EntertainmentAdminService eas = new EntertainmentAdminService();
+            EntertainmentDB edb = new EntertainmentDB();
+            EntertainmentService es = new EntertainmentService();
+            EntertainmentAdminService eas = new EntertainmentAdminService();
+            Service1 ss = new Service1();
 
             //List<Entertainment> temp = edb.GetAllEntertainments();
             //foreach (Entertainment ent in temp)
@@ -76,10 +78,20 @@ namespace midlertidigTest
             //Console.WriteLine(findMovie.Language.Name);
             //Console.WriteLine(findMovie.Genre.Name);
 
-            long ticks = DateTime.Now.Ticks;
-            byte[] bytes = BitConverter.GetBytes(ticks);
-            string id = Convert.ToBase64String(bytes).Replace('+', '_').Replace('/', '-').TrimEnd('=');
-            Console.WriteLine(id);
+            //long ticks = DateTime.Now.Ticks;
+            //byte[] bytes = BitConverter.GetBytes(ticks);
+            //string id = Convert.ToBase64String(bytes).Replace('+', '_').Replace('/', '-').TrimEnd('=');
+            //Console.WriteLine(id);
+
+            User user = new User
+            {
+                Password = "password",
+                UserName = "Linaqx"
+            };
+
+            User u = ss.LoginConfirmation(user);
+            Console.WriteLine(u.Id);
+            Console.WriteLine(u.Session.Session_id);
         }
     }
 }

@@ -21,15 +21,20 @@ namespace FlixNet.ServiceLayer
         {
 
             LogInSessionService.User u = ConvertToWCFUser(user);
-            var henning = logInSession.LoginConfirmation(u);
-            Models.User hennigsMor = ConvertToModelUser(henning);
+            var loginUser = logInSession.LoginConfirmation(u);
+            Models.User convertedUser = ConvertToModelUser(loginUser);
 
-            return hennigsMor;
+            return convertedUser;
         }
 
         //laver en WCF user om til en web user
         private Models.User ConvertToModelUser(LogInSessionService.User wcfUser)
         {
+            Models.Session session = new Models.Session
+            {
+                Id = wcfUser.Session.Id,
+                Session_id = wcfUser.Session.Session_id
+            };
 
             Models.User user = new Models.User
             {

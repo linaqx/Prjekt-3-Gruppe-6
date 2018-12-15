@@ -61,15 +61,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\SessionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.Country.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.FilmingLocation.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EntertainmentAdminService\Host.EntertainmentAdminService.Genre.datasource">
@@ -91,19 +93,10 @@
     <None Include="Connected Services\EntertainmentAdminService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Country.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Entertainment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.FilmingLocation.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Genre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Language.datasource">
+    <None Include="Connected Services\EntertainmentService\Host.EntertainmentService.Movie.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EntertainmentService\Model___Layer.Model.xsd">
@@ -122,6 +115,9 @@
     <None Include="Connected Services\FavoriteListService\Host.FavoriteListService.FavoriteList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\FavoriteListService\Model___Layer.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FavoriteListService\Projekt_3___WCF.Model.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -132,6 +128,22 @@
     <None Include="Connected Services\FavoriteListService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SessionService\Host.SessionService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SessionService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -158,6 +170,7 @@
     <WCFMetadataStorage Include="Connected Services\EntertainmentAdminService\" />
     <WCFMetadataStorage Include="Connected Services\EntertainmentService\" />
     <WCFMetadataStorage Include="Connected Services\FavoriteListService\" />
+    <WCFMetadataStorage Include="Connected Services\SessionService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\EntertainmentService\configuration91.svcinfo" />
@@ -191,6 +204,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\EntertainmentAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SessionService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SessionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SessionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SessionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

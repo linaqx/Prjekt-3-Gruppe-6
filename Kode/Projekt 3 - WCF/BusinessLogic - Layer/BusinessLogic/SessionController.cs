@@ -55,7 +55,7 @@ namespace BusinessLogic___Layer.BusinessLogic
                 byte[] bytes = BitConverter.GetBytes(ticks);
                 string session_id = Convert.ToBase64String(bytes).Replace('+', '_').Replace('/', '-').TrimEnd('=');
                 
-                user.Session = session;
+                
                 user.Session.Id = sDB.InsertSession(user.Id, session_id);
                 user.Session.Session_id = session_id;
             }

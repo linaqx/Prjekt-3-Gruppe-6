@@ -1,2 +1,11 @@
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\obj\Debug\BusinessLogic - Layer.csprojAssemblyReference.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\obj\Debug\BusinessLogic - Layer.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\BusinessLogic - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\BusinessLogic - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\DB - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\Model - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\DB - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\bin\Debug\Model - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\obj\Debug\BusinessLogic - Layer.csproj.CopyComplete
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\obj\Debug\BusinessLogic - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\BusinessLogic - Layer\obj\Debug\BusinessLogic - Layer.pdb

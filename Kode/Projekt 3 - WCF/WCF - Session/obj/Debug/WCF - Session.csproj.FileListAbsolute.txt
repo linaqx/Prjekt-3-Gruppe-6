@@ -1,2 +1,14 @@
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\obj\Debug\WCF - Session.csprojAssemblyReference.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\obj\Debug\WCF - Session.csproj.CoreCompileInputs.cache
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\WCF - Session.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\WCF - Session.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\WCF - Session.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\BusinessLogic - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\Model - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\DB - Layer.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\BusinessLogic - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\Model - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\bin\Debug\DB - Layer.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\obj\Debug\WCF - Session.csproj.CopyComplete
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\obj\Debug\WCF - Session.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\WCF - Session\obj\Debug\WCF - Session.pdb

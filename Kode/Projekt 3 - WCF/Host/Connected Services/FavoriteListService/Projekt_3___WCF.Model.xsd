@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Projekt_3___WCF.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Model___Layer.Model" />
   <xs:complexType name="ArrayOfFavoriteList">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteList" nillable="true" type="tns:FavoriteList" />
@@ -8,8 +9,65 @@
   <xs:element name="ArrayOfFavoriteList" nillable="true" type="tns:ArrayOfFavoriteList" />
   <xs:complexType name="FavoriteList">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Author" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entertainments" nillable="true" type="tns:ArrayOfEntertainment" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FavoriteList" nillable="true" type="tns:FavoriteList" />
+  <xs:complexType name="ArrayOfEntertainment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entertainment" nillable="true" type="tns:Entertainment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntertainment" nillable="true" type="tns:ArrayOfEntertainment" />
+  <xs:complexType name="Entertainment">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Comments" nillable="true" type="q1:ArrayOfComment" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Country" nillable="true" type="q2:Country" />
+      <xs:element minOccurs="0" name="FilmingLocation" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Genre" nillable="true" type="q3:Genre" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMovie" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Language" nillable="true" type="q4:Language" />
+      <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoryLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entertainment" nillable="true" type="tns:Entertainment" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Favoritelists" nillable="true" type="tns:ArrayOfFavoriteList" />
+          <xs:element minOccurs="0" name="Friends" nillable="true" type="tns:ArrayOfUser" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Session" nillable="true" type="q5:Session" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserRank" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
 </xs:schema>

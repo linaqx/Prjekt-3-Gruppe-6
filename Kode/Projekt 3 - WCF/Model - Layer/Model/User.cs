@@ -28,6 +28,7 @@ namespace Projekt_3___WCF.Model
         {
             Friends = new List<User>();
             Favoritelists = new List<FavoriteList>();
+            Session = new Session();
         }
 
         public void AddToFavoriteList(FavoriteList favoritelist)

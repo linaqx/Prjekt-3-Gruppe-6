@@ -19,7 +19,7 @@ namespace FlixNet.Controllers
         public ActionResult Index(string message)
         {
             //FormMethod.Post(string )
-            HttpGetAttribute httpGetAttribute;
+            //HttpGetAttribute httpGetAttribute;
 
             //insert comment skal ske herfra
             return View();
@@ -29,6 +29,7 @@ namespace FlixNet.Controllers
         public ActionResult Movie2(int MovieId)
         {
             Movie movie = eS.GetMovieById(MovieId);
+            Session["movie_id"] = movie.Id;
 
             return View(movie);
 

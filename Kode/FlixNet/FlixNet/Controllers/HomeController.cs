@@ -67,18 +67,31 @@ namespace FlixNet.Controllers
 
         public ActionResult AddComment(string message)
         {
+            Session session = new Session
+            {
+                Session_id = (string)Session["session_id"]
+            };
+
+            User user = new User
+            {
+                Id = (int)Session["user_id"],
+                Session = session
+            };
+
             Comment comment = new Comment
             {
                 Message = message,
-                Entertainment_Id = 1,
-                User = 1
+                Entertainment_Id = (int)Session["movie_id"],
+                User = user
             };
 
 
             eS.InsertComment(comment);
 
+            Movie movie = eS.GetMovieById((int)Session["movie_id"]);
+            Session["movie_id"] = movie.Id;
 
-            return View("Movie2"); //return some view to the user
+            return View("Movie2", movie); //return some view to the user
         }
 
         public ActionResult LogIn()
@@ -98,11 +111,16 @@ namespace FlixNet.Controllers
 
             User userNew = lis.Login(user);
 
-            Session["user"] = userNew;
+            Session["user_id"] = userNew.Id;
+            Session["userName"] = userNew.UserName;
+            Session["session_id"] = userNew.Session.Session_id;
+
             
             if(Session["user"] != null)
             {
-                return View("Index");
+                List<Entertainment> entertainments;
+                entertainments = eS.GetEntertainments();
+                return View("Index", entertainments);
             }
             else
             {
@@ -110,6 +128,11 @@ namespace FlixNet.Controllers
                 return View("LogIn");
             }
 
+        }
+
+        public ActionResult Logout()
+        {
+            return View("Index");
         }
 
 

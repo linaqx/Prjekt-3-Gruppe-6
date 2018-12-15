@@ -178,14 +178,25 @@ namespace FlixNet.ServiceLayer
 
         private ServiceLibrary.Comment ConvertToWCFComments(Models.Comment comment)
         {
-            //EntertainmentService1.User tempUser = new EntertainmentService1.User
-            //{
-            //    Id = comment.User.Id,
-            //    Name = comment.User.Name
-            //};
+            ServiceLibrary.Session session = new ServiceLibrary.Session
+            {
+                Session_id = comment.User.Session.Session_id
+            };
 
+            ServiceLibrary.User user = new ServiceLibrary.User
+            {
+                Id = comment.User.Id,
+                Session = session
+            };
 
-            ServiceLibrary.Comment temp = new ServiceLibrary.Comment
+            ServiceLibrary.Comment tempComment = new ServiceLibrary.Comment
+            {
+                Entertainment_Id = comment.Entertainment_Id,
+                User = user,
+                Message = comment.Message
+            };
+
+        ServiceLibrary.Comment temp = new ServiceLibrary.Comment
             {
                 Id = comment.Id,
                 Entertainment_Id = comment.Entertainment_Id,

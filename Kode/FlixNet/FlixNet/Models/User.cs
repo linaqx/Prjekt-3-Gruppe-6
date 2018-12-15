@@ -14,6 +14,7 @@ namespace FlixNet.Models
         public string UserRank { get; set; }
         public List<User> Friends { get; set; }
         public List<FavoriteList> Favoritelists { get; set; }
+        public Session Session { get; set; }
 
 
 
@@ -21,6 +22,7 @@ namespace FlixNet.Models
         {
             Friends = new List<User>();
             Favoritelists = new List<FavoriteList>();
+            Session = new Session();
         }
 
 

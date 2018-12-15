@@ -18,3 +18,9 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlerti
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - EntertainmentAdmin.dll
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - EntertainmentAdmin.pdb
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - EntertainmentAdmin.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\FavoriteListService.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - Session.dll
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\FavoriteListService.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\FavoriteListService.dll.config
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - Session.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\Projekt 3 - WCF\midlertidigTest\bin\Debug\WCF - Session.dll.config

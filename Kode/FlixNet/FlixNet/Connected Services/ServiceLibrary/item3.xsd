@@ -31,6 +31,7 @@
           <xs:element minOccurs="0" name="Favoritelists" nillable="true" type="tns:ArrayOfFavoriteList" />
           <xs:element minOccurs="0" name="Friends" nillable="true" type="tns:ArrayOfUser" />
           <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model___Layer.Model" minOccurs="0" name="Session" nillable="true" type="q5:Session" />
           <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="UserRank" nillable="true" type="xs:string" />
         </xs:sequence>

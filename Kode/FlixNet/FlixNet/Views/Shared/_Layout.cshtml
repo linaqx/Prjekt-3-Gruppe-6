@@ -46,7 +46,16 @@
                     <li>@Html.ActionLink("Movies", "Movies", "Home")</li>
                     <li>@Html.ActionLink("Series", "Series", "Home")</li>
                     <li>@Html.ActionLink("Friends", "Friends", "Home")</li>
-                    <li>@Html.ActionLink("Log in", "LogIn", "Home")</li>
+                    @if (Session["user"] == null)
+                    {
+                        <li>@Html.ActionLink("Log in", "LogIn", "Home")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Log out", "Login", "Home")</li>
+                    }
+
+
                 </ul>
             </div>
         </div>

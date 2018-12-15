@@ -270,3 +270,4 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debu
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.csproj.CopyComplete
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.dll
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.pdb
+C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.csprojAssemblyReference.cache

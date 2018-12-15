@@ -35,8 +35,17 @@ namespace FlixNet.Controllers
 
         }
 
+        //public ActionResult Movie2(string CommentData, string CommentMovieId)
+        //{
+
+        //    string x = CommentData + "test" + CommentMovieId;
+
+
+        //    return View();
+        //}
+
         //[HttpPost]
-        //public ActionResult AddComment(string message)
+        //public ActionResult Movie2(string message)
         //{
         //    Session session = new Session
         //    {
@@ -65,14 +74,34 @@ namespace FlixNet.Controllers
         //    return View("Movie2", movie); //return some view to the user
         //}
 
-
-        public ActionResult Movie2(string CommentData, string CommentMovieId)
+        [HttpPost]
+        public ActionResult AddComment(string message)
         {
+            Session session = new Session
+            {
+                Session_id = (string)Session["session_id"]
+            };
 
-            string x = CommentData + "test" + CommentMovieId;
+            User user = new User
+            {
+                Id = (int)Session["user_id"],
+                Session = session
+            };
+
+            Comment comment = new Comment
+            {
+                Message = message,
+                Entertainment_Id = (int)Session["movie_id"],
+                User = user
+            };
 
 
-            return View();
+            eS.InsertComment(comment);
+
+            Movie movie = eS.GetMovieById((int)Session["movie_id"]);
+            Session["movie_id"] = movie.Id;
+
+            return View("Movie2", movie); //return some view to the user
         }
 
         // GET: Movie/Details/5

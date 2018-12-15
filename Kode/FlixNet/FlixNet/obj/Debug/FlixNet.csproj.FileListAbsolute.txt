@@ -266,7 +266,6 @@ C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\bin\Micr
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\bin\Microsoft.AI.Web.xml
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.csprojAssemblyReference.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.csproj.CoreCompileInputs.cache
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.csproj.CopyComplete
 C:\Users\Larsen\Desktop\Projects\Prjekt-3-Gruppe-6\Kode\FlixNet\FlixNet\obj\Debug\FlixNet.dll

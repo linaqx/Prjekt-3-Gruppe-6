@@ -46,7 +46,7 @@
                     <li>@Html.ActionLink("Movies", "Movies", "Home")</li>
                     <li>@Html.ActionLink("Series", "Series", "Home")</li>
                     <li>@Html.ActionLink("Friends", "Friends", "Home")</li>
-                    @if (Session["user"] == null)
+                    @if (Session["user_id"] == null)
                     {
                         <li>@Html.ActionLink("Log in", "LogIn", "Home")</li>
                     }

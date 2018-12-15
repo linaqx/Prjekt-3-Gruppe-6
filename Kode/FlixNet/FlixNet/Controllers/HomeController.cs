@@ -64,7 +64,7 @@ namespace FlixNet.Controllers
             return View(favoriteLists);
         }
 
-
+        [HttpPost]
         public ActionResult AddComment(string message)
         {
             Session session = new Session
@@ -116,7 +116,7 @@ namespace FlixNet.Controllers
             Session["session_id"] = userNew.Session.Session_id;
 
 
-            if(Session["user"] != null)
+            if(Session["user_id"] != null)
             {
                 List<Entertainment> entertainments;
                 entertainments = eS.GetEntertainments();

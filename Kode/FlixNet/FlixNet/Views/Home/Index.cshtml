@@ -1,8 +1,10 @@
 ﻿@model IEnumerable<FlixNet.Models.Entertainment>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                /**/
+
+                ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -39,7 +41,7 @@
         <th></th>
     </tr>
 
-        @foreach (var item in Model)
+    @foreach (var item in Model)
     {
         <tr>
             <td>
@@ -69,8 +71,8 @@
             <td>
                 @*@Html.ActionLink("Add to favorite list", "Delete", new { id = item.Id }) |
 
-        @Html.ActionLink("Go", "Movie2", "Movie", new { id = item.Id })*@
-                
+                    @Html.ActionLink("Go", "Movie2", "Movie", new { id = item.Id })*@
+
                 <form action="/Movie/Movie2" method="post">
                     @*<input type="hidden" name="MovieId" id="MovieId"> value="@ViewBag.MovieId1"><br>*@
                     <input type="hidden" name="MovieId" id="MovieId" value="@item.Id" />

@@ -112,18 +112,26 @@
 
 
     //text boxen
-    <input type="text" name="CommentData" id="CommentData"><br>
+    @*<input type="text" name="CommentData" id="CommentData">*@<br>
 
     //Knappen
-    <input type="submit" value="Submit" @FormMethod.Post>
+    @*<input type="submit" value="Submit" @FormMethod.Post>*@
 
+
+
+    <form action="/Movie/Movie2" method="post">
+
+        <input type="text" name="message" id="message" />
+        <input type="submit" value="Submit" @FormMethod.Post>
+
+    </form>
 
 }
 
 @*<form>
-        Comment:<br>
+            Comment:<br>
 
 
-    </form>*@
+        </form>
 
-@*<button onclick="myFunction()">Click me</button>*@
+    @*<button onclick="myFunction()">Click me</button>*@

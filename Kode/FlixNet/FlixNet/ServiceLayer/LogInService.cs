@@ -58,5 +58,10 @@ namespace FlixNet.ServiceLayer
 
             return wcfUser;
         }
+
+        public void Logout(int person_id)
+        {
+            logInSession.LogOut(person_id);
+        }
     }
 }

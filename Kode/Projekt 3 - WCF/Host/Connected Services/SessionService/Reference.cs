@@ -886,6 +886,12 @@ namespace Host.SessionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoginConfirmation", ReplyAction="http://tempuri.org/IService1/LoginConfirmationResponse")]
         System.Threading.Tasks.Task<Host.SessionService.User> LoginConfirmationAsync(Host.SessionService.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LogOut", ReplyAction="http://tempuri.org/IService1/LogOutResponse")]
+        void LogOut(int person_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LogOut", ReplyAction="http://tempuri.org/IService1/LogOutResponse")]
+        System.Threading.Tasks.Task LogOutAsync(int person_id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -921,6 +927,14 @@ namespace Host.SessionService {
         
         public System.Threading.Tasks.Task<Host.SessionService.User> LoginConfirmationAsync(Host.SessionService.User user) {
             return base.Channel.LoginConfirmationAsync(user);
+        }
+        
+        public void LogOut(int person_id) {
+            base.Channel.LogOut(person_id);
+        }
+        
+        public System.Threading.Tasks.Task LogOutAsync(int person_id) {
+            return base.Channel.LogOutAsync(person_id);
         }
     }
 }

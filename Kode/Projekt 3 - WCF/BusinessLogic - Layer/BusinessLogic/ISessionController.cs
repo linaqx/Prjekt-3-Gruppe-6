@@ -10,5 +10,6 @@ namespace BusinessLogic___Layer.BusinessLogic
     interface ISessionController
     {
         User LoginConfirmation(User user);
+        void LogOut(int person_id);
     }
 }

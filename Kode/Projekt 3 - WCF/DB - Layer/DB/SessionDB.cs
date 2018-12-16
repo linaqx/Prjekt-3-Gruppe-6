@@ -13,12 +13,16 @@ namespace DB___Layer.DB
     public class SessionDB : ISessionDB
     {
         private readonly string sql_LOGIN_CONFIRMATION = "select [User].person_id as id, [User].userName, [User].[password], [User].email, Person.firstName, Person.lastName, Person.information from [User], Person where [User].person_id = Person.id and [User].userName = @userName;";
+        private readonly string sql_LOGOUT = "delete from [Session] where person_id = @person_id;";
 
         private readonly string sql_FIND_SESSION = "select [Session].id, [Session].session_id from [Session] where [Session].person_id = @person_id;";
 
         private readonly string sql_INSERT_SESSION = "insert into [Session] (person_id, session_id) output inserted.id values (@person_id, @session_id);";
 
+        
         private SqlCommand loginConfirmation;
+        private SqlCommand logout;
+
         private SqlCommand findSession;
 
         private SqlCommand insertSession;
@@ -30,6 +34,7 @@ namespace DB___Layer.DB
             con = DBConnection.GetInstance().GetConnection();
 
             loginConfirmation = con.CreateCommand();
+            logout = con.CreateCommand();
 
             findSession = con.CreateCommand();
 
@@ -104,20 +109,12 @@ namespace DB___Layer.DB
             return insertedId;
         }
 
-        //private int InsertEntertainment(Movie m)
-        //{
-        //    int insertedId = -1;
-        //    insertEntertainment.CommandText = sql_INSERT_ENTERTAINMENT;
-        //    insertEntertainment.Parameters.AddWithValue("@title", m.Title);
-        //    insertEntertainment.Parameters.AddWithValue("@country_id", m.Country.Id);
-        //    insertEntertainment.Parameters.AddWithValue("@language_id", m.Language.Id);
-        //    insertEntertainment.Parameters.AddWithValue("@releaseDate", m.ReleaseDate);
-        //    insertEntertainment.Parameters.AddWithValue("@storyline", m.StoryLine);
-        //    insertEntertainment.Parameters.AddWithValue("@information", m.Information);
-        //    insertEntertainment.Parameters.AddWithValue("@isMovie", m.IsMovie);
-        //    insertedId = (int)insertEntertainment.ExecuteScalar();
-        //    return insertedId;
-        //}
+        public void LogOut(int person_id)
+        {
+            logout.CommandText = sql_LOGOUT;
+            logout.Parameters.AddWithValue("@person_id", person_id);
+            logout.ExecuteNonQuery();
+        }
 
     }
 }

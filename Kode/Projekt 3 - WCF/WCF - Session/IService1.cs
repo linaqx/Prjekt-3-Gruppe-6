@@ -14,7 +14,8 @@ namespace WCF___Session
     {
         [OperationContract]
         User LoginConfirmation(User user);
-
+        [OperationContract]
+        void LogOut(int person_id);
     }
 
 

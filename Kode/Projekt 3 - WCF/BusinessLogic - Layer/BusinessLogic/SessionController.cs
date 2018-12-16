@@ -45,6 +45,11 @@ namespace BusinessLogic___Layer.BusinessLogic
 
         }
 
+        public void LogOut(int person_id)
+        {
+            sDB.LogOut(person_id);
+        }
+
         private User Session(User user)
         {
             user.Session = sDB.FindSession(user.Id);

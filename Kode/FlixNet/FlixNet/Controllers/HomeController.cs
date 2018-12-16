@@ -36,39 +36,72 @@ namespace FlixNet.Controllers
 
         public ActionResult Movies()
         {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+            if (Session["user_id"] != null)
+            {
+                ViewBag.Message = "Your application description page.";
+                return View();
+            }
+            else
+            {
+                return View("LogIn");
+            }
+
         }
 
         public ActionResult Friends()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (Session["user_id"] != null)
+            {
+                ViewBag.Message = "Your contact page.";
+                return View();
+            }
+            else
+            {
+                return View("LogIn");
+            }
         }
 
         public ActionResult Series()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (Session["user_id"] != null)
+            {
+                ViewBag.Message = "Your contact page.";
+                return View();
+            }
+            else
+            {
+                return View("LogIn");
+            }
         }
 
         public ActionResult MyList()
         {
+            if (Session["user_id"] != null)
+            {
+                List<FavoriteList> favoriteLists = eS.GetFavoriteLists((int)Session["user_id"]);
 
-            List<FavoriteList> favoriteLists = eS.GetFavoriteLists(1);
+                return View(favoriteLists);
 
+            }
+            else
+            {
+                return View("LogIn");
+            }
 
-            return View(favoriteLists);
         }
-
-        
 
         public ActionResult LogIn()
         {
-            return View();
+            if (Session["user_id"] == null)
+            {
+                ViewBag.Message = "Your contact page.";
+                return View();
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
         [HttpPost]
@@ -88,7 +121,7 @@ namespace FlixNet.Controllers
             Session["session_id"] = userNew.Session.Session_id;
 
 
-            if(Session["user_id"] != null)
+            if (Session["user_id"] != null)
             {
                 List<Entertainment> entertainments;
                 entertainments = eS.GetEntertainments();
@@ -104,7 +137,42 @@ namespace FlixNet.Controllers
 
         public ActionResult Logout()
         {
-            return View("Index");
+            try
+            {
+                lis.Logout((int)Session["user_id"]);
+
+                if (Session["user_id"] != null)
+                {
+                    Session["user_id"] = null;
+                }
+
+                if (Session["session_id"] != null)
+                {
+                    Session["session_id"] = null;
+                }
+
+                if (Session["movie_id"] != null)
+                {
+                    Session["movie_id"] = null;
+                }
+
+                if (Session["userName"] != null)
+                {
+                    Session["userName"] = null;
+                }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            List<Entertainment> entertainments;
+
+            entertainments = eS.GetEntertainments();
+
+            return View("Index", entertainments);
         }
 
 

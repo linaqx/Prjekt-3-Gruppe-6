@@ -13,5 +13,6 @@ namespace DB___Layer.DB
         User LoginConfirmation(string userName);
         Session FindSession(int person_id);
         int InsertSession(int id, string session_id);
+        void LogOut(int person_id);
     }
 }

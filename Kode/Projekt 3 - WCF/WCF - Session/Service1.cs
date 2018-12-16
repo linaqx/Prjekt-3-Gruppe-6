@@ -23,5 +23,10 @@ namespace WCF___Session
         {
             return SC.LoginConfirmation(user);
         }
+
+        public void LogOut(int person_id)
+        {
+            SC.LogOut(person_id);
+        }
     }
 }

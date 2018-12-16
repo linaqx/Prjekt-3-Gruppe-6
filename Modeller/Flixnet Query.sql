@@ -193,12 +193,14 @@ use dmab0917_1026423;
 --  FROM table-name
 -- WHERE condition
 
-select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = 1;
+select [Session].person_id, [Session].session_id from [Session];
 --insert into [Session] (person_id, session_id) values (@person_id, @session_id);
 --select [Session].person_id, [Session].session_id from [Session] where [Session].person_id = 1;
 
 
-
+----------Log Out----------
+delete from [Session] where person_id = 2;
+--DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
 
 

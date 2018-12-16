@@ -14,16 +14,35 @@
   <wsdl:message name="IService1_LoginConfirmation_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginConfirmationResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_LogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOut" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="LoginConfirmation">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/LoginConfirmation" message="tns:IService1_LoginConfirmation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginConfirmationResponse" message="tns:IService1_LoginConfirmation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogOut" message="tns:IService1_LogOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogOutResponse" message="tns:IService1_LogOut_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="LoginConfirmation">
       <soap:operation soapAction="http://tempuri.org/IService1/LoginConfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogOut" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

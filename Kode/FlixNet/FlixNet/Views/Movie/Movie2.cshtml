@@ -77,10 +77,7 @@
 
     </dl>
 </div>
-@*<p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>*@
+
 
 <table class="table">
     <tr>
@@ -102,36 +99,12 @@
 
 </table>
 <div> Add a comment</div>
-@*@Html.TextBox("myTextBox", "This is value", new { @class = "form-control" })*@
-
-
-@using (Html.BeginForm())
-{
-
-    <input type="hidden" name="CommentMovieId" id="CommentMovieId" value="@ViewBag.entertainmentId">
-
-
-    //text boxen
-    @*<input type="text" name="CommentData" id="CommentData">*@<br>
-
-    //Knappen
-    @*<input type="submit" value="Submit" @FormMethod.Post>*@
 
 
 
-    <form action="/Movie/AddComment" method="post">
+<form action="/Movie/AddComment" method="post">
 
-        <input type="text" name="message" id="message" />
-        <input type="submit" value="Submit" @FormMethod.Post>
+    <input type="text" name="message" id="message" />
+    <input type="submit" value="Submit" @FormMethod.Post>
 
-    </form>
-
-}
-
-@*<form>
-            Comment:<br>
-
-
-        </form>
-
-    @*<button onclick="myFunction()">Click me</button>*@
+</form>

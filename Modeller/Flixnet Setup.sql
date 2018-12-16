@@ -39,7 +39,7 @@ create table Genre
 create table Entertainment
 	(
 	id int identity(1,1),
-	title nvarchar(50) NOT NULL unique,
+	title nvarchar(50) NOT NULL,
 	country_id int,
 	language_id int,
 	releaseDate date,

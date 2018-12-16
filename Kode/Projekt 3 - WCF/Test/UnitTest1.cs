@@ -3,6 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Projekt_3___WCF.Model;
 using Projekt_3___WCF.BusinessLogic;
 using System.Collections.Generic;
+using WCF___library;
+using WCF___Session;
+using DB___Layer.DB;
+using Model___Layer.Model;
 
 namespace Test
 {
@@ -12,48 +16,24 @@ namespace Test
         static void Main(string[] args)
         {
 
-            
+
         }
 
-        //private User user;
-        private List<Entertainment> templist;
-
-
-        //fix datetime så den ikke er dateTime.now
         [TestMethod]
-        public void TestAddToMyList()
+        public void FindAllEntertainments()
         {
             Console.WriteLine("TestAddToMyList initiated");
             Console.WriteLine("---------------------------");
-            //AAA
-            // arrange, act, assert
-            PersonController pC = new PersonController();
-            //User
-            User monsterMike = new User
-            {
-                
 
-            };
-                //("mike", "hansen", "et-øjet ork", "mike@elskerBanan.com", "HenningsMor", "MonsterMike", "1");
-            //List
-            //FavoriteList f = new FavoriteList(monsterMike, "Horror", "dette er horror");
-            //monsterMike.AddToFavoriteList(f);
-            //pC.CreateFavoriteList(monsterMike, "Horror", "Her er mine yndlingds horror film");
-            //Movie
-            //Movie m = new Movie("Horror", "scary movie 1", "USA", "English", DateTime.Now, "Funny horror movie", "New York", "blabla");
-            // add movie to Horror
-            //f.AddEntertainment(m);
+            //Arrange
+            EntertainmentService es = new EntertainmentService();
+            List<Entertainment> entertainments = new List<Entertainment>();
 
             //Act
-
-            //int firstCount = f.Entertainments.Count;
-
-            //f.AddEntertainment(m);
-
-            //int lastCount = f.Entertainments.Count;
+            entertainments = es.FindAllEntertainments();
 
             //Assert
-            //Assert.AreEqual(firstCount + 1, lastCount);
+            Assert.AreEqual(4, entertainments.Count);
 
             Console.WriteLine("TestAddToMyList complete");
             Console.WriteLine("--------------------------");
@@ -62,58 +42,96 @@ namespace Test
 
 
         [TestMethod]
-        public void FindEntertainmentByName()
+        public void FindMovieById()
         {
+            Console.WriteLine("TestAddToMyList initiated");
+            Console.WriteLine("---------------------------");
+
             //Arrange
-
-            //Entertainment entertainment1 = new Entertainment("bla", "bla", "bla", "bla", DateTime.Today, "bla", "bla", "bla");
-            Entertainment entertainment1 = new Entertainment();
-            //Movie movie1 = new Movie("Horror", "Van Helsing", "USA", "English", DateTime.Today, "vampyr slayer", "california", "A movie about vampire killign");
-            //Series series1 = new Series("Comedy", "HIMYM", "USA", "English", DateTime.Today, "How i met your mother", "New York", "A series about barney");
-            //Episode episode1 = new Episode(1, 1, "Pilot", DateTime.Today, "Started here", series1);
-            //Movie movie2 = new Movie("Comedy", "Tenacious d", "America", "English", DateTime.Today, "Epic tale of two musicians", "In Hell", "Best goddamm music ever made");
-            //lav en liste af entertainments
-            templist = new List<Entertainment>
-            {
-                entertainment1
-            };
-            //templist.Add(movie1);
-            //templist.Add(series1);
-            //templist.Add(movie2);
-
-            Boolean hasEntertainmentBeenFound = false;
-
-            
-
-           
+            EntertainmentService es = new EntertainmentService();
+            int movie_ID = 1;
 
             //Act
-            
-
-            //lav en FindEntertainmentByName metode
-            //set
+            Movie movie = es.GetMovieById(movie_ID);
 
             //Assert
+            Assert.AreEqual("Iron Man", movie.Title);
 
-
-            Assert.IsTrue(hasEntertainmentBeenFound);
-
-            Console.WriteLine("FindEntertainmentByName complete");
+            Console.WriteLine("TestAddToMyList complete");
             Console.WriteLine("--------------------------");
             Console.ReadLine();
         }
 
         [TestMethod]
-        public void FindEntertainmentByGenre()
+        public void LoginConfirmation()
         {
+            Console.WriteLine("TestAddToMyList initiated");
+            Console.WriteLine("---------------------------");
 
+            //Arrange
+            Service1 ss = new Service1();
+            User user = new User
+            {
+                Password = "password",
+                UserName = "Linaqx"
+            };
+            User u = new User();
 
+            //Act
+            u = ss.LoginConfirmation(user);
 
-            Console.WriteLine("FindEntertainmentByGenre complete");
+            //Assert
+            Assert.AreEqual(1, u.Id);
+
+            Console.WriteLine("TestAddToMyList complete");
             Console.WriteLine("--------------------------");
             Console.ReadLine();
         }
 
+        [TestMethod]
+        public void InsertComment()
+        {
+            Console.WriteLine("TestAddToMyList initiated");
+            Console.WriteLine("---------------------------");
+
+            //Arrange
+            SessionDB sDB = new SessionDB();
+            int person_id = 1;
+            int user_id = 1;
+            int entertainment_id = 1;
+            string message = "Awww YEAH!";
+
+            //Act
+            Session sessiondb = sDB.FindSession(person_id);
+            EntertainmentService es = new EntertainmentService();
+            Session session = new Session
+            {
+                Id = sessiondb.Id,
+                Session_id = sessiondb.Session_id
+            };
+
+            User user = new User
+            {
+                Id = user_id,
+                Session = session
+            };
+
+            Comment comment = new Comment
+            {
+                Entertainment_Id = entertainment_id,
+                Message = message,
+                User = user
+            };
+
+            es.InsertComment(comment);
+
+            //Assert
+
+
+            Console.WriteLine("TestAddToMyList complete");
+            Console.WriteLine("--------------------------");
+            Console.ReadLine();
+        }
 
 
 

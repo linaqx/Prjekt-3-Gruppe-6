@@ -46,13 +46,18 @@
             this.txtStoryline = new System.Windows.Forms.TextBox();
             this.txtInformation = new System.Windows.Forms.TextBox();
             this.txtFilmingLocation = new System.Windows.Forms.TextBox();
+            this.lblGenreFault = new System.Windows.Forms.Label();
+            this.lblLanguageFault = new System.Windows.Forms.Label();
+            this.lblCountryFault = new System.Windows.Forms.Label();
+            this.lblDateFormat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(69, 423);
+            this.btnSave.Location = new System.Drawing.Point(46, 275);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 40);
+            this.btnSave.Size = new System.Drawing.Size(50, 26);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -60,9 +65,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(234, 423);
+            this.btnCancel.Location = new System.Drawing.Point(156, 275);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 40);
+            this.btnCancel.Size = new System.Drawing.Size(50, 26);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -70,51 +76,57 @@
             // 
             // cbBoxGenre
             // 
-            this.cbBoxGenre.Location = new System.Drawing.Point(234, 117);
+            this.cbBoxGenre.Location = new System.Drawing.Point(156, 76);
+            this.cbBoxGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBoxGenre.Name = "cbBoxGenre";
-            this.cbBoxGenre.Size = new System.Drawing.Size(148, 28);
+            this.cbBoxGenre.Size = new System.Drawing.Size(100, 21);
             this.cbBoxGenre.TabIndex = 19;
             // 
             // cbBoxCountry
             // 
             this.cbBoxCountry.FormattingEnabled = true;
-            this.cbBoxCountry.Location = new System.Drawing.Point(234, 151);
+            this.cbBoxCountry.Location = new System.Drawing.Point(156, 98);
+            this.cbBoxCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBoxCountry.Name = "cbBoxCountry";
-            this.cbBoxCountry.Size = new System.Drawing.Size(148, 28);
+            this.cbBoxCountry.Size = new System.Drawing.Size(100, 21);
             this.cbBoxCountry.TabIndex = 3;
             // 
             // cbBoxLanguage
             // 
             this.cbBoxLanguage.FormattingEnabled = true;
-            this.cbBoxLanguage.Location = new System.Drawing.Point(234, 185);
+            this.cbBoxLanguage.Location = new System.Drawing.Point(156, 120);
+            this.cbBoxLanguage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBoxLanguage.Name = "cbBoxLanguage";
-            this.cbBoxLanguage.Size = new System.Drawing.Size(148, 28);
+            this.cbBoxLanguage.Size = new System.Drawing.Size(100, 21);
             this.cbBoxLanguage.TabIndex = 4;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(64, 86);
+            this.lblTitle.Location = new System.Drawing.Point(43, 56);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(38, 20);
+            this.lblTitle.Size = new System.Drawing.Size(27, 13);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Title";
             // 
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(64, 115);
+            this.lblGenre.Location = new System.Drawing.Point(43, 75);
+            this.lblGenre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(54, 20);
+            this.lblGenre.Size = new System.Drawing.Size(36, 13);
             this.lblGenre.TabIndex = 6;
             this.lblGenre.Text = "Genre";
             // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(64, 151);
+            this.lblCountry.Location = new System.Drawing.Point(43, 98);
+            this.lblCountry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(64, 20);
+            this.lblCountry.Size = new System.Drawing.Size(43, 13);
             this.lblCountry.TabIndex = 7;
             this.lblCountry.Text = "Country";
             this.lblCountry.Click += new System.EventHandler(this.lblCountry_Click);
@@ -122,88 +134,135 @@
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(64, 185);
+            this.lblLanguage.Location = new System.Drawing.Point(43, 120);
+            this.lblLanguage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(81, 20);
+            this.lblLanguage.Size = new System.Drawing.Size(55, 13);
             this.lblLanguage.TabIndex = 8;
             this.lblLanguage.Text = "Language";
             // 
             // lblReleaseDate
             // 
             this.lblReleaseDate.AutoSize = true;
-            this.lblReleaseDate.Location = new System.Drawing.Point(64, 215);
+            this.lblReleaseDate.Location = new System.Drawing.Point(43, 140);
+            this.lblReleaseDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReleaseDate.Name = "lblReleaseDate";
-            this.lblReleaseDate.Size = new System.Drawing.Size(104, 20);
+            this.lblReleaseDate.Size = new System.Drawing.Size(70, 13);
             this.lblReleaseDate.TabIndex = 9;
             this.lblReleaseDate.Text = "Release date";
             // 
             // lblStoryline
             // 
             this.lblStoryline.AutoSize = true;
-            this.lblStoryline.Location = new System.Drawing.Point(64, 249);
+            this.lblStoryline.Location = new System.Drawing.Point(43, 162);
+            this.lblStoryline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStoryline.Name = "lblStoryline";
-            this.lblStoryline.Size = new System.Drawing.Size(70, 20);
+            this.lblStoryline.Size = new System.Drawing.Size(47, 13);
             this.lblStoryline.TabIndex = 10;
             this.lblStoryline.Text = "Storyline";
             // 
             // lblFilmingLocation
             // 
             this.lblFilmingLocation.AutoSize = true;
-            this.lblFilmingLocation.Location = new System.Drawing.Point(64, 280);
+            this.lblFilmingLocation.Location = new System.Drawing.Point(43, 182);
+            this.lblFilmingLocation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFilmingLocation.Name = "lblFilmingLocation";
-            this.lblFilmingLocation.Size = new System.Drawing.Size(118, 20);
+            this.lblFilmingLocation.Size = new System.Drawing.Size(79, 13);
             this.lblFilmingLocation.TabIndex = 11;
             this.lblFilmingLocation.Text = "Filming location";
             // 
             // lblInformation
             // 
             this.lblInformation.AutoSize = true;
-            this.lblInformation.Location = new System.Drawing.Point(64, 312);
+            this.lblInformation.Location = new System.Drawing.Point(43, 203);
+            this.lblInformation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInformation.Name = "lblInformation";
-            this.lblInformation.Size = new System.Drawing.Size(90, 20);
+            this.lblInformation.Size = new System.Drawing.Size(59, 13);
             this.lblInformation.TabIndex = 12;
             this.lblInformation.Text = "Information";
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(234, 85);
+            this.txtTitle.Location = new System.Drawing.Point(156, 55);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(148, 26);
+            this.txtTitle.Size = new System.Drawing.Size(100, 20);
             this.txtTitle.TabIndex = 13;
             // 
             // txtReleaseDate
             // 
-            this.txtReleaseDate.Location = new System.Drawing.Point(234, 220);
+            this.txtReleaseDate.Location = new System.Drawing.Point(156, 143);
+            this.txtReleaseDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtReleaseDate.Name = "txtReleaseDate";
-            this.txtReleaseDate.Size = new System.Drawing.Size(148, 26);
+            this.txtReleaseDate.Size = new System.Drawing.Size(100, 20);
             this.txtReleaseDate.TabIndex = 14;
             // 
             // txtStoryline
             // 
-            this.txtStoryline.Location = new System.Drawing.Point(234, 252);
+            this.txtStoryline.Location = new System.Drawing.Point(156, 164);
+            this.txtStoryline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStoryline.Name = "txtStoryline";
-            this.txtStoryline.Size = new System.Drawing.Size(148, 26);
+            this.txtStoryline.Size = new System.Drawing.Size(100, 20);
             this.txtStoryline.TabIndex = 15;
             // 
             // txtInformation
             // 
-            this.txtInformation.Location = new System.Drawing.Point(234, 320);
+            this.txtInformation.Location = new System.Drawing.Point(156, 208);
+            this.txtInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInformation.Name = "txtInformation";
-            this.txtInformation.Size = new System.Drawing.Size(148, 26);
+            this.txtInformation.Size = new System.Drawing.Size(100, 20);
             this.txtInformation.TabIndex = 17;
             // 
             // txtFilmingLocation
             // 
-            this.txtFilmingLocation.Location = new System.Drawing.Point(234, 285);
+            this.txtFilmingLocation.Location = new System.Drawing.Point(156, 185);
+            this.txtFilmingLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFilmingLocation.Name = "txtFilmingLocation";
-            this.txtFilmingLocation.Size = new System.Drawing.Size(148, 26);
+            this.txtFilmingLocation.Size = new System.Drawing.Size(100, 20);
             this.txtFilmingLocation.TabIndex = 20;
+            // 
+            // lblGenreFault
+            // 
+            this.lblGenreFault.AutoSize = true;
+            this.lblGenreFault.Location = new System.Drawing.Point(261, 79);
+            this.lblGenreFault.Name = "lblGenreFault";
+            this.lblGenreFault.Size = new System.Drawing.Size(0, 13);
+            this.lblGenreFault.TabIndex = 21;
+            // 
+            // lblLanguageFault
+            // 
+            this.lblLanguageFault.AutoSize = true;
+            this.lblLanguageFault.Location = new System.Drawing.Point(261, 123);
+            this.lblLanguageFault.Name = "lblLanguageFault";
+            this.lblLanguageFault.Size = new System.Drawing.Size(0, 13);
+            this.lblLanguageFault.TabIndex = 22;
+            // 
+            // lblCountryFault
+            // 
+            this.lblCountryFault.AutoSize = true;
+            this.lblCountryFault.Location = new System.Drawing.Point(261, 101);
+            this.lblCountryFault.Name = "lblCountryFault";
+            this.lblCountryFault.Size = new System.Drawing.Size(0, 13);
+            this.lblCountryFault.TabIndex = 23;
+            // 
+            // lblDateFormat
+            // 
+            this.lblDateFormat.AutoSize = true;
+            this.lblDateFormat.Location = new System.Drawing.Point(261, 146);
+            this.lblDateFormat.Name = "lblDateFormat";
+            this.lblDateFormat.Size = new System.Drawing.Size(63, 13);
+            this.lblDateFormat.TabIndex = 24;
+            this.lblDateFormat.Text = "dd-MM-yyyy";
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 506);
+            this.ClientSize = new System.Drawing.Size(495, 329);
+            this.Controls.Add(this.lblDateFormat);
+            this.Controls.Add(this.lblCountryFault);
+            this.Controls.Add(this.lblLanguageFault);
+            this.Controls.Add(this.lblGenreFault);
             this.Controls.Add(this.txtFilmingLocation);
             this.Controls.Add(this.txtInformation);
             this.Controls.Add(this.txtStoryline);
@@ -222,6 +281,7 @@
             this.Controls.Add(this.cbBoxGenre);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.ResumeLayout(false);
@@ -249,5 +309,9 @@
         private System.Windows.Forms.TextBox txtStoryline;
         private System.Windows.Forms.TextBox txtInformation;
         private System.Windows.Forms.TextBox txtFilmingLocation;
+        private System.Windows.Forms.Label lblGenreFault;
+        private System.Windows.Forms.Label lblLanguageFault;
+        private System.Windows.Forms.Label lblCountryFault;
+        private System.Windows.Forms.Label lblDateFormat;
     }
 }

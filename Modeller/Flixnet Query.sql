@@ -199,11 +199,12 @@ select [Session].person_id, [Session].session_id from [Session];
 
 
 ----------Log Out----------
-delete from [Session] where person_id = 2;
+--delete from [Session] where person_id = 2;
 --DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
+select * from Comment;
 
-
+select * from [Session];
 
 
 

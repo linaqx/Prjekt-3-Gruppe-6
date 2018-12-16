@@ -229,15 +229,6 @@ namespace WCF___library.DB
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 
-        //private void InsertEntertainmentFilmingLocation(int insertedId, Movie m)
-        //{
-        //    //insert EntertainmentFilmingLocation - (entertainment_id, filmingLocation_id)
-        //    insertEntertainmentFilmingLocation.CommandText = sql_INSERT_ENTERTAINMENTFILMINGLOCATION;
-        //    insertEntertainmentFilmingLocation.Parameters.AddWithValue("@entertainment_id", insertedId);
-        //    insertEntertainmentFilmingLocation.Parameters.AddWithValue("@filmingLocation_id", m.FilmingLocation);
-        //    insertEntertainmentFilmingLocation.ExecuteNonQuery();
-        //}
-
         public Movie GetMovieById(int id)
         {
             SqlParameter parameter = new SqlParameter
@@ -413,7 +404,7 @@ namespace WCF___library.DB
             {
                 inserComment.CommandText = sql_INSERT_COMMENT;
                 inserComment.Parameters.AddWithValue("@entertainment_id", comment.Entertainment_Id);
-                inserComment.Parameters.AddWithValue("@user_id", comment.User);
+                inserComment.Parameters.AddWithValue("@user_id", comment.User.Id);
                 inserComment.Parameters.AddWithValue("@message", comment.Message);
                 inserComment.ExecuteNonQuery();
                 scope.Complete();

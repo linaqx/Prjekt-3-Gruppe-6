@@ -39,7 +39,8 @@ namespace FlixNet.ServiceLayer
             Models.User user = new Models.User
             {
                 Id = wcfUser.Id,
-                UserName = wcfUser.UserName
+                UserName = wcfUser.UserName,
+                Session = session
             };
 
 

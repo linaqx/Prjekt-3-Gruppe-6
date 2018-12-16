@@ -1,4 +1,5 @@
-﻿using Model___Layer.Model;
+﻿using DB___Layer.DB;
+using Model___Layer.Model;
 using Projekt_3___WCF.DB;
 using Projekt_3___WCF.Model;
 using System;
@@ -21,6 +22,7 @@ namespace midlertidigTest
             EntertainmentService es = new EntertainmentService();
             EntertainmentAdminService eas = new EntertainmentAdminService();
             Service1 ss = new Service1();
+            SessionDB sDB = new SessionDB();
 
             //List<Entertainment> temp = edb.GetAllEntertainments();
             //foreach (Entertainment ent in temp)
@@ -30,15 +32,15 @@ namespace midlertidigTest
             //    Console.WriteLine(ent.ReleaseDate);
             //}
 
-            //edb.GetPersonalEntertainments(2);
+            //edb.GetPersonalEntertainments(1);
 
-            //List<Entertainment> temp2 = es.FindAllEntertainments();
-            //foreach (Entertainment ent2 in temp2)
-            //{
-            //    Console.WriteLine(ent2.Id);
-            //    Console.WriteLine(ent2.Title);
-            //    Console.WriteLine(ent2.ReleaseDate);
-            //}
+            List<Entertainment> temp2 = es.FindAllEntertainments();
+            foreach (Entertainment ent2 in temp2)
+            {
+                Console.WriteLine(ent2.Id);
+                Console.WriteLine(ent2.Title);
+                Console.WriteLine(ent2.ReleaseDate);
+            }
 
             //List<Genre> genres = edb.GetAllGenres();
             //foreach (Genre genre in genres)
@@ -54,29 +56,29 @@ namespace midlertidigTest
             //    Console.WriteLine(country.Name);
             //}
 
-            ////Movie movie = new Movie
-            ////{
-            ////    Title = "Iron Man 4",
-            ////    //Genre = edb.FindGenreByName("Action"),
-            ////    //Country = edb.FindCountryByName("USA"),
-            ////    //Language = edb.FindLanguageByName("English"),
-            ////    ReleaseDate = DateTime.Now,
-            ////    StoryLine = "Something Explode",
-            ////    FilmingLocation = "New York",
-            ////    Information = "nice",
-            ////    //IsMovie = true
-            ////};
-            ////eas.StartInsertMovieTransaction(movie);
+            //Movie movie = new Movie
+            //{
+            //    Title = "Iron Man 4",
+            //    Genre = edb.FindGenreByName("Action"),
+            //    Country = edb.FindCountryByName("USA"),
+            //    Language = edb.FindLanguageByName("English"),
+            //    ReleaseDate = DateTime.Now,
+            //    StoryLine = "Something Explode",
+            //    FilmingLocation = "New York",
+            //    Information = "nice",
+            //    //IsMovie = true
+            //};
+            //eas.StartInsertMovieTransaction(movie);
 
 
-            ////Movie testmovie = es.GetMovieById(1);
-            ////Console.WriteLine(testmovie.Title);
+            //Movie testmovie = es.GetMovieById(1);
+            //Console.WriteLine(testmovie.Title);
 
-            //Movie findMovie = es.GetMovieById(1);
-            //Console.WriteLine(findMovie.Title);
-            //Console.WriteLine(findMovie.Country.Name);
-            //Console.WriteLine(findMovie.Language.Name);
-            //Console.WriteLine(findMovie.Genre.Name);
+            Movie findMovie = es.GetMovieById(1);
+            Console.WriteLine(findMovie.Title);
+            Console.WriteLine(findMovie.Country.Name);
+            Console.WriteLine(findMovie.Language.Name);
+            Console.WriteLine(findMovie.Genre.Name);
 
             //long ticks = DateTime.Now.Ticks;
             //byte[] bytes = BitConverter.GetBytes(ticks);
@@ -92,6 +94,32 @@ namespace midlertidigTest
             User u = ss.LoginConfirmation(user);
             Console.WriteLine(u.Id);
             Console.WriteLine(u.Session.Session_id);
+
+
+
+
+
+            Session sessiondb = sDB.FindSession(1);
+            Session session = new Session
+            {
+                Id = sessiondb.Id,
+                Session_id = sessiondb.Session_id
+            };
+
+            User user1 = new User
+            {
+                Id = 1,
+                Session = session
+            };
+
+            Comment comment = new Comment
+            {
+                Entertainment_Id = 1,
+                Message = "Awwww YEAH!",
+                User = user1
+            };
+
+            es.InsertComment(comment);
         }
     }
 }

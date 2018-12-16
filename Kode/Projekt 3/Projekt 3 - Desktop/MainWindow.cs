@@ -61,11 +61,12 @@ namespace Projekt_3___Desktop
                 ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxGenre.SelectedItem;
                 genre_id = comboBoxItem.HiddenValue;
                 genre_name = comboBoxItem.DisplayValue;
+                lblGenreFault.Text = "";
             }
             catch (Exception)
             {
                 genre_id = 0;
-                MessageBox.Show("Please choose a valid genre");
+                lblGenreFault.Text = "Please choose a valid Genre";
 
             }
             
@@ -74,12 +75,12 @@ namespace Projekt_3___Desktop
                 ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxCountry.SelectedItem;
                 country_id = comboBoxItem.HiddenValue;
                 country_name = comboBoxItem.DisplayValue;
+                lblCountryFault.Text = "";
             }
             catch (Exception)
             {
-
                 country_id = 0;
-                MessageBox.Show("Please choose a valid country");
+                lblCountryFault.Text = "Please choose a valid Country";
             }
             
             try
@@ -87,11 +88,12 @@ namespace Projekt_3___Desktop
                 ComboBoxItem comboBoxItem = (ComboBoxItem)cbBoxLanguage.SelectedItem;
                 language_id = comboBoxItem.HiddenValue;
                 language_name = comboBoxItem.DisplayValue;
+                lblLanguageFault.Text = "";
             }
             catch (Exception)
             {
                 language_id = 0;
-                MessageBox.Show("Please choose a valid language");
+                lblLanguageFault.Text = "Please choose a valid Language";
             }
             
             string storyline = txtStoryline.Text;
@@ -110,13 +112,12 @@ namespace Projekt_3___Desktop
                 }
                 catch (Exception)
                 {
-
-                    MessageBox.Show("Date is not correctly written: dd-MM-yyyy");
+                    lblDateFormat.Text = "Date format is not correctly written: dd-MM-yyyy";
                 }
             }
             else
             {
-                MessageBox.Show("Please fill all the boxes!");
+                MessageBox.Show("Please fill all information!");
             }
 
         }

@@ -196,17 +196,7 @@ namespace FlixNet.ServiceLayer
                 Message = comment.Message
             };
 
-        ServiceLibrary.Comment temp = new ServiceLibrary.Comment
-            {
-                Id = comment.Id,
-                Entertainment_Id = comment.Entertainment_Id,
-                //User = comment.User, //slet mig
-                //User = tempUser,
-                Message = comment.Message
-            };
-
-
-            return temp;
+            return tempComment;
         }
 
 

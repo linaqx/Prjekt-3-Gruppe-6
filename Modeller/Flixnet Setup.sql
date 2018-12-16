@@ -4,9 +4,8 @@ use dmab0917_1026423;
 
 drop table 
 EntertainmentFavoriteList, PersonFavoriteList, FavoriteList, EntertainmentPerson, UserFriend, Comment, 
-[Session], 
-[User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, EntertainmentRole,
-[Role], EntertainmentGenre, Entertainment, Genre, [Language], Country;
+Rating, [Session], [User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, 
+EntertainmentRole, [Role], EntertainmentGenre, Entertainment, Genre, [Language], Country;
 
 create table Country
 	(
@@ -28,13 +27,6 @@ create table Genre
 	[name] nvarchar(50) unique NOT NULL,
 	constraint PKGenre_id primary key(id)
 	);
-
---create table FilmingLocation
---	(
---	id int identity(1,1),
---	[name] nvarchar(50) NOT NULL,
---	constraint PKFilmingLocation_id primary key(id)
---	);
 
 create table Entertainment
 	(
@@ -177,15 +169,24 @@ create table [Session]
 	constraint FKSession_User foreign key(person_id) references [User](person_id)
 	);
 
+	create table Rating
+	(
+	id int identity(1,1),
+	[value] int unique,
+	constraint PKRating_id primary key(id),
+	);
+
 	create table Comment
 	(
 	id int identity(1,1),
 	entertainment_id int,
 	[user_id] int,
 	[message] nvarchar(250),
-	constraint PKComment_entertainment_id primary key(id),
-	constraint FKComment_Movie foreign key(entertainment_id) references Movie(entertainment_id),
-	constraint FKComment_User foreign key([user_id]) references [User](person_id)
+	rating_id int,
+	constraint PKComment_id primary key(id),
+	constraint FKComment_Entertainment foreign key(entertainment_id) references Entertainment(id),
+	constraint FKComment_User foreign key([user_id]) references [User](person_id),
+	constraint FKComment_Rating foreign key(rating_id) references Rating(id)
 	);
 
 create table UserFriend
@@ -285,8 +286,14 @@ insert into [User] values (1, 'Linaqx', 'mail@mail.com', 'password', 'salt', 3);
 insert into [User] values (2, 'Ytte', 'test@email.com', '1234', 'salt', 3);
 insert into [User] values (3, 'KatrineVM', 'kmail@wow.com', 'taellertilfirepaajapansk', 'salt', 3);
 
-insert into Comment values (1, 1, 'It´s so freakin´ awesome!!!!');
-insert into Comment values (1, 2, 'I can´t but agree!');
+insert into Rating values (1);
+insert into Rating values (2);
+insert into Rating values (3);
+insert into Rating values (4);
+insert into Rating values (5);
+
+insert into Comment values (1, 1, 'It´s so freakin´ awesome!!!!', 5);
+insert into Comment values (1, 2, 'I can´t but agree!', 5);
 
 insert into FavoriteList values (1, 'Marvel', 'Most awesome epic super of all time');
 insert into FavoriteList values	(1, 'Series', 'All my series');

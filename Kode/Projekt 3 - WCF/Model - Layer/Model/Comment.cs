@@ -19,11 +19,13 @@ namespace Model___Layer.Model
         public User User { get; set; }
         [DataMember]
         public string Message { get; set; }
+        //[DataMember]
+        //public Rating Rating { get; set; }
 
 
         public Comment()
         {
-
+            
         }
     }
 }

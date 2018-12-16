@@ -148,22 +148,24 @@ namespace FlixNet.ServiceLayer
 
         private List<EntertainmentModel.Comment> ConvertToModelComments(FlixNet.ServiceLibrary.Comment[] ServiceComments)
         {
-
-
             List<EntertainmentModel.Comment> convertedComments = new List<EntertainmentModel.Comment>();
 
             foreach (FlixNet.ServiceLibrary.Comment oldCom in ServiceComments)
             {
+                Models.User user = new Models.User
+                {
+                    Id = oldCom.User.Id,
+                    UserName = oldCom.User.UserName
+                };
 
-                Models.Comment temp = new Models.Comment()
+                Models.Comment temp = new Models.Comment
                 {
                     Id = oldCom.Id,
                     Entertainment_Id = oldCom.Entertainment_Id,
-                    //User = oldCom.User,
+                    User = user,
                     Message = oldCom.Message
                 };
 
-                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
                 convertedComments.Add(temp);
             }
             return convertedComments;

@@ -81,6 +81,9 @@
 
 <table class="table">
     <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Comments)
         </th>
@@ -90,6 +93,9 @@
     @foreach (var item in Model.Comments)
     {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Message)
             </td>
@@ -103,6 +109,13 @@
 
 
 <form action="/Movie/AddComment" method="post">
+    @*<select>
+        <option> 1 </option>
+        <option> 2 </option>
+        <option> 3 </option>
+        <option> 4 </option>
+        <option> 5 </option>
+    </select>*@
 
     <input type="text" name="message" id="message" />
     <input type="submit" value="Submit" @FormMethod.Post>

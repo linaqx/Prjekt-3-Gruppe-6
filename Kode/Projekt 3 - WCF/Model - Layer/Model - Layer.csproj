@@ -52,6 +52,7 @@
     <Compile Include="Model\Language.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\Series.cs" />
     <Compile Include="Model\Session.cs" />
     <Compile Include="Model\User.cs" />

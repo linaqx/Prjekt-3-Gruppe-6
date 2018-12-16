@@ -11,6 +11,7 @@ namespace FlixNet.Models
         public int Entertainment_Id { get; set; }
         public User User { get; set; }
         public string Message { get; set; }
+        //public Rating Rating { get; set; }
 
         public Comment()
         {

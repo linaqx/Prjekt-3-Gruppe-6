@@ -15,7 +15,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-
+            
 
         }
 
@@ -124,9 +124,11 @@ namespace Test
             };
 
             es.InsertComment(comment);
+            Movie movie = es.GetMovieById(entertainment_id);
+            List<Comment> comments = movie.Comments;
 
             //Assert
-
+            Assert.AreEqual(3, comments.Count);
 
             Console.WriteLine("TestAddToMyList complete");
             Console.WriteLine("--------------------------");

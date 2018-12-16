@@ -1,0 +1,13 @@
+Hvis du vil sikre dig et program med frisk data, så kør FLixnet Setup på vores Kraka Database med Login: dmab0917_1026423 og Password: Password1!
+
+Start Visual Studio i administrator mode, hvorefter "Projekt 3 - WCF" køres og "Host" projektet køres.
+Åben dernest enten "Projekt 3" for administrator desktop client, hvor et Movie objekt kan laves eller
+åben "Flixnet" for at køre Web Clienten og prøv at forskellig funktionalitet for almindelig bruger.
+
+Da der endnu ikke kan oprettes bruger via Web clienten, så er der 3 forskellige brugere i sytemet:
+	Brugernavn	Password
+	Linaqx		password
+	Ytte		1234
+	KatrineVM	taellertilfirepaajapansk
+
+Brugeren "Linaqx" er den mest spændende, da der allerede er lavet et par favoritlister til brugeren.

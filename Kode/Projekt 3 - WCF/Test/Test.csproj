@@ -77,6 +77,10 @@
       <Project>{204587fa-4bf9-4c14-91e1-c13659b5ade2}</Project>
       <Name>WCF - Entertainment</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WCF - Session\WCF - Session.csproj">
+      <Project>{E77886E4-3A60-4D0A-B68E-5D230601145D}</Project>
+      <Name>WCF - Session</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

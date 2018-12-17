@@ -9,9 +9,6 @@ namespace WCF___library.DB
 {
     public interface IPersonDB
     {
-        //User FindUserById(int id);
-
-
         
     }
 }

@@ -30,12 +30,12 @@ namespace WCF___library.DB
         private readonly string sql_INSERT_COMMENT = "insert into Comment(entertainment_id, [user_id], [message]) values(@entertainment_id, @user_id, @message);";
 
         private readonly string sql_FIND_MOVIE_BY_ID = "select Entertainment.id, Entertainment.title, Entertainment.releaseDate, Entertainment.storyline, Entertainment.information, Entertainment.country_id, Entertainment.language_id, Genre.[name] as genre, Entertainment.filmingLocation, Entertainment.isMovie as isMovie from Movie INNER JOIN Entertainment on(Entertainment.id = Movie.entertainment_id) INNER JOIN EntertainmentGenre on(Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on(EntertainmentGenre.genre_id = Genre.id) where Movie.entertainment_id = @id;";
-        
+
         private readonly string sql_FIND_GENRE_ON_MOVIE = "select Genre.id, Genre.[name] as genre from Entertainment INNER JOIN EntertainmentGenre on (Entertainment.id = EntertainmentGenre.entertainment_id) INNER JOIN Genre on (EntertainmentGenre.genre_id = Genre.id) where Entertainment.id = @entertainment_id;";
         private readonly string sql_FIND_COUNTRY_ON_MOVIE = "select Country.id, Country.[name] as country from Country, Entertainment where Entertainment.country_id = Country.id and Entertainment.id = @entertainment_id;";
         private readonly string sql_FIND_LANGUAGE_ON_MOVIE = "select [Language].id, [Language].[name] as [language] from [Language], Entertainment where Entertainment.language_id = [Language].id and Entertainment.id = @entertainment_id";
         private readonly string sql_FIND_COMMENTS_ON_MOVIE = "select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] from Comment INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) INNER JOIN[User] on(Comment.[user_id] = [User].person_id) where Comment.entertainment_id = @entertainment_id;";
-        
+
         private SqlCommand findAllEntertainments;
         private SqlCommand findAllPrivateEntertainments;
         private SqlCommand findAllGenres;
@@ -52,7 +52,7 @@ namespace WCF___library.DB
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
         private SqlCommand inserComment;
-        
+
         private SqlConnection con;
 
         public EntertainmentDB()
@@ -382,7 +382,7 @@ namespace WCF___library.DB
                     Id = reader.GetInt32(reader.GetOrdinal("person_id")),
                     UserName = reader.GetString(reader.GetOrdinal("username"))
                 };
-                
+
                 Comment comment = new Comment
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),

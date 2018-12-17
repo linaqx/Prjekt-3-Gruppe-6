@@ -11,19 +11,10 @@ namespace WCF___library.DB
 {
     public class PersonDB : IPersonDB
     {
-        
-
-
-        
-
-
         public PersonDB()
         {
             
-
-            
         }
-
         
     }
 }

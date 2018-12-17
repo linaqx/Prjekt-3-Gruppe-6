@@ -12,6 +12,10 @@ using WCF___library;
 using WCF___library.DB;
 using WCF___Session;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace midlertidigTest
 {
     class Test

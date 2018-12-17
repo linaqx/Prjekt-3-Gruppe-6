@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace Projekt_3___WCF.Model
 {
     [DataContract]
@@ -19,6 +23,9 @@ namespace Projekt_3___WCF.Model
         [DataMember]
         public List<Entertainment> Entertainments { get; set; }
 
+        /// <summary>
+        /// Constructor for favoritelist
+        /// </summary>
         public FavoriteList()
         {
 

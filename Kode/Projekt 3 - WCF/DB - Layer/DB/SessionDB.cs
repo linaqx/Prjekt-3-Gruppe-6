@@ -8,6 +8,10 @@ using Model___Layer.Model;
 using Projekt_3___WCF.DB;
 using Projekt_3___WCF.Model;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace DB___Layer.DB
 {
     public class SessionDB : ISessionDB
@@ -19,7 +23,6 @@ namespace DB___Layer.DB
 
         private readonly string sql_INSERT_SESSION = "insert into [Session] (person_id, session_id) output inserted.id values (@person_id, @session_id);";
 
-        
         private SqlCommand loginConfirmation;
         private SqlCommand logout;
 
@@ -29,6 +32,9 @@ namespace DB___Layer.DB
 
         private SqlConnection con;
 
+        /// <summary>
+        /// Constructor for sessionDB
+        /// </summary>
         public SessionDB()
         {
             con = DBConnection.GetInstance().GetConnection();
@@ -41,6 +47,11 @@ namespace DB___Layer.DB
             insertSession = con.CreateCommand();
         }
 
+        /// <summary>
+        /// Confirms login information
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns>User</returns>
         public User LoginConfirmation(string userName)
         {
             SqlParameter parameter = new SqlParameter
@@ -67,10 +78,14 @@ namespace DB___Layer.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Finds a session by person id
+        /// </summary>
+        /// <param name="person_id"></param>
+        /// <returns>Session</returns>
         public Session FindSession(int person_id)
         {
             SqlParameter parameter = new SqlParameter
@@ -95,10 +110,15 @@ namespace DB___Layer.DB
                 temp = session;
             }
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Inserts a session to the database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="session_id"></param>
+        /// <returns>int id</returns>
         public int InsertSession(int id, string session_id)
         {
             int insertedId = -1;
@@ -109,6 +129,10 @@ namespace DB___Layer.DB
             return insertedId;
         }
 
+        /// <summary>
+        /// Logs a user out
+        /// </summary>
+        /// <param name="person_id"></param>
         public void LogOut(int person_id)
         {
             logout.CommandText = sql_LOGOUT;

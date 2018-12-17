@@ -55,6 +55,9 @@ namespace WCF___library.DB
 
         private SqlConnection con;
 
+        /// <summary>
+        /// Constructor for EntertainmentDB
+        /// </summary>
         public EntertainmentDB()
         {
             con = DBConnection.GetInstance().GetConnection();
@@ -77,6 +80,10 @@ namespace WCF___library.DB
             inserComment = con.CreateCommand();
         }
 
+        /// <summary>
+        /// Gets a list of all entertainments from the database
+        /// </summary>
+        /// <returns>List<Entertainment></returns>
         public List<Entertainment> GetAllEntertainments()
         {
             findAllEntertainments.CommandText = sql_FIND_ALL_ENTERTAINMENT;
@@ -84,6 +91,11 @@ namespace WCF___library.DB
             return temp;
         }
 
+        /// <summary>
+        /// Gets personal list of entertainments by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>List<Entertainment></returns>
         public List<Entertainment> GetPersonalEntertainments(int id)
         {
             SqlParameter parameter = new SqlParameter
@@ -98,6 +110,11 @@ namespace WCF___library.DB
             return temp;
         }
 
+        /// <summary>
+        /// Gets entertainment fomr database
+        /// </summary>
+        /// <param name="sqlCommand"></param>
+        /// <returns>List<Entertainment></returns>
         private List<Entertainment> GetEntertainments(SqlCommand sqlCommand)
         {
             List<Entertainment> temp = new List<Entertainment>();
@@ -114,12 +131,15 @@ namespace WCF___library.DB
                 };
 
                 temp.Add(e);
-
             }
             reader.Close();
             return temp;
         }
 
+        /// <summary>
+        /// Gets a list of all genres from the database
+        /// </summary>
+        /// <returns>List<Genre></returns>
         public List<Genre> GetAllGenres()
         {
             findAllGenres.CommandText = sql_FIND_ALL_GENRE;
@@ -136,10 +156,13 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Returns a list of all alnguages from the database
+        /// </summary>
+        /// <returns>List<Language></returns>
         public List<Language> GetAllLanguages()
         {
             findAllLanguages.CommandText = sql_FIND_ALL_LANGUAGE;
@@ -156,10 +179,13 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Gets a list of all countries from the database
+        /// </summary>
+        /// <returns>List<>Country</returns>
         public List<Country> GetAllCountries()
         {
             findAllCountries.CommandText = sql_FIND_ALL_COUNTRIES;
@@ -176,10 +202,13 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Starts a transaction to insert a movie into the database
+        /// </summary>
+        /// <param name="m"></param>
         public void StartInsertMovieTransaction(Movie m)
         {
             TransactionOptions to = new TransactionOptions
@@ -194,9 +223,13 @@ namespace WCF___library.DB
 
                 scope.Complete();
             }
-
         }
 
+        /// <summary>
+        /// Inserts a entertainment to the database
+        /// </summary>
+        /// <param name="m"></param>
+        /// <returns>int id</returns>
         private int InsertEntertainment(Movie m)
         {
             int insertedId = -1;
@@ -215,6 +248,11 @@ namespace WCF___library.DB
             return insertedId;
         }
 
+        /// <summary>
+        /// Inserts movie into database
+        /// </summary>
+        /// <param name="insertedId"></param>
+        /// <param name="m"></param>
         private void InsertMovie(int insertedId, Movie m)
         {
             insertMovie.CommandText = sql_INSERT_MOVIE;
@@ -222,6 +260,11 @@ namespace WCF___library.DB
             insertMovie.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Inserts a entertainment genre
+        /// </summary>
+        /// <param name="insertedId"></param>
+        /// <param name="m"></param>
         private void InsertEntertainmentGenre(int insertedId, Movie m)
         {
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
@@ -230,6 +273,11 @@ namespace WCF___library.DB
             insertEntertainmentGenre.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Gets a movie by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Movie</returns>
         public Movie GetMovieById(int id)
         {
             SqlParameter parameter = new SqlParameter
@@ -259,6 +307,11 @@ namespace WCF___library.DB
             return movie;
         }
 
+        /// <summary>
+        /// Build an Movie object
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns>Movie</returns>
         private Movie BuildMovie(SqlDataReader reader)
         {
             Movie temp = new Movie
@@ -274,6 +327,11 @@ namespace WCF___library.DB
             return temp;
         }
 
+        /// <summary>
+        /// Finds a grenre on a movie
+        /// </summary>
+        /// <param name="entertainment_id"></param>
+        /// <returns>Genre</returns>
         private Genre FindGenreOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
@@ -298,10 +356,14 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Find a country on a movie object
+        /// </summary>
+        /// <param name="entertainment_id"></param>
+        /// <returns>Country</returns>
         private Country FindCountryOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
@@ -326,10 +388,14 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
+        /// <summary>
+        /// Find a language on a movie object
+        /// </summary>
+        /// <param name="entertainment_id"></param>
+        /// <returns>Langugage</returns>
         private Language FindLanguageOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
@@ -354,7 +420,6 @@ namespace WCF___library.DB
             }
 
             reader.Close();
-
             return temp;
         }
 
@@ -399,7 +464,7 @@ namespace WCF___library.DB
             return comments;
         }
         /// <summary>
-        /// 
+        /// inserts a comment on a movie
         /// </summary>
         /// <param name="comment"></param>
         public void InsertComment(Comment comment)

@@ -6,10 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using FavoriteListService;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace Host
 {
     class Program
     {
+        /// <summary>
+        /// Main method to run host
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.WriteLine("Console based host");
@@ -46,6 +54,10 @@ namespace Host
             }
         }
 
+        /// <summary>
+        /// Displays host information in cmd
+        /// </summary>
+        /// <param name="host"></param>
         static void DisplayHostInfo(ServiceHost host)
         {
             Console.WriteLine();
@@ -58,7 +70,6 @@ namespace Host
                 Console.WriteLine($"Contract: {se.Contract.Name}");
             }
             Console.WriteLine("*---------------*");
-
         }
     }
 }

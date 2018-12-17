@@ -7,6 +7,10 @@ using System.Text;
 using Model___Layer.Model;
 using Projekt_3___WCF.Model;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace WCF___EntertainmentAdmin
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.

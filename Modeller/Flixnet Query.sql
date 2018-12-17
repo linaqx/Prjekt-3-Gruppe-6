@@ -204,15 +204,10 @@ select [Session].person_id, [Session].session_id from [Session];
 
 select * from Comment;
 
-select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message], Rating.[value] as rating
-from Comment 
-INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) 
-INNER JOIN [User] on (Comment.[user_id] = [User].person_id) 
-INNER JOIN Rating on (Comment.rating_id = Rating.id)
-where Comment.entertainment_id = 1;
+--select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message], Rating.[value] as rating from Comment INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) INNER JOIN [User] on (Comment.[user_id] = [User].person_id) INNER JOIN Rating on (Comment.rating_id = Rating.id) where Comment.entertainment_id = 1;
 
 
-
+select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] from Comment INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) INNER JOIN[User] on(Comment.[user_id] = [User].person_id) where Comment.entertainment_id = 1;
 
 
 --select * from [Session];

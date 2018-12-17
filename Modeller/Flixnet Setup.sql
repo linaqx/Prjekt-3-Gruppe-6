@@ -4,7 +4,8 @@ use dmab0917_1026423;
 
 drop table 
 EntertainmentFavoriteList, PersonFavoriteList, FavoriteList, EntertainmentPerson, UserFriend, Comment, 
-Rating, [Session], [User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, 
+--Rating, 
+[Session], [User], UserRank, Actor, PersonRole, Person, Episode, Season, Movie, Series, 
 EntertainmentRole, [Role], EntertainmentGenre, Entertainment, Genre, [Language], Country;
 
 create table Country
@@ -52,15 +53,6 @@ create table EntertainmentGenre
 	constraint FKEntertainmentGenre_Entertainment foreign key(entertainment_id) references Entertainment(id),
 	constraint FKEntertainmentGenre_Genre foreign key(genre_id) references Genre(id)
 	);
-
---create table EntertainmentFilmingLocation
---	(
---	entertainment_id int,
---	filmingLocation_id int,
---	constraint CPKEntertainmentFilmingLocation_Entertainment_id_FilmingLocation_id primary key(entertainment_id, filmingLocation_id),
---	constraint FKEntertainmentFilmingLocation_Entertainment foreign key(entertainment_id) references Entertainment(id),
---	constraint FKEntertainmentFilmingLocation_FilmingLocation foreign key(filmingLocation_id) references FilmingLocation(id)
---	);
 
 create table [Role]
 	(
@@ -169,12 +161,12 @@ create table [Session]
 	constraint FKSession_User foreign key(person_id) references [User](person_id)
 	);
 
-	create table Rating
-	(
-	id int identity(1,1),
-	[value] int unique,
-	constraint PKRating_id primary key(id),
-	);
+--create table Rating
+	--(
+	--id int identity(1,1),
+	--[value] int unique,
+	--constraint PKRating_id primary key(id),
+	--);
 
 	create table Comment
 	(
@@ -182,11 +174,11 @@ create table [Session]
 	entertainment_id int,
 	[user_id] int,
 	[message] nvarchar(250),
-	rating_id int,
+	--rating_id int,
 	constraint PKComment_id primary key(id),
 	constraint FKComment_Entertainment foreign key(entertainment_id) references Entertainment(id),
 	constraint FKComment_User foreign key([user_id]) references [User](person_id),
-	constraint FKComment_Rating foreign key(rating_id) references Rating(id)
+	--constraint FKComment_Rating foreign key(rating_id) references Rating(id)
 	);
 
 create table UserFriend
@@ -265,15 +257,6 @@ insert into EntertainmentGenre values (3, 1);
 insert into EntertainmentGenre values (3, 3);
 insert into EntertainmentGenre values (4, 1);
 
---insert into FilmingLocation values ('New York');
---insert into FilmingLocation values ('Copenhagen');
---insert into FilmingLocation values ('Paris');
-
---insert into EntertainmentFilmingLocation values (1, 1);
---insert into EntertainmentFilmingLocation values (2, 1);
---insert into EntertainmentFilmingLocation values (3, 3);
---insert into EntertainmentFilmingLocation values (4, 2);
-
 insert into UserRank values ('Normal');
 insert into UserRank values ('Premium');
 insert into UserRank values ('Admin');
@@ -286,14 +269,14 @@ insert into [User] values (1, 'Linaqx', 'mail@mail.com', 'password', 'salt', 3);
 insert into [User] values (2, 'Ytte', 'test@email.com', '1234', 'salt', 3);
 insert into [User] values (3, 'KatrineVM', 'kmail@wow.com', 'taellertilfirepaajapansk', 'salt', 3);
 
-insert into Rating values (1);
-insert into Rating values (2);
-insert into Rating values (3);
-insert into Rating values (4);
-insert into Rating values (5);
+--insert into Rating values (1);
+--insert into Rating values (2);
+--insert into Rating values (3);
+--insert into Rating values (4);
+--insert into Rating values (5);
 
-insert into Comment values (1, 1, 'It´s so freakin´ awesome!!!!', 5);
-insert into Comment values (1, 2, 'I can´t but agree!', 5);
+insert into Comment values (1, 1, 'It´s so freakin´ awesome!!!!');
+insert into Comment values (1, 2, 'I can´t but agree!');
 
 insert into FavoriteList values (1, 'Marvel', 'Most awesome epic super of all time');
 insert into FavoriteList values	(1, 'Series', 'All my series');

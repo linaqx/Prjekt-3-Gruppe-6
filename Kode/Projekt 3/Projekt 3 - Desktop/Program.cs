@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace Projekt_3___Desktop
 {
     static class Program

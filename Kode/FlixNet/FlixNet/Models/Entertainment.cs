@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace FlixNet.Models
 {
     public class Entertainment
@@ -17,37 +21,13 @@ namespace FlixNet.Models
         public string FilmingLocation { get; set; }
         public string Information { get; set; }
         public List<Comment> Comments { get; set; }
-
-
-
+        
+        /// <summary>
+        /// Constructor for Entertainment
+        /// </summary>
         public Entertainment()
         {
             List<Comment> comments = new List<Comment>();
         }
-
-        //public Entertainment(string title, DateTime releaseDate)
-        //{
-
-        //    this.title = title;
-        //    this.releaseDate = releaseDate;
-        //}
-
-
-
-        //brug den her til listen på index viewwed
-        //public Entertainment(string title, DateTime realeaseDate)
-        //{
-        //    this.title = title;
-        //    this.releaseDate = releaseDate;
-        //}
-
-        //public Entertainment()
-        //{
-
-        //}
-
-
     }
-
-
 }

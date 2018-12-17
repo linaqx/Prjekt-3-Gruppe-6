@@ -111,7 +111,7 @@ namespace WCF___library.DB
         }
 
         /// <summary>
-        /// Gets entertainment fomr database
+        /// Gets entertainment from database
         /// </summary>
         /// <param name="sqlCommand"></param>
         /// <returns>List<Entertainment></returns>

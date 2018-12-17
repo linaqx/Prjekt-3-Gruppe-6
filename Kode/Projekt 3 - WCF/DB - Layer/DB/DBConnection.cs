@@ -73,7 +73,7 @@ namespace Projekt_3___WCF.DB
         
         //Kraka connection/database information
         private static readonly string dbName = "dmab0917_1026423";
-        private static readonly string serverAddress = "kraka.ucn.dk"; //Kraka address - DROP IKKE DATABASE
+        private static readonly string serverAddress = "kraka.ucn.dk";
         //private static readonly int serverPort = 1433;
         private static readonly bool integratedSecurity = false;
         private static readonly string userName = "dmab0917_1026423";

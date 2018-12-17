@@ -10,16 +10,12 @@ namespace BusinessLogic___Layer.BusinessLogic
 {
     interface IEntertainmentControllerIF
     {
-        //Entertainment FindEntertainmentByName(List<Entertainment> e);
-
         List<Entertainment> FindAllEntertainments();
 
         List<Entertainment> FindPersonalEntertainments(int id);
 
         List<Genre> GetAllGenres();
-
-        //List<FilmingLocation> GetALLFilmingLocations();
-
+        
         List<Language> GetAllLanguages();
 
         List<Country> GetAllCountries();

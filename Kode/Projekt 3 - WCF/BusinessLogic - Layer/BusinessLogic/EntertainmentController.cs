@@ -12,18 +12,11 @@ namespace Projekt_3___WCF.BusinessLogic
     {
         private EntertainmentDB edb;
         private readonly bool IsMovie = true;
-        //private readonly bool IsNotMovie = false;
 
         public EntertainmentController()
         {
             edb = new EntertainmentDB();
         }
-
-        //Search metode!!
-        //public Entertainment FindEntertainmentByName(List<Entertainment> e)
-        //{
-        //    return null;
-        //}
 
         public List<Entertainment> FindAllEntertainments()
         {
@@ -39,11 +32,6 @@ namespace Projekt_3___WCF.BusinessLogic
         { 
             return edb.GetAllGenres();
         }
-
-        //public List<FilmingLocation> GetALLFilmingLocations()
-        //{
-        //    return edb.GetALLFilmingLocations();
-        //}
 
         public List<Language> GetAllLanguages()
         {

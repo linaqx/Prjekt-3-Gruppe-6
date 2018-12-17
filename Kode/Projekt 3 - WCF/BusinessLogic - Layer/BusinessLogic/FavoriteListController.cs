@@ -41,12 +41,5 @@ namespace Projekt_3___WCF.BusinessLogic
             FDB.RemoveUserFromFavoriteList(per, fav);
         }
 
-        //public List<Entertainment> FindFavoriteListByName(List<FavoriteList> listOfList, string nameOfList)
-        //{
-        //    List<Entertainment> temp = new List<Entertainment>();
-        //    temp = listOfList.Find(x => x.PropEntertianments.Contains(nameOfList));
-        //    return temp;
-        //}
-
     }
 }

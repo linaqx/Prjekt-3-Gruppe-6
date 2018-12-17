@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace WCF___library.DB
 {
     public class EntertainmentDB : IEntertainmentDB
@@ -32,7 +36,6 @@ namespace WCF___library.DB
         private readonly string sql_FIND_LANGUAGE_ON_MOVIE = "select [Language].id, [Language].[name] as [language] from [Language], Entertainment where Entertainment.language_id = [Language].id and Entertainment.id = @entertainment_id";
         private readonly string sql_FIND_COMMENTS_ON_MOVIE = "select Comment.id, Comment.entertainment_id, [User].person_id, [User].userName, Comment.[message] from Comment INNER JOIN Entertainment on (Comment.entertainment_id = Entertainment.id) INNER JOIN[User] on(Comment.[user_id] = [User].person_id) where Comment.entertainment_id = @entertainment_id;";
         
-
         private SqlCommand findAllEntertainments;
         private SqlCommand findAllPrivateEntertainments;
         private SqlCommand findAllGenres;
@@ -49,8 +52,7 @@ namespace WCF___library.DB
         private SqlCommand insertMovie;
         private SqlCommand insertEntertainmentGenre;
         private SqlCommand inserComment;
-
-
+        
         private SqlConnection con;
 
         public EntertainmentDB()
@@ -189,7 +191,6 @@ namespace WCF___library.DB
                 int insertedId = InsertEntertainment(m);
                 InsertMovie(insertedId, m);
                 InsertEntertainmentGenre(insertedId, m);
-                //InsertEntertainmentFilmingLocation(insertedId, m);
 
                 scope.Complete();
             }
@@ -199,8 +200,8 @@ namespace WCF___library.DB
         private int InsertEntertainment(Movie m)
         {
             int insertedId = -1;
-            //insert Entertainment - (title, country_id, language_id, releaseDate, storyline, information)
             insertEntertainment.CommandText = sql_INSERT_ENTERTAINMENT;
+
             insertEntertainment.Parameters.AddWithValue("@title", m.Title);
             insertEntertainment.Parameters.AddWithValue("@country_id", m.Country.Id);
             insertEntertainment.Parameters.AddWithValue("@language_id", m.Language.Id);
@@ -208,13 +209,14 @@ namespace WCF___library.DB
             insertEntertainment.Parameters.AddWithValue("@storyline", m.StoryLine);
             insertEntertainment.Parameters.AddWithValue("@information", m.Information);
             insertEntertainment.Parameters.AddWithValue("@isMovie", m.IsMovie);
+
             insertedId = (int)insertEntertainment.ExecuteScalar();
+
             return insertedId;
         }
 
         private void InsertMovie(int insertedId, Movie m)
         {
-            //insert Movie - (entertainment_id)
             insertMovie.CommandText = sql_INSERT_MOVIE;
             insertMovie.Parameters.AddWithValue("@entertainment_id", insertedId);
             insertMovie.ExecuteNonQuery();
@@ -222,7 +224,6 @@ namespace WCF___library.DB
 
         private void InsertEntertainmentGenre(int insertedId, Movie m)
         {
-            //insert EntertainmentGenre - (entertainment_id, genre_id)
             insertEntertainmentGenre.CommandText = sql_INSERT_ENTERTAINMENTGENRE;
             insertEntertainmentGenre.Parameters.AddWithValue("@entertainment_id", insertedId);
             insertEntertainmentGenre.Parameters.AddWithValue("@genre_id", m.Genre.Id);
@@ -357,6 +358,11 @@ namespace WCF___library.DB
             return temp;
         }
 
+        /// <summary>
+        /// Finds Comments on a specific Movie
+        /// </summary>
+        /// <param name="entertainment_id"></param>
+        /// <returns>List<Comment></returns>
         private List<Comment> FindCommentsOnMovie(int entertainment_id)
         {
             SqlParameter parameter = new SqlParameter
@@ -376,19 +382,13 @@ namespace WCF___library.DB
                     Id = reader.GetInt32(reader.GetOrdinal("person_id")),
                     UserName = reader.GetString(reader.GetOrdinal("username"))
                 };
-
-                //Rating rating = new Rating
-                //{
-                //    Rating_Value = reader.GetInt32(reader.GetOrdinal("rating"))
-                //};
-
+                
                 Comment comment = new Comment
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Entertainment_Id = reader.GetInt32(reader.GetOrdinal("entertainment_id")),
                     User = user,
                     Message = reader.GetString(reader.GetOrdinal("message")),
-                    //Rating = rating
                 };
 
                 comments.Add(comment);
@@ -398,7 +398,10 @@ namespace WCF___library.DB
 
             return comments;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="comment"></param>
         public void InsertComment(Comment comment)
         {
             TransactionOptions transactionOptions = new TransactionOptions

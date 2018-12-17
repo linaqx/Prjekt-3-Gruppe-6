@@ -7,26 +7,7 @@
 
 @using FlixNet.Models
 
-
-
 <h2>My List</h2>
-
-@*<select>
-        <option>
-        @Html.DisplayNameFor(model => model.Name)
-        </option>
-    </select>*@
-
-@*@foreach (var item in Model)
-    {
-        <select>
-            <option>
-                @Html.DisplayFor(ModelItem => item.Name)
-            </option>
-        </select>
-
-    }*@
-
 
 <body>
     <table class="table">
@@ -44,9 +25,6 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
 
-            <th>
-
-            </th>
         </tr>
 
         @foreach (var item in Model)
@@ -71,64 +49,5 @@
 
     </table>
 
-    @*<partial name="~/Views/Home/MyListPartialView.cshtml" />*@
-    @*<Html.RenderPartial name="~/Views/Home/MyListPartialView.cshtml" />*@
-
-    @{
-        //Html.RenderPartial("MyListPartialView", System.Collections.Generic.IEnumerable`1[PopcornTime_2._0.Models.Entertainment]);
-    }
-    @*<div class="container body-content">
-            @RenderBody()
-
-        </div>*@
+    
 </body>
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Country)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Language)
-        </th>*@
-@*<th>
-        @Html.DisplayNameFor(model => model.ReleaseDate)
-    </th>*@
-@*<th>
-        @Html.DisplayNameFor(model => model.StoryLine)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.FilmingLocation)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.Information)
-    </th>*@
-@*<th></th>
-    </tr>*@
-
-@*<div>
-    <ul class='dropdown'>
-        <li id="top">
-            <a href='index.html'>Dropdown</a>
-            <span></span>
-            <ol class="dropdown-box">
-                @*foreach()*@
-@*@
-
-
-
-    @Html.DropDownListFor(m => m.StudentGender,
-    new SelectList(Enum.GetValues(typeof(Gender))),
-    "Select Gender")*@
-
-
-@*FindAllfavoriteListByid skal sættes ind i dropdown*@
-
-@*findallEntertainmentsByListId skal tage id fra favorit list og vise alle entertainments i den liste*@
-
-

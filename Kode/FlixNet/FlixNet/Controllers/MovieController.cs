@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using FlixNet.Models;
 using FlixNet.ServiceLayer;
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 
 namespace FlixNet.Controllers
 {
@@ -12,16 +16,29 @@ namespace FlixNet.Controllers
     {
         private EntertainmentService eS;
 
+        /// <summary>
+        /// Constructor for MovieController
+        /// </summary>
         public MovieController()
         {
             eS = new EntertainmentService();
         }
+
+        /// <summary>
+        /// Actionresult for Viwe Index(in Movie views)
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns>View();</returns>
         public ActionResult Index(string message)
         {
-            
             return View();
         }
 
+        /// <summary>
+        /// Actionresult for Movie2
+        /// </summary>
+        /// <param name="MovieId"></param>
+        /// <returns>View(movie);</returns>
         [HttpPost]
         public ActionResult Movie2(int MovieId)
         {
@@ -29,17 +46,19 @@ namespace FlixNet.Controllers
             {
                 Movie movie = eS.GetMovieById(MovieId);
                 Session["movie_id"] = movie.Id;
-
                 return View(movie);
             }
             else
             {
                 return RedirectToAction("Index", "Home");
             }
-
         }
 
-        
+        /// <summary>
+        /// Actionresult for AddComment, creates a comment object adds et to the movie object
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns>View("Movie2", movie);</returns>
         [HttpPost]
         public ActionResult AddComment(string message)
         {
@@ -61,85 +80,11 @@ namespace FlixNet.Controllers
                 User = user
             };
 
-
             eS.InsertComment(comment);
-
             Movie movie = eS.GetMovieById((int)Session["movie_id"]);
             Session["movie_id"] = movie.Id;
 
-            return View("Movie2", movie); //return some view to the user
-        }
-
-        // GET: Movie/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Movie/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Movie/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Movie/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Movie/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return View("Movie2", movie);
         }
     }
 }

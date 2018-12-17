@@ -14,80 +14,60 @@
         <dt>
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Genre.Name)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Title)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Country)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Country.Name)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Language)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Language.Name)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.ReleaseDate)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.StoryLine)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.StoryLine)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.FilmingLocation)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.FilmingLocation)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Information)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Information)
         </dd>
-
     </dl>
 </div>
 
 
 <table class="table">
     <tr>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Comments)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Comments)
         </th>
-
     </tr>
 
     @foreach (var item in Model.Comments)
@@ -99,24 +79,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Message)
             </td>
-
         </tr>
     }
 
 </table>
 <div> Add a comment</div>
 
-
-
 <form action="/Movie/AddComment" method="post">
-    @*<select>
-        <option> 1 </option>
-        <option> 2 </option>
-        <option> 3 </option>
-        <option> 4 </option>
-        <option> 5 </option>
-    </select>*@
-
     <input type="text" name="message" id="message" />
     <input type="submit" value="Submit" @FormMethod.Post>
 

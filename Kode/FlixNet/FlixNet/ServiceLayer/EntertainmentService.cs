@@ -7,36 +7,38 @@ using FavoritListService = FlixNet.FavoriteListService;
 using EntertainmentModel = FlixNet.Models;
 using FlixNet.ServiceLibrary;
 
+/// <summary>
+/// @Author: Group 6: Andreas L, Katrine M, Mathias L
+/// @Version: 17-12-2018
+/// </summary>
 namespace FlixNet.ServiceLayer
 {
-
-
     public class EntertainmentService
     {
-        //Entertainment ent = new Entertainment();
-        
+        /// <summary>
+        /// Gets All entertainments from server which gets from database
+        /// </summary>
+        /// <returnsList<EntertainmentModel.Entertainment>></returns>
         public List<EntertainmentModel.Entertainment> GetEntertainments()
         {
             FlixNet.ServiceLibrary.EntertainmentServiceClient sC = new EntertainmentServiceClient();
-
-
             var entertainments = sC.FindAllEntertainments();
-
             List<EntertainmentModel.Entertainment> convertedEnt = ConvertToModelEntertainment(entertainments);
 
             return convertedEnt;
-
         }
-
+        /// <summary>
+        /// Converts serviceLibrary Entertainments objects from service reference to flixNet.model Entertainment objects
+        /// </summary>
+        /// <param name="serviceEntertainments"></param>
+        /// <returns>List<EntertainmentModel.Entertainment></returns>
         private List<EntertainmentModel.Entertainment> ConvertToModelEntertainment(FlixNet.ServiceLibrary.Entertainment[] serviceEntertainments)
         {
-
             EntertainmentModel.Entertainment temp = null;
             List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
 
             foreach (FlixNet.ServiceLibrary.Entertainment oldEnt in serviceEntertainments)
             {
-
                 temp = new Models.Entertainment()
                 {
                     Id = oldEnt.Id,
@@ -44,25 +46,30 @@ namespace FlixNet.ServiceLayer
                     ReleaseDate = oldEnt.ReleaseDate
                 };
 
-                //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
                 convertedEntertainments.Add(temp);
             }
             return convertedEntertainments;
         }
 
+        /// <summary>
+        /// Gets favoritelist objects for a specific user
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>List<EntertainmentModel.FavoriteList></returns>
         public List<EntertainmentModel.FavoriteList> GetFavoriteLists(int id)
         {
             FavoritListService.Service1Client fls = new FavoritListService.Service1Client();
-
-
             var FavoriteLists = fls.FindAllListByUser(id);
-
             List<EntertainmentModel.FavoriteList> convertedFavoriteList = ConvertToModelFavoriteList(FavoriteLists);
 
             return convertedFavoriteList;
-
         }
 
+        /// <summary>
+        /// Converts serviceLibrary favoritelist to flixNet models FavoriteList
+        /// </summary>
+        /// <param name="serviceFavoriteLists"></param>
+        /// <returns>List<EntertainmentModel.FavoriteList></returns>
         private List<EntertainmentModel.FavoriteList> ConvertToModelFavoriteList(FlixNet.FavoriteListService.FavoriteList[] serviceFavoriteLists)
         {
             EntertainmentModel.FavoriteList temp = new EntertainmentModel.FavoriteList();
@@ -77,32 +84,32 @@ namespace FlixNet.ServiceLayer
                     Author = oldFav.Author,
                     Name = oldFav.Name,
                     Description = oldFav.Description,
-
-
-
                 };
                 temp = temp1;
                 convertedFavoriteList.Add(temp);
             }
-
-
             return convertedFavoriteList;
-
         }
 
-
-
+        /// <summary>
+        /// Returns a specific movie by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>EntertainmentModel.Movie</returns>
         public EntertainmentModel.Movie GetMovieById(int id)
         {
             ServiceLibrary.EntertainmentServiceClient sC = new ServiceLibrary.EntertainmentServiceClient();
-
             var movie = sC.GetMovieById(id);
-
             EntertainmentModel.Movie convertedMovie = ConvertToModelMovie(movie);
 
             return convertedMovie;
         }
 
+        /// <summary>
+        /// Converts a specific service Movie to FlixNet models Movie 
+        /// </summary>
+        /// <param name="serviceEntertainments"></param>
+        /// <returns>EntertainmentModel.Movie </returns>
         private EntertainmentModel.Movie ConvertToModelMovie(FlixNet.ServiceLibrary.Movie serviceEntertainments)
         {
             EntertainmentModel.Language language = new EntertainmentModel.Language
@@ -123,8 +130,6 @@ namespace FlixNet.ServiceLayer
                 Name = serviceEntertainments.Country.Name
             };
 
-
-
             EntertainmentModel.Movie convertedMovie = new EntertainmentModel.Movie
             {
                 Id = serviceEntertainments.Id,
@@ -140,16 +145,17 @@ namespace FlixNet.ServiceLayer
 
             };
 
-
             return convertedMovie;
         }
 
-
-
+        /// <summary>
+        /// Converts a service Comment to a FlixNet comment, and returns a list of comments
+        /// </summary>
+        /// <param name="ServiceComments"></param>
+        /// <returns>List<EntertainmentModel.Comment></returns>
         private List<EntertainmentModel.Comment> ConvertToModelComments(FlixNet.ServiceLibrary.Comment[] ServiceComments)
         {
             List<EntertainmentModel.Comment> convertedComments = new List<EntertainmentModel.Comment>();
-
             foreach (FlixNet.ServiceLibrary.Comment oldCom in ServiceComments)
             {
                 Models.User user = new Models.User
@@ -171,6 +177,10 @@ namespace FlixNet.ServiceLayer
             return convertedComments;
         }
 
+        /// <summary>
+        /// Inserts a Comment object on a specific movie
+        /// </summary>
+        /// <param name="c"></param>
         public void InsertComment(Models.Comment c)
         {
             ServiceLibrary.EntertainmentServiceClient sC = new ServiceLibrary.EntertainmentServiceClient();
@@ -178,6 +188,11 @@ namespace FlixNet.ServiceLayer
             sC.InsertComment(comment);
         }
 
+        /// <summary>
+        /// Converts FlixNet comment to service Comment so that 
+        /// </summary>
+        /// <param name="comment"></param>
+        /// <returns>ServiceLibrary.Comment</returns>
         private ServiceLibrary.Comment ConvertToWCFComments(Models.Comment comment)
         {
             ServiceLibrary.Session session = new ServiceLibrary.Session
@@ -200,38 +215,6 @@ namespace FlixNet.ServiceLayer
 
             return tempComment;
         }
-
-
-        //private List<Models.Entertainment> entertainments(PopcornTime_2._0.FavoritList.FavoriteList FavObject)
-        //{
-        //    PopcornTime_2._0.FavoritList.FavoriteList f1 = new FavoritListService.FavoriteList();
-
-        //    EntertainmentModel.Entertainment temp = null;
-        //    //formål returner en 
-
-
-
-        //    List<EntertainmentModel.Entertainment> convertedEntertainments = new List<EntertainmentModel.Entertainment>();
-
-        //    foreach (PopcornTime_2._0.EntertainmentService1.Entertainment oldEnt in serviceEntertainments)
-        //    {
-
-        //        temp = new Models.Entertainment()
-        //        {
-        //            Id = oldEnt.Id,
-        //            Title = oldEnt.Title,
-        //            ReleaseDate = oldEnt.ReleaseDate
-        //        };
-
-        //        //temp = new EntertainmentModel.Entertainment(oldEnt.Id, oldEnt.genre, oldEnt.title, oldEnt.country, oldEnt.language, oldEnt.releaseDate, oldEnt.storyLine, oldEnt.filmingLocation, oldEnt.information );
-        //        convertedEntertainments.Add(temp);
-        //    }
-        //    return convertedEntertainments;
-
-        //    return null;
-        //}
-
-
     }
 
 }

@@ -37,7 +37,7 @@ namespace WCF___Session
         }
 
         /// <summary>
-        /// Logs an user out of the system
+        /// Log an user out of the system
         /// </summary>
         /// <param name="person_id"></param>
         public void LogOut(int person_id)
